@@ -4,7 +4,7 @@
 
 Extensão para WordPress destinada à criação de cópias de segurança e à preparação de pacotes de recuperação e migração. O projeto mantém código, documentação, auditoria e distribuição em repositório independente.
 
-**Versão:** 5.0.0. **Manutenção:** [gamberine](https://github.com/gamberine). **Licença da distribuição:** GPL-3.0-or-later, com avisos das dependências preservados.
+**Versão:** 5.0.1. **Manutenção:** [gamberine](https://github.com/gamberine). **Licença da distribuição:** GPL-3.0-or-later, com avisos das dependências preservados.
 
 ## Procedência e governança
 
@@ -28,6 +28,8 @@ O fluxo de cópia percorre as etapas de seleção e varredura, exportação do b
 
 Os serviços comerciais e de tradução associados ao domínio não configurado da base são bloqueados. A telemetria está desabilitada. O projeto não fornece credenciais, assinatura comercial, servidor OAuth ou mecanismo de atualização comercial. Não são simuladas ativações de licença.
 
+O requisito mínimo validado é **PHP 8.1**. O requisito 7.4 herdado da base foi corrigido porque bibliotecas incorporadas utilizam sintaxe posterior. A homologação local utiliza PHP 8.3.26.
+
 ## Instalação
 
 1. Baixe o ZIP instalável e `SHA256SUMS` em [Releases](https://github.com/gamberine/gamb-duplica-wp/releases).
@@ -50,7 +52,7 @@ A conferência ZIP verifica abertura consistente, caminhos relativos, duplicidad
 
 Na auditoria local, um pacote de **32.449.207 bytes** chegou ao estado concluído. Foram conferidos **6.403 arquivos**, distribuídos em **7.514 entradas**, sem falha de CRC. O SQL exportado foi importado em outro banco isolado, com **18 tabelas**; os registros de conteúdo e seus metadados coincidiram com a origem do ensaio. Arquivos selecionados foram extraídos e comparados por SHA-256.
 
-Há 31 verificações independentes com ZIP, incluindo criptografia, senha incorreta, arquivos corrompidos, caminhos inseguros, autoload e bloqueio de serviços não configurados. O modo sem ZIP também é testado. A integração contínua verifica PHP 7.4, 8.1, 8.3 e 8.4; consulte o resultado do commit em [Actions](https://github.com/gamberine/gamb-duplica-wp/actions).
+Há 31 verificações independentes com ZIP, incluindo criptografia, senha incorreta, arquivos corrompidos, caminhos inseguros, autoload e bloqueio de serviços não configurados. O modo sem ZIP também é testado. A integração contínua verifica PHP 8.1, 8.2, 8.3 e 8.4; consulte o resultado do commit em [Actions](https://github.com/gamberine/gamb-duplica-wp/actions).
 
 Consulte [Auditoria](docs/AUDIT.md), [Operação e recuperação](docs/OPERATIONS.md), [Registro de versões](CHANGELOG.md), [Segurança](SECURITY.md) e [Contribuição](CONTRIBUTING.md).
 

@@ -3,8 +3,8 @@ Contributors: gamberine
 Tags: backup, migration, zip, database
 Requires at least: 5.3
 Tested up to: 7.1
-Requires PHP: 7.4
-Stable tag: 5.0.0
+Requires PHP: 8.1
+Stable tag: 5.0.1
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,7 +33,7 @@ Downloads assinados exigem reserva de seus tokens. A telemetria está desabilita
 
 == Registro de versões ==
 
-= 5.0.0 =
+= 5.0.1 =
 Recuperação de inicialização e autoload, identificadores PHP/SQL/JavaScript válidos,
 identidade própria, proteção de ZIP, validação de integridade, testes e auditoria.
 

@@ -25,7 +25,7 @@ use DUPX_U;
 class Bootstrap
 {
     const DESCRIPTORS_PREFIX  = 'dup_descriptors_';
-    const MINIMUM_PHP_VERSION = '7.4';
+    const MINIMUM_PHP_VERSION = '8.1';
 
     /**
      * this variable becomes false after the installer is initialized by skipping the shutdown function defined in the boot class

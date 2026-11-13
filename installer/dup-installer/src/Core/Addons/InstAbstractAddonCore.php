@@ -166,7 +166,7 @@ abstract class InstAbstractAddonCore
                 'author'            => '',
                 'authorURI'         => '',
                 'requiresWP'        => '5.3',
-                'requiresPHP'       => '7.4',
+                'requiresPHP'       => '8.1',
                 'requiresDuplcator' => '4.0.2',
                 'requiresAddons'    => [],
             ];

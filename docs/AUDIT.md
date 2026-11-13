@@ -1,6 +1,6 @@
 # Auditoria de funcionamento e segurança
 
-Data: 13/11/2026. Base recebida: 4.5.21. Distribuição corrigida: 5.0.0.
+Data: 13/11/2026. Base recebida: 4.5.21. Distribuição corrigida: 5.0.1.
 
 ## Método e escopo
 
@@ -25,6 +25,10 @@ A cópia instalada foi preservada com inventário SHA-256 de 2.419 arquivos. A a
 | AUD-13 | Média / alta | REST reutilizava verificação AJAX sem reconhecer nonce no cabeçalho; erro de autorização sem status apropriado | SAFE_FIX: nonce do pedido REST e HTTP 401/403 |
 | ENV-01 | Operacional / alta | ZipArchive desabilitado no PHP normal do Laragon | Aviso administrativo; ensaio ZIP carregou a extensão somente nos processos isolados; configuração global preservada |
 | DEP-01 | Média / alta | Ausência de composer.lock e de inventário completo das versões das bibliotecas incorporadas | REVIEW_REQUIRED: pendência documentada em DEPENDENCIES.md; não há declaração de atualização integral da cadeia |
+
+## Correção do requisito de plataforma
+
+A primeira execução da matriz de CI recusou PHP 7.4 em oito arquivos incorporados. Entre as evidências estão atributos em parâmetros e propriedades promovidas em bibliotecas prefixadas. O requisito mínimo passou a PHP 8.1, a menor versão da matriz homologada; não foi realizada reescrita das dependências para simular compatibilidade antiga. A versão 5.0.1 registra esse ajuste e a normalização dos finais de linha.
 
 ## Validação observada
 

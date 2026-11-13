@@ -26,7 +26,7 @@ if (!defined('SECONDS_IN_MICROSECONDS')) {
     define('SECONDS_IN_MICROSECONDS', 1000000);
 }
 
-define('GambDuplicaWP_PRO_VERSION', '5.0.0');
+define('GambDuplicaWP_PRO_VERSION', '5.0.1');
 define('GambDuplicaWP_PRO_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('GambDuplicaWP_PRO_SITE_URL', get_site_url());
 define('GambDuplicaWP_PRO_IMG_URL', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/img');

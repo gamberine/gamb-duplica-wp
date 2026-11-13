@@ -12,7 +12,7 @@ if (!class_exists('GambDuplicaWPPhpVersionCheck')) {
     /**
      * PHP Version
      */
-    class GambDuplicaWPPhpVersionCheck // phpcs:ignore 
+    class GambDuplicaWPPhpVersionCheck // phpcs:ignore
     {
         /** @var string */
         protected static $minVer = '';
@@ -90,7 +90,7 @@ if (!class_exists('GambDuplicaWPPhpVersionCheck')) {
                     ?><br>
                     <?php
                     esc_html_e(
-                        'While your current version of gamb-duplica-wp will continue to work, 
+                        'While your current version of gamb-duplica-wp will continue to work,
                         you\'ll need to upgrade your PHP version to receive future features, improvements, and security updates.',
                         'gamb-duplica-wp'
                     );

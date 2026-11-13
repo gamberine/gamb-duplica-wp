@@ -23,7 +23,7 @@ class BootstrapRunner
     const MANUAL_EXTRACT_FILE_NAME  = 'manual-extract';
     const ARCHIVE_CONFIG_FILE_NAME  = 'archive.txt';
 
-    const MINIMUM_PHP_VERSION = '7.4';
+    const MINIMUM_PHP_VERSION = '8.1';
 
     const NAME_PWD        = 'password';
     const NAME_PWD_BUTTON = 'secure-btn';

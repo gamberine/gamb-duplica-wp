@@ -4,10 +4,10 @@
  * Plugin Name: Gamb Duplica WP
  * Plugin URI: https://github.com/gamberine/gamb-duplica-wp
  * Description: Cópias de segurança e migração WordPress, com geração de arquivos, banco de dados e instalador de recuperação.
- * Version: 5.0.0
+ * Version: 5.0.1
  * Requires at least: 5.3
  * Tested up to: 7.1
- * Requires PHP: 7.4
+ * Requires PHP: 8.1
  * Author: Gamb
  * Author URI: https://github.com/gamberine
  * Network: true
@@ -38,7 +38,7 @@ define('GambDuplicaWP_USTATS_DISALLOW', true );
 require_once __DIR__ . '/src/ProjectPolicy.php';
 \GambDuplicaWP\ProjectPolicy::register();
 // CHECK PHP VERSION
-define('GambDuplicaWP_PRO_PHP_MINIMUM_VERSION', '7.4');
+define('GambDuplicaWP_PRO_PHP_MINIMUM_VERSION', '8.1');
 define('GambDuplicaWP_PRO_PHP_SUGGESTED_VERSION', '8.3');
 require_once dirname(__FILE__) . "/src/Utils/GambDuplicaWPPhpVersionCheck.php";
 if (GambDuplicaWPPhpVersionCheck::check(GambDuplicaWP_PRO_PHP_MINIMUM_VERSION, GambDuplicaWP_PRO_PHP_SUGGESTED_VERSION) === false) {

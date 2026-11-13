@@ -1,5 +1,11 @@
 # Registro de versões
 
+## 5.0.1 - 2026-11-13
+
+- Corrigir o requisito mínimo declarado para PHP 8.1, após a matriz de CI demonstrar incompatibilidade das dependências incorporadas com PHP 7.4. A versão 7.4 não era operacional nesta distribuição.
+- Verificar PHP 8.1, 8.2, 8.3 e 8.4 e normalizar finais de linha de arquivos já incorporados.
+- Preservar a versão 5.0.0 como registro do primeiro lote auditado, sem recomendação de instalação.
+
 ## 5.0.0 - 2026-11-13
 
 ### Identidade e compatibilidade
