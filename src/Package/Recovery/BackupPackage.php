@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * @package   gamb-duplica-wp
+ * @copyright (c) 2022, Snap Creek LLC
+ */
+
+namespace gamb-duplica-wp\Package\Recovery;
+
+use GAMB_DUPLICA_WP_Archive;
+use GAMB_DUPLICA_WP_Package;
+use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use gamb-duplica-wp\Models\Storages\StoragesUtil;
+use gamb-duplica-wp\Package\Import\PackageImporter;
+
+class BackupPackage extends PackageImporter
+{
+    /** @var GAMB_DUPLICA_WP_Package */
+    protected $package;
+
+    /**
+     * Used for restor backup button
+     *
+     * @param string          $path    Archiv path
+     * @param GAMB_DUPLICA_WP_Package $package Recovery Backup
+     */
+    public function __construct($path, GAMB_DUPLICA_WP_Package $package)
+    {
+        $this->package    = $package;
+        $this->archivePwd = $this->package->Archive->getArchivePassword();
+        parent::__construct($path);
+    }
+
+    /**
+     * This function extract archive info backup and read it, After initializing the information deletes the file.
+     *
+     * @return bool true on success, or false on failure
+     */
+    public function loadInfo(): bool
+    {
+        return $this->loadInfoFromArchive();
+    }
+
+    /**
+     * Return overwrite param for recovery
+     *
+     * @return array<string, array{value: mixed, formStatus?: string}>
+     */
+    public function getOverwriteParams(): array
+    {
+        $params  = parent::getOverwriteParams();
+        $updDirs = wp_upload_dir();
+        $result  = [
+            PrmMng::PARAM_TEMPLATE           => ['value' => 'recovery'],
+            PrmMng::PARAM_RECOVERY_LINK      => ['value' => ''],
+            PrmMng::PARAM_SITE_URL           => [
+                'value'      => site_url(),
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_PATH_WP_CORE_NEW   => [
+                'value'      => GAMB_DUPLICA_WP_Archive::getOriginalPaths('abs'),
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_URL_CONTENT_NEW    => [
+                'value'      => content_url(),
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_PATH_CONTENT_NEW   => [
+                'value'      => GAMB_DUPLICA_WP_Archive::getOriginalPaths('wpcontent'),
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_URL_UPLOADS_NEW    => [
+                'value'      => $updDirs['baseurl'],
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_PATH_UPLOADS_NEW   => [
+                'value'      => GAMB_DUPLICA_WP_Archive::getOriginalPaths('uploads'),
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_URL_PLUGINS_NEW    => [
+                'value'      => plugins_url(),
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_PATH_PLUGINS_NEW   => [
+                'value'      => GAMB_DUPLICA_WP_Archive::getOriginalPaths('plugins'),
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_URL_MUPLUGINS_NEW  => [
+                'value'      => WPMU_PLUGIN_URL,
+                'formStatus' => 'st_infoonly',
+            ],
+            PrmMng::PARAM_PATH_MUPLUGINS_NEW => [
+                'value'      => GAMB_DUPLICA_WP_Archive::getOriginalPaths('muplugins'),
+                'formStatus' => 'st_infoonly',
+            ],
+        ];
+
+        $result = array_merge($params, $result);
+        foreach (StoragesUtil::getLocalStoragesPaths() as $path) {
+            $result[PrmMng::PARAM_OVERWRITE_SITE_DATA]['value']['removeFilters']['dirs'][] = $path;
+        }
+
+        return $result;
+    }
+}

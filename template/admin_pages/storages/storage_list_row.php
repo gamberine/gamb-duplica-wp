@@ -1,0 +1,122 @@
+<?php
+
+/**
+ * @package gamb-duplica-wp
+ */
+
+defined("ABSPATH") or die("");
+
+use gamb-duplica-wp\Core\Views\TplMng;
+
+/**
+ * Variables
+ *
+ * @var gamb-duplica-wp\Core\Controllers\ControllersManager $ctrlMng
+ * @var gamb-duplica-wp\Core\Views\TplMng $tplMng
+ * @var array<string, mixed> $tplData
+ * @var gamb-duplica-wp\Models\Storages\AbstractStorageEntity $storage
+ */
+$storage = $tplData['storage'];
+/** @var int */
+$index = $tplData['index'];
+
+$type_name = $storage->getStypeName();
+$type_id   = $storage->getSType();
+?>
+<tr id="main-view-<?php echo (int) $storage->getId() ?>"
+    class="storage-row <?php echo ($index % 2) ? 'alternate' : ''; ?>"
+    data-delete-view="<?php echo esc_attr($storage->getDeleteView(false)); ?>"
+>
+    <td>
+        <?php if ($storage->isDefault()) : ?>
+            <input type="checkbox" disabled="disabled" />
+        <?php else : ?>
+            <input name="selected_id[]" type="checkbox" value="<?php echo (int) $storage->getId(); ?>" class="item-chk" />
+        <?php endif; ?>
+    </td>
+    <td>                                             
+        <a href="javascript:void(0);" onclick="DupPro.Storage.Edit('<?php echo (int) $storage->getId(); ?>')">
+            <b><?php echo esc_html($storage->getName()); ?></b>
+        </a>
+        <div class="sub-menu">
+            <a href="javascript:void(0);" onclick="DupPro.Storage.Edit('<?php echo (int) $storage->getId(); ?>')">
+                <?php esc_html_e('Edit', 'gamb-duplica-wp'); ?>
+            </a> 
+            |
+            <a href="javascript:void(0);" onclick="DupPro.Storage.View('<?php echo (int) $storage->getId(); ?>');">
+                <?php esc_html_e('Quick View', 'gamb-duplica-wp'); ?>
+            </a> 
+            <?php if (!$storage->isDefault()) : ?>    
+                |
+                <a href="javascript:void(0);" onclick="DupPro.Storage.CopyEdit('<?php echo (int) $storage->getId(); ?>');">
+                    <?php esc_html_e('Copy', 'gamb-duplica-wp'); ?>
+                </a>
+                |
+                <a href="javascript:void(0);" onclick="DupPro.Storage.deleteSingle('<?php echo (int) $storage->getId(); ?>');">
+                    <?php esc_html_e('Delete', 'gamb-duplica-wp'); ?>
+                </a>
+            <?php endif; ?>
+        </div>
+    </td>
+    <td>
+        <?php
+        echo wp_kses(
+            $storage->getStypeIcon(),
+            [
+                'i'   => [
+                    'class' => [],
+                ],
+                'img' => [
+                    'src'   => [],
+                    'class' => [],
+                    'alt'   => [],
+                ],
+            ]
+        ),
+        '&nbsp;',
+        esc_html($storage->getStypeName());
+        ?>
+    </td>
+</tr>
+<?php
+ob_start();
+try { ?>
+    <tr id='quick-view-<?php echo (int) $storage->getId(); ?>' class='<?php echo ($index % 2) ? 'alternate' : ''; ?> storage-detail'>
+        <td colspan="3">
+            <b><?php esc_html_e('QUICK VIEW', 'gamb-duplica-wp') ?></b> <br/>
+            <div>
+                <label><?php esc_html_e('Name', 'gamb-duplica-wp') ?>:</label>
+                <?php echo esc_html($storage->getName()); ?>
+            </div>
+            <div>
+                <label><?php esc_html_e('Notes', 'gamb-duplica-wp') ?>:</label>
+                <?php echo (strlen($storage->getNotes())) ? esc_html($storage->getNotes()) : esc_html__('(no notes)', 'gamb-duplica-wp'); ?>
+            </div>
+            <div>
+                <label><?php esc_html_e('Type', 'gamb-duplica-wp') ?>:</label>
+                <?php echo esc_html($storage->getStypeName()); ?>
+            </div>
+            <?php $storage->getListQuickView(); ?>
+            <button type="button" class="button secondary hollow tiny" onclick="DupPro.Storage.View('<?php echo (int) $storage->getId(); ?>');">
+                <?php esc_html_e('Close', 'gamb-duplica-wp') ?>
+            </button>
+        </td>
+    </tr>
+    <?php
+} catch (Exception $e) {
+    ob_clean(); ?>
+    <tr id='quick-view-<?php echo intval($storage->getId()); ?>' class='<?php echo ($index % 2) ? 'alternate' : ''; ?>'>
+        <td colspan="3">
+            <?php TplMng::getInstance()->render(
+                'admin_pages/storages/parts/storage_error',
+                ['exception' => $e]
+            ); ?>
+            <br><br>
+            <button type="button" class="button" onclick="DupPro.Storage.View('<?php echo intval($storage->getId()); ?>');">
+            <?php esc_html_e('Close', 'gamb-duplica-wp') ?>
+            </button>
+        </td>
+    </tr>
+    <?php
+}
+ob_end_flush();
