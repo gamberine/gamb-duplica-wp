@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Exception;
+namespace VendorGambDuplicaWP\GuzzleHttp\Exception;
 
-use VendorDuplicator\Psr\Http\Client\ClientExceptionInterface;
+use VendorGambDuplicaWP\Psr\Http\Client\ClientExceptionInterface;
 interface GuzzleException extends ClientExceptionInterface
 {
 }

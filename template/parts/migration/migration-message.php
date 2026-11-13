@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Core\MigrationMng;
+use GambDuplicaWP\Core\MigrationMng;
 
 defined("ABSPATH") or die("");
 
@@ -43,7 +43,7 @@ $cleanupReport = MigrationMng::getCleanupReport();
                 'The following installation files are stored in the folder %s',
                 'gamb-duplica-wp'
             ),
-            '<b>' . esc_html(gamb-duplica-wp_PRO_SSDIR_PATH_INSTALLER) . '</b>'
+            '<b>' . esc_html(GambDuplicaWP_PRO_SSDIR_PATH_INSTALLER) . '</b>'
         );
         ?>
     </p>

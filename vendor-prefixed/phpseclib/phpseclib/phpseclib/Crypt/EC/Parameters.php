@@ -8,9 +8,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC;
 
-use VendorDuplicator\phpseclib3\Crypt\EC;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC;
 /**
  * EC Parameters
  *

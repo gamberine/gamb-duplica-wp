@@ -12,8 +12,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Shell\Shell;
-use gamb-duplica-wp\Libs\Snap\SnapOS;
+use GambDuplicaWP\Libs\Shell\Shell;
+use GambDuplicaWP\Libs\Snap\SnapOS;
 
 class GAMB_DUPLICA_WP_DB extends wpdb
 {
@@ -162,7 +162,6 @@ class GAMB_DUPLICA_WP_DB extends wpdb
         }
 
         $custom_mysqldump_path = (strlen($global->package_mysqldump_path)) ? $global->package_mysqldump_path : '';
-        $custom_mysqldump_path = escapeshellcmd($custom_mysqldump_path);
 
         //Common Windows Paths
         if (SnapOS::isWindows()) {
@@ -208,11 +207,11 @@ class GAMB_DUPLICA_WP_DB extends wpdb
         }
 
         foreach ($paths as $path) {
-            if (strlen($path) === 0) {
+            if (strlen($path) === 0 || !is_file($path)) {
                 continue;
             }
 
-            $cmd         = $path . ' --version';
+            $cmd         = escapeshellarg($path) . ' --version 2>&1';
             $shellOutput = Shell::runCommand($cmd);
             if ($shellOutput !== false && $shellOutput->getCode() === 0) {
                 return $path;

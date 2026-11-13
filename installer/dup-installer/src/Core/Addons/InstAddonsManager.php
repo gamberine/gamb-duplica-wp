@@ -7,11 +7,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Addons;
+namespace GambDuplicaWP\Installer\Core\Addons;
 
-use gamb-duplica-wp\Installer\Core\Hooks\HooksMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Hooks\HooksMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 
 final class InstAddonsManager
 {
@@ -138,7 +138,7 @@ final class InstAddonsManager
 
                 if (strcasecmp($elem, $info['filename']) === 0) {
                     $addonMainFile  = $checkDir . $elem . '/' . $addonElem;
-                    $addonMainClass = '\\gamb-duplica-wp\\Installer\\Addons\\' . $info['filename'] . '\\' . $info['filename'];
+                    $addonMainClass = '\\GambDuplicaWP\\Installer\\Addons\\' . $info['filename'] . '\\' . $info['filename'];
                     break;
                 }
             }
@@ -148,7 +148,7 @@ final class InstAddonsManager
             }
 
             try {
-                if (!is_subclass_of($addonMainClass, \gamb-duplica-wp\Installer\Core\Addons\InstAbstractAddonCore::class)) {
+                if (!is_subclass_of($addonMainClass, \GambDuplicaWP\Installer\Core\Addons\InstAbstractAddonCore::class)) {
                     continue;
                 }
             } catch (\Exception $e) {

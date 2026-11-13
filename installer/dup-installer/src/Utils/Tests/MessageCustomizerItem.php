@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Utils\Tests;
+namespace GambDuplicaWP\Installer\Utils\Tests;
 
 class MessageCustomizerItem
 {

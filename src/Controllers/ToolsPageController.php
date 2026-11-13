@@ -7,22 +7,22 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
-use gamb-duplica-wp\Core\MigrationMng;
+use GambDuplicaWP\Core\MigrationMng;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Template_Entity;
 use GAMB_DUPLICA_WP_Server;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Controllers\AbstractMenuPageController;
-use gamb-duplica-wp\Core\Controllers\PageAction;
-use gamb-duplica-wp\Core\Controllers\SubMenuItem;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Controllers\AbstractMenuPageController;
+use GambDuplicaWP\Core\Controllers\PageAction;
+use GambDuplicaWP\Core\Controllers\SubMenuItem;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Views\AdminNotices;
 
 class ToolsPageController extends AbstractMenuPageController
 {
@@ -463,7 +463,7 @@ class ToolsPageController extends AbstractMenuPageController
      */
     public static function getLogsList(): array
     {
-        $result = SnapIO::regexGlob(gamb-duplica-wp_PRO_SSDIR_PATH, [
+        $result = SnapIO::regexGlob(GambDuplicaWP_PRO_SSDIR_PATH, [
             'regexFile'   => '/(\.log|_log\.txt)$/',
             'regexFolder' => false,
         ]);

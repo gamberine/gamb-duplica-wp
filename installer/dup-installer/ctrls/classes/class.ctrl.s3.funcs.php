@@ -7,30 +7,30 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Addons\ProBase\License;
-use gamb-duplica-wp\Installer\Core\Deploy\Chunk\SiteUpdateChunkManager;
-use gamb-duplica-wp\Installer\Core\Deploy\CleanUp;
-use gamb-duplica-wp\Installer\Core\Deploy\Database\DbCleanup;
-use gamb-duplica-wp\Installer\Core\Deploy\Database\DbReplace;
-use gamb-duplica-wp\Installer\Core\Deploy\Database\DbUtils;
-use gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginsManager;
-use gamb-duplica-wp\Installer\Core\Deploy\ServerConfigs;
-use gamb-duplica-wp\Installer\Core\Deploy\Standalone;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\InstallerOrigFileMng;
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Utils\ReplaceEngine\ReplaceMng;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Libs\Snap\SnapString;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\WpConfig\WPConfigTransformer;
-use gamb-duplica-wp\Libs\WpConfig\WPConfigTransformerSrc;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Installer\Addons\ProBase\License;
+use GambDuplicaWP\Installer\Core\Deploy\Chunk\SiteUpdateChunkManager;
+use GambDuplicaWP\Installer\Core\Deploy\CleanUp;
+use GambDuplicaWP\Installer\Core\Deploy\Database\DbCleanup;
+use GambDuplicaWP\Installer\Core\Deploy\Database\DbReplace;
+use GambDuplicaWP\Installer\Core\Deploy\Database\DbUtils;
+use GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginsManager;
+use GambDuplicaWP\Installer\Core\Deploy\ServerConfigs;
+use GambDuplicaWP\Installer\Core\Deploy\Standalone;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\InstallerOrigFileMng;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\ReplaceEngine\ReplaceMng;
+use GambDuplicaWP\Libs\Snap\SnapDB;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapString;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\WpConfig\WPConfigTransformer;
+use GambDuplicaWP\Libs\WpConfig\WPConfigTransformerSrc;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 
 /**
  * Step 3 functions
@@ -140,11 +140,11 @@ final class DUPX_S3_Funcs
                     DbCleanup::cleanupPackages();
                     $this->configFilesUpdate();
                     $this->forceLogoutOfAllUsers();
-                    $this->gamb-duplica-wpMigrationInfoSet();
+                    $this->GambDuplicaWPMigrationInfoSet();
                     $this->noticeTest();
                 } elseif (InstState::isImportFromBackendMode() || InstState::isRecoveryMode()) {
                     $this->forceLogoutOfAllUsers();
-                    $this->gamb-duplica-wpMigrationInfoSet();
+                    $this->GambDuplicaWPMigrationInfoSet();
                 }
                 $this->cleanupFiles();
                 $this->setFilePermsission();
@@ -1303,7 +1303,7 @@ LONGMSG;
      *
      * @return bool true if success
      */
-    public function gamb-duplica-wpMigrationInfoSet(): bool
+    public function GambDuplicaWPMigrationInfoSet(): bool
     {
         Log::info('MIGRATION INFO SET');
         // make sure dbConnection is initialized

@@ -5,10 +5,10 @@
  *
  * @package Requests\Utilities
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * SSL utilities for Requests
  *
@@ -29,8 +29,8 @@ final class Ssl
      * @param string|Stringable $host Host name to verify against
      * @param array $cert Certificate data from openssl_x509_parse()
      * @return bool
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $host argument is not a string or a stringable object.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $cert argument is not an array or array accessible.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $host argument is not a string or a stringable object.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $cert argument is not an array or array accessible.
      */
     public static function verify_certificate($host, $cert)
     {
@@ -84,7 +84,7 @@ final class Ssl
      *
      * @param string|Stringable $reference Reference dNSName
      * @return boolean Is the name valid?
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string or a stringable object.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string or a stringable object.
      */
     public static function verify_reference_name($reference)
     {
@@ -130,7 +130,7 @@ final class Ssl
      * @param string|Stringable $host Requested host
      * @param string|Stringable $reference dNSName to match against
      * @return boolean Does the domain match?
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When either of the passed arguments is not a string or a stringable object.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When either of the passed arguments is not a string or a stringable object.
      */
     public static function match_domain($host, $reference)
     {

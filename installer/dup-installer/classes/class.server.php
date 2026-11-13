@@ -2,10 +2,10 @@
 
 defined("DUPXABSPATH") or die("");
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Shell\Shell;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Shell\Shell;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 
 /**
  * DUPX_cPanel

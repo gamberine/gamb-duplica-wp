@@ -9,12 +9,12 @@
  * @copyright 2017 Jim Wigginton
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Curves;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves;
 
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards;
-use VendorDuplicator\phpseclib3\Crypt\Hash;
-use VendorDuplicator\phpseclib3\Crypt\Random;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Hash;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Random;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 class Ed25519 extends TwistedEdwards
 {
     const HASH = 'sha512';
@@ -190,7 +190,7 @@ class Ed25519 extends TwistedEdwards
     /**
      * Creates a random scalar multiplier
      *
-     * @return \VendorDuplicator\phpseclib3\Math\PrimeField\Integer
+     * @return \VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer
      */
     public function createRandomMultiplier()
     {
@@ -204,7 +204,7 @@ class Ed25519 extends TwistedEdwards
      * A point (x,y) is represented in extended homogeneous coordinates (X, Y, Z, T),
      * with x = X/Z, y = Y/Z, x * y = T/Z.
      *
-     * @return \VendorDuplicator\phpseclib3\Math\PrimeField\Integer[]
+     * @return \VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer[]
      */
     public function convertToInternal(array $p)
     {

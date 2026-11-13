@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\Channel;
+use VendorGambDuplicaWP\Google\Service\Drive\Channel;
 /**
  * The "channels" collection of methods.
  * Typical usage is:
@@ -26,14 +26,14 @@ use VendorDuplicator\Google\Service\Drive\Channel;
  *   $channels = $driveService->channels;
  *  </code>
  */
-class Channels extends \VendorDuplicator\Google\Service\Resource
+class Channels extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Stops watching resources through this channel. (channels.stop)
      *
      * @param Channel $postBody
      * @param array $optParams Optional parameters.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function stop(Channel $postBody, $optParams = [])
     {
@@ -43,4 +43,4 @@ class Channels extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Channels::class, 'VendorDuplicator\Google_Service_Drive_Resource_Channels');
+class_alias(Channels::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Channels');

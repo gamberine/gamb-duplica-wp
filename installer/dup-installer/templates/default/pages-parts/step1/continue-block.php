@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 
 ?>
 <div id="next_action" class="bottom-step-action no-display" >           

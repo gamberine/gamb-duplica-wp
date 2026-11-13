@@ -19,7 +19,7 @@
  * @link      https://gamb-duplica-wp.com/
  */
 
-namespace gamb-duplica-wp\Addons\WpCliAddon;
+namespace GambDuplicaWP\Addons\WpCliAddon;
 
 /**
  * Version Pro Base addon class
@@ -30,14 +30,14 @@ namespace gamb-duplica-wp\Addons\WpCliAddon;
  * @license  https://www.gnu.org/licenses/gpl-3.0.html GPLv3
  * @link     http://snapcreek.com
  */
-class WpCLiAddon extends \gamb-duplica-wp\Core\Addons\AbstractAddonCore
+class WpCliAddon extends \GambDuplicaWP\Core\Addons\AbstractAddonCore
 {
     /**
      * @return void
      */
     public function init()
     {
-        $cli = new gamb-duplica-wpCli();
+        $cli = new GambDuplicaWPCli();
     }
 
     /**

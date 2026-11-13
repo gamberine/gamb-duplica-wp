@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Retry\Exception;
+namespace VendorGambDuplicaWP\Aws\Retry\Exception;
 
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
 /**
  * Represents an error interacting with retry configuration
  */

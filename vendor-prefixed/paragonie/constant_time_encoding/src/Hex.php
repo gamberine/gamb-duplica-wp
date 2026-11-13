@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\ParagonIE\ConstantTime;
+namespace VendorGambDuplicaWP\ParagonIE\ConstantTime;
 
 use RangeException;
 use TypeError;
@@ -29,7 +29,7 @@ use TypeError;
  */
 /**
  * Class Hex
- * @package VendorDuplicator\ParagonIE\ConstantTime
+ * @package VendorGambDuplicaWP\ParagonIE\ConstantTime
  */
 abstract class Hex implements EncoderInterface
 {

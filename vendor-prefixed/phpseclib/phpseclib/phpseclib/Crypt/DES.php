@@ -37,10 +37,10 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\BlockCipher;
-use VendorDuplicator\phpseclib3\Exception\BadModeException;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\BlockCipher;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadModeException;
 /**
  * Pure-PHP implementation of DES.
  *
@@ -51,49 +51,49 @@ class DES extends BlockCipher
     /**
      * Contains $keys[self::ENCRYPT]
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\DES::setupKey()
-     * @see \VendorDuplicator\phpseclib3\Crypt\DES::processBlock()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\DES::setupKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\DES::processBlock()
      */
     const ENCRYPT = 0;
     /**
      * Contains $keys[self::DECRYPT]
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\DES::setupKey()
-     * @see \VendorDuplicator\phpseclib3\Crypt\DES::processBlock()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\DES::setupKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\DES::processBlock()
      */
     const DECRYPT = 1;
     /**
      * Block Length of the cipher
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::block_size
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::block_size
      * @var int
      */
     protected $block_size = 8;
     /**
      * Key Length (in bytes)
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setKeyLength()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setKeyLength()
      * @var int
      */
     protected $key_length = 8;
     /**
      * The mcrypt specific name of the cipher
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
      * @var string
      */
     protected $cipher_name_mcrypt = 'des';
     /**
      * The OpenSSL names of the cipher / modes
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::openssl_mode_names
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::openssl_mode_names
      * @var array
      */
     protected $openssl_mode_names = [self::MODE_ECB => 'des-ecb', self::MODE_CBC => 'des-cbc', self::MODE_CFB => 'des-cfb', self::MODE_OFB => 'des-ofb'];
     /**
      * Optimizing value while CFB-encrypting
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::cfb_init_len
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::cfb_init_len
      * @var int
      */
     protected $cfb_init_len = 500;
@@ -224,7 +224,7 @@ class DES extends BlockCipher
      *
      * This is mainly just a wrapper to set things up for \phpseclib3\Crypt\Common\SymmetricKey::isValidEngine()
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::isValidEngine()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::isValidEngine()
      * @param int $engine
      * @return bool
      */
@@ -251,7 +251,7 @@ class DES extends BlockCipher
      *
      * DES also requires that every eighth bit be a parity bit, however, we'll ignore that.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setKey()
      * @param string $key
      */
     public function setKey($key)
@@ -265,8 +265,8 @@ class DES extends BlockCipher
     /**
      * Encrypts a block
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encryptBlock()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encryptBlock()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
      * @see self::encrypt()
      * @param string $in
      * @return string
@@ -278,8 +278,8 @@ class DES extends BlockCipher
     /**
      * Decrypts a block
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decryptBlock()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decryptBlock()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      * @see self::decrypt()
      * @param string $in
      * @return string
@@ -353,7 +353,7 @@ class DES extends BlockCipher
     /**
      * Creates the key schedule
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setupKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setupKey()
      */
     protected function setupKey()
     {
@@ -433,7 +433,7 @@ class DES extends BlockCipher
     /**
      * Setup the performance-optimized function for de/encrypt()
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setupInlineCrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setupInlineCrypt()
      */
     protected function setupInlineCrypt()
     {

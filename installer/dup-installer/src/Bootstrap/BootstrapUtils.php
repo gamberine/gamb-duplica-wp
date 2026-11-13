@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Bootstrap;
+namespace GambDuplicaWP\Installer\Bootstrap;
 
-use gamb-duplica-wp\Installer\Bootstrap\BootstrapRunner;
-use gamb-duplica-wp\Libs\Shell\Shell;
+use GambDuplicaWP\Installer\Bootstrap\BootstrapRunner;
+use GambDuplicaWP\Libs\Shell\Shell;
 use Exception;
 use ZipArchive;
 

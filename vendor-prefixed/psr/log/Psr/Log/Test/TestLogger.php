@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Psr\Log\Test;
+namespace VendorGambDuplicaWP\Psr\Log\Test;
 
-use VendorDuplicator\Psr\Log\AbstractLogger;
+use VendorGambDuplicaWP\Psr\Log\AbstractLogger;
 /**
  * Used for testing purposes.
  *

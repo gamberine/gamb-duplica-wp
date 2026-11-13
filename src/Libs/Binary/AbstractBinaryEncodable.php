@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Binary;
+namespace GambDuplicaWP\Libs\Binary;
 
 /**
  * Abstract class for binary encodable objects

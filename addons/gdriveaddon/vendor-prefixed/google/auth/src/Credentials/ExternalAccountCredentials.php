@@ -15,22 +15,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Credentials;
+namespace VendorGambDuplicaWP\Google\Auth\Credentials;
 
-use VendorDuplicator\Google\Auth\CredentialSource\AwsNativeSource;
-use VendorDuplicator\Google\Auth\CredentialSource\FileSource;
-use VendorDuplicator\Google\Auth\CredentialSource\UrlSource;
-use VendorDuplicator\Google\Auth\ExternalAccountCredentialSourceInterface;
-use VendorDuplicator\Google\Auth\FetchAuthTokenInterface;
-use VendorDuplicator\Google\Auth\GetQuotaProjectInterface;
-use VendorDuplicator\Google\Auth\GetUniverseDomainInterface;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpClientCache;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\Google\Auth\OAuth2;
-use VendorDuplicator\Google\Auth\ProjectIdProviderInterface;
-use VendorDuplicator\Google\Auth\UpdateMetadataInterface;
-use VendorDuplicator\Google\Auth\UpdateMetadataTrait;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\Google\Auth\CredentialSource\AwsNativeSource;
+use VendorGambDuplicaWP\Google\Auth\CredentialSource\FileSource;
+use VendorGambDuplicaWP\Google\Auth\CredentialSource\UrlSource;
+use VendorGambDuplicaWP\Google\Auth\ExternalAccountCredentialSourceInterface;
+use VendorGambDuplicaWP\Google\Auth\FetchAuthTokenInterface;
+use VendorGambDuplicaWP\Google\Auth\GetQuotaProjectInterface;
+use VendorGambDuplicaWP\Google\Auth\GetUniverseDomainInterface;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpClientCache;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\Google\Auth\OAuth2;
+use VendorGambDuplicaWP\Google\Auth\ProjectIdProviderInterface;
+use VendorGambDuplicaWP\Google\Auth\UpdateMetadataInterface;
+use VendorGambDuplicaWP\Google\Auth\UpdateMetadataTrait;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
 use InvalidArgumentException;
 class ExternalAccountCredentials implements FetchAuthTokenInterface, UpdateMetadataInterface, GetQuotaProjectInterface, GetUniverseDomainInterface, ProjectIdProviderInterface
 {

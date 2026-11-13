@@ -15,10 +15,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Middleware;
+namespace VendorGambDuplicaWP\Google\Auth\Middleware;
 
-use VendorDuplicator\GuzzleHttp\Psr7\Query;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Query;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * SimpleMiddleware is a Guzzle Middleware that implements Google's Simple API
  * access.

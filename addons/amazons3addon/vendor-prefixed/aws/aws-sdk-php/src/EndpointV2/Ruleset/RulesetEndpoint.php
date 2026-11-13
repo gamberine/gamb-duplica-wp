@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2\Ruleset;
+namespace VendorGambDuplicaWP\Aws\EndpointV2\Ruleset;
 
 /**
  * Represents a fully resolved endpoint that a

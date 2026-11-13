@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\GuzzleHttp\Psr7\Exception;
+namespace VendorGambDuplicaWP\GuzzleHttp\Psr7\Exception;
 
 use InvalidArgumentException;
 /**

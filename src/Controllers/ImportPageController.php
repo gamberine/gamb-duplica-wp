@@ -7,16 +7,16 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
 use GAMB_DUPLICA_WP_Global_Entity;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Controllers\AbstractMenuPageController;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Package\Import\PackageImporter;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Controllers\AbstractMenuPageController;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Package\Import\PackageImporter;
 
 class ImportPageController extends AbstractMenuPageController
 {
@@ -51,7 +51,7 @@ class ImportPageController extends AbstractMenuPageController
      */
     public function isEnabled()
     {
-        return !((bool) gamb-duplica-wp_PRO_DISALLOW_IMPORT); // @phpstan-ignore-line
+        return !((bool) GambDuplicaWP_PRO_DISALLOW_IMPORT); // @phpstan-ignore-line
     }
 
     /**

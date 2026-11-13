@@ -2,11 +2,11 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Installer\Package\DescriptorSubsite;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Installer\Package\DescriptorSubsite;
+use GambDuplicaWP\Libs\Snap\SnapDB;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 
 class GAMB_DUPLICA_WP_MU_Generations
 {

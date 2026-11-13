@@ -14,8 +14,8 @@ defined("ABSPATH") or die("");
  * @var array<string, mixed> $tplData
  */
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Utils\LockUtil;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Utils\LockUtil;
 
 $global  = GAMB_DUPLICA_WP_Global_Entity::getInstance();
 $sglobal = GAMB_DUPLICA_WP_Secure_Global_Entity::getInstance();

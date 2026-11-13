@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Snap;
+namespace GambDuplicaWP\Libs\Snap;
 
 class Snap32BitSizeLimitException extends \Exception
 {

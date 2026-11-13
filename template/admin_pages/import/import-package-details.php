@@ -5,9 +5,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Installer\Package\PComponents;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\Import\PackageImporter;
+use GambDuplicaWP\Installer\Package\PComponents;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Import\PackageImporter;
 
 defined("ABSPATH") or die("");
 

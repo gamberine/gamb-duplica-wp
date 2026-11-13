@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Models\Storages;
+namespace GambDuplicaWP\Models\Storages;
 
 use classObj;
 use GAMB_DUPLICA_WP_Global_Entity;
@@ -10,18 +10,18 @@ use GAMB_DUPLICA_WP_Package_Upload_Info;
 use GAMB_DUPLICA_WP_Schedule_Entity;
 use GAMB_DUPLICA_WP_Storage_Entity;
 use DateTime;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Utils\IncrementalStatusMessage;
-use gamb-duplica-wp\Utils\Settings\ModelMigrateSettingsInterface;
-use gamb-duplica-wp\Package\Storage\StorageTransferChunkFiles;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\IncrementalStatusMessage;
+use GambDuplicaWP\Utils\Settings\ModelMigrateSettingsInterface;
+use GambDuplicaWP\Package\Storage\StorageTransferChunkFiles;
 use Error;
 use Exception;
 use ReflectionClass;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 
 abstract class AbstractStorageEntity extends GAMB_DUPLICA_WP_Storage_Entity implements AbstractStorageEntityInterface, ModelMigrateSettingsInterface
 {
@@ -565,8 +565,8 @@ abstract class AbstractStorageEntity extends GAMB_DUPLICA_WP_Storage_Entity impl
     {
         GAMB_DUPLICA_WP_Log::infoTrace("Copyng to Storage " . $this->name . '[ID: ' . $this->id . '] type:' . $this->getStypeName());
 
-        $archiveTmpPath   = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' . $package->Archive->getArchiveName() . '.part';
-        $installerTmpPath = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' . $package->Installer->getInstallerName() . '.part';
+        $archiveTmpPath   = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' . $package->Archive->getArchiveName() . '.part';
+        $installerTmpPath = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' . $package->Installer->getInstallerName() . '.part';
         $replacements     = [
             $package->Installer->getInstallerName() => $installerTmpPath,
             $package->Archive->getArchiveName()     => $archiveTmpPath,
@@ -692,7 +692,7 @@ abstract class AbstractStorageEntity extends GAMB_DUPLICA_WP_Storage_Entity impl
         $fullFilesList = $adapter->scanDir('', true, false);
         $packagesList  = array_filter(
             $fullFilesList,
-            fn($file): bool => preg_match(gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN, $file) === 1
+            fn($file): bool => preg_match(GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN, $file) === 1
         );
         return ($this->config['max_packages'] > 0 && count($packagesList) >= $this->config['max_packages']);
     }
@@ -727,7 +727,7 @@ abstract class AbstractStorageEntity extends GAMB_DUPLICA_WP_Storage_Entity impl
                 }
                 $result[] = $file;
 
-                if (preg_match(gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN, $file) !== 1) {
+                if (preg_match(GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN, $file) !== 1) {
                     // Skip non-archive files
                     continue;
                 }
@@ -769,7 +769,7 @@ abstract class AbstractStorageEntity extends GAMB_DUPLICA_WP_Storage_Entity impl
     {
         $backupList = array_filter(
             $fullFileList,
-            fn($file): bool => preg_match(gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN, $file) === 1
+            fn($file): bool => preg_match(GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN, $file) === 1
         );
 
         if (count($backupList) <= $maxBackups) {

@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Signature;
+namespace VendorGambDuplicaWP\Aws\Signature;
 
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Interface used to provide interchangeable strategies for signing requests
  * using the various AWS signature protocols.

@@ -12,9 +12,9 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Utils\Log\LogHandler;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Utils\Log\LogHandler;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 class DUPX_Validation_test_wordfence extends DUPX_Validation_abstract_item
 {

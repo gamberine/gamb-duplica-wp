@@ -8,10 +8,10 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\DH;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\DH;
 
-use VendorDuplicator\phpseclib3\Crypt\Common;
-use VendorDuplicator\phpseclib3\Crypt\DH;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DH;
 /**
  * DH Public Key
  *
@@ -35,7 +35,7 @@ final class PublicKey extends DH
     /**
      * Returns the public key as a BigInteger
      *
-     * @return \VendorDuplicator\phpseclib3\Math\BigInteger
+     * @return \VendorGambDuplicaWP\phpseclib3\Math\BigInteger
      */
     public function toBigInteger()
     {

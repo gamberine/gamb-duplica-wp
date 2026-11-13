@@ -7,7 +7,7 @@ jQuery(document).ready(function () {
 
     var data = {
         action: 'gamb-duplica-wp_pro_process_worker',
-        nonce: dp_gateway.gamb-duplica-wp_pro_process_worker_nonce,
+        nonce: dp_gateway['GambDuplicaWP_pro_process_worker_nonce'],
     }
 
     dp_kickme = function () {

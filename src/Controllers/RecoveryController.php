@@ -1,10 +1,10 @@
 <?php
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
 use Error;
 use Exception;
 
@@ -24,7 +24,7 @@ class RecoveryController
      */
     public static function isDisallow()
     {
-        return (bool) gamb-duplica-wp_PRO_DISALLOW_RECOVERY;
+        return (bool) GambDuplicaWP_PRO_DISALLOW_RECOVERY;
     }
 
     /**

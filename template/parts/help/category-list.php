@@ -5,8 +5,8 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Utils\Help\Category;
-use gamb-duplica-wp\Utils\Help\Help;
+use GambDuplicaWP\Utils\Help\Category;
+use GambDuplicaWP\Utils\Help\Help;
 
 defined("ABSPATH") or die("");
 
@@ -29,7 +29,7 @@ if (empty($categories)) : ?>
                     '%1$s and %2$s are the opening and closing tags for the link to the online docs.',
                     'gamb-duplica-wp'
                 ),
-                '<a href="' . esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'docs') . '" target="_blank">',
+                '<a href="' . esc_url(GambDuplicaWP_PRO_BLOG_URL . 'docs') . '" target="_blank">',
                 '</a>'
             );
         ?>

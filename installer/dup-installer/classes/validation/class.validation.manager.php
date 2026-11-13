@@ -12,8 +12,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Bootstrap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Bootstrap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 
 require_once(DUPX_INIT . '/classes/validation/class.validation.database.service.php');
 require_once(DUPX_INIT . '/classes/validation/class.validation.abstract.item.php');

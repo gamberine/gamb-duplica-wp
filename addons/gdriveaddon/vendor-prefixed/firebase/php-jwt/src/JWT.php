@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Firebase\JWT;
+namespace VendorGambDuplicaWP\Firebase\JWT;
 
 use ArrayAccess;
 use DateTime;
@@ -221,7 +221,7 @@ class JWT
                 }
                 return $signature;
             case 'sodium_crypto':
-                if (!\function_exists('sodium_crypto_sign_detached') && !\function_exists('VendorDuplicator\sodium_crypto_sign_detached')) {
+                if (!\function_exists('sodium_crypto_sign_detached') && !\function_exists('VendorGambDuplicaWP\sodium_crypto_sign_detached')) {
                     throw new DomainException('libsodium is not available');
                 }
                 if (!\is_string($key)) {
@@ -273,7 +273,7 @@ class JWT
                 // returns 1 on success, 0 on failure, -1 on error.
                 throw new DomainException('OpenSSL error: ' . \openssl_error_string());
             case 'sodium_crypto':
-                if (!\function_exists('sodium_crypto_sign_verify_detached') && !\function_exists('VendorDuplicator\sodium_crypto_sign_verify_detached')) {
+                if (!\function_exists('sodium_crypto_sign_verify_detached') && !\function_exists('VendorGambDuplicaWP\sodium_crypto_sign_verify_detached')) {
                     throw new DomainException('libsodium is not available');
                 }
                 if (!\is_string($keyMaterial)) {

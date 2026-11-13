@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Token;
+namespace VendorGambDuplicaWP\Aws\Token;
 
-use VendorDuplicator\Aws\Exception\TokenException;
-use VendorDuplicator\Aws\SSOOIDC\SSOOIDCClient;
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Aws\Exception\TokenException;
+use VendorGambDuplicaWP\Aws\SSOOIDC\SSOOIDCClient;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 /**
  * Token that comes from the SSO provider
  */

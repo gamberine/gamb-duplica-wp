@@ -12,12 +12,12 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\AES;
-use VendorDuplicator\phpseclib3\Crypt\Random;
-use VendorDuplicator\phpseclib3\Exception\BadDecryptionException;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\AES;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Random;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadDecryptionException;
 /**
  * OpenSSH Formatted RSA Key Handler
  *

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Credentials;
+namespace VendorGambDuplicaWP\Aws\Credentials;
 
 /**
  * Provides access to the AWS credentials used for accessing AWS services: AWS

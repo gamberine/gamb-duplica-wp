@@ -12,10 +12,10 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Math;
+namespace VendorGambDuplicaWP\phpseclib3\Math;
 
-use VendorDuplicator\phpseclib3\Math\Common\FiniteField;
-use VendorDuplicator\phpseclib3\Math\PrimeField\Integer;
+use VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField;
+use VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer;
 /**
  * Prime Finite Fields
  *

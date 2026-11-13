@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax\FileTransfer;
+namespace GambDuplicaWP\Ajax\FileTransfer;
 
 use GAMB_DUPLICA_WP_Log;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Requests;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use GambDuplicaWP\Libs\Snap\SnapURL;
 use Exception;
 
 class RemoteDownloadCustom

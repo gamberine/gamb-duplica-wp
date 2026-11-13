@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Package;
+namespace GambDuplicaWP\Package;
 
 use GAMB_DUPLICA_WP_Package_Template_Entity;
 use GAMB_DUPLICA_WP_Schedule_Entity;

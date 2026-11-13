@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointDiscovery;
+namespace VendorGambDuplicaWP\Aws\EndpointDiscovery;
 
 /**
  * Provides access to endpoint discovery configuration options:

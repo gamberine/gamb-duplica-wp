@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Models\Storages\Local\LocalStorage;
+use GambDuplicaWP\Models\Storages\Local\LocalStorage;
 
 defined("ABSPATH") or die("");
 
@@ -38,7 +38,7 @@ $tplMng->render('admin_pages/storages/parts/provider_head');
             '%1$s represents the home directory path',
             'gamb-duplica-wp'
         ),
-        '<b>' . esc_html(gamb-duplica-wp_pro_get_home_path()) . '</b>'
+        '<b>' . esc_html(GambDuplicaWP_pro_get_home_path()) . '</b>'
     ); ?><br>
 <?php esc_html_e("On Linux servers start with '/' (e.g. /mypath). On Windows use drive letters (e.g. E:/mypath).", 'gamb-duplica-wp'); ?><br>
 <?php esc_html_e("If you are unsure of the path, contact your hosting provider.", 'gamb-duplica-wp'); ?><br>

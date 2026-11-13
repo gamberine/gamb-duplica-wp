@@ -6,10 +6,10 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Views\AdminNotices;
 
 /**
  * Variables
@@ -182,11 +182,11 @@ $fullEditUrl = ControllersManager::getMenuLink(
         
         DupPro.Storage.RevokeAuth = function (storageId)
         {
-            gamb-duplica-wp.Util.ajaxWrapper(
+            GambDuplicaWP.Util.ajaxWrapper(
                 {
                     action: 'gamb-duplica-wp_pro_revoke_storage',
                     storage_id: storageId,
-                    nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_revoke_storage')); ?>'
+                    nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_revoke_storage')); ?>'
                 },
                 function (result, data, funcData, textStatus, jqXHR) {
                     if (funcData.success) {
@@ -208,9 +208,9 @@ $fullEditUrl = ControllersManager::getMenuLink(
             extraData.action       = 'gamb-duplica-wp_pro_auth_storage';
             extraData.storage_id   = storageId;
             extraData.storage_type = storageType;
-            extraData.nonce = '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_auth_storage')); ?>';
+            extraData.nonce = '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_auth_storage')); ?>';
 
-            gamb-duplica-wp.Util.ajaxWrapper(
+            GambDuplicaWP.Util.ajaxWrapper(
                 extraData,
                 function (result, data, funcData, textStatus, jqXHR) {
                     if (funcData.success) {

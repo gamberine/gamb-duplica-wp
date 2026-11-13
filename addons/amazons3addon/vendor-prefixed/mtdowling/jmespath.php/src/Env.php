@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\JmesPath;
+namespace VendorGambDuplicaWP\JmesPath;
 
 /**
  * Provides a simple environment based search.

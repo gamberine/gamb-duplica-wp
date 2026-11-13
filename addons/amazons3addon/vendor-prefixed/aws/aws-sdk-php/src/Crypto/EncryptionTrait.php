@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\AppendStream;
-use VendorDuplicator\GuzzleHttp\Psr7\Stream;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\AppendStream;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Stream;
 trait EncryptionTrait
 {
     private static $allowedOptions = ['Cipher' => \true, 'KeySize' => \true, 'Aad' => \true];

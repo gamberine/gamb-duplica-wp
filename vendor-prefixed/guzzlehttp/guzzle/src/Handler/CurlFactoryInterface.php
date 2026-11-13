@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Handler;
+namespace VendorGambDuplicaWP\GuzzleHttp\Handler;
 
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 interface CurlFactoryInterface
 {
     /**

@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Index;
+namespace GambDuplicaWP\Libs\Index;
 
-use gamb-duplica-wp\Libs\Binary\BinaryFormat;
-use gamb-duplica-wp\Libs\Binary\BinaryIO;
+use GambDuplicaWP\Libs\Binary\BinaryFormat;
+use GambDuplicaWP\Libs\Binary\BinaryIO;
 use Generator;
 
 /**

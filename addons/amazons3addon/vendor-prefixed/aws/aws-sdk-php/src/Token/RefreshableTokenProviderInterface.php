@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Token;
+namespace VendorGambDuplicaWP\Aws\Token;
 
 /**
  * Provides access to an AWS token used for accessing AWS services

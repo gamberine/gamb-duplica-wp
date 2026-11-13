@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
 <div id="dup-notifications">
     <div class="dup-notifications-header">
         <div class="dup-notifications-bell">
-        <img src="<?php echo esc_url(gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/img/notification-bell.svg') ?>"/>
+        <img src="<?php echo esc_url(GambDuplicaWP_PRO_PLUGIN_URL . 'assets/img/notification-bell.svg') ?>"/>
             <span class="wp-ui-notification dup-notifications-circle"></span>
         </div>
         <div class="dup-notifications-title"><?php esc_html_e('Notifications', 'gamb-duplica-wp'); ?></div>

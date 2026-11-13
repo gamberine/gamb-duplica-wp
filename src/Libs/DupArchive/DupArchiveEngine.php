@@ -6,22 +6,22 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive;
+namespace GambDuplicaWP\Libs\DupArchive;
 
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveDirectoryHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveFileHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveGlobHeader;
-use gamb-duplica-wp\Libs\DupArchive\Info\DupArchiveInfo;
-use gamb-duplica-wp\Libs\DupArchive\Processors\DupArchiveDirectoryProcessor;
-use gamb-duplica-wp\Libs\DupArchive\Processors\DupArchiveFileProcessor;
-use gamb-duplica-wp\Libs\DupArchive\Processors\DupArchiveProcessingFailure;
-use gamb-duplica-wp\Libs\DupArchive\States\DupArchiveCreateState;
-use gamb-duplica-wp\Libs\DupArchive\States\DupArchiveExpandState;
-use gamb-duplica-wp\Libs\DupArchive\Utils\DupArchiveScanUtil;
-use gamb-duplica-wp\Libs\DupArchive\Utils\DupArchiveUtil;
-use gamb-duplica-wp\Libs\Snap\Snap32BitSizeLimitException;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveDirectoryHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveFileHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveGlobHeader;
+use GambDuplicaWP\Libs\DupArchive\Info\DupArchiveInfo;
+use GambDuplicaWP\Libs\DupArchive\Processors\DupArchiveDirectoryProcessor;
+use GambDuplicaWP\Libs\DupArchive\Processors\DupArchiveFileProcessor;
+use GambDuplicaWP\Libs\DupArchive\Processors\DupArchiveProcessingFailure;
+use GambDuplicaWP\Libs\DupArchive\States\DupArchiveCreateState;
+use GambDuplicaWP\Libs\DupArchive\States\DupArchiveExpandState;
+use GambDuplicaWP\Libs\DupArchive\Utils\DupArchiveScanUtil;
+use GambDuplicaWP\Libs\DupArchive\Utils\DupArchiveUtil;
+use GambDuplicaWP\Libs\Snap\Snap32BitSizeLimitException;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use Exception;
 use ErrorException;
 use stdClass;

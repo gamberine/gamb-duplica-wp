@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\OneDriveAddon\Models\OneDriveStorage;
+use GambDuplicaWP\Addons\OneDriveAddon\Models\OneDriveStorage;
 
 defined("ABSPATH") or die("");
 
@@ -68,7 +68,7 @@ $tplMng->render('admin_pages/storages/parts/provider_head');
                 >
                     <i class="fa fa-plug"></i> <?php esc_html_e('Connect to OneDrive', 'gamb-duplica-wp'); ?>
                     <img
-                        src="<?php echo esc_url(gamb-duplica-wp_PRO_IMG_URL . '/onedrive.svg'); ?>"
+                        src="<?php echo esc_url(GambDuplicaWP_PRO_IMG_URL . '/onedrive.svg'); ?>"
                         style='vertical-align: middle; margin:-2px 0 0 3px; height:18px; width:18px'
                     >
                 </button>

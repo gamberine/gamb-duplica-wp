@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 
 defined("ABSPATH") or die("");
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Crypto;
+namespace VendorGambDuplicaWP\Aws\S3\Crypto;
 
-use VendorDuplicator\Aws\Crypto\MaterialsProviderInterfaceV2;
+use VendorGambDuplicaWP\Aws\Crypto\MaterialsProviderInterfaceV2;
 trait CryptoParamsTraitV2
 {
     use CryptoParamsTrait;

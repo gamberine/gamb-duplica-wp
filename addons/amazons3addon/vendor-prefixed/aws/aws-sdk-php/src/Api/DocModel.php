@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api;
+namespace VendorGambDuplicaWP\Aws\Api;
 
 /**
  * Encapsulates the documentation strings for a given service-version and

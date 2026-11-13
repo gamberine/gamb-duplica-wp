@@ -97,7 +97,7 @@
            url: ajaxurl,
            data: {
                action: 'gamb-duplica-wp_pro_delete_trace_log',
-               nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_delete_trace_log')); ?>'
+               nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_delete_trace_log')); ?>'
            },
            success: function (respData) {
                if (reload && respData.success) {

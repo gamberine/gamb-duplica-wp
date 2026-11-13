@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Libs\Snap\FunctionalityCheck;
+use GambDuplicaWP\Libs\Snap\FunctionalityCheck;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

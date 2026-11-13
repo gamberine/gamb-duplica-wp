@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Serializer;
+namespace VendorGambDuplicaWP\Aws\Api\Serializer;
 
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\Api\ListShape;
-use VendorDuplicator\Aws\Api\MapShape;
-use VendorDuplicator\Aws\Api\Shape;
-use VendorDuplicator\Aws\Api\TimestampShape;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\Api\ListShape;
+use VendorGambDuplicaWP\Aws\Api\MapShape;
+use VendorGambDuplicaWP\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\Api\TimestampShape;
 /**
  * @internal
  */

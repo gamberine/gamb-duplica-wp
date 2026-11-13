@@ -10,11 +10,11 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Math\BigInteger\Engines\PHP;
+namespace VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\PHP;
 
-use VendorDuplicator\phpseclib3\Math\BigInteger\Engines\Engine;
-use VendorDuplicator\phpseclib3\Math\BigInteger\Engines\PHP;
-use VendorDuplicator\phpseclib3\Math\BigInteger\Engines\PHP\Reductions\PowerOfTwo;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\Engine;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\PHP;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\PHP\Reductions\PowerOfTwo;
 /**
  * PHP Montgomery Modular Exponentiation Engine
  *

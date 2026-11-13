@@ -15,15 +15,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Http;
+namespace VendorGambDuplicaWP\Google\Http;
 
-use VendorDuplicator\Google\Client;
-use VendorDuplicator\Google\Service\Exception as GoogleServiceException;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\GuzzleHttp\Psr7\Response;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Google\Client;
+use VendorGambDuplicaWP\Google\Service\Exception as GoogleServiceException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Response;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * Class to handle batched requests to the Google API service.
  *

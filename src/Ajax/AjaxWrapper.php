@@ -5,13 +5,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
 use GAMB_DUPLICA_WP_Handler;
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use Error;
 use Exception;
 
@@ -147,10 +147,10 @@ class AjaxWrapper
                 throw new Exception('Unexpected output');
             }
 
-            \gamb-duplica-wp\Libs\Snap\SnapIO::serveFileForDownload(
+            \GambDuplicaWP\Libs\Snap\SnapIO::serveFileForDownload(
                 $fileInfo['path'],
                 $fileInfo['name'],
-                gamb-duplica-wp_PRO_BUFFER_DOWNLOAD_SIZE
+                GambDuplicaWP_PRO_BUFFER_DOWNLOAD_SIZE
             );
         } catch (Exception | Error $e) {
             GAMB_DUPLICA_WP_Log::traceException($e, 'Error executing ajax callback file download');

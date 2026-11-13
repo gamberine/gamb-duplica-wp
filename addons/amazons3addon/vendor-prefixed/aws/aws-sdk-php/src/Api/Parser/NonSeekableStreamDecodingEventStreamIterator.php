@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser;
+namespace VendorGambDuplicaWP\Aws\Api\Parser;
 
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
-use VendorDuplicator\Aws\Api\Parser\Exception\ParserException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Api\Parser\Exception\ParserException;
 /**
  * @inheritDoc
  */

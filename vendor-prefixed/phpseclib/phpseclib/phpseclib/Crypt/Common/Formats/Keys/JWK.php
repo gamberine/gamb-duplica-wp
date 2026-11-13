@@ -10,9 +10,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
 /**
  * JSON Web Key Formatted Key Handler
  *

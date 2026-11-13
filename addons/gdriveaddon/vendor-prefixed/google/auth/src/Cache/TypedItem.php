@@ -15,9 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Cache;
+namespace VendorGambDuplicaWP\Google\Auth\Cache;
 
-use VendorDuplicator\Psr\Cache\CacheItemInterface;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemInterface;
 /**
  * A cache item.
  *

@@ -5,10 +5,10 @@
  *
  * @package Requests\Exceptions
  */
-namespace VendorDuplicator\WpOrg\Requests\Exception;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Exception;
 
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\Http\StatusUnknown;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\StatusUnknown;
 /**
  * Exception based on HTTP response
  *
@@ -65,7 +65,7 @@ class Http extends Exception
         if (!$code) {
             return StatusUnknown::class;
         }
-        $class = sprintf('\VendorDuplicator\\WpOrg\Requests\Exception\Http\Status%d', $code);
+        $class = sprintf('\VendorGambDuplicaWP\\WpOrg\Requests\Exception\Http\Status%d', $code);
         if (class_exists($class)) {
             return $class;
         }

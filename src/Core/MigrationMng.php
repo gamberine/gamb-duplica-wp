@@ -5,32 +5,32 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core;
+namespace GambDuplicaWP\Core;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Schedule_Entity;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Upgrade\UpgradeFunctions;
-use gamb-duplica-wp\Core\Upgrade\UpgradePlugin;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Models\MigrateData;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Package\Import\PackageImporter;
-use gamb-duplica-wp\Package\PackageUtils;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
-use gamb-duplica-wp\Utils\CachesPurge\CachesPurge;
-use gamb-duplica-wp\Utils\Email\EmailSummary;
-use gamb-duplica-wp\Utils\UsageStatistics\CommStats;
-use gamb-duplica-wp\Utils\UsageStatistics\PluginData;
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Upgrade\UpgradeFunctions;
+use GambDuplicaWP\Core\Upgrade\UpgradePlugin;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Models\MigrateData;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Package\Import\PackageImporter;
+use GambDuplicaWP\Package\PackageUtils;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Utils\CachesPurge\CachesPurge;
+use GambDuplicaWP\Utils\Email\EmailSummary;
+use GambDuplicaWP\Utils\UsageStatistics\CommStats;
+use GambDuplicaWP\Utils\UsageStatistics\PluginData;
+use GambDuplicaWP\Views\AdminNotices;
 use Error;
 use Exception;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 
 /**
  * After install migration class
@@ -414,7 +414,7 @@ class MigrationMng
             $hash        = $matches[2];
             $matches     = null;
 
-            if (preg_match(gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN, $archiveName, $matches) !== 1) {
+            if (preg_match(GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN, $archiveName, $matches) !== 1) {
                 if (SnapIO::unlink($file)) {
                     self::$migrationCleanupReport['instFile'][] = "<div class='failure'>"
                         . "<i class='fa fa-check green'></i> "
@@ -458,9 +458,9 @@ class MigrationMng
      */
     public static function storeMigrationFiles(MigrateData $migrationData)
     {
-        wp_mkdir_p(gamb-duplica-wp_PRO_SSDIR_PATH_INSTALLER);
-        SnapIO::emptyDir(gamb-duplica-wp_PRO_SSDIR_PATH_INSTALLER);
-        SnapIO::createSilenceIndex(gamb-duplica-wp_PRO_SSDIR_PATH_INSTALLER);
+        wp_mkdir_p(GambDuplicaWP_PRO_SSDIR_PATH_INSTALLER);
+        SnapIO::emptyDir(GambDuplicaWP_PRO_SSDIR_PATH_INSTALLER);
+        SnapIO::createSilenceIndex(GambDuplicaWP_PRO_SSDIR_PATH_INSTALLER);
 
         $filesToMove = [
             $migrationData->installerLog,
@@ -470,7 +470,7 @@ class MigrationMng
 
         foreach ($filesToMove as $path) {
             if (file_exists($path)) {
-                if (SnapIO::rcopy($path, gamb-duplica-wp_PRO_SSDIR_PATH_INSTALLER . '/' . basename($path))) {
+                if (SnapIO::rcopy($path, GambDuplicaWP_PRO_SSDIR_PATH_INSTALLER . '/' . basename($path))) {
                     self::$migrationCleanupReport['stored'][] = "<div class='success'>"
                         . "<i class='fa fa-check'></i> "
                         . __('Original files folder moved in installer backup directory', 'gamb-duplica-wp') . " - " . esc_html($path) .
@@ -478,7 +478,7 @@ class MigrationMng
                 } else {
                     self::$migrationCleanupReport['stored'][] = "<div class='success'>"
                         . '<i class="fa fa-exclamation-triangle"></i> '
-                        . sprintf(__('Can\'t move %1$s to %2$s', 'gamb-duplica-wp'), esc_html($path), gamb-duplica-wp_PRO_SSDIR_PATH_INSTALLER)
+                        . sprintf(__('Can\'t move %1$s to %2$s', 'gamb-duplica-wp'), esc_html($path), GambDuplicaWP_PRO_SSDIR_PATH_INSTALLER)
                         . '</div>';
                 }
             }
@@ -505,7 +505,7 @@ class MigrationMng
         $result = [];
 
         foreach ($filesToCheck as $path => $label) {
-            $storedPath = gamb-duplica-wp_PRO_SSDIR_PATH_INSTALLER . '/' . basename($path);
+            $storedPath = GambDuplicaWP_PRO_SSDIR_PATH_INSTALLER . '/' . basename($path);
             if (!file_exists($storedPath)) {
                 continue;
             }
@@ -594,12 +594,12 @@ class MigrationMng
         foreach ($foldersToChkeck as $folder) {
             $result = array_merge($result, SnapIO::regexGlob($folder, [
                 'regexFile'   => [
-                    gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN,
-                    gamb-duplica-wp_PRO_INSTALLER_REGEX_PATTERN,
-                    gamb-duplica-wp_PRO_DUP_INSTALLER_BOOTLOG_REGEX_PATTERN,
-                    gamb-duplica-wp_PRO_DUP_INSTALLER_OWRPARAM_REGEX_PATTERN,
+                    GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN,
+                    GambDuplicaWP_PRO_INSTALLER_REGEX_PATTERN,
+                    GambDuplicaWP_PRO_DUP_INSTALLER_BOOTLOG_REGEX_PATTERN,
+                    GambDuplicaWP_PRO_DUP_INSTALLER_OWRPARAM_REGEX_PATTERN,
                 ],
-                'regexFolder' => [gamb-duplica-wp_PRO_DUP_INSTALLER_FOLDER_REGEX_PATTERN],
+                'regexFolder' => [GambDuplicaWP_PRO_DUP_INSTALLER_FOLDER_REGEX_PATTERN],
             ]));
         }
 

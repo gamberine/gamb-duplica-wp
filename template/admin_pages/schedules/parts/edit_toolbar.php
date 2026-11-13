@@ -7,9 +7,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\SchedulePageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Controllers\SchedulePageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 defined("ABSPATH") or die("");
 

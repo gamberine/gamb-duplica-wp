@@ -9,11 +9,11 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Formatter;
+namespace VendorGambDuplicaWP\Monolog\Formatter;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Gelf\Message;
-use VendorDuplicator\Monolog\Utils;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Gelf\Message;
+use VendorGambDuplicaWP\Monolog\Utils;
 /**
  * Serializes a log message to GELF
  * @see http://docs.graylog.org/en/latest/pages/gelf.html

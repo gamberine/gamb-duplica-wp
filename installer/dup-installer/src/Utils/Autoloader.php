@@ -4,18 +4,18 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Utils;
+namespace GambDuplicaWP\Installer\Utils;
 
 /**
  * Autoloader class
  */
 final class Autoloader
 {
-    const ROOT_NAMESPACE                 = 'gamb-duplica-wp\\';
+    const ROOT_NAMESPACE                 = 'GambDuplicaWP\\';
     const ROOT_INSTALLER_NAMESPACE       = self::ROOT_NAMESPACE . 'Installer\\';
     const ROOT_ADDON_INSTALLER_NAMESPACE = self::ROOT_INSTALLER_NAMESPACE . 'Addons\\';
     const ROOT_LIBS_NAMESPACE            = self::ROOT_NAMESPACE . 'Libs\\';
-    const ROOT_VENDOR                    = 'Vendorgamb-duplica-wp\\';
+    const ROOT_VENDOR                    = 'VendorGambDuplicaWP\\';
     const VENDOR_PATH                    = DUPX_INIT . '/vendor-prefixed/';
 
     /**
@@ -95,7 +95,7 @@ final class Autoloader
     protected static function getAddonFile($class)
     {
         $matches = null;
-        if (preg_match('/^\\\\?gamb-duplica-wp\\\\Installer\\\\Addons\\\\(.+?)\\\\(.+)$/', $class, $matches) !== 1) {
+        if (preg_match('/^\\\\?GambDuplicaWP\\\\Installer\\\\Addons\\\\(.+?)\\\\(.+)$/', $class, $matches) !== 1) {
             return false;
         }
 

@@ -6,12 +6,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\FtpAddon\Models;
+namespace GambDuplicaWP\Addons\FtpAddon\Models;
 
-use gamb-duplica-wp\Addons\FtpAddon\Utils\FTPUtils;
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Addons\FtpAddon\Utils\FTPUtils;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
 use FTP\Connection;
 use Exception;
 

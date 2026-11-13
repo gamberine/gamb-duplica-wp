@@ -4,9 +4,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Package;
+namespace GambDuplicaWP\Installer\Package;
 
-use gamb-duplica-wp\Installer\Addons\ProBase\AbstractLicense;
+use GambDuplicaWP\Installer\Addons\ProBase\AbstractLicense;
 
 class ArchiveDescriptor
 {

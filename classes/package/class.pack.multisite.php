@@ -1,6 +1,6 @@
 <?php
 
-use gamb-duplica-wp\Libs\Snap\SnapDB;
+use GambDuplicaWP\Libs\Snap\SnapDB;
 
 class GAMB_DUPLICA_WP_Multisite
 {

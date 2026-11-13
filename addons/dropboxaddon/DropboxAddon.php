@@ -1,11 +1,11 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\DropboxAddon;
+namespace GambDuplicaWP\Addons\DropboxAddon;
 
-use gamb-duplica-wp\Addons\DropboxAddon\Models\DropboxStorage;
-use gamb-duplica-wp\Addons\DropboxAddon\Utils\Autoloader;
-use gamb-duplica-wp\Core\Addons\AbstractAddonCore;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Addons\DropboxAddon\Models\DropboxStorage;
+use GambDuplicaWP\Addons\DropboxAddon\Utils\Autoloader;
+use GambDuplicaWP\Core\Addons\AbstractAddonCore;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 class DropboxAddon extends AbstractAddonCore
 {

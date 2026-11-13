@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\Retry\ConfigurationInterface;
-use VendorDuplicator\Aws\Retry\QuotaManager;
-use VendorDuplicator\Aws\Retry\RateLimiter;
-use VendorDuplicator\Aws\Retry\RetryHelperTrait;
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Retry\ConfigurationInterface;
+use VendorGambDuplicaWP\Aws\Retry\QuotaManager;
+use VendorGambDuplicaWP\Aws\Retry\RateLimiter;
+use VendorGambDuplicaWP\Aws\Retry\RetryHelperTrait;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Middleware that retries failures. V2 implementation that supports 'standard'
  * and 'adaptive' modes.

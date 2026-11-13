@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Psr\Log;
+namespace VendorGambDuplicaWP\Psr\Log;
 
 /**
  * Describes a logger instance.
@@ -111,7 +111,7 @@ interface LoggerInterface
      *
      * @return void
      *
-     * @throws \VendorDuplicator\Psr\Log\InvalidArgumentException
+     * @throws \VendorGambDuplicaWP\Psr\Log\InvalidArgumentException
      */
     public function log($level, $message, array $context = array());
 }

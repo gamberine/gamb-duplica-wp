@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
 abstract class MaterialsProvider implements MaterialsProviderInterface
 {

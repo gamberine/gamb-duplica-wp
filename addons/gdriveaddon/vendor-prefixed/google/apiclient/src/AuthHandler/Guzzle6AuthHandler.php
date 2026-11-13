@@ -1,16 +1,16 @@
 <?php
 
-namespace VendorDuplicator\Google\AuthHandler;
+namespace VendorGambDuplicaWP\Google\AuthHandler;
 
-use VendorDuplicator\Google\Auth\CredentialsLoader;
-use VendorDuplicator\Google\Auth\FetchAuthTokenCache;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\Google\Auth\Middleware\AuthTokenMiddleware;
-use VendorDuplicator\Google\Auth\Middleware\ScopedAccessTokenMiddleware;
-use VendorDuplicator\Google\Auth\Middleware\SimpleMiddleware;
-use VendorDuplicator\GuzzleHttp\Client;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\Google\Auth\CredentialsLoader;
+use VendorGambDuplicaWP\Google\Auth\FetchAuthTokenCache;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\Google\Auth\Middleware\AuthTokenMiddleware;
+use VendorGambDuplicaWP\Google\Auth\Middleware\ScopedAccessTokenMiddleware;
+use VendorGambDuplicaWP\Google\Auth\Middleware\SimpleMiddleware;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
 /**
  * This supports Guzzle 6
  */

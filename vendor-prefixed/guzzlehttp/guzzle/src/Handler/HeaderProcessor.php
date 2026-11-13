@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Handler;
+namespace VendorGambDuplicaWP\GuzzleHttp\Handler;
 
-use VendorDuplicator\GuzzleHttp\Utils;
+use VendorGambDuplicaWP\GuzzleHttp\Utils;
 /**
  * @internal
  */

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
 /**
  * A command object encapsulates the input parameters used to control the

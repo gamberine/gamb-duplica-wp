@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Psr\Cache;
+namespace VendorGambDuplicaWP\Psr\Cache;
 
 /**
  * Exception interface for all exceptions thrown by an Implementing Library.

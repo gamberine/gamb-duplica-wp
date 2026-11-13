@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Identity\S3;
+namespace VendorGambDuplicaWP\Aws\Identity\S3;
 
-use VendorDuplicator\Aws;
-use VendorDuplicator\Aws\LruArrayCache;
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Aws;
+use VendorGambDuplicaWP\Aws\LruArrayCache;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 class S3ExpressIdentityProvider
 {
     private $cache;

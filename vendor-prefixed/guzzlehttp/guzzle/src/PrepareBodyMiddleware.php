@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp;
+namespace VendorGambDuplicaWP\GuzzleHttp;
 
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Prepares requests that contain a body, adding the Content-Length,
  * Content-Type, and Expect headers.

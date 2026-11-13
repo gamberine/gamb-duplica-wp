@@ -12,7 +12,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 class DUPX_Validation_test_db_user_resources extends DUPX_Validation_abstract_item
 {

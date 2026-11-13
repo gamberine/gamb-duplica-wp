@@ -19,12 +19,12 @@
  * @link      https://gamb-duplica-wp.com/
  */
 
-namespace gamb-duplica-wp\Addons\FtpAddon;
+namespace GambDuplicaWP\Addons\FtpAddon;
 
-use gamb-duplica-wp\Addons\FtpAddon\Models\FTPStorage;
-use gamb-duplica-wp\Addons\FtpAddon\Models\SFTPStorage;
-use gamb-duplica-wp\Core\Addons\AbstractAddonCore;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Addons\FtpAddon\Models\FTPStorage;
+use GambDuplicaWP\Addons\FtpAddon\Models\SFTPStorage;
+use GambDuplicaWP\Core\Addons\AbstractAddonCore;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 /**
  * Storage ftp/sftp addon class

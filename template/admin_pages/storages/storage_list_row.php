@@ -6,7 +6,7 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Core\Views\TplMng;
+use GambDuplicaWP\Core\Views\TplMng;
 
 /**
  * Variables

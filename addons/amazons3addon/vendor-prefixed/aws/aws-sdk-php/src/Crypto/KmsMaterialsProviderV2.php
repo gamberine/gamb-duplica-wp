@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\Aws\Exception\CryptoException;
-use VendorDuplicator\Aws\Kms\KmsClient;
+use VendorGambDuplicaWP\Aws\Exception\CryptoException;
+use VendorGambDuplicaWP\Aws\Kms\KmsClient;
 /**
  * Uses KMS to supply materials for encrypting and decrypting data. This
  * V2 implementation should be used with the V2 encryption clients (i.e.

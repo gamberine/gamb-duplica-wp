@@ -15,10 +15,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth;
+namespace VendorGambDuplicaWP\Google\Auth;
 
-use VendorDuplicator\phpseclib3\Crypt\PublicKeyLoader;
-use VendorDuplicator\phpseclib3\Crypt\RSA;
+use VendorGambDuplicaWP\phpseclib3\Crypt\PublicKeyLoader;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
 /**
  * Sign a string using a Service Account private key.
  */

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Psr\Log;
+namespace VendorGambDuplicaWP\Psr\Log;
 
 /**
  * This Logger can be used to avoid conditional log calls.
@@ -21,7 +21,7 @@ class NullLogger extends AbstractLogger
      *
      * @return void
      *
-     * @throws \VendorDuplicator\Psr\Log\InvalidArgumentException
+     * @throws \VendorGambDuplicaWP\Psr\Log\InvalidArgumentException
      */
     public function log($level, $message, array $context = array())
     {

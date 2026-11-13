@@ -1,19 +1,19 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Api\ApiProvider;
-use VendorDuplicator\Aws\Api\DocModel;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Auth\AuthSelectionMiddleware;
-use VendorDuplicator\Aws\Auth\AuthSchemeResolverInterface;
-use VendorDuplicator\Aws\EndpointDiscovery\EndpointDiscoveryMiddleware;
-use VendorDuplicator\Aws\EndpointV2\EndpointProviderV2;
-use VendorDuplicator\Aws\EndpointV2\EndpointV2Middleware;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\Signature\SignatureProvider;
-use VendorDuplicator\GuzzleHttp\Psr7\Uri;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Api\ApiProvider;
+use VendorGambDuplicaWP\Aws\Api\DocModel;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Auth\AuthSelectionMiddleware;
+use VendorGambDuplicaWP\Aws\Auth\AuthSchemeResolverInterface;
+use VendorGambDuplicaWP\Aws\EndpointDiscovery\EndpointDiscoveryMiddleware;
+use VendorGambDuplicaWP\Aws\EndpointV2\EndpointProviderV2;
+use VendorGambDuplicaWP\Aws\EndpointV2\EndpointV2Middleware;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Signature\SignatureProvider;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Uri;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Default AWS client implementation
  */
@@ -355,7 +355,7 @@ class AwsClient implements AwsClientInterface
             return ['', AwsException::class];
         }
         $service = substr($klass, strrpos($klass, '\\') + 1, -6);
-        return [strtolower($service), "VendorDuplicator\\Aws\\{$service}\\Exception\\{$service}Exception"];
+        return [strtolower($service), "VendorGambDuplicaWP\\Aws\\{$service}\\Exception\\{$service}Exception"];
     }
     private function addEndpointParameterMiddleware($args)
     {
@@ -448,7 +448,7 @@ class AwsClient implements AwsClientInterface
             if (is_null($file)) {
                 $file = __DIR__ . '/data/aliases.json';
             }
-            $aliases = \VendorDuplicator\Aws\load_compiled_json($file);
+            $aliases = \VendorGambDuplicaWP\Aws\load_compiled_json($file);
             $serviceId = $this->api->getServiceId();
             $version = $this->getApi()->getApiVersion();
             if (!empty($aliases['operations'][$serviceId][$version])) {
@@ -594,7 +594,7 @@ class AwsClient implements AwsClientInterface
      */
     public static function applyDocFilters(array $api, array $docs)
     {
-        $aliases = \VendorDuplicator\Aws\load_compiled_json(__DIR__ . '/data/aliases.json');
+        $aliases = \VendorGambDuplicaWP\Aws\load_compiled_json(__DIR__ . '/data/aliases.json');
         $serviceId = $api['metadata']['serviceId'] ?? '';
         $version = $api['metadata']['apiVersion'];
         // Replace names for any operations with SDK aliases

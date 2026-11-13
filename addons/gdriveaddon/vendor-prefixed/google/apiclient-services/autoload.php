@@ -1,19 +1,19 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 // For older (pre-2.7.2) verions of google/apiclient
-if (\file_exists(__DIR__ . '/../apiclient/src/Google/Client.php') && !\class_exists('VendorDuplicator\Google_Client', \false)) {
+if (\file_exists(__DIR__ . '/../apiclient/src/Google/Client.php') && !\class_exists('VendorGambDuplicaWP\Google_Client', \false)) {
     require_once __DIR__ . '/../apiclient/src/Google/Client.php';
-    if (\defined('VendorDuplicator\\Google_Client::LIBVER') && \version_compare(Google_Client::LIBVER, '2.7.2', '<=')) {
-        $servicesClassMap = ['VendorDuplicator\Google\Client' => 'VendorDuplicator\\Google_Client', 'VendorDuplicator\Google\Service' => 'VendorDuplicator\\Google_Service', 'VendorDuplicator\Google\Service\Resource' => 'VendorDuplicator\\Google_Service_Resource', 'VendorDuplicator\Google\Model' => 'VendorDuplicator\\Google_Model', 'VendorDuplicator\Google\Collection' => 'VendorDuplicator\\Google_Collection'];
+    if (\defined('VendorGambDuplicaWP\\Google_Client::LIBVER') && \version_compare(Google_Client::LIBVER, '2.7.2', '<=')) {
+        $servicesClassMap = ['VendorGambDuplicaWP\Google\Client' => 'VendorGambDuplicaWP\\Google_Client', 'VendorGambDuplicaWP\Google\Service' => 'VendorGambDuplicaWP\\Google_Service', 'VendorGambDuplicaWP\Google\Service\Resource' => 'VendorGambDuplicaWP\\Google_Service_Resource', 'VendorGambDuplicaWP\Google\Model' => 'VendorGambDuplicaWP\\Google_Model', 'VendorGambDuplicaWP\Google\Collection' => 'VendorGambDuplicaWP\\Google_Collection'];
         foreach ($servicesClassMap as $alias => $class) {
             \class_alias($class, $alias);
         }
     }
 }
 \spl_autoload_register(function ($class) {
-    if (0 === \strpos($class, 'VendorDuplicator\\Google_Service_')) {
+    if (0 === \strpos($class, 'VendorGambDuplicaWP\\Google_Service_')) {
         // Autoload the new class, which will also create an alias for the
         // old class by changing underscores to namespaces:
         //     Google_Service_Speech_Resource_Operations

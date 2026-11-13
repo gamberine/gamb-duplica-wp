@@ -5,7 +5,7 @@
  * @package templates/default
  */
 
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

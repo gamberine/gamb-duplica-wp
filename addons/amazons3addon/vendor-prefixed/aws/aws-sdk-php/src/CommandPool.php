@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Promise\PromisorInterface;
-use VendorDuplicator\GuzzleHttp\Promise\EachPromise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromisorInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\EachPromise;
 /**
  * Sends and iterator of commands concurrently using a capped pool size.
  *
@@ -80,7 +80,7 @@ class CommandPool implements PromisorInterface
      * @param array              $config   Configuration options.
      *
      * @return array
-     * @see \VendorDuplicator\Aws\CommandPool::__construct for available configuration options.
+     * @see \VendorGambDuplicaWP\Aws\CommandPool::__construct for available configuration options.
      */
     public static function batch(AwsClientInterface $client, $commands, array $config = [])
     {

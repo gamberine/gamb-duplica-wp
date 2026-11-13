@@ -9,14 +9,14 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Aws\Sdk;
-use VendorDuplicator\Aws\DynamoDb\DynamoDbClient;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Aws\DynamoDb\Marshaler;
-use VendorDuplicator\Monolog\Formatter\ScalarFormatter;
-use VendorDuplicator\Monolog\Logger;
+use VendorGambDuplicaWP\Aws\Sdk;
+use VendorGambDuplicaWP\Aws\DynamoDb\DynamoDbClient;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Aws\DynamoDb\Marshaler;
+use VendorGambDuplicaWP\Monolog\Formatter\ScalarFormatter;
+use VendorGambDuplicaWP\Monolog\Logger;
 /**
  * Amazon DynamoDB handler (http://aws.amazon.com/dynamodb/)
  *
@@ -45,7 +45,7 @@ class DynamoDbHandler extends AbstractProcessingHandler
     public function __construct(DynamoDbClient $client, string $table, $level = Logger::DEBUG, bool $bubble = \true)
     {
         /** @phpstan-ignore-next-line */
-        if (defined('VendorDuplicator\Aws\Sdk::VERSION') && version_compare(Sdk::VERSION, '3.0', '>=')) {
+        if (defined('VendorGambDuplicaWP\Aws\Sdk::VERSION') && version_compare(Sdk::VERSION, '3.0', '>=')) {
             $this->version = 3;
             $this->marshaler = new Marshaler();
         } else {

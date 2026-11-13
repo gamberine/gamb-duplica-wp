@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Google;
+namespace VendorGambDuplicaWP\Google;
 
 /**
  * Extension to the regular Google\Model that automatically

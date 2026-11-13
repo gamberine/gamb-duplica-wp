@@ -5,14 +5,14 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\WpCliAddon;
+namespace GambDuplicaWP\Addons\WpCliAddon;
 
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_PackageStatus;
-use gamb-duplica-wp\Ajax\ServicesPackage;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Ajax\ServicesPackage;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
 use Exception;
 use WP_CLI;
 

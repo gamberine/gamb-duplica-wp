@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\AmazonS3Storage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\AmazonS3Storage;
 
 defined("ABSPATH") or die("");
 

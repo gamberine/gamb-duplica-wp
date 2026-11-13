@@ -6,10 +6,10 @@
  * @package Requests\Utilities
  * @since   2.0.0
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
 /**
  * Find the correct port depending on the Request type.
  *
@@ -51,8 +51,8 @@ final class Port
      *
      * @return int
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When a non-string input has been passed.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception                 When a non-supported port is requested ('portnotsupported').
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When a non-string input has been passed.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception                 When a non-supported port is requested ('portnotsupported').
      */
     public static function get($type)
     {

@@ -7,11 +7,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Controllers\AbstractMenuPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Controllers\AbstractMenuPageController;
 
 class MainPageController extends AbstractMenuPageController
 {
@@ -26,7 +26,7 @@ class MainPageController extends AbstractMenuPageController
         $this->menuLabel    = apply_filters('gamb-duplica-wp_main_menu_label', 'gamb-duplica-wp');
         $this->capatibility = CapMng::CAP_BASIC;
         $this->iconUrl      = 'data:image/svg+xml;base64,' . base64_encode(
-            file_get_contents(gamb-duplica-wp____PATH . '/assets/img/gamb-duplica-wp-logo-icon-menu.svg')
+            file_get_contents(GambDuplicaWP____PATH . '/assets/img/gamb-duplica-wp-logo-icon-menu.svg')
         );
     }
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Exception;
+namespace VendorGambDuplicaWP\GuzzleHttp\Exception;
 
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * Exception when an HTTP error occurs (4xx or 5xx error)
  */

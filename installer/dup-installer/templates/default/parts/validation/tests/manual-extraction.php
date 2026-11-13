@@ -7,8 +7,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
 
 $paramsManager = PrmMng::getInstance();
 $descMng       = InstDescMng::getInstance();

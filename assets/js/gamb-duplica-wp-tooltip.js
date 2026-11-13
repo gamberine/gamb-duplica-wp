@@ -1,6 +1,6 @@
 /*! dup tooltip */
 (function ($) {
-    gamb-duplica-wpTooltip = {
+    GambDuplicaWPTooltip = {
         initialized: false,
         messages: Object.assign(
             {}, 
@@ -95,7 +95,7 @@
                     },
                 });
 
-                var copyTitle = element.is('[data-dup-copy-title]') ? element.data('dup-copy-title') : gamb-duplica-wpTooltip.messages.copy;
+                var copyTitle = element.is('[data-dup-copy-title]') ? element.data('dup-copy-title') : GambDuplicaWPTooltip.messages.copy;
                 tippyElement.setContent('<div class="dup-tippy-content">' + copyTitle + '</div>');
 
                 //Have to set manually otherwise might hide on click.
@@ -107,8 +107,8 @@
 
                 element.on('click',function () {
                     var valueToCopy = element.data('dup-copy-value');
-                    var copiedTitle = element.is('[data-dup-copied-title]') ? element.data('dup-copied-title') : valueToCopy + ' ' + gamb-duplica-wpTooltip.messages.copied;
-                    var message = gamb-duplica-wpTooltip.messages.copyUnable;
+                    var copiedTitle = element.is('[data-dup-copied-title]') ? element.data('dup-copied-title') : valueToCopy + ' ' + GambDuplicaWPTooltip.messages.copied;
+                    var message = GambDuplicaWPTooltip.messages.copyUnable;
                     var tmpArea = jQuery("<textarea></textarea>").css({
                         position: 'absolute',
                         top: '-10000px'
@@ -116,7 +116,7 @@
                     tmpArea.select();
 
                     try {
-                        message = document.execCommand('copy') ? copiedTitle : gamb-duplica-wpTooltip.messages.copyUnable;
+                        message = document.execCommand('copy') ? copiedTitle : GambDuplicaWPTooltip.messages.copyUnable;
                     } catch (err) {
                         console.log(err);
                     }

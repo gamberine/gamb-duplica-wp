@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
 use GAMB_DUPLICA_WP_Handler;
 use GAMB_DUPLICA_WP_Log;
@@ -13,7 +13,7 @@ use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Runner;
 use GAMB_DUPLICA_WP_Schedule_Entity;
 use GAMB_DUPLICA_WP_U;
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Core\CapMng;
 use Error;
 use Exception;
 use stdClass;

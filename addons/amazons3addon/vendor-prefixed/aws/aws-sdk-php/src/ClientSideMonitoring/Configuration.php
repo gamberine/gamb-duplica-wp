@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\ClientSideMonitoring;
+namespace VendorGambDuplicaWP\Aws\ClientSideMonitoring;
 
 class Configuration implements ConfigurationInterface
 {

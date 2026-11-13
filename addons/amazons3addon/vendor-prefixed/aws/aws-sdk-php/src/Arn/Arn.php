@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn;
+namespace VendorGambDuplicaWP\Aws\Arn;
 
-use VendorDuplicator\Aws\Arn\Exception\InvalidArnException;
+use VendorGambDuplicaWP\Aws\Arn\Exception\InvalidArnException;
 /**
  * Amazon Resource Names (ARNs) uniquely identify AWS resources. The Arn class
  * parses and stores a generic ARN object representation that can apply to any

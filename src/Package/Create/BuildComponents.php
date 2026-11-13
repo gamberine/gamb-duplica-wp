@@ -6,14 +6,14 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Create;
+namespace GambDuplicaWP\Package\Create;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_STR;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Installer\Package\PComponents;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Installer\Package\PComponents;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 use Exception;
 
 class BuildComponents extends PComponents

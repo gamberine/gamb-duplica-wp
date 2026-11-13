@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Signature;
+namespace VendorGambDuplicaWP\Aws\Signature;
 
-use VendorDuplicator\Aws\Exception\UnresolvedSignatureException;
-use VendorDuplicator\Aws\Token\BearerTokenAuthorization;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedSignatureException;
+use VendorGambDuplicaWP\Aws\Token\BearerTokenAuthorization;
 /**
  * Signature providers.
  *

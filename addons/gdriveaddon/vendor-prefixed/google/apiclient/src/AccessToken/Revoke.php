@@ -15,13 +15,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\AccessToken;
+namespace VendorGambDuplicaWP\Google\AccessToken;
 
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\Google\Client;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\Google\Client;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
 /**
  * Wrapper around Google Access Tokens which provides convenience functions
  *

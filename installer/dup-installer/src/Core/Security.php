@@ -7,20 +7,20 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core;
+namespace GambDuplicaWP\Installer\Core;
 
-use gamb-duplica-wp\Installer\Bootstrap\BootstrapRunner;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Bootstrap;
-use gamb-duplica-wp\Installer\Core\Descriptors\ArchiveConfig;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Installer\Utils\SecureCsrf;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Bootstrap\BootstrapRunner;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Bootstrap;
+use GambDuplicaWP\Installer\Core\Descriptors\ArchiveConfig;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Installer\Utils\SecureCsrf;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use DUPX_ArchiveConfig;
 use DUPX_Ctrl_ajax;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 use Exception;
 
 /**

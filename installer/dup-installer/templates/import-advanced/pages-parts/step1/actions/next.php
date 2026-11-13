@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 
 $importSiteInfo = PrmMng::getInstance()->getValue(PrmMng::PARAM_FROM_SITE_IMPORT_INFO);
 $importPage     = $importSiteInfo['import_page'] ?? false;

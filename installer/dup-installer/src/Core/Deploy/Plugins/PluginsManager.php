@@ -5,15 +5,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\Plugins;
+namespace GambDuplicaWP\Installer\Core\Deploy\Plugins;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 use DUPX_ArchiveConfig;
 use DUPX_DB;
 use DUPX_DB_Functions;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Libs\Snap\SnapURL;
 use DUPX_NOTICE_ITEM;
 use DUPX_NOTICE_MANAGER;
 use DUPX_U;
@@ -31,9 +31,9 @@ final class PluginsManager
     const SLUG_WP_FORCE_SSL          = 'wp-force-ssl/wp-force-ssl.php';
     const SLUG_RECAPTCHA             = 'simple-google-recaptcha/simple-google-recaptcha.php';
     const SLUG_WPBAKERY_PAGE_BUILDER = 'js_composer/js_composer.php';
-    const SLUG_gamb-duplica-wp_PRO        = 'gamb-duplica-wp/gamb-duplica-wp.php';
-    const SLUG_gamb-duplica-wp_LITE       = 'gamb-duplica-wp/gamb-duplica-wp.php';
-    const SLUG_gamb-duplica-wp_TESTER     = 'gamb-duplica-wp-tester-plugin/gamb-duplica-wp-tester.php';
+    const SLUG_GambDuplicaWP_PRO        = 'gamb-duplica-wp/gamb-duplica-wp.php';
+    const SLUG_GambDuplicaWP_LITE       = 'gamb-duplica-wp/gamb-duplica-wp.php';
+    const SLUG_GambDuplicaWP_TESTER     = 'gamb-duplica-wp-tester-plugin/gamb-duplica-wp-tester.php';
     const SLUG_WPS_HIDE_LOGIN        = 'wps-hide-login/wps-hide-login.php';
     const SLUG_POPUP_MAKER           = 'popup-maker/popup-maker.php';
     const SLUG_JETPACK               = 'jetpack/jetpack.php';
@@ -100,22 +100,22 @@ final class PluginsManager
             $longMsg    = '';
         }
 
-        $this->customPluginsActions[self::SLUG_gamb-duplica-wp_PRO] = new PluginCustomActions(
-            self::SLUG_gamb-duplica-wp_PRO,
+        $this->customPluginsActions[self::SLUG_GambDuplicaWP_PRO] = new PluginCustomActions(
+            self::SLUG_GambDuplicaWP_PRO,
             $default,
             $afterLogin,
             $longMsg
         );
 
-        $this->customPluginsActions[self::SLUG_gamb-duplica-wp_TESTER] = new PluginCustomActions(
-            self::SLUG_gamb-duplica-wp_TESTER,
+        $this->customPluginsActions[self::SLUG_GambDuplicaWP_TESTER] = new PluginCustomActions(
+            self::SLUG_GambDuplicaWP_TESTER,
             $default,
             $afterLogin,
             $longMsg
         );
 
-        $this->customPluginsActions[self::SLUG_gamb-duplica-wp_LITE] = new PluginCustomActions(
-            self::SLUG_gamb-duplica-wp_LITE,
+        $this->customPluginsActions[self::SLUG_GambDuplicaWP_LITE] = new PluginCustomActions(
+            self::SLUG_GambDuplicaWP_LITE,
             PluginCustomActions::BY_DEFAULT_DISABLED,
             false,
             'gamb-duplica-wp LITE has been deactivated because in the new versions it is not possible to ' .
@@ -539,23 +539,23 @@ final class PluginsManager
         }
 
         // force gamb-duplica-wp pro activation
-        if (!array_key_exists(self::SLUG_gamb-duplica-wp_PRO, $activePluginsList)) {
+        if (!array_key_exists(self::SLUG_GambDuplicaWP_PRO, $activePluginsList)) {
             if (InstState::isNewSiteIsMultisite()) {
-                $activePluginsList[self::SLUG_gamb-duplica-wp_PRO] = time();
+                $activePluginsList[self::SLUG_GambDuplicaWP_PRO] = time();
             } else {
-                $activePluginsList[] = self::SLUG_gamb-duplica-wp_PRO;
+                $activePluginsList[] = self::SLUG_GambDuplicaWP_PRO;
             }
         }
 
         // force gamb-duplica-wp tester activation if exists
         if (
-            $this->pluginExistsInArchive(self::SLUG_gamb-duplica-wp_TESTER)
-            && !array_key_exists(self::SLUG_gamb-duplica-wp_TESTER, $activePluginsList)
+            $this->pluginExistsInArchive(self::SLUG_GambDuplicaWP_TESTER)
+            && !array_key_exists(self::SLUG_GambDuplicaWP_TESTER, $activePluginsList)
         ) {
             if (InstState::isNewSiteIsMultisite()) {
-                $activePluginsList[self::SLUG_gamb-duplica-wp_TESTER] = time();
+                $activePluginsList[self::SLUG_GambDuplicaWP_TESTER] = time();
             } else {
-                $activePluginsList[] = self::SLUG_gamb-duplica-wp_TESTER;
+                $activePluginsList[] = self::SLUG_GambDuplicaWP_TESTER;
             }
         }
 

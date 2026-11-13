@@ -6,7 +6,7 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Utils\Email\EmailSummary;
+use GambDuplicaWP\Utils\Email\EmailSummary;
 
 /**
  * Variables
@@ -87,7 +87,7 @@ $global = GAMB_DUPLICA_WP_Global_Entity::getInstance();
         $('#email-summary-recipients').select2({
             tags: true,
             tokenSeparators: [',', ' '],
-            placeholder: '<?php esc_attr_e('Enter email addresses', 'gamb-duplica-wp'); ?>',
+            placeholder: '<?php esc_attr_e('Enter email addresses', 'GambDuplicaWP'); ?>',
             minimumInputLength: 3,
         });
     });

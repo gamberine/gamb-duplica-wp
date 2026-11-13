@@ -6,14 +6,14 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Ajax\ServicesSchedule;
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Controllers\SchedulePageController;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Ajax\ServicesSchedule;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Controllers\SchedulePageController;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 /**
  * Variables
@@ -367,7 +367,7 @@ $schedule_bulk_action_nonce = wp_create_nonce('gamb-duplica-wp_pro_schedule_bulk
             var data = {
                 action: 'gamb-duplica-wp_pro_run_schedule_now',
                 schedule_id: schedule_id,
-                nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_run_schedule_now')); ?>'
+                nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_run_schedule_now')); ?>'
             }
             $.ajax({
                 type: "POST",
@@ -560,7 +560,7 @@ $schedule_bulk_action_nonce = wp_create_nonce('gamb-duplica-wp_pro_schedule_bulk
 
             var data = {
                 action: 'gamb-duplica-wp_pro_get_schedule_infos',
-                nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_get_schedule_infos')); ?>'
+                nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_get_schedule_infos')); ?>'
             };
 
             $.ajax({

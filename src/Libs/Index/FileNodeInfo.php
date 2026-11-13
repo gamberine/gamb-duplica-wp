@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Index;
+namespace GambDuplicaWP\Libs\Index;
 
-use gamb-duplica-wp\Libs\Binary\AbstractBinaryEncodable;
-use gamb-duplica-wp\Libs\Binary\BinaryFormat;
+use GambDuplicaWP\Libs\Binary\AbstractBinaryEncodable;
+use GambDuplicaWP\Libs\Binary\BinaryFormat;
 
 class FileNodeInfo extends AbstractBinaryEncodable
 {
@@ -100,7 +100,7 @@ class FileNodeInfo extends AbstractBinaryEncodable
     private function includeHash(): bool
     {
         // @phpstan-ignore booleanNot.alwaysTrue
-        if (!gamb-duplica-wp_PRO_INDEX_INCLUDE_HASH) {
+        if (!GambDuplicaWP_PRO_INDEX_INCLUDE_HASH) {
             return false;
         }
 

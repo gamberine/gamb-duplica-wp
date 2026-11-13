@@ -1,9 +1,9 @@
 <?php
 
-namespace  gamb-duplica-wp\Installer\Core\Deploy\Files;
+namespace  GambDuplicaWP\Installer\Core\Deploy\Files;
 
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\AbstractJsonSerializable;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 /**
  * Manage filters for extraction

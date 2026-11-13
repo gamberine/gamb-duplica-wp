@@ -2,8 +2,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Libs\Snap\SnapOS;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapOS;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 /**
  * Runs a recursive scan on a directory and finds symlinks and unreadable files

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api;
+namespace VendorGambDuplicaWP\Aws\Api;
 
 /**
  * Builds shape based on shape references.

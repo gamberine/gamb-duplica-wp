@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Exception\IncalculablePayloadException;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Exception\IncalculablePayloadException;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * @internal
  */

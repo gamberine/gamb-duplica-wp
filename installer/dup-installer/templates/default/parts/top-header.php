@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Hooks\HooksMng;
+use GambDuplicaWP\Installer\Core\Hooks\HooksMng;
 
 /**
  * Variables

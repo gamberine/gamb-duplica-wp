@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\GuzzleHttp\Promise\Coroutine;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Promise\PromisorInterface;
-use VendorDuplicator\GuzzleHttp\Promise\RejectedPromise;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\Coroutine;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromisorInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\RejectedPromise;
 /**
  * "Waiters" are associated with an AWS resource (e.g., EC2 instance), and poll
  * that resource and until it is in a particular state.

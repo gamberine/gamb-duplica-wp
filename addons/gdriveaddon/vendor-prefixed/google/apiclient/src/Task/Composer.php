@@ -15,12 +15,12 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Task;
+namespace VendorGambDuplicaWP\Google\Task;
 
-use VendorDuplicator\Composer\Script\Event;
+use VendorGambDuplicaWP\Composer\Script\Event;
 use InvalidArgumentException;
-use VendorDuplicator\Symfony\Component\Filesystem\Filesystem;
-use VendorDuplicator\Symfony\Component\Finder\Finder;
+use VendorGambDuplicaWP\Symfony\Component\Filesystem\Filesystem;
+use VendorGambDuplicaWP\Symfony\Component\Finder\Finder;
 class Composer
 {
     /**
@@ -65,7 +65,7 @@ class Composer
             try {
                 $finder->in($serviceDir . '/' . $service);
             } catch (InvalidArgumentException $e) {
-                throw new InvalidArgumentException(sprintf('VendorDuplicator\\Google service "%s" does not exist or was removed previously', $service));
+                throw new InvalidArgumentException(sprintf('VendorGambDuplicaWP\\Google service "%s" does not exist or was removed previously', $service));
             }
         }
     }

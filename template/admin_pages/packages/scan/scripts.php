@@ -4,8 +4,8 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Ajax\ServicesPackage;
-use gamb-duplica-wp\Controllers\PackagesPageController;
+use GambDuplicaWP\Ajax\ServicesPackage;
+use GambDuplicaWP\Controllers\PackagesPageController;
 
 defined("ABSPATH") or die("");
 
@@ -43,7 +43,7 @@ $messageText = $tplMng->render('admin_pages/packages/scan/error_message', [], fa
         var large_tree = $('#hb-files-large-jstree').length ? $('#hb-files-large-jstree') : null;
 
         Handlebars.registerHelper('stripWPRoot', function(path) {
-            return  path.replace('<?php echo esc_js(gamb-duplica-wp_pro_get_home_path()) ?>', '');
+            return  path.replace('<?php echo esc_js(GambDuplicaWP_pro_get_home_path()) ?>', '');
         });
 
         Handlebars.registerHelper('ifAllOr', function (v1, v2, v3, options) {
@@ -96,7 +96,7 @@ $messageText = $tplMng->render('admin_pages/packages/scan/error_message', [], fa
 
         DupPro.Pack.FilterButton = {
             loading : function (btn) {
-                $(btn).html('<i class="fas fa-circle-notch fa-spin"></i> <?php esc_html_e('Initializing Please Wait...', 'gamb-duplica-wp');?>');
+                $(btn).html('<i class="fas fa-circle-notch fa-spin"></i> <?php esc_html_e('Initializing Please Wait...', 'GambDuplicaWP');?>');
                 $(btn).prop('disabled' , true);
                 $('#dup-build-button').prop('disable' , true);
             },
@@ -609,7 +609,7 @@ $messageText = $tplMng->render('admin_pages/packages/scan/error_message', [], fa
             $('#mysqldump-limit-result').html(html);
             }
 
-            gamb-duplica-wpTooltip.reload();
+            GambDuplicaWPTooltip.reload();
         };
         
         DupPro.Pack.fullLoadButtonInit();
@@ -639,7 +639,7 @@ $messageText = $tplMng->render('admin_pages/packages/scan/error_message', [], fa
         let scanTimeout      = (scanTimeoutInSec + 10) * 1000; // Add 10 seconds to the backend timeout
 
         DupPro.Pack.runScanner = function (callbackOnSuccess, firstChunk = false) {
-            gamb-duplica-wp.Util.ajaxWrapper(
+            GambDuplicaWP.Util.ajaxWrapper(
                 {
                     action: 'gamb-duplica-wp_pro_package_scan',
                     firstChunk: firstChunk,
@@ -741,8 +741,8 @@ $messageText = $tplMng->render('admin_pages/packages/scan/error_message', [], fa
                 //****************
                 //DATABASE
                 var html = "";
-                var DB_TableRowMax = <?php echo (int) gamb-duplica-wp_PRO_SCAN_DB_TBL_ROWS; ?>;
-                var DB_TableSizeMax = <?php echo (int) gamb-duplica-wp_PRO_SCAN_DB_TBL_SIZE; ?>;
+                var DB_TableRowMax = <?php echo (int) GambDuplicaWP_PRO_SCAN_DB_TBL_ROWS; ?>;
+                var DB_TableSizeMax = <?php echo (int) GambDuplicaWP_PRO_SCAN_DB_TBL_SIZE; ?>;
                 if (data.DB.DBExcluded && data.DB.Status.Success) {
                     $('#data-db-size1').text(data.DB.Size || errMsg);
                 } else if (data.DB.Status.Success) {
@@ -752,7 +752,7 @@ $messageText = $tplMng->render('admin_pages/packages/scan/error_message', [], fa
                     $('#data-db-tablecount').text(data.DB.TableCount || errMsg);
                     //Table Details
                     if (data.DB.TableList == undefined || data.DB.TableList.length == 0) {
-                        html = '<?php esc_html_e("Unable to report on any tables", 'gamb-duplica-wp') ?>';
+                        html = '<?php esc_html_e("Unable to report on any tables", 'GambDuplicaWP') ?>';
                     } else {
                         $.each(data.DB.TableList, function (i) {
                             html += '<b>' + i + '</b><br/>';
@@ -761,16 +761,16 @@ $messageText = $tplMng->render('admin_pages/packages/scan/error_message', [], fa
                                 switch (key) {
                                     case 'Case':
                                         color = (val == 1) ? 'maroon' : 'black';
-                                        html += '<td style="color:' + color + '"><?php echo esc_js(__('Uppercase:', 'gamb-duplica-wp')) ?> ' + val + '</td>';
+                                        html += '<td style="color:' + color + '"><?php echo esc_js(__('Uppercase:', 'GambDuplicaWP')) ?> ' + val + '</td>';
                                         break;
                                     case 'Rows':
                                         color = (val > DB_TableRowMax) ? 'red' : 'black';
-                                        html += '<td style="color:' + color + '"><?php echo esc_js(__('Rows:', 'gamb-duplica-wp')) ?> ' + val + '</td>';
+                                        html += '<td style="color:' + color + '"><?php echo esc_js(__('Rows:', 'GambDuplicaWP')) ?> ' + val + '</td>';
                                         break;
                                     case 'USize':
                                         color = (parseInt(val) > DB_TableSizeMax) ? 'red' : 'black';
                                         html += '<td style="color:' + color + '">';
-                                        html += '<?php echo esc_js(__('Size:', 'gamb-duplica-wp')) ?> ' + data.DB.TableList[i]['Size'];
+                                        html += '<?php echo esc_js(__('Size:', 'GambDuplicaWP')) ?> ' + data.DB.TableList[i]['Size'];
                                         html += '</td>';
                                         break;
                                 }
@@ -780,7 +780,7 @@ $messageText = $tplMng->render('admin_pages/packages/scan/error_message', [], fa
                     }
                     $('#data-db-tablelist').html(html);
                 } else {
-                    html = '<?php esc_html_e("Unable to report on database stats", 'gamb-duplica-wp') ?>';
+                    html = '<?php esc_html_e("Unable to report on database stats", 'GambDuplicaWP') ?>';
                     $('#dup-scan-db').html(html);
                 }
 

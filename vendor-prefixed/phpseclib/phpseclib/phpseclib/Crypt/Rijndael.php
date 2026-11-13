@@ -49,14 +49,14 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\BlockCipher;
-use VendorDuplicator\phpseclib3\Exception\BadDecryptionException;
-use VendorDuplicator\phpseclib3\Exception\BadModeException;
-use VendorDuplicator\phpseclib3\Exception\InconsistentSetupException;
-use VendorDuplicator\phpseclib3\Exception\InsufficientSetupException;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\BlockCipher;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadDecryptionException;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadModeException;
+use VendorGambDuplicaWP\phpseclib3\Exception\InconsistentSetupException;
+use VendorGambDuplicaWP\phpseclib3\Exception\InsufficientSetupException;
 /**
  * Pure-PHP implementation of Rijndael.
  *
@@ -72,8 +72,8 @@ class Rijndael extends BlockCipher
      * or not for the current $block_size/$key_length.
      * In case of, $cipher_name_mcrypt will be set dynamically at run time accordingly.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::engine
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::engine
      * @see self::isValidEngine()
      * @var string
      */
@@ -243,7 +243,7 @@ class Rijndael extends BlockCipher
      *
      * This is mainly just a wrapper to set things up for \phpseclib3\Crypt\Common\SymmetricKey::isValidEngine()
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      * @param int $engine
      * @return bool
      */
@@ -443,7 +443,7 @@ class Rijndael extends BlockCipher
     /**
      * Setup the key (expansion)
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setupKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setupKey()
      */
     protected function setupKey()
     {
@@ -876,7 +876,7 @@ class Rijndael extends BlockCipher
     /**
      * Setup the performance-optimized function for de/encrypt()
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setupInlineCrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setupInlineCrypt()
      */
     protected function setupInlineCrypt()
     {

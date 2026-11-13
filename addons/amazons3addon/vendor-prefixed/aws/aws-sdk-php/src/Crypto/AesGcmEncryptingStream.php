@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\Aws\Crypto\Polyfill\AesGcm;
-use VendorDuplicator\Aws\Crypto\Polyfill\Key;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\StreamDecoratorTrait;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Crypto\Polyfill\AesGcm;
+use VendorGambDuplicaWP\Aws\Crypto\Polyfill\Key;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\StreamDecoratorTrait;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 use RuntimeException;
 /**
  * @internal Represents a stream of data to be gcm encrypted.

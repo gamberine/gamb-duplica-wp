@@ -1,10 +1,10 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Utils\Tests\WP;
+namespace GambDuplicaWP\Installer\Utils\Tests\WP;
 
-use gamb-duplica-wp\Installer\Utils\Autoloader;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Installer\Utils\Tests\MessageCustomizer;
+use GambDuplicaWP\Installer\Utils\Autoloader;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Utils\Tests\MessageCustomizer;
 use DUPX_NOTICE_ITEM;
 use DUPX_NOTICE_MANAGER;
 use Exception;

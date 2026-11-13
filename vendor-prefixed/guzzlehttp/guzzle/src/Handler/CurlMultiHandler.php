@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Handler;
+namespace VendorGambDuplicaWP\GuzzleHttp\Handler;
 
 use Closure;
-use VendorDuplicator\GuzzleHttp\Promise as P;
-use VendorDuplicator\GuzzleHttp\Promise\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Utils;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise as P;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Utils;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Returns an asynchronous response using curl_multi_* functions.
  *

@@ -3,9 +3,9 @@
 /**
  * Map item class
  *
- * @package VendorDuplicator\Amk\JsonSerialize
+ * @package VendorGambDuplicaWP\Amk\JsonSerialize
  */
-namespace VendorDuplicator\Amk\JsonSerialize;
+namespace VendorGambDuplicaWP\Amk\JsonSerialize;
 
 /**
  * Map item element

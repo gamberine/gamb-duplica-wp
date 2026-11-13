@@ -5,8 +5,8 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
 
 defined("ABSPATH") or die("");
 
@@ -54,7 +54,7 @@ $importSettingsUrl = $ctrlMng->getMenuLink(
             <?php
                 printf(
                     esc_html__('Upload the file via FTP/file manager to the "%s" folder and reload the page.', 'gamb-duplica-wp'),
-                    esc_html(gamb-duplica-wp_PRO_PATH_IMPORTS)
+                    esc_html(GambDuplicaWP_PRO_PATH_IMPORTS)
                 );
                 ?>
         </li>
@@ -68,7 +68,7 @@ $importSettingsUrl = $ctrlMng->getMenuLink(
                 '%1$s and %2$s represents the opening and closing HTML tags for an anchor or link',
                 'gamb-duplica-wp'
             ),
-            '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-handle-import-install-upload-launch-issues') . '" target="_blank">',
+            '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-handle-import-install-upload-launch-issues') . '" target="_blank">',
             '</a>'
         );
         ?>

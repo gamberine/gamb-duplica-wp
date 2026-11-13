@@ -9,11 +9,11 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Monolog\Formatter\LogglyFormatter;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Formatter\LogglyFormatter;
 use function array_key_exists;
 use CurlHandle;
 /**

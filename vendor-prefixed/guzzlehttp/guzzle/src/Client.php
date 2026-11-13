@@ -1,19 +1,19 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp;
+namespace VendorGambDuplicaWP\GuzzleHttp;
 
-use VendorDuplicator\GuzzleHttp\Cookie\CookieJar;
-use VendorDuplicator\GuzzleHttp\Exception\GuzzleException;
-use VendorDuplicator\GuzzleHttp\Exception\InvalidArgumentException;
-use VendorDuplicator\GuzzleHttp\Promise as P;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Cookie\CookieJar;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\GuzzleException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\InvalidArgumentException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise as P;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 /**
  * @final
  */
-class Client implements ClientInterface, \VendorDuplicator\Psr\Http\Client\ClientInterface
+class Client implements ClientInterface, \VendorGambDuplicaWP\Psr\Http\Client\ClientInterface
 {
     use ClientTrait;
     /**

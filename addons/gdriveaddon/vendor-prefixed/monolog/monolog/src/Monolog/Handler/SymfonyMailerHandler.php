@@ -9,15 +9,15 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Utils;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Monolog\Formatter\LineFormatter;
-use VendorDuplicator\Symfony\Component\Mailer\MailerInterface;
-use VendorDuplicator\Symfony\Component\Mailer\Transport\TransportInterface;
-use VendorDuplicator\Symfony\Component\Mime\Email;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Utils;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Formatter\LineFormatter;
+use VendorGambDuplicaWP\Symfony\Component\Mailer\MailerInterface;
+use VendorGambDuplicaWP\Symfony\Component\Mailer\Transport\TransportInterface;
+use VendorGambDuplicaWP\Symfony\Component\Mime\Email;
 /**
  * SymfonyMailerHandler uses Symfony's Mailer component to send the emails
  *

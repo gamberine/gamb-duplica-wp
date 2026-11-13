@@ -31,19 +31,19 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\Common;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\Common;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Blowfish;
-use VendorDuplicator\phpseclib3\Crypt\Hash;
-use VendorDuplicator\phpseclib3\Exception\BadDecryptionException;
-use VendorDuplicator\phpseclib3\Exception\BadModeException;
-use VendorDuplicator\phpseclib3\Exception\InconsistentSetupException;
-use VendorDuplicator\phpseclib3\Exception\InsufficientSetupException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\phpseclib3\Math\BinaryField;
-use VendorDuplicator\phpseclib3\Math\PrimeField;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Blowfish;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Hash;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadDecryptionException;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadModeException;
+use VendorGambDuplicaWP\phpseclib3\Exception\InconsistentSetupException;
+use VendorGambDuplicaWP\phpseclib3\Exception\InsufficientSetupException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Math\BinaryField;
+use VendorGambDuplicaWP\phpseclib3\Math\PrimeField;
 /**
  * Base Class for all \phpseclib3\Crypt\* cipher classes
  *
@@ -58,117 +58,117 @@ abstract class SymmetricKey
      * Set to -1 since that's what Crypt/Random.php uses to index the CTR mode.
      *
      * @link http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Counter_.28CTR.29
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_CTR = -1;
     /**
      * Encrypt / decrypt using the Electronic Code Book mode.
      *
      * @link http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Electronic_codebook_.28ECB.29
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_ECB = 1;
     /**
      * Encrypt / decrypt using the Code Book Chaining mode.
      *
      * @link http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Cipher-block_chaining_.28CBC.29
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_CBC = 2;
     /**
      * Encrypt / decrypt using the Cipher Feedback mode.
      *
      * @link http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Cipher_feedback_.28CFB.29
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_CFB = 3;
     /**
      * Encrypt / decrypt using the Cipher Feedback mode (8bit)
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_CFB8 = 7;
     /**
      * Encrypt / decrypt using the Output Feedback mode (8bit)
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_OFB8 = 8;
     /**
      * Encrypt / decrypt using the Output Feedback mode.
      *
      * @link http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation#Output_feedback_.28OFB.29
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_OFB = 4;
     /**
      * Encrypt / decrypt using Galois/Counter mode.
      *
      * @link https://en.wikipedia.org/wiki/Galois/Counter_Mode
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_GCM = 5;
     /**
      * Encrypt / decrypt using streaming mode.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      */
     const MODE_STREAM = 6;
     /**
      * Mode Map
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      */
     const MODE_MAP = ['ctr' => self::MODE_CTR, 'ecb' => self::MODE_ECB, 'cbc' => self::MODE_CBC, 'cfb' => self::MODE_CFB, 'cfb8' => self::MODE_CFB8, 'ofb' => self::MODE_OFB, 'ofb8' => self::MODE_OFB8, 'gcm' => self::MODE_GCM, 'stream' => self::MODE_STREAM];
     /**
      * Base value for the internal implementation $engine switch
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      */
     const ENGINE_INTERNAL = 1;
     /**
      * Base value for the eval() implementation $engine switch
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      */
     const ENGINE_EVAL = 2;
     /**
      * Base value for the mcrypt implementation $engine switch
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      */
     const ENGINE_MCRYPT = 3;
     /**
      * Base value for the openssl implementation $engine switch
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      */
     const ENGINE_OPENSSL = 4;
     /**
      * Base value for the libsodium implementation $engine switch
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      */
     const ENGINE_LIBSODIUM = 5;
     /**
      * Base value for the openssl / gcm implementation $engine switch
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      */
     const ENGINE_OPENSSL_GCM = 6;
     /**
      * Engine Reverse Map
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::getEngine()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::getEngine()
      */
     const ENGINE_MAP = [self::ENGINE_INTERNAL => 'PHP', self::ENGINE_EVAL => 'Eval', self::ENGINE_MCRYPT => 'mcrypt', self::ENGINE_OPENSSL => 'OpenSSL', self::ENGINE_LIBSODIUM => 'libsodium', self::ENGINE_OPENSSL_GCM => 'OpenSSL (GCM)'];
     /**
@@ -267,16 +267,16 @@ abstract class SymmetricKey
     /**
      * Does the enmcrypt resource need to be (re)initialized?
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Twofish::setKey()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Twofish::setIV()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Twofish::setKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Twofish::setIV()
      * @var bool
      */
     private $enchanged = \true;
     /**
      * Does the demcrypt resource need to be (re)initialized?
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Twofish::setKey()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Twofish::setIV()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Twofish::setKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Twofish::setIV()
      * @var bool
      */
     private $dechanged = \true;

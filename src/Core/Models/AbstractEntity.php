@@ -5,12 +5,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Models;
+namespace GambDuplicaWP\Core\Models;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 use Error;
 use Exception;
 use ReflectionClass;
@@ -35,7 +35,7 @@ abstract class AbstractEntity
     /** @var string generic indexed value */
     protected $value5 = '';
     /** @var string plugin version on update */
-    protected $version = gamb-duplica-wp_PRO_VERSION;
+    protected $version = GambDuplicaWP_PRO_VERSION;
     /** @var string timestamp YYYY-MM-DD HH:MM:SS UTC */
     protected $created = '';
     /** @var string timestamp YYYY-MM-DD HH:MM:SS UTC */
@@ -176,7 +176,7 @@ abstract class AbstractEntity
         }
 
         $this->updated = $this->created = gmdate("Y-m-d H:i:s");
-        $this->version = gamb-duplica-wp_PRO_VERSION;
+        $this->version = GambDuplicaWP_PRO_VERSION;
 
         $result = $wpdb->insert(
             self::getTableName(),
@@ -222,7 +222,7 @@ abstract class AbstractEntity
         }
 
         $this->updated = gmdate("Y-m-d H:i:s");
-        $this->version = gamb-duplica-wp_PRO_VERSION;
+        $this->version = GambDuplicaWP_PRO_VERSION;
 
         return ($wpdb->update(
             self::getTableName(),
@@ -294,7 +294,7 @@ abstract class AbstractEntity
     {
         /** @var wpdb $wpdb */
         global $wpdb;
-        $res = $wpdb->base_prefix . 'gamb-duplica-wp_entities';
+        $res = $wpdb->base_prefix . 'gamb_duplica_wp_entities';
         return ($escape ? esc_sql($res) : $res);
     }
 

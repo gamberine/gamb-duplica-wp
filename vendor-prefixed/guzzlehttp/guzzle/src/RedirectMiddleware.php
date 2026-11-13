@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp;
+namespace VendorGambDuplicaWP\GuzzleHttp;
 
-use VendorDuplicator\GuzzleHttp\Exception\BadResponseException;
-use VendorDuplicator\GuzzleHttp\Exception\TooManyRedirectsException;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\BadResponseException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\TooManyRedirectsException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 /**
  * Request redirect middleware.
  *

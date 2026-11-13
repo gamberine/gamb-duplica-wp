@@ -42,36 +42,36 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Net;
+namespace VendorGambDuplicaWP\phpseclib3\Net;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Blowfish;
-use VendorDuplicator\phpseclib3\Crypt\ChaCha20;
-use VendorDuplicator\phpseclib3\Crypt\Common\AsymmetricKey;
-use VendorDuplicator\phpseclib3\Crypt\Common\PrivateKey;
-use VendorDuplicator\phpseclib3\Crypt\Common\PublicKey;
-use VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey;
-use VendorDuplicator\phpseclib3\Crypt\DH;
-use VendorDuplicator\phpseclib3\Crypt\DSA;
-use VendorDuplicator\phpseclib3\Crypt\EC;
-use VendorDuplicator\phpseclib3\Crypt\Hash;
-use VendorDuplicator\phpseclib3\Crypt\Random;
-use VendorDuplicator\phpseclib3\Crypt\RC4;
-use VendorDuplicator\phpseclib3\Crypt\Rijndael;
-use VendorDuplicator\phpseclib3\Crypt\RSA;
-use VendorDuplicator\phpseclib3\Crypt\TripleDES;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Blowfish;
+use VendorGambDuplicaWP\phpseclib3\Crypt\ChaCha20;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\AsymmetricKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DH;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DSA;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Hash;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Random;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RC4;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Rijndael;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
+use VendorGambDuplicaWP\phpseclib3\Crypt\TripleDES;
 // Used to do Diffie-Hellman key exchange and DSA/RSA signature verification.
-use VendorDuplicator\phpseclib3\Crypt\Twofish;
-use VendorDuplicator\phpseclib3\Exception\ConnectionClosedException;
-use VendorDuplicator\phpseclib3\Exception\InsufficientSetupException;
-use VendorDuplicator\phpseclib3\Exception\InvalidPacketLengthException;
-use VendorDuplicator\phpseclib3\Exception\NoSupportedAlgorithmsException;
-use VendorDuplicator\phpseclib3\Exception\TimeoutException;
-use VendorDuplicator\phpseclib3\Exception\UnableToConnectException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedCurveException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\phpseclib3\System\SSH\Agent;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Twofish;
+use VendorGambDuplicaWP\phpseclib3\Exception\ConnectionClosedException;
+use VendorGambDuplicaWP\phpseclib3\Exception\InsufficientSetupException;
+use VendorGambDuplicaWP\phpseclib3\Exception\InvalidPacketLengthException;
+use VendorGambDuplicaWP\phpseclib3\Exception\NoSupportedAlgorithmsException;
+use VendorGambDuplicaWP\phpseclib3\Exception\TimeoutException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnableToConnectException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedCurveException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\System\SSH\Agent;
 /**
  * Pure-PHP implementation of SSHv2.
  *
@@ -115,8 +115,8 @@ class SSH2
      *     open request, and 'sender channel' is the channel number allocated by
      *     the other side.
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::send_channel_packet()
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::get_channel_packet()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::send_channel_packet()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::get_channel_packet()
      */
     const CHANNEL_EXEC = 1;
     // PuTTy uses 0x100
@@ -127,13 +127,13 @@ class SSH2
     /**
      * Returns the message numbers
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::getLog()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::getLog()
      */
     const LOG_SIMPLE = 1;
     /**
      * Returns the message content
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::getLog()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::getLog()
      */
     const LOG_COMPLEX = 2;
     /**
@@ -155,20 +155,20 @@ class SSH2
     /**
      * Make sure that the log never gets larger than this
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::getLog()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::getLog()
      */
     const LOG_MAX_SIZE = 1048576;
     // 1024 * 1024
     /**
      * Returns when a string matching $expect exactly is found
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::read()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::read()
      */
     const READ_SIMPLE = 1;
     /**
      * Returns when a string matching the regular expression $expect is found
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::read()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::read()
      */
     const READ_REGEX = 2;
     /**
@@ -177,7 +177,7 @@ class SSH2
      * Some data packets may only contain a single character so it may be necessary
      * to call read() multiple times when using this option
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::read()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::read()
      */
     const READ_NEXT = 3;
     /**

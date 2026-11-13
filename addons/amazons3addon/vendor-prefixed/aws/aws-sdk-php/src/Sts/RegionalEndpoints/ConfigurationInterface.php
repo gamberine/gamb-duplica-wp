@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Sts\RegionalEndpoints;
+namespace VendorGambDuplicaWP\Aws\Sts\RegionalEndpoints;
 
 /**
  * Provides access to STS regional endpoints configuration options: endpoints_type

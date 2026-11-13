@@ -6,9 +6,9 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Core\Models\AbstractEntityList;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Core\Models\AbstractEntityList;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 
 /**
  * @copyright 2016 Snap Creek LLC

@@ -13,7 +13,7 @@
  * @license    https://opensource.org/licenses/GPL-3.0 GNU Public License
  */
 
-namespace gamb-duplica-wp\Package\Import;
+namespace GambDuplicaWP\Package\Import;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_Constants;
@@ -23,30 +23,30 @@ use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_MU;
 use GAMB_DUPLICA_WP_Secure_Global_Entity;
 use GAMB_DUPLICA_WP_U;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Controllers\ImportPageController;
-use gamb-duplica-wp\Controllers\RecoveryController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Installer\Bootstrap\BootstrapRunner;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Libs\DupArchive\DupArchive;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
-use gamb-duplica-wp\Installer\Package\InstallerDescriptors;
-use gamb-duplica-wp\Installer\Package\LegacyInstallerDescriptors;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\MuPlugin\MuGenerator;
-use gamb-duplica-wp\MuPlugin\MuBootstrap;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
-use gamb-duplica-wp\Utils\PHPExecCheck;
-use gamb-duplica-wp\Utils\UsageStatistics\PluginData;
-use gamb-duplica-wp\Utils\ZipArchiveExtended;
-use gamb-duplica-wp\Views\ScreenBase;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Controllers\ImportPageController;
+use GambDuplicaWP\Controllers\RecoveryController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Installer\Bootstrap\BootstrapRunner;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Libs\DupArchive\DupArchive;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Installer\Package\InstallerDescriptors;
+use GambDuplicaWP\Installer\Package\LegacyInstallerDescriptors;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\MuPlugin\MuGenerator;
+use GambDuplicaWP\MuPlugin\MuBootstrap;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Utils\PHPExecCheck;
+use GambDuplicaWP\Utils\UsageStatistics\PluginData;
+use GambDuplicaWP\Utils\ZipArchiveExtended;
+use GambDuplicaWP\Views\ScreenBase;
 use Exception;
 use ZipArchive;
 
@@ -457,7 +457,7 @@ class PackageImporter
         $installerBackupName = '';
         switch ($this->ext) {
             case "zip":
-                if (($fileStat = ZipArchiveExtended::searchRegex($this->archive, gamb-duplica-wp_PRO_INSTALLER_REGEX_PATTERN, $this->archivePwd)) === false) {
+                if (($fileStat = ZipArchiveExtended::searchRegex($this->archive, GambDuplicaWP_PRO_INSTALLER_REGEX_PATTERN, $this->archivePwd)) === false) {
                     throw new Exception('Can\'t find installer-backup.php in archive ' . $this->archive);
                 }
                 $installerBackupName = basename($fileStat['name']);
@@ -468,7 +468,7 @@ class PackageImporter
                     (
                         $fileStat = DupArchive::seachRegexInArchive(
                             $this->archive,
-                            gamb-duplica-wp_PRO_INSTALLER_REGEX_PATTERN,
+                            GambDuplicaWP_PRO_INSTALLER_REGEX_PATTERN,
                             $this->archivePwd,
                             $offset
                         )
@@ -559,7 +559,7 @@ class PackageImporter
     public static function isImportPath($path)
     {
         $result = preg_match(
-            '/[\/]' . preg_quote(gamb-duplica-wp_PRO_SSDIR_NAME, '/') . '[\/]' . preg_quote(gamb-duplica-wp_PRO_IMPORTS_DIR_NAME, '/') . '[\/]/',
+            '/[\/]' . preg_quote(GambDuplicaWP_PRO_SSDIR_NAME, '/') . '[\/]' . preg_quote(GambDuplicaWP_PRO_IMPORTS_DIR_NAME, '/') . '[\/]/',
             $path
         );
         return ($result === 1);
@@ -573,15 +573,15 @@ class PackageImporter
      */
     public static function cleanFolder($removeArchive = false): bool
     {
-        if (!file_exists(gamb-duplica-wp_PRO_PATH_IMPORTS)) {
-            if (!wp_mkdir_p(gamb-duplica-wp_PRO_PATH_IMPORTS)) {
-                throw new Exception('Can\'t create ' . gamb-duplica-wp_PRO_PATH_IMPORTS);
+        if (!file_exists(GambDuplicaWP_PRO_PATH_IMPORTS)) {
+            if (!wp_mkdir_p(GambDuplicaWP_PRO_PATH_IMPORTS)) {
+                throw new Exception('Can\'t create ' . GambDuplicaWP_PRO_PATH_IMPORTS);
             }
-            SnapIO::createSilenceIndex(gamb-duplica-wp_PRO_PATH_IMPORTS);
+            SnapIO::createSilenceIndex(GambDuplicaWP_PRO_PATH_IMPORTS);
         }
 
         SnapIO::regexGlobCallback(
-            gamb-duplica-wp_PRO_PATH_IMPORTS,
+            GambDuplicaWP_PRO_PATH_IMPORTS,
             function ($path) {
                 if (time() - filemtime($path) < (30 * MINUTE_IN_SECONDS)) {
                     // In case the archive is password protected and has been renamed, it should not be deleted immediately
@@ -594,7 +594,7 @@ class PackageImporter
                 return SnapIO::rrmdir($path);
             },
             [
-                'regexFile'   => ($removeArchive ? false : gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN),
+                'regexFile'   => ($removeArchive ? false : GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN),
                 'regexFolder' => false,
                 'invert'      => true,
             ]
@@ -613,7 +613,7 @@ class PackageImporter
             'gamb-duplica-wp cannot launch Import because on this Server it isn\'t possible to determine installer path:',
             'gamb-duplica-wp'
         ) . '<br>' .
-        ' - ' . gamb-duplica-wp_PRO_PATH_IMPORTS . '<br>' .
+        ' - ' . GambDuplicaWP_PRO_PATH_IMPORTS . '<br>' .
         ' - ' . SnapWP::getHomePath();
     }
 
@@ -676,7 +676,7 @@ class PackageImporter
             return self::PATH_MODE_CLASSIC;
         }
 
-        if (!gamb-duplica-wp_FORCE_IMPORT_BRIDGE_MODE) { // @phpstan-ignore-line
+        if (!GambDuplicaWP_FORCE_IMPORT_BRIDGE_MODE) { // @phpstan-ignore-line
             if (self::isPathBackupAvailable()) {
                 return self::PATH_MODE_BACKUP;
             }
@@ -702,8 +702,8 @@ class PackageImporter
     {
         static $pathBackupAvabiale = null;
         if ($pathBackupAvabiale === null) {
-            $path               = gamb-duplica-wp_PRO_PATH_IMPORTS;
-            $url                = gamb-duplica-wp_PRO_URL_IMPORTS;
+            $path               = GambDuplicaWP_PRO_PATH_IMPORTS;
+            $url                = GambDuplicaWP_PRO_URL_IMPORTS;
             $phpCheck           = new PHPExecCheck($path, $url);
             $pathBackupAvabiale = ($phpCheck->check() == PHPExecCheck::PHP_OK);
         }
@@ -746,12 +746,12 @@ class PackageImporter
     {
         switch ($this->getPathMode()) {
             case self::PATH_MODE_BACKUP:
-                return gamb-duplica-wp_PRO_PATH_IMPORTS;
+                return GambDuplicaWP_PRO_PATH_IMPORTS;
             case self::PATH_MODE_HOME:
             case self::PATH_MODE_CLASSIC:
                 return SnapWP::getHomePath();
             case self::PATH_MODE_BRIDGE:
-                return gamb-duplica-wp_PRO_PATH_IMPORTS;
+                return GambDuplicaWP_PRO_PATH_IMPORTS;
             case self::PATH_MODE_CUSTOM: // this mode work only on extended recovery class
             case self::PATH_MODE_NONE:
             default:
@@ -768,7 +768,7 @@ class PackageImporter
     {
         switch ($this->getPathMode()) {
             case self::PATH_MODE_BACKUP:
-                return gamb-duplica-wp_PRO_URL_IMPORTS;
+                return GambDuplicaWP_PRO_URL_IMPORTS;
             case self::PATH_MODE_HOME:
             case self::PATH_MODE_CLASSIC:
                 return get_home_url();
@@ -855,7 +855,7 @@ class PackageImporter
                     'archive'        => $this->archive,
                     'inst_path'      => $this->getInstallerFolderPath() . '/' . $this->getInstallerName(),
                     'inst_main_path' => '',
-                    'inst_main_url'  => gamb-duplica-wp_PRO_URL_IMPORTS . '/' . $dupInstallerFolder,
+                    'inst_main_url'  => GambDuplicaWP_PRO_URL_IMPORTS . '/' . $dupInstallerFolder,
                     'dup_folder'     => $dupInstallerFolder,
                     'brchk'          => MuBootstrap::getBridgeHash(),
                 ];
@@ -943,7 +943,7 @@ class PackageImporter
             PrmMng::PARAM_DB_COLLATE                  => ['value' => DB_COLLATE],
             PrmMng::PARAM_OVERWRITE_SITE_DATA         => [
                 'value' => [
-                    'dupVersion'          => gamb-duplica-wp_PRO_VERSION,
+                    'dupVersion'          => GambDuplicaWP_PRO_VERSION,
                     'wpVersion'           => $wp_version,
                     'dbhost'              => DB_HOST,
                     'dbname'              => DB_NAME,
@@ -1048,7 +1048,7 @@ class PackageImporter
             throw new Exception('Is impossibile exec the installer file');
         }
 
-        $overwriteFile = $installerPath . '/' . gamb-duplica-wp_PRO_LOCAL_OVERWRITE_PARAMS . '_' . $this->packageHash . '.json';
+        $overwriteFile = $installerPath . '/' . GambDuplicaWP_PRO_LOCAL_OVERWRITE_PARAMS . '_' . $this->packageHash . '.json';
 
         $params = $this->getOverwriteParams();
 
@@ -1088,7 +1088,7 @@ class PackageImporter
                         '%1$s and %2$s represents the opening and closing HTML tags for an anchor or link',
                         'gamb-duplica-wp'
                     ),
-                    '<a href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-handle-import-install-upload-launch-issues" target="_blank">',
+                    '<a href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-handle-import-install-upload-launch-issues" target="_blank">',
                     '</a>'
                 );
             }
@@ -1128,7 +1128,7 @@ class PackageImporter
                     '%1$s and %2$s represents the opening and closing HTML tags for an anchor or link',
                     'gamb-duplica-wp'
                 ),
-                '<a target="_blank" href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'classic-install">',
+                '<a target="_blank" href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'classic-install">',
                 '</a>'
             );
             return false;
@@ -1541,11 +1541,11 @@ class PackageImporter
     protected static function getFoldersToCheck(): array
     {
         $result = [];
-        if (is_readable(gamb-duplica-wp_PRO_PATH_IMPORTS) && is_dir(gamb-duplica-wp_PRO_PATH_IMPORTS)) {
-            $result[] = gamb-duplica-wp_PRO_PATH_IMPORTS;
+        if (is_readable(GambDuplicaWP_PRO_PATH_IMPORTS) && is_dir(GambDuplicaWP_PRO_PATH_IMPORTS)) {
+            $result[] = GambDuplicaWP_PRO_PATH_IMPORTS;
         }
 
-        $home = gamb-duplica-wp_pro_get_home_path();
+        $home = GambDuplicaWP_pro_get_home_path();
         if (is_readable($home) && is_dir($home)) {
             $result[] = $home;
         }
@@ -1648,7 +1648,7 @@ class PackageImporter
      */
     public static function getNameHashFromArchiveName($path)
     {
-        return preg_replace(gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN, '$1', basename($path));
+        return preg_replace(GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN, '$1', basename($path));
     }
 
     /**
@@ -1668,17 +1668,17 @@ class PackageImporter
      */
     public static function purgeOldImports()
     {
-        if (!file_exists(gamb-duplica-wp_PRO_PATH_IMPORTS)) {
+        if (!file_exists(GambDuplicaWP_PRO_PATH_IMPORTS)) {
             return;
         }
 
-        if (($files = scandir(gamb-duplica-wp_PRO_PATH_IMPORTS)) == false) {
-            GAMB_DUPLICA_WP_Log::trace("Couldn't get list of files in " . gamb-duplica-wp_PRO_PATH_IMPORTS);
+        if (($files = scandir(GambDuplicaWP_PRO_PATH_IMPORTS)) == false) {
+            GAMB_DUPLICA_WP_Log::trace("Couldn't get list of files in " . GambDuplicaWP_PRO_PATH_IMPORTS);
             return;
         }
 
         foreach ($files as $file) {
-            $filepath = gamb-duplica-wp_PRO_PATH_IMPORTS . "/{$file}";
+            $filepath = GambDuplicaWP_PRO_PATH_IMPORTS . "/{$file}";
             GAMB_DUPLICA_WP_Log::trace("checking {$filepath}");
             if (!is_file($filepath) || $file == 'index.php') {
                 continue;

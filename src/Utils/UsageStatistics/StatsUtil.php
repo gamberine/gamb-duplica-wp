@@ -1,17 +1,17 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\UsageStatistics;
+namespace GambDuplicaWP\Utils\UsageStatistics;
 
 use GAMB_DUPLICA_WP_Archive_Build_Mode;
 use GAMB_DUPLICA_WP_DB;
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_ZipArchive_Mode;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Package\Create\BuildComponents;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Package\Create\BuildComponents;
 use Exception;
 
 class StatsUtil

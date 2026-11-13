@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn\S3;
+namespace VendorGambDuplicaWP\Aws\Arn\S3;
 
-use VendorDuplicator\Aws\Arn\ArnInterface;
+use VendorGambDuplicaWP\Aws\Arn\ArnInterface;
 /**
  * @internal
  */

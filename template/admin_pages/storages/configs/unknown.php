@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Models\Storages\UnknownStorage;
+use GambDuplicaWP\Models\Storages\UnknownStorage;
 
 defined("ABSPATH") or die("");
 

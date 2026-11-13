@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Hooks;
+namespace GambDuplicaWP\Installer\Core\Hooks;
 
 final class HooksMng
 {

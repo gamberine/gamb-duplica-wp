@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Signature;
+namespace VendorGambDuplicaWP\Aws\Signature;
 
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Provides anonymous client access (does not sign requests).
  */

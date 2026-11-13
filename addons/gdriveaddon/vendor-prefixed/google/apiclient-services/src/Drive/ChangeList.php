@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class ChangeList extends \VendorDuplicator\Google\Collection
+class ChangeList extends \VendorGambDuplicaWP\Google\Collection
 {
     protected $collection_key = 'changes';
     protected $changesType = Change::class;
@@ -92,4 +92,4 @@ class ChangeList extends \VendorDuplicator\Google\Collection
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ChangeList::class, 'VendorDuplicator\Google_Service_Drive_ChangeList');
+class_alias(ChangeList::class, 'VendorGambDuplicaWP\Google_Service_Drive_ChangeList');

@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Models;
+namespace GambDuplicaWP\Installer\Models;
 
 use DUPX_Package;
 use Exception;

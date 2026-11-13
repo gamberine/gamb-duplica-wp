@@ -7,8 +7,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 ?>
 <script>

@@ -10,13 +10,13 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Common\Functions;
+namespace VendorGambDuplicaWP\phpseclib3\Common\Functions;
 
-use VendorDuplicator\ParagonIE\ConstantTime\Base64;
-use VendorDuplicator\ParagonIE\ConstantTime\Base64UrlSafe;
-use VendorDuplicator\ParagonIE\ConstantTime\Hex;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\phpseclib3\Math\Common\FiniteField;
+use VendorGambDuplicaWP\ParagonIE\ConstantTime\Base64;
+use VendorGambDuplicaWP\ParagonIE\ConstantTime\Base64UrlSafe;
+use VendorGambDuplicaWP\ParagonIE\ConstantTime\Hex;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField;
 /**
  * Common String Functions
  *

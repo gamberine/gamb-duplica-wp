@@ -23,13 +23,13 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Utils\LockUtil;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Utils\LockUtil;
 
 class GAMB_DUPLICA_WP_Package_Runner
 {
@@ -113,7 +113,7 @@ class GAMB_DUPLICA_WP_Package_Runner
 
         if ($kick_off_worker || self::$delayed_exit_and_kickoff) {
             self::kick_off_worker();
-        } elseif (is_admin() && ControllersManager::getInstance()->isgamb-duplica-wpPage()) {
+        } elseif (is_admin() && ControllersManager::getInstance()->isGambDuplicaWPPage()) {
             GAMB_DUPLICA_WP_Log::trace("************kicking off slug worker");
             // If it's one of our pages force it to kick off the client
             self::kick_off_worker(true);
@@ -154,7 +154,7 @@ class GAMB_DUPLICA_WP_Package_Runner
             'client_call_frequency'               => $CLIENT_CALL_PERIOD_IN_MS,
             'gamb-duplica-wp_pro_process_worker_nonce' => wp_create_nonce('gamb-duplica-wp_pro_process_worker'),
         ];
-        wp_register_script('dup-pro-kick', gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/dp-kick.js', ['jquery'], gamb-duplica-wp_PRO_VERSION);
+        wp_register_script('dup-pro-kick', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/dp-kick.js', ['jquery'], GambDuplicaWP_PRO_VERSION);
         wp_localize_script('dup-pro-kick', 'dp_gateway', $gateway);
         GAMB_DUPLICA_WP_Log::trace('KICKOFF: Client Side');
         wp_enqueue_script('dup-pro-kick');
@@ -215,7 +215,7 @@ class GAMB_DUPLICA_WP_Package_Runner
                             'Click button to switch to the DupArchive engine. Please see this %1$sFAQ%2$s for other possible solutions.',
                             'gamb-duplica-wp'
                         ),
-                        '<a href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-schedule-build-failures" target="_blank">',
+                        '<a href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-schedule-build-failures" target="_blank">',
                         '</a>'
                     ),
                     [
@@ -232,7 +232,7 @@ class GAMB_DUPLICA_WP_Package_Runner
                             'Click button to increase Max Build Time. Please see this %1$sFAQ%2$s for other possible solutions.',
                             'gamb-duplica-wp'
                         ),
-                        '<a href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-schedule-build-failures" target="_blank">',
+                        '<a href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-schedule-build-failures" target="_blank">',
                         '</a>'
                     ),
                     [
@@ -292,7 +292,7 @@ class GAMB_DUPLICA_WP_Package_Runner
                     $system_global->addTextFix(
                         __('Communication to AJAX is blocked.', 'gamb-duplica-wp'),
                         sprintf(
-                            "%s <a href='" . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . "how-to-resolve-builds-getting-stuck-at-a-certain-point/' target='_blank'>%s</a>",
+                            "%s <a href='" . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . "how-to-resolve-builds-getting-stuck-at-a-certain-point/' target='_blank'>%s</a>",
                             __('See FAQ:', 'gamb-duplica-wp'),
                             __('Why is the Backup build stuck at 5%?', 'gamb-duplica-wp')
                         )
@@ -355,7 +355,7 @@ class GAMB_DUPLICA_WP_Package_Runner
                         'Click button to increase Max Transfer Time. Please see this %1$sFAQ%2$s for other possible solutions.',
                         'gamb-duplica-wp'
                     ),
-                    '<a href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-schedule-build-failures" target="_blank">',
+                    '<a href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-schedule-build-failures" target="_blank">',
                     '</a>'
                 ),
                 [

@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\Cron;
+namespace VendorGambDuplicaWP\Cron;
 
 use DateTimeInterface;
 use InvalidArgumentException;

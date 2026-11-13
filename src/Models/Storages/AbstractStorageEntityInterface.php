@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Models\Storages;
+namespace GambDuplicaWP\Models\Storages;
 
 /**
  * Used this interface to avoit errors in PHP 5.6 because isn't possibile declare an abstract static method.

@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package;
+namespace GambDuplicaWP\Package;
 
 use GAMB_DUPLICA_WP_Package;
-use gamb-duplica-wp\Installer\Models\MigrateData;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Installer\Models\MigrateData;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
 
 class PackageUtils
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2;
+namespace VendorGambDuplicaWP\Aws\EndpointV2;
 
-use VendorDuplicator\Aws\EndpointV2\Ruleset\Ruleset;
-use VendorDuplicator\Aws\Exception\UnresolvedEndpointException;
-use VendorDuplicator\Aws\LruArrayCache;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\Ruleset;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedEndpointException;
+use VendorGambDuplicaWP\Aws\LruArrayCache;
 /**
  * Given a service's Ruleset and client-provided input parameters, provides
  * either an object reflecting the properties of a resolved endpoint,

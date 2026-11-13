@@ -12,10 +12,10 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Models\ScanInfo;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Models\ScanInfo;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 class DUPX_Validation_test_disk_space extends DUPX_Validation_abstract_item
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint\UseDualstackEndpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint\UseDualstackEndpoint;
 
-use VendorDuplicator\Aws;
-use VendorDuplicator\Aws\Endpoint\UseDualstackEndpoint\Exception\ConfigurationException;
+use VendorGambDuplicaWP\Aws;
+use VendorGambDuplicaWP\Aws\Endpoint\UseDualstackEndpoint\Exception\ConfigurationException;
 class Configuration implements ConfigurationInterface
 {
     private $useDualstackEndpoint;

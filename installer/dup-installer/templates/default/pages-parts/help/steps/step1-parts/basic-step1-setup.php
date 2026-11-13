@@ -1,6 +1,6 @@
 <?php
 
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

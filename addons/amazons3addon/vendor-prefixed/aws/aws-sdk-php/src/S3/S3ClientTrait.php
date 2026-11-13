@@ -1,17 +1,17 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Api\Parser\PayloadParserTrait;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\HandlerList;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\Aws\S3\Exception\PermanentRedirectException;
-use VendorDuplicator\Aws\S3\Exception\S3Exception;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Promise\RejectedPromise;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Api\Parser\PayloadParserTrait;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\HandlerList;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\Aws\S3\Exception\PermanentRedirectException;
+use VendorGambDuplicaWP\Aws\S3\Exception\S3Exception;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\RejectedPromise;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * A trait providing S3-specific functionality. This is meant to be used in
  * classes implementing \Aws\S3\S3ClientInterface
@@ -84,7 +84,7 @@ trait S3ClientTrait
         $params = ['Bucket' => $bucket, 'Prefix' => $prefix];
         $iter = $this->getIterator('ListObjects', $params);
         if ($regex) {
-            $iter = \VendorDuplicator\Aws\filter($iter, function ($c) use ($regex) {
+            $iter = \VendorGambDuplicaWP\Aws\filter($iter, function ($c) use ($regex) {
                 return preg_match($regex, $c['Key']);
             });
         }

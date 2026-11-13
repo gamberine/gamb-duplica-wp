@@ -1,11 +1,11 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Core\Deploy;
+namespace GambDuplicaWP\Installer\Core\Deploy;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Package\DescriptorTheme;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Package\DescriptorTheme;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 use DUPX_DB;
 use DUPX_DB_Functions;
 use Exception;

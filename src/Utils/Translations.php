@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils;
+namespace GambDuplicaWP\Utils;
 
 /**
  * This class pulls in translations

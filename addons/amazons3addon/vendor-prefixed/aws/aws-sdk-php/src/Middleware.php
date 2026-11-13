@@ -1,19 +1,19 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Api\Validator;
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\Aws\EndpointV2\EndpointProviderV2;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\Signature\S3ExpressSignature;
-use VendorDuplicator\Aws\Token\TokenAuthorization;
-use VendorDuplicator\Aws\Token\TokenInterface;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\LazyOpenStream;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\Validator;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\Aws\EndpointV2\EndpointProviderV2;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Signature\S3ExpressSignature;
+use VendorGambDuplicaWP\Aws\Token\TokenAuthorization;
+use VendorGambDuplicaWP\Aws\Token\TokenInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\LazyOpenStream;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 final class Middleware
 {
     /**

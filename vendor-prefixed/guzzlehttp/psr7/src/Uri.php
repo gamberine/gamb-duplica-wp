@@ -1,10 +1,10 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\GuzzleHttp\Psr7;
+namespace VendorGambDuplicaWP\GuzzleHttp\Psr7;
 
-use VendorDuplicator\GuzzleHttp\Psr7\Exception\MalformedUriException;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Exception\MalformedUriException;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 /**
  * PSR-7 URI implementation.
  *

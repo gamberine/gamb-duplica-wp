@@ -5,12 +5,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Chunking;
+namespace GambDuplicaWP\Libs\Chunking;
 
-use gamb-duplica-wp\Libs\Chunking\Iterators\ChunkFileCopyIterator;
-use gamb-duplica-wp\Libs\Chunking\Persistance\NoPersistanceAdapter;
-use gamb-duplica-wp\Libs\Chunking\Persistance\PersistanceAdapterInterface;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Chunking\Iterators\ChunkFileCopyIterator;
+use GambDuplicaWP\Libs\Chunking\Persistance\NoPersistanceAdapter;
+use GambDuplicaWP\Libs\Chunking\Persistance\PersistanceAdapterInterface;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use Exception;
 
 class ChunkFileCopyManager extends ChunkingManager

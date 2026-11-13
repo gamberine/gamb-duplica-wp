@@ -7,12 +7,12 @@
  *
  * @package Requests
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Cookie\Jar;
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\Http;
-use VendorDuplicator\WpOrg\Requests\Response\Headers;
+use VendorGambDuplicaWP\WpOrg\Requests\Cookie\Jar;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\Http;
+use VendorGambDuplicaWP\WpOrg\Requests\Response\Headers;
 /**
  * HTTP response class
  *
@@ -37,7 +37,7 @@ class Response
     /**
      * Headers, as an associative array
      *
-     * @var \VendorDuplicator\WpOrg\Requests\Response\Headers Array-like object representing headers
+     * @var \VendorGambDuplicaWP\WpOrg\Requests\Response\Headers Array-like object representing headers
      */
     public $headers = [];
     /**
@@ -79,7 +79,7 @@ class Response
     /**
      * Cookies from the request
      *
-     * @var \VendorDuplicator\WpOrg\Requests\Cookie\Jar Array-like object representing a cookie jar
+     * @var \VendorGambDuplicaWP\WpOrg\Requests\Cookie\Jar Array-like object representing a cookie jar
      */
     public $cookies = [];
     /**
@@ -105,8 +105,8 @@ class Response
      *
      * @param boolean $allow_redirects Set to false to throw on a 3xx as well
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception If `$allow_redirects` is false, and code is 3xx (`response.no_redirects`)
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\Http On non-successful status code. Exception class corresponds to "Status" + code (e.g. {@see \WpOrg\Requests\Exception\Http\Status404})
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception If `$allow_redirects` is false, and code is 3xx (`response.no_redirects`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\Http On non-successful status code. Exception class corresponds to "Status" + code (e.g. {@see \WpOrg\Requests\Exception\Http\Status404})
      */
     public function throw_for_status($allow_redirects = \true)
     {
@@ -139,7 +139,7 @@ class Response
      *
      * @return array
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception If `$this->body` is not valid json.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception If `$this->body` is not valid json.
      */
     public function decode_body($associative = \true, $depth = 512, $options = 0)
     {

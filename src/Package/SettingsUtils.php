@@ -5,14 +5,14 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package;
+namespace GambDuplicaWP\Package;
 
 use GAMB_DUPLICA_WP_Archive_Build_Mode;
 use GAMB_DUPLICA_WP_Global_Entity;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Libs\DupArchive\DupArchive;
-use gamb-duplica-wp\Utils\ZipArchiveExtended;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Libs\DupArchive\DupArchive;
+use GambDuplicaWP\Utils\ZipArchiveExtended;
 use Exception;
 
 class SettingsUtils
@@ -34,7 +34,7 @@ class SettingsUtils
                     '%1$s and %2$s represents the opening and closing HTML tags for an anchor or link',
                     'gamb-duplica-wp'
                 ),
-                '<a href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'packages-new-step-1-setup" target="_blank">',
+                '<a href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'packages-new-step-1-setup" target="_blank">',
                 '</a>'
             );
 

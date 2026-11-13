@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
 /**
  * Represents a simple cache interface.

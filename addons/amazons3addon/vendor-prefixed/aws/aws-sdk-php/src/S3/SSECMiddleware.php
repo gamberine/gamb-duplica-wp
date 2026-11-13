@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Simplifies the SSE-C process by encoding and hashing the key.
  * @internal

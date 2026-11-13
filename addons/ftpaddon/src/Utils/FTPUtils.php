@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snapcreek LLC
  */
 
-namespace gamb-duplica-wp\Addons\FtpAddon\Utils;
+namespace GambDuplicaWP\Addons\FtpAddon\Utils;
 
 use DateTime;
 

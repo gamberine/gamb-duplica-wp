@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\Aws\Exception\CryptoException;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\LimitStream;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Exception\CryptoException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\LimitStream;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 trait DecryptionTraitV2
 {
     /**

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Credentials;
+namespace VendorGambDuplicaWP\Aws\Credentials;
 
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\Exception\CredentialsException;
-use VendorDuplicator\Aws\Result;
-use VendorDuplicator\Aws\Sts\StsClient;
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Exception\CredentialsException;
+use VendorGambDuplicaWP\Aws\Result;
+use VendorGambDuplicaWP\Aws\Sts\StsClient;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 /**
  * Credential provider that provides credentials via assuming a role with a web identity
  * More Information, see: https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-sts-2011-06-15.html#assumerolewithwebidentity

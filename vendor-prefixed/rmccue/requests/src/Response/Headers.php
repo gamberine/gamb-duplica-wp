@@ -5,12 +5,12 @@
  *
  * @package Requests
  */
-namespace VendorDuplicator\WpOrg\Requests\Response;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Response;
 
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Utility\CaseInsensitiveDictionary;
-use VendorDuplicator\WpOrg\Requests\Utility\FilteredIterator;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\CaseInsensitiveDictionary;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\FilteredIterator;
 /**
  * Case-insensitive dictionary, suitable for HTTP headers
  *
@@ -46,7 +46,7 @@ class Headers extends CaseInsensitiveDictionary
      * @param string $offset Item name
      * @param string $value Item value
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On attempting to use dictionary as list (`invalidset`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On attempting to use dictionary as list (`invalidset`)
      */
     public function offsetSet($offset, $value)
     {
@@ -67,7 +67,7 @@ class Headers extends CaseInsensitiveDictionary
      * @param string $offset Name of the header to retrieve.
      * @return array|null Header values
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not valid as an array key.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not valid as an array key.
      */
     public function getValues($offset)
     {
@@ -91,7 +91,7 @@ class Headers extends CaseInsensitiveDictionary
      * @param string|array $value Value to flatten
      * @return string Flattened value
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string or an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string or an array.
      */
     public function flatten($value)
     {

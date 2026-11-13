@@ -15,11 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Middleware;
+namespace VendorGambDuplicaWP\Google\Auth\Middleware;
 
-use VendorDuplicator\Google\Auth\CacheTrait;
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Google\Auth\CacheTrait;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * ScopedAccessTokenMiddleware is a Guzzle Middleware that adds an Authorization
  * header provided by a closure.
@@ -79,7 +79,7 @@ class ScopedAccessTokenMiddleware
      *   $middleware = new ScopedAccessTokenMiddleware(
      *       'AppIdentityService::getAccessToken',
      *       $scope,
-     *       [ 'prefix' => 'VendorDuplicator\\Google\Auth\ScopedAccessToken::' ],
+     *       [ 'prefix' => 'VendorGambDuplicaWP\\Google\Auth\ScopedAccessToken::' ],
      *       $cache = new Memcache()
      *   );
      *   $stack = HandlerStack::create();

@@ -22,17 +22,17 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys\PKCS1 as Progenitor;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedCurveException;
-use VendorDuplicator\phpseclib3\File\ASN1;
-use VendorDuplicator\phpseclib3\File\ASN1\Maps;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys\PKCS1 as Progenitor;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedCurveException;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1\Maps;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * "PKCS1" (RFC5915) Formatted EC Key Handler
  *
@@ -134,7 +134,7 @@ abstract class PKCS1 extends Progenitor
      *
      * @param BigInteger $privateKey
      * @param BaseCurve $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @param string $secret optional
      * @param string $password optional
      * @param array $options optional

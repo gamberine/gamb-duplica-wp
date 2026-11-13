@@ -5,15 +5,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Utils\HTTP;
+namespace GambDuplicaWP\Utils\HTTP;
 
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\AbstractJsonSerializable;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use Exception;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Requests;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Response;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Response\Headers;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use VendorGambDuplicaWP\WpOrg\Requests\Response;
+use VendorGambDuplicaWP\WpOrg\Requests\Response\Headers;
 
 class DynamicChunkRequests extends AbstractJsonSerializable
 {

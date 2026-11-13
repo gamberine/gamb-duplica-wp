@@ -9,9 +9,9 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Processor;
+namespace VendorGambDuplicaWP\Monolog\Processor;
 
-use VendorDuplicator\Monolog\ResettableInterface;
+use VendorGambDuplicaWP\Monolog\ResettableInterface;
 /**
  * Adds a unique identifier into records
  *

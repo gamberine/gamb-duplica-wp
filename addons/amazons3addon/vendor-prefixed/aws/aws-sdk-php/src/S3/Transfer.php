@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\MetricsBuilder;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Promise\PromisorInterface;
+use VendorGambDuplicaWP\Aws;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\MetricsBuilder;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromisorInterface;
 use Iterator;
 /**
  * Transfers files from the local filesystem to S3 or from S3 to the local
@@ -237,7 +237,7 @@ class Transfer implements PromisorInterface
     private function createUploadPromise()
     {
         // Map each file into a promise that performs the actual transfer.
-        $files = \VendorDuplicator\Aws\map($this->getUploadsIterator(), function ($file) {
+        $files = \VendorGambDuplicaWP\Aws\map($this->getUploadsIterator(), function ($file) {
             return filesize($file) >= $this->mupThreshold ? $this->uploadMultipart($file) : $this->upload($file);
         });
         // Create an EachPromise, that will concurrently handle the upload

@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Core\MigrationMng;
+use GambDuplicaWP\Core\MigrationMng;
 
 defined("ABSPATH") or die("");
 

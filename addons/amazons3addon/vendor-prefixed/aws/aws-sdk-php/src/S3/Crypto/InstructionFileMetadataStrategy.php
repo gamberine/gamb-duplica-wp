@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Crypto;
+namespace VendorGambDuplicaWP\Aws\S3\Crypto;
 
-use VendorDuplicator\Aws\Crypto\MetadataStrategyInterface;
-use VendorDuplicator\Aws\Crypto\MetadataEnvelope;
-use VendorDuplicator\Aws\S3\S3Client;
+use VendorGambDuplicaWP\Aws\Crypto\MetadataStrategyInterface;
+use VendorGambDuplicaWP\Aws\Crypto\MetadataEnvelope;
+use VendorGambDuplicaWP\Aws\S3\S3Client;
 /**
  * Stores and reads encryption MetadataEnvelope information in a file on Amazon
  * S3.

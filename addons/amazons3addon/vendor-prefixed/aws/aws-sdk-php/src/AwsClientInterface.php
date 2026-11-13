@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Psr\Http\Message\UriInterface;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
 /**
  * Represents an AWS client.
  */
@@ -54,7 +54,7 @@ interface AwsClientInterface
      *
      * @param CommandInterface $command Command to execute
      *
-     * @return \VendorDuplicator\GuzzleHttp\Promise\PromiseInterface
+     * @return \VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface
      */
     public function executeAsync(CommandInterface $command);
     /**
@@ -82,7 +82,7 @@ interface AwsClientInterface
     /**
      * Get the service description associated with the client.
      *
-     * @return \VendorDuplicator\Aws\Api\Service
+     * @return \VendorGambDuplicaWP\Aws\Api\Service
      */
     public function getApi();
     /**
@@ -118,7 +118,7 @@ interface AwsClientInterface
      * @param string $name   Name of the operation used for iterator
      * @param array  $args   Command args to be used with each command
      *
-     * @return \VendorDuplicator\Aws\ResultPaginator
+     * @return \VendorGambDuplicaWP\Aws\ResultPaginator
      * @throws \UnexpectedValueException if the iterator config is invalid.
      */
     public function getPaginator($name, array $args = []);
@@ -149,7 +149,7 @@ interface AwsClientInterface
      *                              by the waiter. Waiter configuration options
      *                              can be provided in an associative array in
      *                              the @waiter key.
-     * @return \VendorDuplicator\Aws\Waiter
+     * @return \VendorGambDuplicaWP\Aws\Waiter
      * @throws \UnexpectedValueException if the waiter is invalid.
      */
     public function getWaiter($name, array $args = []);

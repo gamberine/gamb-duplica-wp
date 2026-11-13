@@ -1,10 +1,10 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Core\Deploy;
+namespace GambDuplicaWP\Installer\Core\Deploy;
 
-use gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginsManager;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginsManager;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 use DUPX_ArchiveConfig;
 use DUPX_DB;
 use DUPX_DB_Functions;

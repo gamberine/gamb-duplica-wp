@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class DriveFileImageMediaMetadataLocation extends \VendorDuplicator\Google\Model
+class DriveFileImageMediaMetadataLocation extends \VendorGambDuplicaWP\Google\Model
 {
     public $altitude;
     public $latitude;
@@ -48,4 +48,4 @@ class DriveFileImageMediaMetadataLocation extends \VendorDuplicator\Google\Model
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DriveFileImageMediaMetadataLocation::class, 'VendorDuplicator\Google_Service_Drive_DriveFileImageMediaMetadataLocation');
+class_alias(DriveFileImageMediaMetadataLocation::class, 'VendorGambDuplicaWP\Google_Service_Drive_DriveFileImageMediaMetadataLocation');

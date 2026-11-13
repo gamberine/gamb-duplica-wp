@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser;
+namespace VendorGambDuplicaWP\Aws\Api\Parser;
 
-use VendorDuplicator\Aws\Api\Parser\Exception\ParserException;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Api\Parser\Exception\ParserException;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 trait PayloadParserTrait
 {
     /**

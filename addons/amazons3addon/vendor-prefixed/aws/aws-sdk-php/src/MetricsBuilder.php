@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\Aws\Credentials\CredentialSources;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialSources;
 /**
  * A placeholder for gathering metrics in a request.
  *

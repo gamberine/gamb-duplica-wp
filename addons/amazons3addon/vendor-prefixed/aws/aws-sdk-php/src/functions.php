@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\GuzzleHttp\Client;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\GuzzleHttp\Promise\FulfilledPromise;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\FulfilledPromise;
 //-----------------------------------------------------------------------------
 // Functional functions
 //-----------------------------------------------------------------------------
@@ -252,11 +252,11 @@ function default_http_handler()
     $version = guzzle_major_version();
     // If Guzzle 6 or 7 installed
     if ($version === 6 || $version === 7) {
-        return new \VendorDuplicator\Aws\Handler\GuzzleV6\GuzzleHandler();
+        return new \VendorGambDuplicaWP\Aws\Handler\GuzzleV6\GuzzleHandler();
     }
     // If Guzzle 5 installed
     if ($version === 5) {
-        return new \VendorDuplicator\Aws\Handler\GuzzleV5\GuzzleHandler();
+        return new \VendorGambDuplicaWP\Aws\Handler\GuzzleV5\GuzzleHandler();
     }
     throw new \RuntimeException('Unknown Guzzle version: ' . $version);
 }
@@ -270,11 +270,11 @@ function default_user_agent()
     $version = guzzle_major_version();
     // If Guzzle 6 or 7 installed
     if ($version === 6 || $version === 7) {
-        return \VendorDuplicator\GuzzleHttp\default_user_agent();
+        return \VendorGambDuplicaWP\GuzzleHttp\default_user_agent();
     }
     // If Guzzle 5 installed
     if ($version === 5) {
-        return \VendorDuplicator\GuzzleHttp\Client::getDefaultUserAgent();
+        return \VendorGambDuplicaWP\GuzzleHttp\Client::getDefaultUserAgent();
     }
     throw new \RuntimeException('Unknown Guzzle version: ' . $version);
 }
@@ -291,7 +291,7 @@ function guzzle_major_version()
     if (null !== $cache) {
         return $cache;
     }
-    if (defined('VendorDuplicator\GuzzleHttp\ClientInterface::VERSION')) {
+    if (defined('VendorGambDuplicaWP\GuzzleHttp\ClientInterface::VERSION')) {
         $version = (string) ClientInterface::VERSION;
         if ($version[0] === '6') {
             return $cache = 6;
@@ -299,7 +299,7 @@ function guzzle_major_version()
         if ($version[0] === '5') {
             return $cache = 5;
         }
-    } elseif (defined('VendorDuplicator\GuzzleHttp\ClientInterface::MAJOR_VERSION')) {
+    } elseif (defined('VendorGambDuplicaWP\GuzzleHttp\ClientInterface::MAJOR_VERSION')) {
         return $cache = ClientInterface::MAJOR_VERSION;
     }
     throw new \RuntimeException('Unable to determine what Guzzle version is installed.');

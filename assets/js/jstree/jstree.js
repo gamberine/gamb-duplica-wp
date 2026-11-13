@@ -8272,7 +8272,7 @@
                         mask[pattern.charAt(i)] = 0;
                     }
                     for (i = 0; i < patternLen; i++) {
-                        mask[pattern.charAt(i)] | = 1 << (patternLen - i - 1);
+                        mask[pattern.charAt(i)] |= 1 << (patternLen - i - 1);
                     }
                     return mask;
                 }());

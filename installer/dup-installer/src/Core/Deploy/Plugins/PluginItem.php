@@ -5,14 +5,14 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\Plugins;
+namespace GambDuplicaWP\Installer\Core\Deploy\Plugins;
 
-use gamb-duplica-wp\Installer\Core\Deploy\Helpers;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Package\DescriptorPlugin;
-use gamb-duplica-wp\Installer\Utils\InstallerOrigFileMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Core\Deploy\Helpers;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Package\DescriptorPlugin;
+use GambDuplicaWP\Installer\Utils\InstallerOrigFileMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use DUPX_ArchiveConfig;
 use DUPX_NOTICE_ITEM;
 use DUPX_NOTICE_MANAGER;

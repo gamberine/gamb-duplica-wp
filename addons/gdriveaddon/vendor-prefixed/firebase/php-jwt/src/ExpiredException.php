@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Firebase\JWT;
+namespace VendorGambDuplicaWP\Firebase\JWT;
 
 class ExpiredException extends \UnexpectedValueException implements JWTExceptionWithPayloadInterface
 {

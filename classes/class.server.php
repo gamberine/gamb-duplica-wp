@@ -2,16 +2,16 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Addons\DropboxAddon\Models\DropboxStorage;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Addons\ProBase\LicensingController;
-use gamb-duplica-wp\Core\MigrationMng;
-use gamb-duplica-wp\Libs\Shell\Shell;
-use gamb-duplica-wp\Libs\Snap\FunctionalityCheck;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Addons\DropboxAddon\Models\DropboxStorage;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\LicensingController;
+use GambDuplicaWP\Core\MigrationMng;
+use GambDuplicaWP\Libs\Shell\Shell;
+use GambDuplicaWP\Libs\Snap\FunctionalityCheck;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
 
 /**
  * Class used to get server info
@@ -120,11 +120,11 @@ class GAMB_DUPLICA_WP_Server
 
         self::logRequirementFail($dup_tests['IO']['WPROOT'], $home_path . ' (home path) can\'t be opened.');
 
-        $dup_tests['IO']['SSDIR'] = is_writeable(gamb-duplica-wp_PRO_SSDIR_PATH) ? 'Pass' : 'Fail';
-        self::logRequirementFail($dup_tests['IO']['SSDIR'], gamb-duplica-wp_PRO_SSDIR_PATH . ' (gamb-duplica-wp_PRO_SSDIR_PATH) can\'t be writeable.');
+        $dup_tests['IO']['SSDIR'] = is_writeable(GambDuplicaWP_PRO_SSDIR_PATH) ? 'Pass' : 'Fail';
+        self::logRequirementFail($dup_tests['IO']['SSDIR'], GambDuplicaWP_PRO_SSDIR_PATH . ' (gamb-duplica-wp_PRO_SSDIR_PATH) can\'t be writeable.');
 
-        $dup_tests['IO']['SSTMP'] = is_writeable(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) ? 'Pass' : 'Fail';
-        self::logRequirementFail($dup_tests['IO']['SSTMP'], gamb-duplica-wp_PRO_SSDIR_PATH_TMP . ' (gamb-duplica-wp_PRO_SSDIR_PATH_TMP) can\'t be writeable.');
+        $dup_tests['IO']['SSTMP'] = is_writeable(GambDuplicaWP_PRO_SSDIR_PATH_TMP) ? 'Pass' : 'Fail';
+        self::logRequirementFail($dup_tests['IO']['SSTMP'], GambDuplicaWP_PRO_SSDIR_PATH_TMP . ' (gamb-duplica-wp_PRO_SSDIR_PATH_TMP) can\'t be writeable.');
 
         $dup_tests['IO']['ALL'] = !in_array('Fail', $dup_tests['IO']) ? 'Pass' : 'Fail';
 
@@ -167,7 +167,7 @@ class GAMB_DUPLICA_WP_Server
                 true,
                 'https://www.php.net/manual/en/class.ziparchive.php',
                 '<i style="font-size:12px">'
-                   . '<a href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-work-with-the-different-zip-engines" target="_blank">'
+                   . '<a href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-work-with-the-different-zip-engines" target="_blank">'
                    . esc_html__('Overview on how to enable ZipArchive', 'gamb-duplica-wp') . '</i></a>'
             );
         }
@@ -284,12 +284,12 @@ class GAMB_DUPLICA_WP_Server
         self::logCheckFalse($testOpenBaseDir, 'open_basedir is enabled.');
 
         $max_execution_time = ini_get("max_execution_time");
-        $testMaxExecTime    = ($max_execution_time > gamb-duplica-wp_PRO_SCAN_TIMEOUT) || (strcmp($max_execution_time, 'Off') == 0 || $max_execution_time == 0);
+        $testMaxExecTime    = ($max_execution_time > GambDuplicaWP_PRO_SCAN_TIMEOUT) || (strcmp($max_execution_time, 'Off') == 0 || $max_execution_time == 0);
 
         if (strcmp($max_execution_time, 'Off') == 0) {
             $max_execution_time_error_message = 'max_execution_time should not be' . $max_execution_time;
         } else {
-            $max_execution_time_error_message = 'max_execution_time (' . $max_execution_time . ') should not be lower than the gamb-duplica-wp_PRO_SCAN_TIMEOUT' . gamb-duplica-wp_PRO_SCAN_TIMEOUT;
+            $max_execution_time_error_message = 'max_execution_time (' . $max_execution_time . ') should not be lower than the gamb-duplica-wp_PRO_SCAN_TIMEOUT' . GambDuplicaWP_PRO_SCAN_TIMEOUT;
         }
         self::logCheckFalse($testMaxExecTime, $max_execution_time_error_message);
 
@@ -311,7 +311,7 @@ class GAMB_DUPLICA_WP_Server
         self::logCheckFalse($test64Bit, 'This servers PHP architecture is NOT 64-bit.  Backups over 2GB are not possible.');
 
         $testMemory = self::hasEnoughMemory();
-        self::logCheckFalse($testCURL, 'memory_limit is less than gamb-duplica-wp_PRO_MIN_MEMORY_LIMIT: ' . gamb-duplica-wp_PRO_MIN_MEMORY_LIMIT);
+        self::logCheckFalse($testCURL, 'memory_limit is less than gamb-duplica-wp_PRO_MIN_MEMORY_LIMIT: ' . GambDuplicaWP_PRO_MIN_MEMORY_LIMIT);
 
         $checks['SRV']['Brand'] = GAMB_DUPLICA_WP_Package::is_active_brand_prepared();
         $checks['SRV']['HOST']  = GAMB_DUPLICA_WP_Custom_Host_Manager::getInstance()->getActiveHostings();
@@ -403,7 +403,7 @@ class GAMB_DUPLICA_WP_Server
             return true;
         }
 
-        if (SnapUtil::convertToBytes($memory_limit) >= SnapUtil::convertToBytes(gamb-duplica-wp_PRO_MIN_MEMORY_LIMIT)) {
+        if (SnapUtil::convertToBytes($memory_limit) >= SnapUtil::convertToBytes(GambDuplicaWP_PRO_MIN_MEMORY_LIMIT)) {
             return true;
         }
 
@@ -462,13 +462,13 @@ class GAMB_DUPLICA_WP_Server
         $pagePackages      = null;
         $fileTimeSkipInSec = (max(GAMB_DUPLICA_WP_Constants::DEFAULT_MAX_PACKAGE_RUNTIME_IN_MIN, $global->max_package_runtime_in_min) + GAMB_DUPLICA_WP_Constants::ORPAHN_CLEANUP_DELAY_MAX_PACKAGE_RUNTIME) * 60;
 
-        if (file_exists(gamb-duplica-wp_PRO_SSDIR_PATH) && ($handle = opendir(gamb-duplica-wp_PRO_SSDIR_PATH)) !== false) {
+        if (file_exists(GambDuplicaWP_PRO_SSDIR_PATH) && ($handle = opendir(GambDuplicaWP_PRO_SSDIR_PATH)) !== false) {
             while (false !== ($fileName = readdir($handle))) {
                 if ($fileName == '.' || $fileName == '..') {
                     continue;
                 }
 
-                $fileFullPath = gamb-duplica-wp_PRO_SSDIR_PATH . '/' . $fileName;
+                $fileFullPath = GambDuplicaWP_PRO_SSDIR_PATH . '/' . $fileName;
 
                 if (is_dir($fileFullPath)) {
                     continue;
@@ -631,7 +631,7 @@ class GAMB_DUPLICA_WP_Server
         ];
 
         //Disk Space
-        $home_path          = gamb-duplica-wp_pro_get_home_path();
+        $home_path          = GambDuplicaWP_pro_get_home_path();
         $space              = SnapIO::diskTotalSpace($home_path);
         $space_free         = SnapIO::diskFreeSpace($home_path);
         $serverDiskSettings = [
@@ -687,7 +687,7 @@ class GAMB_DUPLICA_WP_Server
             [
                 'label'     => __('gamb-duplica-wp Version', 'gamb-duplica-wp'),
                 'logLabel'  => 'gamb-duplica-wp Version',
-                'value'     => gamb-duplica-wp_PRO_VERSION,
+                'value'     => GambDuplicaWP_PRO_VERSION,
                 'valueNote' => sprintf(
                     _x(
                         '- %1$sCheck WordPress Updates%2$s',
@@ -756,7 +756,7 @@ class GAMB_DUPLICA_WP_Server
             [
                 'label'    => __('gamb-duplica-wp Version', 'gamb-duplica-wp'),
                 'logLabel' => 'gamb-duplica-wp Version',
-                'value'    => gamb-duplica-wp_PRO_VERSION,
+                'value'    => GambDuplicaWP_PRO_VERSION,
             ],
         ];
     }

@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint;
 
-use VendorDuplicator\JmesPath\Env;
+use VendorGambDuplicaWP\JmesPath\Env;
 class PartitionEndpointProvider
 {
     /** @var Partition[] */
@@ -81,8 +81,8 @@ class PartitionEndpointProvider
      */
     public static function defaultProvider($options = [])
     {
-        $data = \VendorDuplicator\Aws\load_compiled_json(__DIR__ . '/../data/endpoints.json');
-        $prefixData = \VendorDuplicator\Aws\load_compiled_json(__DIR__ . '/../data/endpoints_prefix_history.json');
+        $data = \VendorGambDuplicaWP\Aws\load_compiled_json(__DIR__ . '/../data/endpoints.json');
+        $prefixData = \VendorGambDuplicaWP\Aws\load_compiled_json(__DIR__ . '/../data/endpoints_prefix_history.json');
         $mergedData = self::mergePrefixData($data, $prefixData);
         return new self($mergedData['partitions'], 'aws', $options);
     }

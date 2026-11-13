@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
 /**
  * Builds a single handler function from zero or more middleware functions and

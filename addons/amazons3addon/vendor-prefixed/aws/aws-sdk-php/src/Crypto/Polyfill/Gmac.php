@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto\Polyfill;
+namespace VendorGambDuplicaWP\Aws\Crypto\Polyfill;
 
 /**
  * Class Gmac

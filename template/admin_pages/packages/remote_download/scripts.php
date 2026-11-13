@@ -7,8 +7,8 @@
  * @copyright (c) 2024, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 defined("ABSPATH") or die("");
 
@@ -103,7 +103,7 @@ jQuery(document).ready(function ($) {
         if (action.length === 0 || nonceVal.length === 0 || packageId <= 0) {
             location.reload();
         } else {
-            gamb-duplica-wp.Util.dynamicFormSubmit('', 'post', {
+            GambDuplicaWP.Util.dynamicFormSubmit('', 'post', {
                 packageId: packageId,
                 action: action,
                 _wpnonce: nonceVal
@@ -123,7 +123,7 @@ jQuery(document).ready(function ($) {
         packageId,
         remoteAction,
     ) {
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_get_remote_restore_download_options',
                 packageId: packageId,

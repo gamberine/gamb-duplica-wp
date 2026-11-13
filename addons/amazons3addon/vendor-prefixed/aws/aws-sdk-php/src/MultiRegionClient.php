@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Endpoint\PartitionEndpointProvider;
-use VendorDuplicator\Aws\Endpoint\PartitionInterface;
-use VendorDuplicator\Aws\EndpointV2\EndpointProviderV2;
-use VendorDuplicator\Aws\EndpointV2\EndpointDefinitionProvider;
+use VendorGambDuplicaWP\Aws\Endpoint\PartitionEndpointProvider;
+use VendorGambDuplicaWP\Aws\Endpoint\PartitionInterface;
+use VendorGambDuplicaWP\Aws\EndpointV2\EndpointProviderV2;
+use VendorGambDuplicaWP\Aws\EndpointV2\EndpointDefinitionProvider;
 class MultiRegionClient implements AwsClientInterface
 {
     use AwsClientTrait;
@@ -33,7 +33,7 @@ class MultiRegionClient implements AwsClientInterface
         unset($args['region']['default']);
         return $args + ['client_factory' => ['type' => 'config', 'valid' => ['callable'], 'doc' => 'A callable that takes an array of client' . ' configuration arguments and returns a regionalized' . ' client.', 'required' => \true, 'internal' => \true, 'default' => function (array $args) {
             $namespace = manifest($args['service'])['namespace'];
-            $klass = "VendorDuplicator\\Aws\\{$namespace}\\{$namespace}Client";
+            $klass = "VendorGambDuplicaWP\\Aws\\{$namespace}\\{$namespace}Client";
             $region = isset($args['region']) ? $args['region'] : null;
             return function (array $args) use ($klass, $region) {
                 if ($region && empty($args['region'])) {

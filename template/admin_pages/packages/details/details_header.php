@@ -4,8 +4,8 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Core\CapMng;
 
 defined("ABSPATH") or die("");
 
@@ -77,9 +77,9 @@ $packgeTransferUrl = PackagesPageController::getInstance()->getPackageTransferUr
                     '1 and 3 are opening, 2 and 4 are closing anchor/link tags',
                     'gamb-duplica-wp'
                 ),
-                '<a target="_blank" href="' . esc_url(gamb-duplica-wp_PRO_TECH_FAQ_URL) . '">',
+                '<a target="_blank" href="' . esc_url(GambDuplicaWP_PRO_TECH_FAQ_URL) . '">',
                 '</a>',
-                '<a target="_blank" href="' . esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'my-account/support/') . '">',
+                '<a target="_blank" href="' . esc_url(GambDuplicaWP_PRO_BLOG_URL . 'my-account/support/') . '">',
                 '</a>'
             );
         ?>

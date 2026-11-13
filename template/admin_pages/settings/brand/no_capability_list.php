@@ -6,8 +6,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Views\ViewHelper;
 
 /**
  * Variables
@@ -59,5 +59,5 @@ if (License::can(License::CAPABILITY_BRAND)) {
 </div>
 
 <div style="border:0px solid #999; padding: 5px; margin: 5px; border-radius: 5px; width:700px">
-    <img src="<?php echo esc_attr(gamb-duplica-wp_PRO_IMG_URL . '/dpro-brand.png'); ?>" >
+    <img src="<?php echo esc_attr(GambDuplicaWP_PRO_IMG_URL . '/dpro-brand.png'); ?>" >
 </div>

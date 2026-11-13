@@ -4,12 +4,12 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Utils;
+namespace GambDuplicaWP\Installer\Utils;
 
-use gamb-duplica-wp\Installer\Core\Bootstrap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapOrigFileManager;
+use GambDuplicaWP\Installer\Core\Bootstrap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapOrigFileManager;
 
 /**
  * Original installer files manager

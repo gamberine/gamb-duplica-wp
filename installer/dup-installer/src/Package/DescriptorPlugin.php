@@ -4,7 +4,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Package;
+namespace GambDuplicaWP\Installer\Package;
 
 /**
  * Plugin descriptor

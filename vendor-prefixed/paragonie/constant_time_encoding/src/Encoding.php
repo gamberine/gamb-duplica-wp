@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\ParagonIE\ConstantTime;
+namespace VendorGambDuplicaWP\ParagonIE\ConstantTime;
 
 use TypeError;
 /**
@@ -28,7 +28,7 @@ use TypeError;
  */
 /**
  * Class Encoding
- * @package VendorDuplicator\ParagonIE\ConstantTime
+ * @package VendorGambDuplicaWP\ParagonIE\ConstantTime
  */
 abstract class Encoding
 {

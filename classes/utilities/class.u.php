@@ -15,8 +15,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Libs\Shell\Shell;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Shell\Shell;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 class GAMB_DUPLICA_WP_U
 {

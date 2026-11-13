@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser;
+namespace VendorGambDuplicaWP\Aws\Api\Parser;
 
-use VendorDuplicator\Aws\Api\DateTimeResult;
-use VendorDuplicator\Aws\Api\Shape;
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\Result;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Api\DateTimeResult;
+use VendorGambDuplicaWP\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\Result;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * @internal
  */

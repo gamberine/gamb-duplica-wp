@@ -1,9 +1,9 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\GuzzleHttp\Psr7;
+namespace VendorGambDuplicaWP\GuzzleHttp\Psr7;
 
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 /**
  * Provides methods to determine if a modified URL should be considered cross-origin.
  *

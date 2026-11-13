@@ -5,18 +5,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core;
+namespace GambDuplicaWP\Installer\Core;
 
-use gamb-duplica-wp\Installer\Core\Addons\InstAddonsManager;
-use gamb-duplica-wp\Installer\Core\Deploy\ServerConfigs;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\InstallerOrigFileMng;
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Utils\Log\LogHandler;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Core\Addons\InstAddonsManager;
+use GambDuplicaWP\Installer\Core\Deploy\ServerConfigs;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\InstallerOrigFileMng;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\Log\LogHandler;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use DUPX_U;
 
 /**
@@ -132,8 +132,8 @@ class Bootstrap
         if (!defined('GB_IN_BYTES')) {
             define('GB_IN_BYTES', 1024 * MB_IN_BYTES);
         }
-        if (!defined('gamb-duplica-wp_PRO_PHP_MAX_MEMORY')) {
-            define('gamb-duplica-wp_PRO_PHP_MAX_MEMORY', 4096 * MB_IN_BYTES);
+        if (!defined('GambDuplicaWP_PRO_PHP_MAX_MEMORY')) {
+            define('GambDuplicaWP_PRO_PHP_MAX_MEMORY', 4096 * MB_IN_BYTES);
         }
 
         date_default_timezone_set('UTC'); // Some machines don’t have this set so just do it here.
@@ -150,7 +150,7 @@ class Bootstrap
             @ini_set("default_charset", 'utf-8');
         }
         if (SnapUtil::isIniValChangeable('memory_limit')) {
-            @ini_set('memory_limit', (string) gamb-duplica-wp_PRO_PHP_MAX_MEMORY);
+            @ini_set('memory_limit', (string) GambDuplicaWP_PRO_PHP_MAX_MEMORY);
         }
         if (SnapUtil::isIniValChangeable('max_input_time')) {
             @ini_set('max_input_time', '-1');

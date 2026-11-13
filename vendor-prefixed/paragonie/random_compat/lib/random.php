@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 /**
  * Random_* Compatibility Library

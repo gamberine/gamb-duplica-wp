@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api;
+namespace VendorGambDuplicaWP\Aws\Api;
 
-use VendorDuplicator\Aws\Api\Parser\Exception\ParserException;
+use VendorGambDuplicaWP\Aws\Api\Parser\Exception\ParserException;
 use DateTime;
 use DateTimeZone;
 use Exception;
@@ -81,7 +81,7 @@ class DateTimeResult extends \DateTime implements \JsonSerializable
                 } catch (Exception $exception) {
                     return self::fromISO8601($timestamp);
                 }
-            } else if (\VendorDuplicator\Aws\is_valid_epoch($timestamp)) {
+            } else if (\VendorGambDuplicaWP\Aws\is_valid_epoch($timestamp)) {
                 return self::fromEpoch($timestamp);
             }
             return self::fromISO8601($timestamp);

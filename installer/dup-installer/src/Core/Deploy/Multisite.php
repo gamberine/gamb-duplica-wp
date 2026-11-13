@@ -1,17 +1,17 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Core\Deploy;
+namespace GambDuplicaWP\Installer\Core\Deploy;
 
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescMultisite;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\REST\RESTPoints;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescMultisite;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\REST\RESTPoints;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapURL;
 use DUPX_ArchiveConfig;
 use DUPX_Ctrl_Params;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 use DUPX_U;
 use Exception;
 

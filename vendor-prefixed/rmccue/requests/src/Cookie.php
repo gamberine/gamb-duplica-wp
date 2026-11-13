@@ -5,13 +5,13 @@
  *
  * @package Requests\Cookies
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Iri;
-use VendorDuplicator\WpOrg\Requests\Response\Headers;
-use VendorDuplicator\WpOrg\Requests\Utility\CaseInsensitiveDictionary;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Iri;
+use VendorGambDuplicaWP\WpOrg\Requests\Response\Headers;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\CaseInsensitiveDictionary;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * Cookie storage object
  *
@@ -37,7 +37,7 @@ class Cookie
      * Valid keys are `'path'`, `'domain'`, `'expires'`, `'max-age'`, `'secure'` and
      * `'httponly'`.
      *
-     * @var \VendorDuplicator\WpOrg\Requests\Utility\CaseInsensitiveDictionary|array Array-like object
+     * @var \VendorGambDuplicaWP\WpOrg\Requests\Utility\CaseInsensitiveDictionary|array Array-like object
      */
     public $attributes = [];
     /**
@@ -68,11 +68,11 @@ class Cookie
      *                                                                                `'persistent'` and `'host-only'`.
      * @param int|null                                                $reference_time Reference time for relative calculations.
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $name argument is not a string.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $value argument is not a string.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $attributes argument is not an array or iterable object with array access.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $flags argument is not an array.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $reference_time argument is not an integer or null.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $name argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $value argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $attributes argument is not an array or iterable object with array access.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $flags argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $reference_time argument is not an integer or null.
      */
     public function __construct($name, $value, $attributes = [], $flags = [], $reference_time = null)
     {
@@ -138,7 +138,7 @@ class Cookie
     /**
      * Check if a cookie is valid for a given URI
      *
-     * @param \VendorDuplicator\WpOrg\Requests\Iri $uri URI to check
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Iri $uri URI to check
      * @return boolean Whether the cookie is valid for the given URI
      */
     public function uri_matches(Iri $uri)
@@ -357,10 +357,10 @@ class Cookie
      * @param string $cookie_header Cookie header value (from a Set-Cookie header)
      * @param string $name
      * @param int|null $reference_time
-     * @return \VendorDuplicator\WpOrg\Requests\Cookie Parsed cookie object
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Cookie Parsed cookie object
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $cookie_header argument is not a string.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $name argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $cookie_header argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $name argument is not a string.
      */
     public static function parse($cookie_header, $name = '', $reference_time = null)
     {
@@ -407,12 +407,12 @@ class Cookie
     /**
      * Parse all Set-Cookie headers from request headers
      *
-     * @param \VendorDuplicator\WpOrg\Requests\Response\Headers $headers Headers to parse from
-     * @param \VendorDuplicator\WpOrg\Requests\Iri|null $origin URI for comparing cookie origins
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Response\Headers $headers Headers to parse from
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Iri|null $origin URI for comparing cookie origins
      * @param int|null $time Reference time for expiration calculation
      * @return array
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $origin argument is not null or an instance of the Iri class.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $origin argument is not null or an instance of the Iri class.
      */
     public static function parse_from_headers(Headers $headers, $origin = null, $time = null)
     {

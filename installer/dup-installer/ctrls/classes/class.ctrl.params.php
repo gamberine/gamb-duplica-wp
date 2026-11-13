@@ -12,14 +12,14 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginsManager;
-use gamb-duplica-wp\Installer\Core\Deploy\ServerConfigs;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescDatabase;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescEngines;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamForm;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginsManager;
+use GambDuplicaWP\Installer\Core\Deploy\ServerConfigs;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescDatabase;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescEngines;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamForm;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 
 /**
  * singleton class
@@ -157,7 +157,7 @@ final class DUPX_Ctrl_Params
                 $forceDisable = PluginsManager::getInstance()->getAllPluginsSlugs();
 
                 // EXCLUDE gamb-duplica-wp PRO
-                if (($key = array_search(PluginsManager::SLUG_gamb-duplica-wp_PRO, $forceDisable)) !== false) {
+                if (($key = array_search(PluginsManager::SLUG_GambDuplicaWP_PRO, $forceDisable)) !== false) {
                     unset($forceDisable[$key]);
                 }
 

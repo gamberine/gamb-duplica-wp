@@ -15,11 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth;
+namespace VendorGambDuplicaWP\Google\Auth;
 
 use Exception;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpClientCache;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpClientCache;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
 trait IamSignerTrait
 {
     /**

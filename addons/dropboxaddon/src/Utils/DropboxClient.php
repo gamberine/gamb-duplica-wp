@@ -1,13 +1,13 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\DropboxAddon\Utils;
+namespace GambDuplicaWP\Addons\DropboxAddon\Utils;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
-use Vendorgamb-duplica-wp\GrahamCampbell\GuzzleFactory\GuzzleFactory;
-use Vendorgamb-duplica-wp\GuzzleHttp\Client as GuzzleClient;
-use Vendorgamb-duplica-wp\GuzzleHttp\Psr7\Response;
-use Vendorgamb-duplica-wp\Spatie\Dropbox\Client;
+use VendorGambDuplicaWP\GrahamCampbell\GuzzleFactory\GuzzleFactory;
+use VendorGambDuplicaWP\GuzzleHttp\Client as GuzzleClient;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Response;
+use VendorGambDuplicaWP\Spatie\Dropbox\Client;
 
 class DropboxClient extends Client
 {
@@ -186,7 +186,7 @@ class DropboxClient extends Client
         $global            = GAMB_DUPLICA_WP_Global_Entity::getInstance();
         $opts['sslverify'] = !$global->ssl_disableverify;
         if (!$global->ssl_useservercerts) {
-            $opts['sslcertificates'] = gamb-duplica-wp_PRO_CERT_PATH;
+            $opts['sslcertificates'] = GambDuplicaWP_PRO_CERT_PATH;
         }
         return $opts;
     }

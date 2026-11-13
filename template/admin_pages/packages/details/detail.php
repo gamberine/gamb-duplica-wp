@@ -6,13 +6,13 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Package\Create\BuildComponents;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Package\Create\BuildComponents;
 
 /**
  * Variables
@@ -292,7 +292,7 @@ $lang_notset = __("- not set -", 'gamb-duplica-wp');
             <i style='font-size:11px'>
                 <?php
                     printf(
-                        "%s <a href='" . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . "how-to-work-with-daf-files-and-the-duparchive-extraction-tool") .
+                        "%s <a href='" . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . "how-to-work-with-daf-files-and-the-duparchive-extraction-tool") .
                         "' target='_blank'>%s</a>",
                         esc_html__(
                             "An exact copy of the database SQL and installer file can both be found inside of the archive.zip/daf file. 

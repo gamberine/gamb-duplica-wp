@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\License\License;
 
 defined("ABSPATH") or die("");
 

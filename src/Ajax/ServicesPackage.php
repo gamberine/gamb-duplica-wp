@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_Archive_Build_Mode;
@@ -22,13 +22,13 @@ use GAMB_DUPLICA_WP_Tree_files;
 use GAMB_DUPLICA_WP_U;
 use GAMB_DUPLICA_WP_Upload_Status;
 use GAMB_DUPLICA_WP_ZipArchive_Mode;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Utils\LockUtil;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Utils\LockUtil;
 use Error;
 use Exception;
 use stdClass;
@@ -635,7 +635,7 @@ class ServicesPackage extends AbstractAjaxService
                 throw new Exception(__("File don\'t exists", 'gamb-duplica-wp'));
             }
 
-            \gamb-duplica-wp\Libs\Snap\SnapIO::serveFileForDownload($filePath, $fileName, gamb-duplica-wp_PRO_BUFFER_DOWNLOAD_SIZE);
+            \GambDuplicaWP\Libs\Snap\SnapIO::serveFileForDownload($filePath, $fileName, GambDuplicaWP_PRO_BUFFER_DOWNLOAD_SIZE);
         } catch (Exception $ex) {
             GAMB_DUPLICA_WP_Log::trace('Unable to download Backup file: ' . $ex->getMessage());
             wp_die(esc_html($ex->getMessage()));

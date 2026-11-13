@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Serializer;
+namespace VendorGambDuplicaWP\Aws\Api\Serializer;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\EndpointV2\EndpointProviderV2;
-use VendorDuplicator\Aws\EndpointV2\EndpointV2SerializerTrait;
-use VendorDuplicator\Aws\EndpointV2\Ruleset\RulesetEndpoint;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\EndpointV2\EndpointProviderV2;
+use VendorGambDuplicaWP\Aws\EndpointV2\EndpointV2SerializerTrait;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\RulesetEndpoint;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Serializes a query protocol request.
  * @internal

@@ -9,10 +9,10 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Psr\Log\LogLevel;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Psr\Log\LogLevel;
 /**
  * Used for testing purposes.
  *
@@ -200,7 +200,7 @@ class TestHandler extends AbstractProcessingHandler
     {
         if (preg_match('/(.*)(Debug|Info|Notice|Warning|Error|Critical|Alert|Emergency)(.*)/', $method, $matches) > 0) {
             $genericMethod = $matches[1] . ('Records' !== $matches[3] ? 'Record' : '') . $matches[3];
-            $level = constant('VendorDuplicator\\Monolog\Logger::' . strtoupper($matches[2]));
+            $level = constant('VendorGambDuplicaWP\\Monolog\Logger::' . strtoupper($matches[2]));
             $callback = [$this, $genericMethod];
             if (is_callable($callback)) {
                 $args[] = $level;

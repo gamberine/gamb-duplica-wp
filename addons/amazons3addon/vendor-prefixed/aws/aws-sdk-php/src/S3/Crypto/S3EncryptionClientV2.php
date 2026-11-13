@@ -1,21 +1,21 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Crypto;
+namespace VendorGambDuplicaWP\Aws\S3\Crypto;
 
-use VendorDuplicator\Aws\Crypto\DecryptionTraitV2;
-use VendorDuplicator\Aws\Exception\CryptoException;
-use VendorDuplicator\Aws\HashingStream;
-use VendorDuplicator\Aws\MetricsBuilder;
-use VendorDuplicator\Aws\PhpHash;
-use VendorDuplicator\Aws\Crypto\AbstractCryptoClientV2;
-use VendorDuplicator\Aws\Crypto\EncryptionTraitV2;
-use VendorDuplicator\Aws\Crypto\MetadataEnvelope;
-use VendorDuplicator\Aws\Crypto\MaterialsProvider;
-use VendorDuplicator\Aws\Crypto\Cipher\CipherBuilderTrait;
-use VendorDuplicator\Aws\S3\S3Client;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Aws\Crypto\DecryptionTraitV2;
+use VendorGambDuplicaWP\Aws\Exception\CryptoException;
+use VendorGambDuplicaWP\Aws\HashingStream;
+use VendorGambDuplicaWP\Aws\MetricsBuilder;
+use VendorGambDuplicaWP\Aws\PhpHash;
+use VendorGambDuplicaWP\Aws\Crypto\AbstractCryptoClientV2;
+use VendorGambDuplicaWP\Aws\Crypto\EncryptionTraitV2;
+use VendorGambDuplicaWP\Aws\Crypto\MetadataEnvelope;
+use VendorGambDuplicaWP\Aws\Crypto\MaterialsProvider;
+use VendorGambDuplicaWP\Aws\Crypto\Cipher\CipherBuilderTrait;
+use VendorGambDuplicaWP\Aws\S3\S3Client;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
 /**
  * Provides a wrapper for an S3Client that supplies functionality to encrypt
  * data on putObject[Async] calls and decrypt data on getObject[Async] calls.
@@ -232,7 +232,7 @@ class S3EncryptionClientV2 extends AbstractCryptoClientV2
      *   instruction file if an using an InstructionFileMetadataHandler was
      *   determined.
      *
-     * @return \VendorDuplicator\Aws\Result PutObject call result with the details of uploading
+     * @return \VendorGambDuplicaWP\Aws\Result PutObject call result with the details of uploading
      *                     the encrypted file.
      *
      * @throws \InvalidArgumentException Thrown when arguments above are not
@@ -358,7 +358,7 @@ class S3EncryptionClientV2 extends AbstractCryptoClientV2
      *   be specified and provided to the decrypt operation. Ignored for non-KMS
      *   materials providers. Defaults to false.
      *
-     * @return \VendorDuplicator\Aws\Result GetObject call result with the 'Body' field
+     * @return \VendorGambDuplicaWP\Aws\Result GetObject call result with the 'Body' field
      *                     wrapped in a decryption stream with its metadata
      *                     information.
      *

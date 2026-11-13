@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\Aws\Kms\KmsClient;
+use VendorGambDuplicaWP\Aws\Kms\KmsClient;
 /**
  * Uses KMS to supply materials for encrypting and decrypting data.
  *

@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Utils;
+namespace GambDuplicaWP\Utils;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_U;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 class PathUtil
 {

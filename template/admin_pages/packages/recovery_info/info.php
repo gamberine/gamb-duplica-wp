@@ -7,8 +7,8 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\RecoveryController;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Controllers\RecoveryController;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
 
 defined("ABSPATH") or die("");
 

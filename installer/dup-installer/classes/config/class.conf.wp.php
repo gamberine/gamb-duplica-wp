@@ -13,12 +13,12 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Deploy\ServerConfigs;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\InstallerOrigFileMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\WpConfig\WPConfigTransformer;
+use GambDuplicaWP\Installer\Core\Deploy\ServerConfigs;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\InstallerOrigFileMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\WpConfig\WPConfigTransformer;
 
 class DUPX_WPConfig
 {

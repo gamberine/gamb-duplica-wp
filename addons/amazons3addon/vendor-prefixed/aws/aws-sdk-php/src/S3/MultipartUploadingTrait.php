@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Multipart\UploadState;
-use VendorDuplicator\Aws\ResultInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Multipart\UploadState;
+use VendorGambDuplicaWP\Aws\ResultInterface;
 trait MultipartUploadingTrait
 {
     /**

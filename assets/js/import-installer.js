@@ -23,6 +23,6 @@
     }
 
     DupProImportInstaller.init();
-    gamb-duplica-wpTooltip.load();
+    GambDuplicaWPTooltip.load();
 
 })(jQuery);

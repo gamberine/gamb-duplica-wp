@@ -2,15 +2,15 @@
 
 defined('ABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 
 /**
  * Return home path
  *
  * @return string
  */
-function gamb-duplica-wp_pro_get_home_path()
+function GambDuplicaWP_pro_get_home_path()
 {
     static $homePath = null;
     if (is_null($homePath)) {

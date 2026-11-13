@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\AwsClientInterface;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\Aws\S3\Exception\S3Exception;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\AwsClientInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\Aws\S3\Exception\S3Exception;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 interface S3ClientInterface extends AwsClientInterface
 {
     /**

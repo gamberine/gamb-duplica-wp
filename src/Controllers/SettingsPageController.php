@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
 use GAMB_DUPLICA_WP_Constants;
 use GAMB_DUPLICA_WP_DB;
@@ -16,17 +16,17 @@ use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Secure_Global_Entity;
 use GAMB_DUPLICA_WP_Server_Load_Reduction;
 use GAMB_DUPLICA_WP_U;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Controllers\AbstractMenuPageController;
-use gamb-duplica-wp\Core\Controllers\PageAction;
-use gamb-duplica-wp\Core\Controllers\SubMenuItem;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\BrandEntity;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Utils\Logging\TraceLogMng;
-use gamb-duplica-wp\Utils\Settings\MigrateSettings;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Controllers\AbstractMenuPageController;
+use GambDuplicaWP\Core\Controllers\PageAction;
+use GambDuplicaWP\Core\Controllers\SubMenuItem;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\BrandEntity;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Utils\Logging\TraceLogMng;
+use GambDuplicaWP\Utils\Settings\MigrateSettings;
 use Exception;
 
 class SettingsPageController extends AbstractMenuPageController
@@ -802,7 +802,7 @@ class SettingsPageController extends AbstractMenuPageController
             'import_chunk_size',
             FILTER_VALIDATE_INT,
             [
-                'options' => ['default' => gamb-duplica-wp_PRO_DEFAULT_CHUNK_UPLOAD_SIZE],
+                'options' => ['default' => GambDuplicaWP_PRO_DEFAULT_CHUNK_UPLOAD_SIZE],
             ]
         );
         $global->import_custom_path = filter_input(
@@ -935,7 +935,7 @@ class SettingsPageController extends AbstractMenuPageController
                             '%1$s and %2$s are html anchor tags or link',
                             'gamb-duplica-wp'
                         ),
-                        '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-dependency-checks') . '" target="_blank">',
+                        '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-dependency-checks') . '" target="_blank">',
                         '</a>'
                     );
                 } else {
@@ -950,7 +950,7 @@ class SettingsPageController extends AbstractMenuPageController
                             '%1$s and %2$s are html anchor tags or link',
                             'gamb-duplica-wp'
                         ),
-                        '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-dependency-checks') . '" target="_blank">',
+                        '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-dependency-checks') . '" target="_blank">',
                         '</a>'
                     );
                 } else {
@@ -968,7 +968,7 @@ class SettingsPageController extends AbstractMenuPageController
                         '%1$s and %2$s are html anchor tags or links',
                         'gamb-duplica-wp'
                     ),
-                    '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'what-host-providers-are-recommended-for-gamb-duplica-wp/') . '" target="_blank">',
+                    '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'what-host-providers-are-recommended-for-gamb-duplica-wp/') . '" target="_blank">',
                     '</a>'
                 );
             } else {
@@ -989,7 +989,7 @@ class SettingsPageController extends AbstractMenuPageController
                     '%1$s and %2$s are html anchor tags or links',
                     'gamb-duplica-wp'
                 ),
-                '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'what-host-providers-are-recommended-for-gamb-duplica-wp/') . '" target="_blank">',
+                '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'what-host-providers-are-recommended-for-gamb-duplica-wp/') . '" target="_blank">',
                 '</a>'
             );
         }

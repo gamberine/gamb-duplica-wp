@@ -8,19 +8,19 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\RSA;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common;
-use VendorDuplicator\phpseclib3\Crypt\Hash;
-use VendorDuplicator\phpseclib3\Crypt\Random;
-use VendorDuplicator\phpseclib3\Crypt\RSA;
-use VendorDuplicator\phpseclib3\Crypt\RSA\Formats\Keys\PSS;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedFormatException;
-use VendorDuplicator\phpseclib3\File\ASN1;
-use VendorDuplicator\phpseclib3\File\ASN1\Maps\DigestInfo;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Hash;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Random;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA\Formats\Keys\PSS;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedFormatException;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1\Maps\DigestInfo;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Raw RSA Key Handler
  *

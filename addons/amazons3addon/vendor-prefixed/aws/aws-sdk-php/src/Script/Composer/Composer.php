@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Script\Composer;
+namespace VendorGambDuplicaWP\Aws\Script\Composer;
 
-use VendorDuplicator\Composer\Script\Event;
-use VendorDuplicator\Symfony\Component\Filesystem\Exception\IOException;
-use VendorDuplicator\Symfony\Component\Filesystem\Filesystem;
+use VendorGambDuplicaWP\Composer\Script\Event;
+use VendorGambDuplicaWP\Symfony\Component\Filesystem\Exception\IOException;
+use VendorGambDuplicaWP\Symfony\Component\Filesystem\Filesystem;
 class Composer
 {
     public static function removeUnusedServicesInDev(Event $event, ?Filesystem $filesystem = null)

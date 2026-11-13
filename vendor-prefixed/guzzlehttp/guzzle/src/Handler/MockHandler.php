@@ -1,16 +1,16 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Handler;
+namespace VendorGambDuplicaWP\GuzzleHttp\Handler;
 
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\GuzzleHttp\HandlerStack;
-use VendorDuplicator\GuzzleHttp\Promise as P;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\TransferStats;
-use VendorDuplicator\GuzzleHttp\Utils;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\GuzzleHttp\HandlerStack;
+use VendorGambDuplicaWP\GuzzleHttp\Promise as P;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\TransferStats;
+use VendorGambDuplicaWP\GuzzleHttp\Utils;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 /**
  * Handler that returns responses or throw exceptions from a queue.
  *

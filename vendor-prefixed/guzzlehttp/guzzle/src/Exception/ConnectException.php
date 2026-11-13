@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Exception;
+namespace VendorGambDuplicaWP\GuzzleHttp\Exception;
 
-use VendorDuplicator\Psr\Http\Client\NetworkExceptionInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Client\NetworkExceptionInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Exception thrown when a connection cannot be established.
  *

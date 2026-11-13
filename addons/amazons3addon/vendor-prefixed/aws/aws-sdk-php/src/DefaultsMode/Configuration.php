@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\DefaultsMode;
+namespace VendorGambDuplicaWP\Aws\DefaultsMode;
 
-use VendorDuplicator\Aws\DefaultsMode\Exception\ConfigurationException;
+use VendorGambDuplicaWP\Aws\DefaultsMode\Exception\ConfigurationException;
 class Configuration implements ConfigurationInterface
 {
     private $mode;
@@ -22,7 +22,7 @@ class Configuration implements ConfigurationInterface
         if ($this->mode == 'legacy') {
             return;
         }
-        $data = \VendorDuplicator\Aws\load_compiled_json(__DIR__ . '/../data/sdk-default-configuration.json');
+        $data = \VendorGambDuplicaWP\Aws\load_compiled_json(__DIR__ . '/../data/sdk-default-configuration.json');
         $this->retryMode = $data['base']['retryMode'];
         $this->stsRegionalEndpoints = $data['base']['stsRegionalEndpoints'];
         $this->s3UsEast1RegionalEndpoints = $data['base']['s3UsEast1RegionalEndpoints'];

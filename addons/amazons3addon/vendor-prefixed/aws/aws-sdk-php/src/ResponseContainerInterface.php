@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 interface ResponseContainerInterface
 {
     /**

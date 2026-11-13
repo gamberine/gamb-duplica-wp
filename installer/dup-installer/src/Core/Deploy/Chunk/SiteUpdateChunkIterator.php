@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace  gamb-duplica-wp\Installer\Core\Deploy\Chunk;
+namespace  GambDuplicaWP\Installer\Core\Deploy\Chunk;
 
 use ArrayIterator;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
 use DUPX_DB_Tables;
 use DUPX_S3_Funcs;
 use DUPX_UpdateEngine;

@@ -4,11 +4,11 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Utils;
+namespace GambDuplicaWP\Installer\Utils;
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Installer\Package\InstallerDescriptors;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Installer\Package\InstallerDescriptors;
 
 /**
  * Descriptors Manager class for installer

@@ -6,11 +6,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Models;
+namespace GambDuplicaWP\Models;
 
-use gamb-duplica-wp\Core\Models\AbstractEntitySingleton;
-use gamb-duplica-wp\Models\RecommendedFix;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Core\Models\AbstractEntitySingleton;
+use GambDuplicaWP\Models\RecommendedFix;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 
 /**
  * System global entity

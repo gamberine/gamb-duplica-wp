@@ -4,8 +4,8 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Package\SettingsUtils;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Package\SettingsUtils;
 
 defined("ABSPATH") or die("");
 

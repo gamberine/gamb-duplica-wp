@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\ErrorParser;
+namespace VendorGambDuplicaWP\Aws\Api\ErrorParser;
 
-use VendorDuplicator\Aws\Api\Parser\JsonParser;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Api\Parser\JsonParser;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * Parsers JSON-RPC errors.
  */

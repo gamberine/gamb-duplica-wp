@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Firebase\JWT;
+namespace VendorGambDuplicaWP\Firebase\JWT;
 
 use InvalidArgumentException;
 use OpenSSLAsymmetricKey;

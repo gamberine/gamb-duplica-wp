@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp;
+namespace VendorGambDuplicaWP\GuzzleHttp;
 
-use VendorDuplicator\Psr\Http\Message\MessageInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\MessageInterface;
 interface BodySummarizerInterface
 {
     /**

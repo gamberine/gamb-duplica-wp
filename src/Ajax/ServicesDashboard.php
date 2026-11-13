@@ -5,13 +5,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
 use GAMB_DUPLICA_WP_Package;
-use gamb-duplica-wp\Ajax\AjaxWrapper;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Views\DashboardWidget;
+use GambDuplicaWP\Ajax\AjaxWrapper;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Views\DashboardWidget;
 
 class ServicesDashboard extends AbstractAjaxService
 {

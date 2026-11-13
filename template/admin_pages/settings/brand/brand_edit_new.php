@@ -6,7 +6,7 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Models\BrandEntity;
+use GambDuplicaWP\Models\BrandEntity;
 
 /**
  * Variables

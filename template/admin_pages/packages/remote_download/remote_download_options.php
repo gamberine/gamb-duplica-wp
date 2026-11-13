@@ -4,8 +4,8 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 defined("ABSPATH") or die("");
 

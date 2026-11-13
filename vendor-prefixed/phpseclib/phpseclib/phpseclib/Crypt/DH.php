@@ -21,15 +21,15 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\AsymmetricKey;
-use VendorDuplicator\phpseclib3\Crypt\DH\Parameters;
-use VendorDuplicator\phpseclib3\Crypt\DH\PrivateKey;
-use VendorDuplicator\phpseclib3\Crypt\DH\PublicKey;
-use VendorDuplicator\phpseclib3\Exception\NoKeyLoadedException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedOperationException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\AsymmetricKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DH\Parameters;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DH\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DH\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Exception\NoKeyLoadedException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedOperationException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Pure-PHP (EC)DH implementation
  *

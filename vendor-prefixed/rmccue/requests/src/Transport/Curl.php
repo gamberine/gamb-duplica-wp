@@ -5,17 +5,17 @@
  *
  * @package Requests\Transport
  */
-namespace VendorDuplicator\WpOrg\Requests\Transport;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Transport;
 
 use RecursiveArrayIterator;
 use RecursiveIteratorIterator;
-use VendorDuplicator\WpOrg\Requests\Capability;
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Exception\Transport\Curl as CurlException;
-use VendorDuplicator\WpOrg\Requests\Requests;
-use VendorDuplicator\WpOrg\Requests\Transport;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Capability;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\Transport\Curl as CurlException;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use VendorGambDuplicaWP\WpOrg\Requests\Transport;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * cURL HTTP transport
  *
@@ -58,7 +58,7 @@ final class Curl implements Transport
     /**
      * Hook dispatcher instance
      *
-     * @var \VendorDuplicator\WpOrg\Requests\Hooks
+     * @var \VendorGambDuplicaWP\WpOrg\Requests\Hooks
      */
     private $hooks;
     /**
@@ -125,11 +125,11 @@ final class Curl implements Transport
      * @param array $options Request options, see {@see \WpOrg\Requests\Requests::response()} for documentation
      * @return string Raw HTTP result
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string or Stringable.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $headers argument is not an array.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $data parameter is not an array or string.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception       On a cURL error (`curlerror`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string or Stringable.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $headers argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $data parameter is not an array or string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception       On a cURL error (`curlerror`)
      */
     public function request($url, $headers = [], $data = [], $options = [])
     {
@@ -202,8 +202,8 @@ final class Curl implements Transport
      * @param array $options Global options
      * @return array Array of \WpOrg\Requests\Response objects (may contain \WpOrg\Requests\Exception or string responses as well)
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $requests argument is not an array or iterable object with array access.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $requests argument is not an array or iterable object with array access.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
      */
     public function request_multiple($requests, $options)
     {
@@ -395,7 +395,7 @@ final class Curl implements Transport
      * @param string $response Response data from the body
      * @param array $options Request options
      * @return string|false HTTP response data including headers. False if non-blocking.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception If the request resulted in a cURL error.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception If the request resulted in a cURL error.
      */
     public function process_response($response, $options)
     {

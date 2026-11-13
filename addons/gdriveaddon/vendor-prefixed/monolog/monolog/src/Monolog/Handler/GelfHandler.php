@@ -9,12 +9,12 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Gelf\PublisherInterface;
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Formatter\GelfMessageFormatter;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Gelf\PublisherInterface;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Formatter\GelfMessageFormatter;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
 /**
  * Handler to send messages to a Graylog2 (http://www.graylog2.org) server
  *

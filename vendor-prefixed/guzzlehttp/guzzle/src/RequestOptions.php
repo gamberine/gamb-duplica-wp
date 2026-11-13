@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp;
+namespace VendorGambDuplicaWP\GuzzleHttp;
 
 /**
  * This class contains a list of built-in Guzzle request options.

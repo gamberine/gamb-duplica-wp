@@ -5,9 +5,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\Database;
+namespace GambDuplicaWP\Installer\Core\Deploy\Database;
 
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 use DUPX_DB;
 use DUPX_DB_Functions;
 use mysqli;

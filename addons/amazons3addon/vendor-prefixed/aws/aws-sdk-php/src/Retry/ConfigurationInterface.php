@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Retry;
+namespace VendorGambDuplicaWP\Aws\Retry;
 
 /**
  * Provides access to retry configuration

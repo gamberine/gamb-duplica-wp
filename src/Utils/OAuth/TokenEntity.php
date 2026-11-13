@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\OAuth;
+namespace GambDuplicaWP\Utils\OAuth;
 
 use GAMB_DUPLICA_WP_Log;
 

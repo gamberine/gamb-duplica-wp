@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Utils;
+namespace GambDuplicaWP\Installer\Utils;
 
 use Exception;
 

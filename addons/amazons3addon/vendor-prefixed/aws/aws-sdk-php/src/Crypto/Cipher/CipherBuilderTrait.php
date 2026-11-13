@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto\Cipher;
+namespace VendorGambDuplicaWP\Aws\Crypto\Cipher;
 
-use VendorDuplicator\Aws\Exception\CryptoException;
+use VendorGambDuplicaWP\Aws\Exception\CryptoException;
 trait CipherBuilderTrait
 {
     /**

@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\Service;
 /**
  * Validates the required input parameters of commands are non empty
  *

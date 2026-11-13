@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\JmesPath;
+namespace VendorGambDuplicaWP\JmesPath;
 
 /**
  * Dispatches to named JMESPath functions using a single function that has the

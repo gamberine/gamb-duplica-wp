@@ -10,12 +10,12 @@
  * @package SC\DUPX\U
  */
 
-namespace gamb-duplica-wp\Installer\Utils\Tests\WP;
+namespace GambDuplicaWP\Installer\Utils\Tests\WP;
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Tests\TestInterface;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Tests\TestInterface;
 use DUPX_NOTICE_ITEM;
 use DUPX_NOTICE_MANAGER;
 

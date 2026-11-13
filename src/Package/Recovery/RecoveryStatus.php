@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Package\Recovery;
+namespace GambDuplicaWP\Package\Recovery;
 
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_File_Type;
@@ -8,11 +8,11 @@ use Exception;
 use GAMB_DUPLICA_WP_Package_Template_Entity;
 use GAMB_DUPLICA_WP_Schedule_Entity;
 use GAMB_DUPLICA_WP_U;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\Import\PackageImporter;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Import\PackageImporter;
 
 /**
  * Class RecoveryStatus

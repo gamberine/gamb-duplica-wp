@@ -10,10 +10,10 @@
  * @package SC\DUPX\U
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params\Descriptors;
+namespace GambDuplicaWP\Installer\Core\Params\Descriptors;
 
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamForm;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamItem;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamForm;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamItem;
 
 interface DescriptorInterface
 {

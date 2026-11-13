@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\Credentials;
+namespace VendorGambDuplicaWP\Aws\Credentials;
 
-use VendorDuplicator\Aws\Exception\CredentialsException;
-use VendorDuplicator\GuzzleHttp\Exception\ConnectException;
-use VendorDuplicator\GuzzleHttp\Exception\GuzzleException;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Exception\CredentialsException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ConnectException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\GuzzleException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * Credential provider that fetches container credentials with GET request.
  * container environment variables are used in constructing request URI.
@@ -46,7 +46,7 @@ class EcsCredentialProvider
     {
         $this->timeout = (float) isset($config['timeout']) ? $config['timeout'] : (getenv(self::ENV_TIMEOUT) ?: self::DEFAULT_ENV_TIMEOUT);
         $this->retries = (int) isset($config['retries']) ? $config['retries'] : ((int) getenv(self::ENV_RETRIES) ?: self::DEFAULT_ENV_RETRIES);
-        $this->client = $config['client'] ?? \VendorDuplicator\Aws\default_http_handler();
+        $this->client = $config['client'] ?? \VendorGambDuplicaWP\Aws\default_http_handler();
     }
     /**
      * Load container credentials.

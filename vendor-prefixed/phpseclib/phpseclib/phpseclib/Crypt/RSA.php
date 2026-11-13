@@ -50,15 +50,15 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\AsymmetricKey;
-use VendorDuplicator\phpseclib3\Crypt\RSA\Formats\Keys\PSS;
-use VendorDuplicator\phpseclib3\Crypt\RSA\PrivateKey;
-use VendorDuplicator\phpseclib3\Crypt\RSA\PublicKey;
-use VendorDuplicator\phpseclib3\Exception\InconsistentSetupException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\AsymmetricKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA\Formats\Keys\PSS;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Exception\InconsistentSetupException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Pure-PHP PKCS#1 compliant implementation of RSA.
  *

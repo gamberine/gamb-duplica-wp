@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\JmesPath;
+namespace VendorGambDuplicaWP\JmesPath;
 
 /**
  * Tokenizes JMESPath expressions

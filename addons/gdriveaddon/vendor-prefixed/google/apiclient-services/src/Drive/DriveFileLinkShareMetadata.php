@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class DriveFileLinkShareMetadata extends \VendorDuplicator\Google\Model
+class DriveFileLinkShareMetadata extends \VendorGambDuplicaWP\Google\Model
 {
     /**
      * @var bool
@@ -57,4 +57,4 @@ class DriveFileLinkShareMetadata extends \VendorDuplicator\Google\Model
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DriveFileLinkShareMetadata::class, 'VendorDuplicator\Google_Service_Drive_DriveFileLinkShareMetadata');
+class_alias(DriveFileLinkShareMetadata::class, 'VendorGambDuplicaWP\Google_Service_Drive_DriveFileLinkShareMetadata');

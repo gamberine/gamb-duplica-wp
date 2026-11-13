@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api;
+namespace VendorGambDuplicaWP\Aws\Api;
 
 /**
  * Base class representing a modeled shape.

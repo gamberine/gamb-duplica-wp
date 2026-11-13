@@ -1,19 +1,19 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Settings;
+namespace GambDuplicaWP\Utils\Settings;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package_Template_Entity;
 use GAMB_DUPLICA_WP_Schedule_Entity;
 use GAMB_DUPLICA_WP_Secure_Global_Entity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\Local\DefaultLocalStorage;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Utils\Crypt\CryptCustom;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\Local\DefaultLocalStorage;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Utils\Crypt\CryptCustom;
 use Exception;
 use stdClass;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 
 class MigrateSettings
 {
@@ -27,7 +27,7 @@ class MigrateSettings
     public static function export(&$message = '')
     {
         $exportData                  = new stdClass();
-        $exportData->version         = gamb-duplica-wp_PRO_VERSION;
+        $exportData->version         = GambDuplicaWP_PRO_VERSION;
         $exportData->settings        = GAMB_DUPLICA_WP_Global_Entity::getInstance()->settingsExport();
         $exportData->secure_settings = GAMB_DUPLICA_WP_Secure_Global_Entity::getInstance()->settingsExport();
 
@@ -98,7 +98,7 @@ ERR;
         }
 
         $encryptedData  = CryptCustom::encrypt($jsonData, 'test');
-        $exportFilepath = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/dpro-export-' . date("Ymdhs") . '.dup';
+        $exportFilepath = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/dpro-export-' . date("Ymdhs") . '.dup';
 
         if (file_put_contents($exportFilepath, $encryptedData) === false) {
             GAMB_DUPLICA_WP_Log::trace("Error writing export to {$exportFilepath}");

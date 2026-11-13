@@ -20,8 +20,8 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
  */
 class GambDuplicaWpUninstall // phpcs:ignore
 {
-    const ENTITIES_TABLE_NAME           = 'gamb-duplica-wp_entities';
-    const PACKAGES_TABLE_NAME           = 'gamb-duplica-wp_backups';
+    const ENTITIES_TABLE_NAME           = 'gamb_duplica_wp_entities';
+    const PACKAGES_TABLE_NAME           = 'gamb_duplica_wp_backups';
     const OLD_ENTITIES_TABLE_NAME       = 'gamb-duplica-wp_pro_entities';
     const OLD_PACKAGES_TABLE_NAME       = 'gamb-duplica-wp_pro_packages';
     const VERSION_OPTION_KEY            = 'gamb-duplica-wp_pro_plugin_version';

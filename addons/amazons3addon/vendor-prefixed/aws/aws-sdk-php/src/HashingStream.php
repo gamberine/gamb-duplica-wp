@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\GuzzleHttp\Psr7\StreamDecoratorTrait;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\StreamDecoratorTrait;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 /**
  * Stream decorator that calculates a rolling hash of the stream as it is read.
  */

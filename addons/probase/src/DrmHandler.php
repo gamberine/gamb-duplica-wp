@@ -6,11 +6,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\ProBase;
+namespace GambDuplicaWP\Addons\ProBase;
 
 use GAMB_DUPLICA_WP_Schedule_Entity;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
 
 class DrmHandler
 {

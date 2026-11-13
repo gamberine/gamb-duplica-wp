@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
 /**
  * Interface for adding and retrieving client-side monitoring events

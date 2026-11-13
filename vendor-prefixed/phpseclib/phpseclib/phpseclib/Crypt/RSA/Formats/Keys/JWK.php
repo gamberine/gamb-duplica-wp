@@ -10,11 +10,11 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\RSA\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\RSA\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys\JWK as Progenitor;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys\JWK as Progenitor;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * JWK Formatted RSA Handler
  *

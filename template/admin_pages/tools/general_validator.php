@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Core\CapMng;
 
 defined("ABSPATH") or die("");
 
@@ -129,8 +129,8 @@ jQuery(document).ready(function($)
             'scan-recursive': 1
         };
 
-        $('#hb-result').html('<?php esc_html_e("Scanning Environment... This may take a few minutes.", 'gamb-duplica-wp'); ?>');
-        $('#scan-run-btn').html('<i class="fas fa-circle-notch fa-spin fa-fw"></i> <?php echo esc_js(__('Running Please Wait...', 'gamb-duplica-wp')) ?>');
+        $('#hb-result').html('<?php esc_html_e("Scanning Environment... This may take a few minutes.", 'GambDuplicaWP'); ?>');
+        $('#scan-run-btn').html('<i class="fas fa-circle-notch fa-spin fa-fw"></i> <?php echo esc_js(__('Running Please Wait...', 'GambDuplicaWP')) ?>');
 
         $.ajax({
             type: "POST",
@@ -152,7 +152,7 @@ jQuery(document).ready(function($)
         var templateScript = Handlebars.compile(template);
         var html = templateScript(data);
         $('#hb-result').html(html);
-        $('#scan-run-btn').html('<?php esc_html_e("Run Scan Integrity Validation", 'gamb-duplica-wp'); ?>');
+        $('#scan-run-btn').html('<?php esc_html_e("Run Scan Integrity Validation", 'GambDuplicaWP'); ?>');
     }
 });
 </script>

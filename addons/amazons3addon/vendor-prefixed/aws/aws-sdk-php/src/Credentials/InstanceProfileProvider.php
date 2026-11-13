@@ -1,16 +1,16 @@
 <?php
 
-namespace VendorDuplicator\Aws\Credentials;
+namespace VendorGambDuplicaWP\Aws\Credentials;
 
-use VendorDuplicator\Aws\Configuration\ConfigurationResolver;
-use VendorDuplicator\Aws\Exception\CredentialsException;
-use VendorDuplicator\Aws\Exception\InvalidJsonException;
-use VendorDuplicator\Aws\Sdk;
-use VendorDuplicator\GuzzleHttp\Exception\TransferException;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Configuration\ConfigurationResolver;
+use VendorGambDuplicaWP\Aws\Exception\CredentialsException;
+use VendorGambDuplicaWP\Aws\Exception\InvalidJsonException;
+use VendorGambDuplicaWP\Aws\Sdk;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\TransferException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * Credential provider that provides credentials from the EC2 metadata service.
  */
@@ -74,7 +74,7 @@ class InstanceProfileProvider
         $this->timeout = (float) getenv(self::ENV_TIMEOUT) ?: $config['timeout'] ?? self::DEFAULT_TIMEOUT;
         $this->profile = $config['profile'] ?? null;
         $this->retries = (int) getenv(self::ENV_RETRIES) ?: $config['retries'] ?? self::DEFAULT_RETRIES;
-        $this->client = $config['client'] ?? \VendorDuplicator\Aws\default_http_handler();
+        $this->client = $config['client'] ?? \VendorGambDuplicaWP\Aws\default_http_handler();
         $this->ec2MetadataV1Disabled = $config[self::CFG_EC2_METADATA_V1_DISABLED] ?? null;
         $this->endpoint = $config[self::CFG_EC2_METADATA_SERVICE_ENDPOINT] ?? null;
         if (!empty($this->endpoint) && !$this->isValidEndpoint($this->endpoint)) {
@@ -178,7 +178,7 @@ class InstanceProfileProvider
         if (defined('HHVM_VERSION')) {
             $userAgent .= ' HHVM/' . HHVM_VERSION;
         }
-        $userAgent .= ' ' . \VendorDuplicator\Aws\default_user_agent();
+        $userAgent .= ' ' . \VendorGambDuplicaWP\Aws\default_user_agent();
         $request = $request->withHeader('User-Agent', $userAgent);
         foreach ($headers as $key => $value) {
             $request = $request->withHeader($key, $value);
@@ -240,7 +240,7 @@ class InstanceProfileProvider
      */
     private function shouldFallbackToIMDSv1(): bool
     {
-        $isImdsV1Disabled = \VendorDuplicator\Aws\boolean_value($this->ec2MetadataV1Disabled) ?? \VendorDuplicator\Aws\boolean_value(ConfigurationResolver::resolve(self::CFG_EC2_METADATA_V1_DISABLED, self::DEFAULT_AWS_EC2_METADATA_V1_DISABLED, 'bool', $this->config)) ?? self::DEFAULT_AWS_EC2_METADATA_V1_DISABLED;
+        $isImdsV1Disabled = \VendorGambDuplicaWP\Aws\boolean_value($this->ec2MetadataV1Disabled) ?? \VendorGambDuplicaWP\Aws\boolean_value(ConfigurationResolver::resolve(self::CFG_EC2_METADATA_V1_DISABLED, self::DEFAULT_AWS_EC2_METADATA_V1_DISABLED, 'bool', $this->config)) ?? self::DEFAULT_AWS_EC2_METADATA_V1_DISABLED;
         return !$isImdsV1Disabled;
     }
     /**

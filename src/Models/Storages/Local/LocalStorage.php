@@ -6,20 +6,20 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Models\Storages\Local;
+namespace GambDuplicaWP\Models\Storages\Local;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Installer;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapOS;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use gamb-duplica-wp\Utils\PathUtil;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapOS;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Utils\PathUtil;
 use Exception;
 
 class LocalStorage extends AbstractStorageEntity
@@ -602,7 +602,7 @@ FILECONTENT;
                 'robots.txt',
                 '.htaccess',
                 'index.html',
-                gamb-duplica-wp_PRO_GEN_FILE_REGEX_PATTERN,
+                GambDuplicaWP_PRO_GEN_FILE_REGEX_PATTERN,
             ]
         );
     }

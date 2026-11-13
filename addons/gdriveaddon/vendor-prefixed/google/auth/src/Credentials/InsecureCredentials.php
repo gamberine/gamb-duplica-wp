@@ -15,9 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Credentials;
+namespace VendorGambDuplicaWP\Google\Auth\Credentials;
 
-use VendorDuplicator\Google\Auth\FetchAuthTokenInterface;
+use VendorGambDuplicaWP\Google\Auth\FetchAuthTokenInterface;
 /**
  * Provides a set of credentials that will always return an empty access token.
  * This is useful for APIs which do not require authentication, for local

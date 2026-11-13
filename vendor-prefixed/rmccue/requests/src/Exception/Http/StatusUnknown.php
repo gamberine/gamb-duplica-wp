@@ -5,10 +5,10 @@
  *
  * @package Requests\Exceptions
  */
-namespace VendorDuplicator\WpOrg\Requests\Exception\Http;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Exception\Http;
 
-use VendorDuplicator\WpOrg\Requests\Exception\Http;
-use VendorDuplicator\WpOrg\Requests\Response;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\Http;
+use VendorGambDuplicaWP\WpOrg\Requests\Response;
 /**
  * Exception for unknown status responses
  *

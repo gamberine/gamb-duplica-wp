@@ -1,14 +1,14 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Support;
+namespace GambDuplicaWP\Utils\Support;
 
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Server;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Utils\Logging\TraceLogMng;
-use gamb-duplica-wp\Utils\ZipArchiveExtended;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Utils\Logging\TraceLogMng;
+use GambDuplicaWP\Utils\ZipArchiveExtended;
 use Exception;
 
 class SupportToolkit
@@ -65,7 +65,7 @@ class SupportToolkit
                             '1: opening anchor tag, 2: closing anchor tag',
                             'gamb-duplica-wp'
                         ),
-                        '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-do-i-read-the-package-build-log/') . '" target="_blank">',
+                        '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-do-i-read-the-package-build-log/') . '" target="_blank">',
                         '</a>'
                     );
                     break;
@@ -76,7 +76,7 @@ class SupportToolkit
                             '1: opening anchor tag, 2: closing anchor tag',
                             'gamb-duplica-wp'
                         ),
-                        '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-do-i-read-the-package-trace-log/') . '" target="_blank">',
+                        '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-do-i-read-the-package-trace-log/') . '" target="_blank">',
                         '</a>'
                     );
                     break;
@@ -146,7 +146,7 @@ class SupportToolkit
      */
     public static function getToolkit()
     {
-        $tempZipFilePath = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' .
+        $tempZipFilePath = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' .
             self::SUPPORT_TOOLKIT_PREFIX . date(GAMB_DUPLICA_WP_Package::PACKAGE_HASH_DATE_FORMAT) . '_' .
             SnapUtil::generatePassword(16, false, false) . '.zip';
         $zip             = new ZipArchiveExtended($tempZipFilePath);

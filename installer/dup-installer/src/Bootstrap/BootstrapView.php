@@ -4,9 +4,9 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Bootstrap;
+namespace GambDuplicaWP\Installer\Bootstrap;
 
-use gamb-duplica-wp\Libs\DupArchive\DupArchive;
+use GambDuplicaWP\Libs\DupArchive\DupArchive;
 
 class BootstrapView
 {

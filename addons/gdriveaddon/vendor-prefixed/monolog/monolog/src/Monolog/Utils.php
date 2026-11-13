@@ -9,7 +9,7 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog;
+namespace VendorGambDuplicaWP\Monolog;
 
 final class Utils
 {
@@ -104,7 +104,7 @@ final class Utils
         if (is_string($data)) {
             self::detectAndCleanUtf8($data);
         } elseif (is_array($data)) {
-            array_walk_recursive($data, array('VendorDuplicator\\Monolog\Utils', 'detectAndCleanUtf8'));
+            array_walk_recursive($data, array('VendorGambDuplicaWP\\Monolog\Utils', 'detectAndCleanUtf8'));
         } else {
             self::throwEncodeError($code, $data);
         }

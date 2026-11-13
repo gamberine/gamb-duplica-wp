@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Exception;
+namespace VendorGambDuplicaWP\GuzzleHttp\Exception;
 
 class TooManyRedirectsException extends RequestException
 {

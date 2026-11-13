@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\ClientSideMonitoring;
+namespace VendorGambDuplicaWP\Aws\ClientSideMonitoring;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * @internal
  */

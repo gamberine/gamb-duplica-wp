@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 /**
  * Bootstrapping File for phpseclib

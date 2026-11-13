@@ -9,17 +9,17 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\Shell\Shell;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\Create\DatabaseInfo;
-use gamb-duplica-wp\Utils\GroupOptions;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapDB;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Shell\Shell;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Create\DatabaseInfo;
+use GambDuplicaWP\Utils\GroupOptions;
 
 require_once __DIR__ . '/class.pack.database.build.iterator.php';
 /**
@@ -125,7 +125,7 @@ class GAMB_DUPLICA_WP_Database
         }
 
         global $wpdb;
-        $query = $wpdb->prepare("SET SESSION wait_timeout = %d", gamb-duplica-wp_PRO_DB_MAX_TIME);
+        $query = $wpdb->prepare("SET SESSION wait_timeout = %d", GambDuplicaWP_PRO_DB_MAX_TIME);
         $wpdb->query($query);
         $isTimeoutSet = true;
     }
@@ -168,7 +168,7 @@ class GAMB_DUPLICA_WP_Database
 
         $log .= "(query limit - {$global->package_mysqldump_qrylimit})\n";
         $log .= "MYSQLDUMP:    {$mysqlDumpSupport}\n";
-        $log .= "MYSQLTIMEOUT: " . gamb-duplica-wp_PRO_DB_MAX_TIME;
+        $log .= "MYSQLTIMEOUT: " . GambDuplicaWP_PRO_DB_MAX_TIME;
         GAMB_DUPLICA_WP_Log::info($log);
         $log = null;
         do_action('gamb-duplica-wp_pro_build_database_start', $this->Package);
@@ -192,7 +192,7 @@ class GAMB_DUPLICA_WP_Database
      */
     public function getSafeFilePath()
     {
-        return SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH . "/{$this->File}");
+        return SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH . "/{$this->File}");
     }
 
     /**
@@ -200,7 +200,7 @@ class GAMB_DUPLICA_WP_Database
      */
     public function getURL()
     {
-        return gamb-duplica-wp_PRO_SSDIR_URL . "/{$this->File}";
+        return GambDuplicaWP_PRO_SSDIR_URL . "/{$this->File}";
     }
 
     /**
@@ -210,7 +210,7 @@ class GAMB_DUPLICA_WP_Database
      */
     protected function getStoreProgressFile()
     {
-        return trailingslashit(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . self::STORE_DB_PROGRESS_FILE_PREFIX . $this->Package->getHash() . '.json';
+        return trailingslashit(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . self::STORE_DB_PROGRESS_FILE_PREFIX . $this->Package->getHash() . '.json';
     }
 
     /**
@@ -321,8 +321,8 @@ class GAMB_DUPLICA_WP_Database
         }
 
         $this->info->addTriggers();
-        $info['Status']['Size']                   = $info['Size'] <= gamb-duplica-wp_PRO_SCAN_DB_ALL_SIZE;
-        $info['Status']['Rows']                   = $info['Rows'] <= gamb-duplica-wp_PRO_SCAN_DB_ALL_ROWS;
+        $info['Status']['Size']                   = $info['Size'] <= GambDuplicaWP_PRO_SCAN_DB_ALL_SIZE;
+        $info['Status']['Rows']                   = $info['Rows'] <= GambDuplicaWP_PRO_SCAN_DB_ALL_ROWS;
         $info['Status']['Triggers']               = count($this->info->triggerList) <= 0;
         $info['Status']['mysqlDumpMemoryCheck']   = self::mysqldumpMemoryCheck($info['Size']);
         $info['Status']['requiredMysqlDumpLimit'] = GAMB_DUPLICA_WP_U::byteSize(self::requiredMysqlDumpLimit($info['Size']));
@@ -463,7 +463,7 @@ class GAMB_DUPLICA_WP_Database
         $cmd         = $this->getMysqlDumpCmd($exePath, $extraFlags, '', $filtered, $optionFlagsToIgnore);
         $mysqlResult = $this->mysqlDumpWriteCmd($cmd, $exePath);
         $sql_footer  = "\n\n/* gamb-duplica-wp WordPress Timestamp: " . date("Y-m-d H:i:s") . "*/\n";
-        $sql_footer .= "/* " . gamb-duplica-wp_PRO_DB_EOF_MARKER . " */\n";
+        $sql_footer .= "/* " . GambDuplicaWP_PRO_DB_EOF_MARKER . " */\n";
         if (file_put_contents($this->dbStorePathPublic, $sql_footer, FILE_APPEND) === false) {
             GAMB_DUPLICA_WP_Log::error("file_put_content failed", "file_put_content failed while writing to {$this->dbStorePathPublic}", false);
             return false;
@@ -595,7 +595,7 @@ class GAMB_DUPLICA_WP_Database
             GAMB_DUPLICA_WP_Log::infoTrace('MYSQL DUMP ERROR ' . print_r($mysqlResult, true));
             GAMB_DUPLICA_WP_Log::error(
                 __('Shell mysql dump failed. Last 10 lines of dump file below.', 'gamb-duplica-wp'),
-                implode("\n", SnapIO::getLastLinesOfFile($this->dbStorePathPublic, gamb-duplica-wp_PRO_DB_MYSQLDUMP_ERROR_CONTAINING_LINE_COUNT, gamb-duplica-wp_PRO_DB_MYSQLDUMP_ERROR_CHARS_IN_LINE_COUNT)),
+                implode("\n", SnapIO::getLastLinesOfFile($this->dbStorePathPublic, GambDuplicaWP_PRO_DB_MYSQLDUMP_ERROR_CONTAINING_LINE_COUNT, GambDuplicaWP_PRO_DB_MYSQLDUMP_ERROR_CHARS_IN_LINE_COUNT)),
                 false
             );
             $this->setError(
@@ -818,7 +818,7 @@ class GAMB_DUPLICA_WP_Database
         GAMB_DUPLICA_WP_Log::trace("RUN PHP DUMP");
         global $wpdb;
         $global = GAMB_DUPLICA_WP_Global_Entity::getInstance();
-        $query  = $wpdb->prepare("SET session wait_timeout = %d", gamb-duplica-wp_PRO_DB_MAX_TIME);
+        $query  = $wpdb->prepare("SET session wait_timeout = %d", GambDuplicaWP_PRO_DB_MAX_TIME);
         $wpdb->query($query);
         $this->doFiltering();
         $this->writeCreates();
@@ -951,7 +951,7 @@ class GAMB_DUPLICA_WP_Database
             SnapUtil::errorLog($log_msg);
         }
 
-        if ($this->Package->db_build_progress->errorOut || $this->Package->db_build_progress->failureCount > gamb-duplica-wp_PRO_SQL_SCRIPT_PHP_CODE_MULTI_THREADED_MAX_RETRIES) {
+        if ($this->Package->db_build_progress->errorOut || $this->Package->db_build_progress->failureCount > GambDuplicaWP_PRO_SQL_SCRIPT_PHP_CODE_MULTI_THREADED_MAX_RETRIES) {
             $this->Package->build_progress->failed = true;
             GAMB_DUPLICA_WP_Log::trace('Database: buildInChunks Failed');
             $this->Package->update();
@@ -1007,7 +1007,7 @@ class GAMB_DUPLICA_WP_Database
         $isValid = true;
         // SEARCH END MARKER
         $lastLines = GAMB_DUPLICA_WP_U::tailFile($this->dbStorePathPublic, 3);
-        if (strpos($lastLines, (string) gamb-duplica-wp_PRO_DB_EOF_MARKER) === false) {
+        if (strpos($lastLines, (string) GambDuplicaWP_PRO_DB_EOF_MARKER) === false) {
             GAMB_DUPLICA_WP_Log::infoTrace('DB VALIDATION 1: can\'t find SQL EOR MARKER in sql file');
             $isValid = false;
         }
@@ -1082,10 +1082,10 @@ class GAMB_DUPLICA_WP_Database
         static $tableList = null;
         if (is_null($tableList)) {
             $tableList = [];
-            if (!is_array(gamb-duplica-wp_TABLE_VALIDATION_FILTER_LIST)) { // @phpstan-ignore-line function.alreadyNarrowedType
-                $list = (strlen((string) gamb-duplica-wp_TABLE_VALIDATION_FILTER_LIST) > 0 ? [gamb-duplica-wp_TABLE_VALIDATION_FILTER_LIST] : []);
+            if (!is_array(GambDuplicaWP_TABLE_VALIDATION_FILTER_LIST)) { // @phpstan-ignore-line function.alreadyNarrowedType
+                $list = (strlen((string) GambDuplicaWP_TABLE_VALIDATION_FILTER_LIST) > 0 ? [GambDuplicaWP_TABLE_VALIDATION_FILTER_LIST] : []);
             } else {
-                $list = gamb-duplica-wp_TABLE_VALIDATION_FILTER_LIST;
+                $list = GambDuplicaWP_TABLE_VALIDATION_FILTER_LIST;
             }
             foreach ($list as $table) {
                 $table = trim($table);
@@ -1129,7 +1129,7 @@ class GAMB_DUPLICA_WP_Database
     {
         /** @var wpdb */
         global $wpdb;
-        $query = $wpdb->prepare("SET session wait_timeout = %d", gamb-duplica-wp_PRO_DB_MAX_TIME);
+        $query = $wpdb->prepare("SET session wait_timeout = %d", GambDuplicaWP_PRO_DB_MAX_TIME);
         $wpdb->query($query);
 
         $tables          = $this->getFilteredTables();
@@ -1398,7 +1398,7 @@ class GAMB_DUPLICA_WP_Database
         $sql_footer      .= "/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;\n";
         $sql_footer      .= "/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;\n\n";
         $sql_footer      .= "/* gamb-duplica-wp WordPress Timestamp: " . date("Y-m-d H:i:s") . "*/\n";
-        $sql_footer      .= "/* " . gamb-duplica-wp_PRO_DB_EOF_MARKER . " */\n";
+        $sql_footer      .= "/* " . GambDuplicaWP_PRO_DB_EOF_MARKER . " */\n";
         $dbInsertIterator = $this->getDbBuildIterator();
         $dbInsertIterator->addFileSize(SnapIO::fwrite($fileHandle, $sql_footer));
     }

@@ -7,8 +7,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 
 $paramsManager = PrmMng::getInstance();
 $subsite_id    = $paramsManager->getValue(PrmMng::PARAM_SUBSITE_ID);

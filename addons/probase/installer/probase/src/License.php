@@ -6,9 +6,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Addons\ProBase;
+namespace GambDuplicaWP\Installer\Addons\ProBase;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 use DUPX_ArchiveConfig;
 use DUPX_U;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\GuzzleHttp\Psr7\StreamDecoratorTrait;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\StreamDecoratorTrait;
 use LogicException;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
-use VendorDuplicator\Aws\Crypto\Cipher\CipherMethod;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Crypto\Cipher\CipherMethod;
 /**
  * @internal Represents a stream of data to be decrypted with passed cipher.
  */

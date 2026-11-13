@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\UseArnRegion;
+namespace VendorGambDuplicaWP\Aws\S3\UseArnRegion;
 
-use VendorDuplicator\Aws;
-use VendorDuplicator\Aws\S3\UseArnRegion\Exception\ConfigurationException;
+use VendorGambDuplicaWP\Aws;
+use VendorGambDuplicaWP\Aws\S3\UseArnRegion\Exception\ConfigurationException;
 class Configuration implements ConfigurationInterface
 {
     private $useArnRegion;

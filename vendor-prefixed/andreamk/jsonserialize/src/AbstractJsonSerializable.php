@@ -3,9 +3,9 @@
 /**
  * Abstract class to extend in order to use the maximum potentialities of JsonSerialize
  *
- * @package VendorDuplicator\Amk\JsonSerialize
+ * @package VendorGambDuplicaWP\Amk\JsonSerialize
  */
-namespace VendorDuplicator\Amk\JsonSerialize;
+namespace VendorGambDuplicaWP\Amk\JsonSerialize;
 
 /**
  * Abstract class to extend in order to use the maximum potentialities of JsonSerialize

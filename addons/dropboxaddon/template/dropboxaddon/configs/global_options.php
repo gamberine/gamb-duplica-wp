@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\DropboxAddon\Models\DropboxStorage;
+use GambDuplicaWP\Addons\DropboxAddon\Models\DropboxStorage;
 
 defined("ABSPATH") or die("");
 

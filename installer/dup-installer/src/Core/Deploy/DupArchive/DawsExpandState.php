@@ -7,13 +7,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\DupArchive;
+namespace GambDuplicaWP\Installer\Core\Deploy\DupArchive;
 
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
-use gamb-duplica-wp\Libs\DupArchive\States\DupArchiveExpandState;
-use gamb-duplica-wp\Libs\DupArchive\Utils\DupArchiveUtil;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Libs\DupArchive\States\DupArchiveExpandState;
+use GambDuplicaWP\Libs\DupArchive\Utils\DupArchiveUtil;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use DUPX_Package;
 use Exception;
 

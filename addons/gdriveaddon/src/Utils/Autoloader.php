@@ -1,9 +1,9 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\GDriveAddon\Utils;
+namespace GambDuplicaWP\Addons\GDriveAddon\Utils;
 
-use gamb-duplica-wp\Addons\GDriveAddon\GDriveAddon;
-use gamb-duplica-wp\Utils\AbstractAutoloader;
+use GambDuplicaWP\Addons\GDriveAddon\GDriveAddon;
+use GambDuplicaWP\Utils\AbstractAutoloader;
 
 class Autoloader extends AbstractAutoloader
 {

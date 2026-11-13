@@ -15,10 +15,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\TeamDrive;
-use VendorDuplicator\Google\Service\Drive\TeamDriveList;
+use VendorGambDuplicaWP\Google\Service\Drive\TeamDrive;
+use VendorGambDuplicaWP\Google\Service\Drive\TeamDriveList;
 /**
  * The "teamdrives" collection of methods.
  * Typical usage is:
@@ -27,7 +27,7 @@ use VendorDuplicator\Google\Service\Drive\TeamDriveList;
  *   $teamdrives = $driveService->teamdrives;
  *  </code>
  */
-class Teamdrives extends \VendorDuplicator\Google\Service\Resource
+class Teamdrives extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Deprecated: Use `drives.create` instead. (teamdrives.create)
@@ -40,7 +40,7 @@ class Teamdrives extends \VendorDuplicator\Google\Service\Resource
      * @param TeamDrive $postBody
      * @param array $optParams Optional parameters.
      * @return TeamDrive
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function create($requestId, TeamDrive $postBody, $optParams = [])
     {
@@ -53,7 +53,7 @@ class Teamdrives extends \VendorDuplicator\Google\Service\Resource
      *
      * @param string $teamDriveId The ID of the Team Drive
      * @param array $optParams Optional parameters.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function delete($teamDriveId, $optParams = [])
     {
@@ -71,7 +71,7 @@ class Teamdrives extends \VendorDuplicator\Google\Service\Resource
      * administrator; if set to true, then the requester will be granted access if
      * they are an administrator of the domain to which the Team Drive belongs.
      * @return TeamDrive
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($teamDriveId, $optParams = [])
     {
@@ -91,7 +91,7 @@ class Teamdrives extends \VendorDuplicator\Google\Service\Resource
      * administrator; if set to true, then all Team Drives of the domain in which
      * the requester is an administrator are returned.
      * @return TeamDriveList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listTeamdrives($optParams = [])
     {
@@ -110,7 +110,7 @@ class Teamdrives extends \VendorDuplicator\Google\Service\Resource
      * administrator; if set to true, then the requester will be granted access if
      * they are an administrator of the domain to which the Team Drive belongs.
      * @return TeamDrive
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function update($teamDriveId, TeamDrive $postBody, $optParams = [])
     {
@@ -120,4 +120,4 @@ class Teamdrives extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Teamdrives::class, 'VendorDuplicator\Google_Service_Drive_Resource_Teamdrives');
+class_alias(Teamdrives::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Teamdrives');

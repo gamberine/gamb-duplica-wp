@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Arn\ArnParser;
-use VendorDuplicator\Aws\Arn\S3\AccessPointArn;
-use VendorDuplicator\Aws\Exception\MultipartUploadException;
-use VendorDuplicator\Aws\Result;
-use VendorDuplicator\Aws\S3\Exception\S3Exception;
-use VendorDuplicator\GuzzleHttp\Promise\Coroutine;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Promise\PromisorInterface;
+use VendorGambDuplicaWP\Aws\Arn\ArnParser;
+use VendorGambDuplicaWP\Aws\Arn\S3\AccessPointArn;
+use VendorGambDuplicaWP\Aws\Exception\MultipartUploadException;
+use VendorGambDuplicaWP\Aws\Result;
+use VendorGambDuplicaWP\Aws\S3\Exception\S3Exception;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\Coroutine;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromisorInterface;
 use InvalidArgumentException;
 /**
  * Copies objects from one S3 location to another, utilizing a multipart copy

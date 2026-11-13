@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto\Cipher;
+namespace VendorGambDuplicaWP\Aws\Crypto\Cipher;
 
 use InvalidArgumentException;
 use LogicException;

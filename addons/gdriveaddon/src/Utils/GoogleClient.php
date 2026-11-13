@@ -1,9 +1,9 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\GDriveAddon\Utils;
+namespace GambDuplicaWP\Addons\GDriveAddon\Utils;
 
-use Vendorgamb-duplica-wp\Google\Client;
-use Vendorgamb-duplica-wp\GuzzleHttp\Client as GuzzleClient;
+use VendorGambDuplicaWP\Google\Client;
+use VendorGambDuplicaWP\GuzzleHttp\Client as GuzzleClient;
 
 class GoogleClient extends Client
 {

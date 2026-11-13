@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\ImportPageController;
+use GambDuplicaWP\Controllers\ImportPageController;
 
 defined("ABSPATH") or die("");
 
@@ -117,7 +117,7 @@ DRAG/DROP AREA -->
                                 '%1$s and %2$s are <a> tags',
                                 'gamb-duplica-wp'
                             ),
-                            '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-handle-import-install-upload-launch-issues')
+                            '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-handle-import-install-upload-launch-issues')
                             . '" target="_blank">',
                             '</a>'
                         );

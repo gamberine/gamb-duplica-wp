@@ -9,10 +9,10 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler\FingersCrossed;
+namespace VendorGambDuplicaWP\Monolog\Handler\FingersCrossed;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Psr\Log\LogLevel;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Psr\Log\LogLevel;
 /**
  * Channel and Error level based monolog activation strategy. Allows to trigger activation
  * based on level per channel. e.g. trigger activation on level 'ERROR' by default, except
@@ -57,7 +57,7 @@ class ChannelLevelActivationStrategy implements ActivationStrategyInterface
     public function __construct($defaultActionLevel, array $channelToActionLevel = [])
     {
         $this->defaultActionLevel = Logger::toMonologLevel($defaultActionLevel);
-        $this->channelToActionLevel = array_map('VendorDuplicator\Monolog\Logger::toMonologLevel', $channelToActionLevel);
+        $this->channelToActionLevel = array_map('VendorGambDuplicaWP\Monolog\Logger::toMonologLevel', $channelToActionLevel);
     }
     /**
      * @phpstan-param Record $record

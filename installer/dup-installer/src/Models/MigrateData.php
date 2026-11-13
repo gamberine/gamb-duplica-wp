@@ -1,8 +1,8 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Models;
+namespace GambDuplicaWP\Installer\Models;
 
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 
 class MigrateData
 {

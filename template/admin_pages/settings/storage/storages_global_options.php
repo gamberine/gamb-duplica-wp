@@ -6,8 +6,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
 
 /**
  * Variables

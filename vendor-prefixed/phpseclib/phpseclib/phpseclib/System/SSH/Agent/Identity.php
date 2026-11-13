@@ -12,17 +12,17 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\System\SSH\Agent;
+namespace VendorGambDuplicaWP\phpseclib3\System\SSH\Agent;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\PrivateKey;
-use VendorDuplicator\phpseclib3\Crypt\Common\PublicKey;
-use VendorDuplicator\phpseclib3\Crypt\DSA;
-use VendorDuplicator\phpseclib3\Crypt\EC;
-use VendorDuplicator\phpseclib3\Crypt\RSA;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\System\SSH\Agent;
-use VendorDuplicator\phpseclib3\System\SSH\Common\Traits\ReadBytes;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DSA;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\System\SSH\Agent;
+use VendorGambDuplicaWP\phpseclib3\System\SSH\Common\Traits\ReadBytes;
 /**
  * Pure-PHP ssh-agent client identity object
  *

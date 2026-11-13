@@ -5,9 +5,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Controllers\SubMenuItem;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Controllers\SubMenuItem;
 
 defined("ABSPATH") or die("");
 

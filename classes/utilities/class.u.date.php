@@ -42,7 +42,7 @@ class GAMB_DUPLICA_WP_DATE
      */
     public static function getLocalTicksFromGMT($timestamp)
     {
-        return $timestamp + \gamb-duplica-wp\Libs\Snap\SnapWP::getGMTOffset();
+        return $timestamp + \GambDuplicaWP\Libs\Snap\SnapWP::getGMTOffset();
     }
 
 
@@ -55,7 +55,7 @@ class GAMB_DUPLICA_WP_DATE
      */
     public static function getLocalTimeFromGMTTicks($ticks)
     {
-        return self::getStandardTime($ticks + \gamb-duplica-wp\Libs\Snap\SnapWP::getGMTOffset());
+        return self::getStandardTime($ticks + \GambDuplicaWP\Libs\Snap\SnapWP::getGMTOffset());
     }
 
     /**

@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snapcreek LLC
  */
 
-namespace gamb-duplica-wp\Utils;
+namespace GambDuplicaWP\Utils;
 
 use ReflectionClass;
 

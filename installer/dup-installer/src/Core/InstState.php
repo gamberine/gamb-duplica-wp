@@ -5,16 +5,16 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core;
+namespace GambDuplicaWP\Installer\Core;
 
-use gamb-duplica-wp\Installer\Core\Deploy\ServerConfigs;
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescConfigs;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Models\MigrateData;
-use gamb-duplica-wp\Installer\Utils\InstallerOrigFileMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Core\Deploy\ServerConfigs;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescConfigs;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Models\MigrateData;
+use GambDuplicaWP\Installer\Utils\InstallerOrigFileMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use DUPX_ArchiveConfig;
 use DUPX_DB;
 use DUPX_DB_Functions;
@@ -341,7 +341,7 @@ class InstState
      */
     public static function isBridgeInstall()
     {
-        return defined('gamb-duplica-wp_MU_PLUGIN_VERSION');
+        return defined('GambDuplicaWP_MU_PLUGIN_VERSION');
     }
 
     /**
@@ -606,9 +606,9 @@ class InstState
                 throw new Exception("OVERWRITE DATA ERROR: Options tables doesn't exist.\n");
             }
 
-            $gamb-duplica-wpProVersion = $dbFuncs->getgamb-duplica-wpVersion($overwriteData['table_prefix']);
+            $GambDuplicaWPProVersion = $dbFuncs->getGambDuplicaWPVersion($overwriteData['table_prefix']);
 
-            $overwriteData['dupVersion']          = (empty($gamb-duplica-wpProVersion) ? '0' : $gamb-duplica-wpProVersion);
+            $overwriteData['dupVersion']          = (empty($GambDuplicaWPProVersion) ? '0' : $GambDuplicaWPProVersion);
             $overwriteData['ustatIdentifier']     = $dbFuncs->getUstatIdentifier($overwriteData['table_prefix']);
             $overwriteData['packagesTableExists'] = $dbFuncs->tablesExist($dbFuncs->getPackagesTableName($overwriteData['table_prefix']));
         } catch (Exception $e) {

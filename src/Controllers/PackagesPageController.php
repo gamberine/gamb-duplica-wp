@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_Global_Entity;
@@ -14,16 +14,16 @@ use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Template_Entity;
 use GAMB_DUPLICA_WP_Server;
 use GAMB_DUPLICA_WP_U;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Ajax\ServicesPackage;
-use gamb-duplica-wp\Ajax\ServicesRecovery;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Controllers\AbstractMenuPageController;
-use gamb-duplica-wp\Core\Controllers\PageAction;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Views\PackageScreen;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Ajax\ServicesPackage;
+use GambDuplicaWP\Ajax\ServicesRecovery;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Controllers\AbstractMenuPageController;
+use GambDuplicaWP\Core\Controllers\PageAction;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Views\PackageScreen;
 use Error;
 use Exception;
 

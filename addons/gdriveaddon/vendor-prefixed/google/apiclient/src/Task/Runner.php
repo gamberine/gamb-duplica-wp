@@ -15,10 +15,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Task;
+namespace VendorGambDuplicaWP\Google\Task;
 
-use VendorDuplicator\Google\Service\Exception as GoogleServiceException;
-use VendorDuplicator\Google\Task\Exception as GoogleTaskException;
+use VendorGambDuplicaWP\Google\Service\Exception as GoogleServiceException;
+use VendorGambDuplicaWP\Google\Task\Exception as GoogleTaskException;
 /**
  * A task runner with exponential backoff support.
  *
@@ -90,7 +90,7 @@ class Runner
      * @param string $name The name of the current task (used for logging)
      * @param callable $action The task to run and possibly retry
      * @param array $arguments The task arguments
-     * @throws \VendorDuplicator\Google\Task\Exception when misconfigured
+     * @throws \VendorGambDuplicaWP\Google\Task\Exception when misconfigured
      */
     // @phpstan-ignore-next-line
     public function __construct($config, $name, $action, array $arguments = [])
@@ -144,7 +144,7 @@ class Runner
      * Runs the task and (if applicable) automatically retries when errors occur.
      *
      * @return mixed
-     * @throws \VendorDuplicator\Google\Service\Exception on failure when no retries are available.
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception on failure when no retries are available.
      */
     public function run()
     {

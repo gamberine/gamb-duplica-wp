@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Create\DupArchive;
+namespace GambDuplicaWP\Package\Create\DupArchive;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Libs\DupArchive\DupArchiveLoggerBase;
+use GambDuplicaWP\Libs\DupArchive\DupArchiveLoggerBase;
 
 /**
  * Dup archive logger

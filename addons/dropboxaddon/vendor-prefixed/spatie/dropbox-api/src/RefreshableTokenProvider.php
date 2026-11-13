@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Spatie\Dropbox;
+namespace VendorGambDuplicaWP\Spatie\Dropbox;
 
-use VendorDuplicator\GuzzleHttp\Exception\ClientException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ClientException;
 interface RefreshableTokenProvider extends TokenProvider
 {
     /**

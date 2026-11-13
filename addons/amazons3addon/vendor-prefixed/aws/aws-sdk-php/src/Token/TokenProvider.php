@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Token;
+namespace VendorGambDuplicaWP\Aws\Token;
 
-use VendorDuplicator\Aws;
-use VendorDuplicator\Aws\Api\DateTimeResult;
-use VendorDuplicator\Aws\CacheInterface;
-use VendorDuplicator\Aws\Exception\TokenException;
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Aws;
+use VendorGambDuplicaWP\Aws\Api\DateTimeResult;
+use VendorGambDuplicaWP\Aws\CacheInterface;
+use VendorGambDuplicaWP\Aws\Exception\TokenException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 /**
  * Token providers are functions that accept no arguments and return a
  * promise that is fulfilled with an {@see \Aws\Token\TokenInterface}
@@ -178,7 +178,7 @@ class TokenProvider
         $profiles = [];
         $configFile = self::getHomeDir() . '/.aws/config';
         if (file_exists($configFile)) {
-            $configProfileData = \VendorDuplicator\Aws\parse_ini_file($configFile, \true, \INI_SCANNER_RAW);
+            $configProfileData = \VendorGambDuplicaWP\Aws\parse_ini_file($configFile, \true, \INI_SCANNER_RAW);
             foreach ($configProfileData as $name => $profile) {
                 // standardize config profile names
                 $name = str_replace('profile ', '', $name);

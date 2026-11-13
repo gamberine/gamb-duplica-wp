@@ -9,11 +9,11 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 /**
  * Variables
@@ -193,7 +193,7 @@ jQuery(document).ready(function($) {
                 loading: function() {
                     $this.prop('disabled', true)
                         .addClass('disabled')
-                        .html('<i class="fas fa-circle-notch fa-spin fa-fw"></i> <?php esc_html_e('Please Wait...', 'gamb-duplica-wp') ?>');
+                        .html('<i class="fas fa-circle-notch fa-spin fa-fw"></i> <?php esc_html_e('Please Wait...', 'GambDuplicaWP') ?>');
                 },
                 reset: function() {
                     $this.prop('disabled', false)
@@ -218,12 +218,12 @@ jQuery(document).ready(function($) {
         error.remove();
         button.loading();
 
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
            {
                 action: 'gamb-duplica-wp_pro_quick_fix',
                 setup: params,
                 id: id,
-                nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_quick_fix')); ?>'
+                nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_quick_fix')); ?>'
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 if (funcData.success) {
@@ -249,7 +249,7 @@ jQuery(document).ready(function($) {
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 button.reset();
-                error.message('<?php esc_html_e('Unexpected Error!', 'gamb-duplica-wp') ?>');
+                error.message('<?php esc_html_e('Unexpected Error!', 'GambDuplicaWP') ?>');
                 console.log(data);
                 return '';
             }
@@ -302,10 +302,10 @@ jQuery(document).ready(function($) {
     }
 
     DupPro.Pack.BackupRestore = function() {
-        gamb-duplica-wp.Util.ajaxWrapper({
+        GambDuplicaWP.Util.ajaxWrapper({
                 action: 'gamb-duplica-wp_pro_restore_backup_prepare',
                 packageId: DupPro.Pack.RestorePackageId,
-                nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_restore_backup_prepare')); ?>'
+                nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_restore_backup_prepare')); ?>'
             },
             function(result, data, funcData, textStatus, jqXHR) {
                 window.location.href = data.funcData;
@@ -338,11 +338,11 @@ jQuery(document).ready(function($) {
         var pageCount = $('#current-page-selector').val();
         var pageItems = $('input[name="delete_confirm"]');
         
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_pro_package_delete',
                 package_ids: packageIds,
-                nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_package_delete')); ?>'
+                nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_package_delete')); ?>'
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 //Increment back a page-set if no items are left
@@ -375,7 +375,7 @@ jQuery(document).ready(function($) {
         $('#stop-backup-id').val(packageID);
         $('#form-gamb-duplica-wp').submit();
         
-        $('.dup-build-stop-btn').html('<?php esc_html_e("Cancelling...", 'gamb-duplica-wp'); ?>');
+        $('.dup-build-stop-btn').html('<?php esc_html_e("Cancelling...", 'GambDuplicaWP'); ?>');
         $('.dup-build-stop-btn').prop('disabled', true);
     }
 
@@ -388,11 +388,11 @@ jQuery(document).ready(function($) {
     DupPro.Pack.ShowRemote = function(package_id, name) {
         <?php $remoteDlg->showAlert(); ?>
         
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_pro_get_storage_details',
                 package_id: package_id,
-                nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_get_storage_details')); ?>'
+                nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_get_storage_details')); ?>'
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 if (!funcData.success) {
@@ -408,7 +408,7 @@ jQuery(document).ready(function($) {
                 }
                 info += '</div>';
                 info += "<small><a href='" + funcData.logURL + "' class='dup-dlg-store-log-link' target='_blank'>" + 
-                    '<?php echo esc_html__('[Backup Build Log]', 'gamb-duplica-wp'); ?>' + "</a></small>";
+                    '<?php echo esc_html__('[Backup Build Log]', 'GambDuplicaWP'); ?>' + "</a></small>";
                 $('#TB_window .dpro-dlg-alert-txt').html(info);
             },
             function(data) {
@@ -439,15 +439,15 @@ jQuery(document).ready(function($) {
     });
 
     DupPro.Pack.ShowRestoreModal = function(packageId) {
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_pro_backup_redirect',
                 packageId: packageId,
-                nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_backup_redirect')); ?>'
+                nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_backup_redirect')); ?>'
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 if (funcData.success) {
-                    let box = new gamb-duplica-wpModalBox({
+                    let box = new GambDuplicaWPModalBox({
                         url: data.funcData.redirect_url, 
                         openCallback: function (iframe, modalObj) {
                             let body = $(iframe.contentWindow.document.body);
@@ -636,11 +636,11 @@ jQuery(document).ready(function($) {
 
         let packageId = $(this).data('package-id');
         
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_pro_get_recovery_box_content',
                 packageId: packageId,
-                nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_get_recovery_box_content')); ?>'
+                nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_get_recovery_box_content')); ?>'
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 if (funcData.success) {

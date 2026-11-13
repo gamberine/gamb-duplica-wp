@@ -5,18 +5,18 @@
  *
  * @package Requests\Cookies
  */
-namespace VendorDuplicator\WpOrg\Requests\Cookie;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Cookie;
 
 use ArrayAccess;
 use ArrayIterator;
 use IteratorAggregate;
 use ReturnTypeWillChange;
-use VendorDuplicator\WpOrg\Requests\Cookie;
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\HookManager;
-use VendorDuplicator\WpOrg\Requests\Iri;
-use VendorDuplicator\WpOrg\Requests\Response;
+use VendorGambDuplicaWP\WpOrg\Requests\Cookie;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\HookManager;
+use VendorGambDuplicaWP\WpOrg\Requests\Iri;
+use VendorGambDuplicaWP\WpOrg\Requests\Response;
 /**
  * Cookie holder object
  *
@@ -35,7 +35,7 @@ class Jar implements ArrayAccess, IteratorAggregate
      *
      * @param array $cookies Existing cookie values
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not an array.
      */
     public function __construct($cookies = [])
     {
@@ -49,7 +49,7 @@ class Jar implements ArrayAccess, IteratorAggregate
      *
      * @param string|\WpOrg\Requests\Cookie $cookie Cookie header value, possibly pre-parsed (object).
      * @param string                        $key    Optional. The name for this cookie.
-     * @return \VendorDuplicator\WpOrg\Requests\Cookie
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Cookie
      */
     public function normalize_cookie($cookie, $key = '')
     {
@@ -89,7 +89,7 @@ class Jar implements ArrayAccess, IteratorAggregate
      * @param string $offset Item name
      * @param string $value Item value
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On attempting to use dictionary as list (`invalidset`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On attempting to use dictionary as list (`invalidset`)
      */
     #[ReturnTypeWillChange]
     public function offsetSet($offset, $value)
@@ -122,7 +122,7 @@ class Jar implements ArrayAccess, IteratorAggregate
     /**
      * Register the cookie handler with the request's hooking system
      *
-     * @param \VendorDuplicator\WpOrg\Requests\HookManager $hooks Hooking system
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\HookManager $hooks Hooking system
      */
     public function register(HookManager $hooks)
     {
@@ -163,7 +163,7 @@ class Jar implements ArrayAccess, IteratorAggregate
     /**
      * Parse all cookies from a response and attach them to the response
      *
-     * @param \VendorDuplicator\WpOrg\Requests\Response $response Response as received.
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Response $response Response as received.
      */
     public function before_redirect_check(Response $response)
     {

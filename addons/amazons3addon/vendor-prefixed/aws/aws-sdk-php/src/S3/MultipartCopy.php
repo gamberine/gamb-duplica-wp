@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Arn\ArnParser;
-use VendorDuplicator\Aws\Multipart\AbstractUploadManager;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Aws\Arn\ArnParser;
+use VendorGambDuplicaWP\Aws\Multipart\AbstractUploadManager;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
 class MultipartCopy extends AbstractUploadManager
 {
     use MultipartUploadingTrait;

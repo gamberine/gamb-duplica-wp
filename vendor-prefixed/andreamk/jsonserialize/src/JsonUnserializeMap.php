@@ -3,9 +3,9 @@
 /**
  * JsonUnserializeMapping class
  *
- * @package VendorDuplicator\Amk\JsonSerialize
+ * @package VendorGambDuplicaWP\Amk\JsonSerialize
  */
-namespace VendorDuplicator\Amk\JsonSerialize;
+namespace VendorGambDuplicaWP\Amk\JsonSerialize;
 
 use Exception;
 /**

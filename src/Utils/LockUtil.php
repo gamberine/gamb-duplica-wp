@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils;
+namespace GambDuplicaWP\Utils;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
@@ -86,7 +86,7 @@ class LockUtil
 
         if (
             self::$lockingFile === false &&
-            (self::$lockingFile = fopen(gamb-duplica-wp_PRO_LOCKING_FILE_FILENAME, 'c+')) === false
+            (self::$lockingFile = fopen(GambDuplicaWP_PRO_LOCKING_FILE_FILENAME, 'c+')) === false
         ) {
             // Problem opening the locking file report this is a critical error
             GAMB_DUPLICA_WP_Log::trace("Problem opening locking file so auto switching to SQL lock mode");
@@ -95,9 +95,9 @@ class LockUtil
         }
 
         if (($acquired_lock = flock(self::$lockingFile, LOCK_EX | LOCK_NB)) !== false) {
-            GAMB_DUPLICA_WP_Log::trace("File lock acquired " . gamb-duplica-wp_PRO_LOCKING_FILE_FILENAME);
+            GAMB_DUPLICA_WP_Log::trace("File lock acquired " . GambDuplicaWP_PRO_LOCKING_FILE_FILENAME);
         } else {
-            GAMB_DUPLICA_WP_Log::trace("File lock denied " . gamb-duplica-wp_PRO_LOCKING_FILE_FILENAME);
+            GAMB_DUPLICA_WP_Log::trace("File lock denied " . GambDuplicaWP_PRO_LOCKING_FILE_FILENAME);
         }
 
         return $acquired_lock;

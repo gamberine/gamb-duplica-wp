@@ -5,9 +5,9 @@
  * @package templates/default
  */
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Exception;
+namespace VendorGambDuplicaWP\Aws\S3\Exception;
 
 class PermanentRedirectException extends S3Exception
 {

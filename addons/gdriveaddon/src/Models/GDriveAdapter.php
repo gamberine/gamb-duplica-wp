@@ -6,18 +6,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\GDriveAddon\Models;
+namespace GambDuplicaWP\Addons\GDriveAddon\Models;
 
-use gamb-duplica-wp\Addons\GDriveAddon\Utils\GoogleClient;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use gamb-duplica-wp\Utils\OAuth\TokenEntity;
+use GambDuplicaWP\Addons\GDriveAddon\Utils\GoogleClient;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Utils\OAuth\TokenEntity;
 use Exception;
-use Vendorgamb-duplica-wp\Psr\Http\Message\RequestInterface;
-use Vendorgamb-duplica-wp\Google\Http\MediaFileUpload;
-use Vendorgamb-duplica-wp\Google\Service\Drive;
-use Vendorgamb-duplica-wp\GuzzleHttp\Psr7\Request;
-use Vendorgamb-duplica-wp\GuzzleHttp\Psr7\Response;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Google\Http\MediaFileUpload;
+use VendorGambDuplicaWP\Google\Service\Drive;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Response;
 
 /**
  * @method GDriveStoragePathInfo getPathInfo(string $path)
@@ -885,7 +885,7 @@ class GDriveAdapter extends AbstractStorageAdapter
 
             if ($timeout > 0) {
                 $baseUri = $originalHttpClient->getConfig('base_uri');
-                $client->setHttpClient(new \Vendorgamb-duplica-wp\GuzzleHttp\Client([
+                $client->setHttpClient(new \VendorGambDuplicaWP\GuzzleHttp\Client([
                     'base_uri'    => $baseUri,
                     'http_errors' => \false,
                 ]));

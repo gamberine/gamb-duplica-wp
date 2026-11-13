@@ -5,13 +5,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
 use GAMB_DUPLICA_WP_Handler;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Models\BrandEntity;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Models\BrandEntity;
 use Exception;
 
 class ServicesBrand extends AbstractAjaxService

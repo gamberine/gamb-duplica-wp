@@ -15,10 +15,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\Drive;
-use VendorDuplicator\Google\Service\Drive\DriveList;
+use VendorGambDuplicaWP\Google\Service\Drive\Drive;
+use VendorGambDuplicaWP\Google\Service\Drive\DriveList;
 /**
  * The "drives" collection of methods.
  * Typical usage is:
@@ -27,7 +27,7 @@ use VendorDuplicator\Google\Service\Drive\DriveList;
  *   $drives = $driveService->drives;
  *  </code>
  */
-class Drives extends \VendorDuplicator\Google\Service\Resource
+class Drives extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Creates a shared drive. (drives.create)
@@ -40,7 +40,7 @@ class Drives extends \VendorDuplicator\Google\Service\Resource
      * @param Drive $postBody
      * @param array $optParams Optional parameters.
      * @return Drive
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function create($requestId, Drive $postBody, $optParams = [])
     {
@@ -61,7 +61,7 @@ class Drives extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool useDomainAdminAccess Issue the request as a domain
      * administrator; if set to true, then the requester will be granted access if
      * they are an administrator of the domain to which the shared drive belongs.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function delete($driveId, $optParams = [])
     {
@@ -79,7 +79,7 @@ class Drives extends \VendorDuplicator\Google\Service\Resource
      * administrator; if set to true, then the requester will be granted access if
      * they are an administrator of the domain to which the shared drive belongs.
      * @return Drive
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($driveId, $optParams = [])
     {
@@ -93,7 +93,7 @@ class Drives extends \VendorDuplicator\Google\Service\Resource
      * @param string $driveId The ID of the shared drive.
      * @param array $optParams Optional parameters.
      * @return Drive
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function hide($driveId, $optParams = [])
     {
@@ -116,7 +116,7 @@ class Drives extends \VendorDuplicator\Google\Service\Resource
      * administrator; if set to true, then all shared drives of the domain in which
      * the requester is an administrator are returned.
      * @return DriveList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listDrives($optParams = [])
     {
@@ -130,7 +130,7 @@ class Drives extends \VendorDuplicator\Google\Service\Resource
      * @param string $driveId The ID of the shared drive.
      * @param array $optParams Optional parameters.
      * @return Drive
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function unhide($driveId, $optParams = [])
     {
@@ -149,7 +149,7 @@ class Drives extends \VendorDuplicator\Google\Service\Resource
      * administrator; if set to true, then the requester will be granted access if
      * they are an administrator of the domain to which the shared drive belongs.
      * @return Drive
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function update($driveId, Drive $postBody, $optParams = [])
     {
@@ -159,4 +159,4 @@ class Drives extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Drives::class, 'VendorDuplicator\Google_Service_Drive_Resource_Drives');
+class_alias(Drives::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Drives');

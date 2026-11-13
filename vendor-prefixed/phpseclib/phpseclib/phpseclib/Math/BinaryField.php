@@ -11,11 +11,11 @@
  * @copyright 2017 Jim Wigginton
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  */
-namespace VendorDuplicator\phpseclib3\Math;
+namespace VendorGambDuplicaWP\phpseclib3\Math;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Math\BinaryField\Integer;
-use VendorDuplicator\phpseclib3\Math\Common\FiniteField;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Math\BinaryField\Integer;
+use VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField;
 /**
  * Binary Finite Fields
  *

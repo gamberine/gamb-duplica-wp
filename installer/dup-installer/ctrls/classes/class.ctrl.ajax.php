@@ -12,16 +12,16 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginsManager;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Utils\SecureCsrf;
-use gamb-duplica-wp\Installer\Utils\Tests\WP\TestsExecuter;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Libs\Snap\SnapString;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginsManager;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\SecureCsrf;
+use GambDuplicaWP\Installer\Utils\Tests\WP\TestsExecuter;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapString;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 /**
  * Ajax controller
@@ -243,7 +243,7 @@ final class DUPX_Ctrl_ajax
                     (!InstState::dbDoNothing() || InstState::isImportFromBackendMode()) &&
                     DUPX_Ctrl_Params::setParamAutoClean()
                 ) {
-                    $valid = DUPX_S3_Funcs::getInstance()->gamb-duplica-wpMigrationInfoSet();
+                    $valid = DUPX_S3_Funcs::getInstance()->GambDuplicaWPMigrationInfoSet();
                 } else {
                     $valid = false;
                 }

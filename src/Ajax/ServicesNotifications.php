@@ -5,15 +5,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Ajax\AjaxWrapper;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Views\Notifications;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Ajax\AjaxWrapper;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Views\Notifications;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Views\AdminNotices;
 use Exception;
 
 class ServicesNotifications extends AbstractAjaxService
@@ -55,7 +55,7 @@ class ServicesNotifications extends AbstractAjaxService
                 self::class,
                 'dismissNotifications',
             ],
-            Notifications::gamb-duplica-wp_NOTIFICATION_NONCE_KEY,
+            Notifications::GambDuplicaWP_NOTIFICATION_NONCE_KEY,
             SnapUtil::sanitizeTextInput(INPUT_POST, 'nonce'),
             'manage_options'
         );

@@ -9,14 +9,14 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy;
-use VendorDuplicator\Monolog\Handler\FingersCrossed\ActivationStrategyInterface;
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\ResettableInterface;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Psr\Log\LogLevel;
+use VendorGambDuplicaWP\Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy;
+use VendorGambDuplicaWP\Monolog\Handler\FingersCrossed\ActivationStrategyInterface;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\ResettableInterface;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Psr\Log\LogLevel;
 /**
  * Buffers all records until a certain level is reached
  *

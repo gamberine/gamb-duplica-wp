@@ -6,19 +6,19 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\OneDriveAddon\Models;
+namespace GambDuplicaWP\Addons\OneDriveAddon\Models;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Addons\OneDriveAddon\OnedriveAdapter;
-use gamb-duplica-wp\Addons\OneDriveAddon\OneDriveStoragePathInfo;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\StorageAuthInterface;
-use gamb-duplica-wp\Utils\OAuth\TokenEntity;
-use gamb-duplica-wp\Utils\OAuth\TokenService;
+use GambDuplicaWP\Addons\OneDriveAddon\OnedriveAdapter;
+use GambDuplicaWP\Addons\OneDriveAddon\OneDriveStoragePathInfo;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\StorageAuthInterface;
+use GambDuplicaWP\Utils\OAuth\TokenEntity;
+use GambDuplicaWP\Utils\OAuth\TokenService;
 use Exception;
 
 class OneDriveStorage extends AbstractStorageEntity implements StorageAuthInterface
@@ -136,7 +136,7 @@ class OneDriveStorage extends AbstractStorageEntity implements StorageAuthInterf
      */
     public static function getStypeIcon()
     {
-        $imgUrl = gamb-duplica-wp_PRO_IMG_URL . '/onedrive.svg';
+        $imgUrl = GambDuplicaWP_PRO_IMG_URL . '/onedrive.svg';
         return '<img src="' . esc_url($imgUrl) . '" class="dup-storage-icon" alt="' . esc_attr(static::getStypeName()) . '" />';
     }
 
@@ -503,7 +503,7 @@ class OneDriveStorage extends AbstractStorageEntity implements StorageAuthInterf
                 $this->config['storage_folder'],
                 $this->config['storage_folder_id'],
                 !$global->ssl_disableverify,
-                ($global->ssl_useservercerts ? '' : gamb-duplica-wp_PRO_CERT_PATH)
+                ($global->ssl_useservercerts ? '' : GambDuplicaWP_PRO_CERT_PATH)
             );
             if (! $this->adapter->initialize($error)) {
                 GAMB_DUPLICA_WP_Log::trace("Failed to initialize OneDrive adapter: $error");
@@ -567,7 +567,7 @@ class OneDriveStorage extends AbstractStorageEntity implements StorageAuthInterf
     protected static function getDefaultSettings()
     {
         return [
-            'onedrive_upload_chunksize_in_kb'   => gamb-duplica-wp_PRO_ONEDRIVE_UPLOAD_CHUNK_DEFAULT_SIZE_IN_KB,
+            'onedrive_upload_chunksize_in_kb'   => GambDuplicaWP_PRO_ONEDRIVE_UPLOAD_CHUNK_DEFAULT_SIZE_IN_KB,
             'onedrive_download_chunksize_in_kb' => self::DEFAULT_DOWNLOAD_CHUNK_SIZE_IN_KB,
         ];
     }
@@ -582,7 +582,7 @@ class OneDriveStorage extends AbstractStorageEntity implements StorageAuthInterf
         TplMng::getInstance()->render(
             'onedriveaddon/configs/global_options',
             [
-                'uploadChunkSize'   => $dGlobal->getVal('onedrive_upload_chunksize_in_kb', gamb-duplica-wp_PRO_ONEDRIVE_UPLOAD_CHUNK_DEFAULT_SIZE_IN_KB),
+                'uploadChunkSize'   => $dGlobal->getVal('onedrive_upload_chunksize_in_kb', GambDuplicaWP_PRO_ONEDRIVE_UPLOAD_CHUNK_DEFAULT_SIZE_IN_KB),
                 'downloadChunkSize' => $dGlobal->getVal('onedrive_download_chunksize_in_kb', self::DEFAULT_DOWNLOAD_CHUNK_SIZE_IN_KB),
             ]
         );

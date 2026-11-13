@@ -5,7 +5,7 @@
  *
  * @package Requests\Transport
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
 /**
  * Base HTTP transport

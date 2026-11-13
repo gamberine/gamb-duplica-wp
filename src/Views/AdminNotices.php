@@ -1,20 +1,20 @@
 <?php
 
-namespace gamb-duplica-wp\Views;
+namespace GambDuplicaWP\Views;
 
 use Closure;
 use GAMB_DUPLICA_WP_Server;
 use GAMB_DUPLICA_WP_U;
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Models\RecommendedFix;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Utils\Autoloader;
-use gamb-duplica-wp\Utils\Support\SupportToolkit;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Models\RecommendedFix;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Utils\Autoloader;
+use GambDuplicaWP\Utils\Support\SupportToolkit;
 use Exception;
 
 /**
@@ -109,7 +109,7 @@ class AdminNotices
      */
     public static function addonInitFailNotice()
     {
-        if (\gamb-duplica-wp\Core\Addons\AddonsManager::getInstance()->isAddonsReady()) {
+        if (\GambDuplicaWP\Core\Addons\AddonsManager::getInstance()->isAddonsReady()) {
             return;
         }
 
@@ -141,7 +141,7 @@ class AdminNotices
      */
     public static function unhookThirdPartyNotices($hook)
     {
-        if (!ControllersManager::getInstance()->isgamb-duplica-wpPage()) {
+        if (!ControllersManager::getInstance()->isGambDuplicaWPPage()) {
             return;
         }
 
@@ -207,9 +207,9 @@ class AdminNotices
                 %1$sStep-by-Step guide%2$s and %3$sUser Bucket Policy%4$s.',
                 'gamb-duplica-wp'
             ),
-            '<a target="_blank" href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'amazon-s3-step-by-step">',
+            '<a target="_blank" href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'amazon-s3-step-by-step">',
             '</a>',
-            '<a target="_blank" href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'amazon-s3-step-by-step">',
+            '<a target="_blank" href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'amazon-s3-step-by-step">',
             '</a>'
         );
 
@@ -305,7 +305,7 @@ class AdminNotices
                 '1: open link tag, 2: close link tag, 3: diagnostic data link with label or link to instructions to download the Backup logs',
                 'gamb-duplica-wp'
             ),
-            '<a href="' . esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'my-account/support/') . '" target="_blank">',
+            '<a href="' . esc_url(GambDuplicaWP_PRO_BLOG_URL . 'my-account/support/') . '" target="_blank">',
             '</a>',
             SupportToolkit::getDiagnosticInfoLinks(['package'])
         );

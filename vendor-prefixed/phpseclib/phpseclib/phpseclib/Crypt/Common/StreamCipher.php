@@ -11,7 +11,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\Common;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\Common;
 
 /**
  * Base Class for all stream cipher classes
@@ -25,14 +25,14 @@ abstract class StreamCipher extends SymmetricKey
      *
      * Stream ciphers do not have a block size
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::block_size
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::block_size
      * @var int
      */
     protected $block_size = 0;
     /**
      * Default Constructor.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      * @return StreamCipher
      */
     public function __construct()

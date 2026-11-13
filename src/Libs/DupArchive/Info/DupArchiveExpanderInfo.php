@@ -1,8 +1,8 @@
 <?php
 
-namespace gamb-duplica-wp\Libs\DupArchive\Info;
+namespace GambDuplicaWP\Libs\DupArchive\Info;
 
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveFileHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveFileHeader;
 
 class DupArchiveExpanderInfo
 {

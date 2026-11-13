@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\UseArnRegion\Exception;
+namespace VendorGambDuplicaWP\Aws\S3\UseArnRegion\Exception;
 
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
 /**
  * Represents an error interacting with configuration for S3's UseArnRegion
  */

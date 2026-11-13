@@ -2,12 +2,12 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Shell\Shell;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\Local\LocalStorage;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Package\Create\BuildProgress;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Shell\Shell;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\Local\LocalStorage;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Package\Create\BuildProgress;
 
 /**
  *  Creates a zip file using Shell_Exec and the system zip command
@@ -57,7 +57,7 @@ class GAMB_DUPLICA_WP_ShellZip
             $filterFiles  = empty($archive->FilterFiles) ? 'not set' : rtrim(str_replace(';', "\n\t", $archive->FilterFiles));
             $filterExts   = empty($archive->FilterExts) ? 'not set' : $archive->FilterExts;
             $filterOn     = ($archive->FilterOn) ? 'ON' : 'OFF';
-            $scanFilepath = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/{$package->getNameHash()}_scan.json";
+            $scanFilepath = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/{$package->getNameHash()}_scan.json";
             // LOAD SCAN REPORT
             try {
                 $scanReport = $package->getScanReportFromJson($scanFilepath);
@@ -149,7 +149,7 @@ class GAMB_DUPLICA_WP_ShellZip
                     $exclude_string .= "$storagePath**\* ";
                 }
 
-                $relative_backup_dir = GAMB_DUPLICA_WP_U::getRelativePath($compressDir, gamb-duplica-wp_PRO_SSDIR_PATH);
+                $relative_backup_dir = GAMB_DUPLICA_WP_U::getRelativePath($compressDir, GambDuplicaWP_PRO_SSDIR_PATH);
                 $exclude_string     .= "$relative_backup_dir**\* ";
                 $params              = Shell::getCompressionParam($build_progress->current_build_compression);
                 if (strlen($package->Archive->getArchivePassword()) > 0) {
@@ -173,7 +173,7 @@ class GAMB_DUPLICA_WP_ShellZip
                         $system_global->addTextFix($error_text, $fix_text);
                     } elseif (GAMB_DUPLICA_WP_STR::contains($stderr, 'such file or')) {
                         $fix_text = sprintf(
-                            "%s <a href='" . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . "how-to-resolve-zip-format-related-build-issues' target='_blank'>%s</a>",
+                            "%s <a href='" . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . "how-to-resolve-zip-format-related-build-issues' target='_blank'>%s</a>",
                             __('See FAQ:', 'gamb-duplica-wp'),
                             __('How to resolve "zip warning: No such file or directory"?', 'gamb-duplica-wp')
                         );

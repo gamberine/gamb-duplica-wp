@@ -15,13 +15,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Service;
+namespace VendorGambDuplicaWP\Google\Service;
 
-use VendorDuplicator\Google\Exception as GoogleException;
-use VendorDuplicator\Google\Http\MediaFileUpload;
-use VendorDuplicator\Google\Model;
-use VendorDuplicator\Google\Utils\UriTemplate;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\Google\Exception as GoogleException;
+use VendorGambDuplicaWP\Google\Http\MediaFileUpload;
+use VendorGambDuplicaWP\Google\Model;
+use VendorGambDuplicaWP\Google\Utils\UriTemplate;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
 /**
  * Implements the actual methods/resources of the discovered Google API using magic function
  * calling overloading (__call()), which on call will see if the method name (plus.activities.list)
@@ -34,7 +34,7 @@ class Resource
     private $stackParameters = ['alt' => ['type' => 'string', 'location' => 'query'], 'fields' => ['type' => 'string', 'location' => 'query'], 'trace' => ['type' => 'string', 'location' => 'query'], 'userIp' => ['type' => 'string', 'location' => 'query'], 'quotaUser' => ['type' => 'string', 'location' => 'query'], 'data' => ['type' => 'string', 'location' => 'body'], 'mimeType' => ['type' => 'string', 'location' => 'header'], 'uploadType' => ['type' => 'string', 'location' => 'query'], 'mediaUpload' => ['type' => 'complex', 'location' => 'query'], 'prettyPrint' => ['type' => 'string', 'location' => 'query']];
     /** @var string $rootUrlTemplate */
     private $rootUrlTemplate;
-    /** @var \VendorDuplicator\Google\Client $client */
+    /** @var \VendorGambDuplicaWP\Google\Client $client */
     private $client;
     /** @var string $serviceName */
     private $serviceName;
@@ -61,7 +61,7 @@ class Resource
      * @param array $arguments
      * @param class-string<T> $expectedClass - optional, the expected class name
      * @return mixed|T|ResponseInterface|RequestInterface
-     * @throws \VendorDuplicator\Google\Exception
+     * @throws \VendorGambDuplicaWP\Google\Exception
      */
     public function call($name, $arguments, $expectedClass = null)
     {

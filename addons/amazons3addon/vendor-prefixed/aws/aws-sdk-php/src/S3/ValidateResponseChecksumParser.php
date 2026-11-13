@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Api\Parser\AbstractParser;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\S3\Exception\S3Exception;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Api\Parser\AbstractParser;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\S3\Exception\S3Exception;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 /**
  * @internal Decorates a parser for the S3 service to validate the response checksum.
  */

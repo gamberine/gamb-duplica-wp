@@ -9,7 +9,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapLog;
 
 /**
  * Dump database tables for PHPDump (single and multi)

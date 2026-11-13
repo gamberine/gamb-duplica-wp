@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2\Rule;
+namespace VendorGambDuplicaWP\Aws\EndpointV2\Rule;
 
-use VendorDuplicator\Aws\EndpointV2\Ruleset\RulesetStandardLibrary;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\RulesetStandardLibrary;
 /**
  *  A rule within a rule set. All rules contain a conditions property,
  * which can be empty, and documentation about the rule.

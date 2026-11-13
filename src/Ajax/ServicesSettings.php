@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
 use GAMB_DUPLICA_WP_Constants;
 use GAMB_DUPLICA_WP_Handler;
@@ -13,16 +13,16 @@ use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_U;
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Secure_Global_Entity;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\MigrationMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Utils\Logging\TraceLogMng;
-use gamb-duplica-wp\Utils\Settings\MigrateSettings;
-use gamb-duplica-wp\Utils\ZipArchiveExtended;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\MigrationMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Utils\Logging\TraceLogMng;
+use GambDuplicaWP\Utils\Settings\MigrateSettings;
+use GambDuplicaWP\Utils\ZipArchiveExtended;
 use Exception;
 
 class ServicesSettings extends AbstractAjaxService
@@ -134,7 +134,7 @@ class ServicesSettings extends AbstractAjaxService
         try {
             CapMng::can(CapMng::CAP_CREATE);
 
-            $zip_path = gamb-duplica-wp_PRO_SSDIR_PATH . "/" . GAMB_DUPLICA_WP_Constants::ZIPPED_LOG_FILENAME;
+            $zip_path = GambDuplicaWP_PRO_SSDIR_PATH . "/" . GAMB_DUPLICA_WP_Constants::ZIPPED_LOG_FILENAME;
 
             if (file_exists($zip_path)) {
                 SnapIO::unlink($zip_path);

@@ -12,9 +12,9 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Models\ScanInfo;
-use gamb-duplica-wp\Installer\Package\PComponents;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Models\ScanInfo;
+use GambDuplicaWP\Installer\Package\PComponents;
 
 class DUPX_Validation_test_importable extends DUPX_Validation_abstract_item
 {

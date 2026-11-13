@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 /*
  * Copyright 2014 Google Inc.
@@ -20,7 +20,7 @@ namespace VendorDuplicator;
 function oauth2client_php_autoload($className)
 {
     $classPath = \explode('_', $className);
-    if ($classPath[0] != 'VendorDuplicator\\Google') {
+    if ($classPath[0] != 'VendorGambDuplicaWP\\Google') {
         return;
     }
     if (\count($classPath) > 3) {
@@ -32,4 +32,4 @@ function oauth2client_php_autoload($className)
         require_once $filePath;
     }
 }
-\spl_autoload_register('VendorDuplicator\oauth2client_php_autoload');
+\spl_autoload_register('VendorGambDuplicaWP\oauth2client_php_autoload');

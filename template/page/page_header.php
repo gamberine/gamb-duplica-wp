@@ -17,6 +17,6 @@ defined("ABSPATH") or die("");
  * @var array<string, mixed> $tplData
  */
 
-require_once(gamb-duplica-wp____PATH . '/assets/js/javascript.php');
+require_once(GambDuplicaWP____PATH . '/assets/js/javascript.php');
 ?>
 <div class="wrap dup-styles">

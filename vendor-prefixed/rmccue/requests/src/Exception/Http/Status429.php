@@ -7,9 +7,9 @@
  *
  * @package Requests\Exceptions
  */
-namespace VendorDuplicator\WpOrg\Requests\Exception\Http;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Exception\Http;
 
-use VendorDuplicator\WpOrg\Requests\Exception\Http;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\Http;
 /**
  * Exception for 429 Too Many Requests responses
  *

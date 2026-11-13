@@ -1,16 +1,16 @@
 <?php
 
-namespace gamb-duplica-wp\Package\Create\Scan;
+namespace GambDuplicaWP\Package\Create\Scan;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
-use gamb-duplica-wp\Libs\Index\FileIndexManager;
-use gamb-duplica-wp\Libs\Chunking\ChunkingManager;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\Scan\ScanIterator;
-use gamb-duplica-wp\Libs\Scan\ScanNodeInfo;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Index\FileIndexManager;
+use GambDuplicaWP\Libs\Chunking\ChunkingManager;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Scan\ScanIterator;
+use GambDuplicaWP\Libs\Scan\ScanNodeInfo;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use Exception;
 
 /**
@@ -141,7 +141,7 @@ class ScanChunker extends ChunkingManager
     {
         $filePath     = $node->getPath();
         $relativePath = SnapIO::getRelativePath($filePath, $this->scanOpts->rootPath);
-        if (!$this->scanOpts->skipSizeWarning && $node->getSize() > gamb-duplica-wp_PRO_SCAN_WARN_FILE_SIZE) {
+        if (!$this->scanOpts->skipSizeWarning && $node->getSize() > GambDuplicaWP_PRO_SCAN_WARN_FILE_SIZE) {
             $this->scanResult->bigFiles[] = [
                 'path'         => $filePath,
                 'relativePath' => $relativePath,
@@ -168,7 +168,7 @@ class ScanChunker extends ChunkingManager
         $relativePath = SnapIO::getRelativePath($dirPath, $this->scanOpts->rootPath);
         // is relative path is empty is the root path
         if ($relativePath !== '' && !$this->scanOpts->skipSizeWarning) {
-            if ($node->getSize() > gamb-duplica-wp_PRO_SCAN_WARN_DIR_SIZE) {
+            if ($node->getSize() > GambDuplicaWP_PRO_SCAN_WARN_DIR_SIZE) {
                 $this->scanResult->bigDirs[] = [
                     'path'         => $dirPath,
                     'relativePath' => $relativePath,

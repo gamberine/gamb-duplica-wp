@@ -5,7 +5,7 @@
  * @package templates/default
  */
 
-use gamb-duplica-wp\Installer\ViewHelpers\Resources;
+use GambDuplicaWP\Installer\ViewHelpers\Resources;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

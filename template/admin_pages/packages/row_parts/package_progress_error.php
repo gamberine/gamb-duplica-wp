@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
+use GambDuplicaWP\Controllers\PackagesPageController;
 
 defined("ABSPATH") or die("");
 

@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Utils\ZipArchiveExtended;
+use GambDuplicaWP\Utils\ZipArchiveExtended;
 
 defined("ABSPATH") or die("");
 
@@ -116,7 +116,7 @@ $isShellZipAvailable   = (GAMB_DUPLICA_WP_Zip_U::getShellExecZipPath() != null);
     esc_html_e('This option is fully multi-threaded and recommended for large sites or throttled servers.', 'gamb-duplica-wp');
     echo '<br/>  ';
     printf(
-        '%s <a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-work-with-daf-files-and-the-duparchive-extraction-tool')
+        '%s <a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-work-with-daf-files-and-the-duparchive-extraction-tool')
         . '" target="_blank">%s</a> ',
         esc_html__('For details on how to use and manually extract the DAF format please see the ', 'gamb-duplica-wp'),
         esc_html__('online documentation.', 'gamb-duplica-wp')

@@ -13,12 +13,12 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Index\FileIndexManager;
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Core\Bootstrap;
-use gamb-duplica-wp\Installer\Core\Deploy\ServerConfigs;
-use gamb-duplica-wp\Installer\Utils\InstallerOrigFileMng;
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Libs\Index\FileIndexManager;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Core\Bootstrap;
+use GambDuplicaWP\Installer\Core\Deploy\ServerConfigs;
+use GambDuplicaWP\Installer\Utils\InstallerOrigFileMng;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
 
 /**
  * Package related functions

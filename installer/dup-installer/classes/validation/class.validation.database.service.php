@@ -12,11 +12,11 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapOS;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapOS;
 
 require_once(DUPX_INIT . '/api/class.cpnl.ctrl.php');
 

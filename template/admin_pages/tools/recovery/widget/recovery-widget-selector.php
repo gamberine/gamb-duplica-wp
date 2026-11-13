@@ -4,8 +4,8 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Core\CapMng;
 
 defined("ABSPATH") or die("");
 

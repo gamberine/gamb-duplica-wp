@@ -7,18 +7,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\RESTPoints;
+namespace GambDuplicaWP\RESTPoints;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapURL;
 use Exception;
 use WP_Error;
 use WP_REST_Request;
 
-class SubsiteActions extends \gamb-duplica-wp\Core\REST\AbstractRESTPoint
+class SubsiteActions extends \GambDuplicaWP\Core\REST\AbstractRESTPoint
 {
     /**
      * return REST point route string
@@ -62,8 +62,9 @@ class SubsiteActions extends \gamb-duplica-wp\Core\REST\AbstractRESTPoint
      */
     public function permission(WP_REST_Request $request) // @phpstan-ignore missingType.generics
     {
-        if (!CapMng::can(CapMng::CAP_IMPORT, false) || !is_super_admin() || !check_ajax_referer('wp_rest', false, false)) {
-            return new WP_Error('rest_forbidden', esc_html__('You cannot execute this action.', 'gamb-duplica-wp'));
+        $nonce = $request->get_header('X-WP-Nonce') ?: $request->get_param('_wpnonce');
+        if (!CapMng::can(CapMng::CAP_IMPORT, false) || !is_super_admin() || !wp_verify_nonce((string) $nonce, 'wp_rest')) {
+            return new WP_Error('rest_forbidden', esc_html__('You cannot execute this action.', 'gamb-duplica-wp'), ['status' => is_user_logged_in() ? 403 : 401]);
         }
         return true;
     }

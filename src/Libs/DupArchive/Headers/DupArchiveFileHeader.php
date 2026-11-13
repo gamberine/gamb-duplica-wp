@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive\Headers;
+namespace GambDuplicaWP\Libs\DupArchive\Headers;
 
-use gamb-duplica-wp\Libs\DupArchive\DupArchive;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\DupArchive\DupArchive;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use Exception;
 
 /**

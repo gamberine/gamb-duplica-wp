@@ -1,6 +1,6 @@
 /*! gamb-duplica-wp iframe modal box */
 
-class gamb-duplica-wpModalBox {
+class GambDuplicaWPModalBox {
     #url;
     #modal;
     #iframe;

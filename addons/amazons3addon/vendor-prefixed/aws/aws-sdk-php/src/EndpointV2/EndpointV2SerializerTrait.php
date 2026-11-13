@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2;
+namespace VendorGambDuplicaWP\Aws\EndpointV2;
 
-use VendorDuplicator\Aws\Api\Serializer\RestSerializer;
-use VendorDuplicator\Aws\EndpointV2\Ruleset\RulesetEndpoint;
-use VendorDuplicator\GuzzleHttp\Psr7\Uri;
+use VendorGambDuplicaWP\Aws\Api\Serializer\RestSerializer;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\RulesetEndpoint;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Uri;
 /**
  * Set of helper functions used to set endpoints and endpoint
  * properties derived from dynamic endpoint resolution.

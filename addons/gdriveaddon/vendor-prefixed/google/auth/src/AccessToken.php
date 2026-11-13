@@ -15,28 +15,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth;
+namespace VendorGambDuplicaWP\Google\Auth;
 
 use DateTime;
-use VendorDuplicator\Firebase\JWT\ExpiredException;
-use VendorDuplicator\Firebase\JWT\JWT;
-use VendorDuplicator\Firebase\JWT\Key;
-use VendorDuplicator\Firebase\JWT\SignatureInvalidException;
-use VendorDuplicator\Google\Auth\Cache\MemoryCacheItemPool;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpClientCache;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\GuzzleHttp\Psr7\Utils;
+use VendorGambDuplicaWP\Firebase\JWT\ExpiredException;
+use VendorGambDuplicaWP\Firebase\JWT\JWT;
+use VendorGambDuplicaWP\Firebase\JWT\Key;
+use VendorGambDuplicaWP\Firebase\JWT\SignatureInvalidException;
+use VendorGambDuplicaWP\Google\Auth\Cache\MemoryCacheItemPool;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpClientCache;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils;
 use InvalidArgumentException;
-use VendorDuplicator\phpseclib3\Crypt\PublicKeyLoader;
-use VendorDuplicator\phpseclib3\Crypt\RSA;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\phpseclib3\Crypt\PublicKeyLoader;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
 use RuntimeException;
-use VendorDuplicator\SimpleJWT\InvalidTokenException;
-use VendorDuplicator\SimpleJWT\JWT as SimpleJWT;
-use VendorDuplicator\SimpleJWT\Keys\KeyFactory;
-use VendorDuplicator\SimpleJWT\Keys\KeySet;
+use VendorGambDuplicaWP\SimpleJWT\InvalidTokenException;
+use VendorGambDuplicaWP\SimpleJWT\JWT as SimpleJWT;
+use VendorGambDuplicaWP\SimpleJWT\Keys\KeyFactory;
+use VendorGambDuplicaWP\SimpleJWT\Keys\KeySet;
 use TypeError;
 use UnexpectedValueException;
 /**

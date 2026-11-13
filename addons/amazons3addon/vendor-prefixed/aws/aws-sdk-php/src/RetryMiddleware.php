@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\Retry\RetryHelperTrait;
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Retry\RetryHelperTrait;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 /**
  * Middleware that retries failures. V1 implemention that supports 'legacy' mode.
  *

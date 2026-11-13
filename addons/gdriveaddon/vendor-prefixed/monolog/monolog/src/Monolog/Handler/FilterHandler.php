@@ -9,12 +9,12 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\ResettableInterface;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Psr\Log\LogLevel;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\ResettableInterface;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Psr\Log\LogLevel;
 /**
  * Simple handler wrapper that filters records based on a list of levels
  *
@@ -87,7 +87,7 @@ class FilterHandler extends Handler implements ProcessableHandlerInterface, Rese
     public function setAcceptedLevels($minLevelOrList = Logger::DEBUG, $maxLevel = Logger::EMERGENCY): self
     {
         if (is_array($minLevelOrList)) {
-            $acceptedLevels = array_map('VendorDuplicator\Monolog\Logger::toMonologLevel', $minLevelOrList);
+            $acceptedLevels = array_map('VendorGambDuplicaWP\Monolog\Logger::toMonologLevel', $minLevelOrList);
         } else {
             $minLevelOrList = Logger::toMonologLevel($minLevelOrList);
             $maxLevel = Logger::toMonologLevel($maxLevel);

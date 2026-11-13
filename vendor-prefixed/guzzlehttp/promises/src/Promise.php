@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\GuzzleHttp\Promise;
+namespace VendorGambDuplicaWP\GuzzleHttp\Promise;
 
 /**
  * Promises/A+ implementation that avoids recursion when possible.
@@ -86,7 +86,7 @@ class Promise implements PromiseInterface
         // Reject the promise only if it wasn't rejected in a then callback.
         /** @psalm-suppress RedundantCondition */
         if ($this->state === self::PENDING) {
-            $this->reject(new CancellationException('VendorDuplicator\\Promise has been cancelled'));
+            $this->reject(new CancellationException('VendorGambDuplicaWP\\Promise has been cancelled'));
         }
     }
     public function resolve($value): void

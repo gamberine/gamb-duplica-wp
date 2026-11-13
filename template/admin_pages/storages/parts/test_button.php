@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 defined("ABSPATH") or die("");
 
@@ -68,13 +68,13 @@ $alertStorageStatusLong->initAlert();
         DupPro.Storage.Test = function ()
         {
             var $test_button = $('#button_file_test');
-            $test_button.html('<i class="fas fa-circle-notch fa-spin"></i> <?php esc_html_e('Attempting to test storage', 'gamb-duplica-wp'); ?>');
+            $test_button.html('<i class="fas fa-circle-notch fa-spin"></i> <?php esc_html_e('Attempting to test storage', 'GambDuplicaWP'); ?>');
 
-            gamb-duplica-wp.Util.ajaxWrapper(
+            GambDuplicaWP.Util.ajaxWrapper(
                 {
                     action: 'gamb-duplica-wp_pro_storage_test',
                     storage_id: <?php echo (int) $storage->getId(); ?>,
-                    nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_storage_test')); ?>'
+                    nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_storage_test')); ?>'
                 },
                 function (result, data, funcData, textStatus, jqXHR) {
                     console.log('Func data',funcData);
@@ -103,11 +103,11 @@ $alertStorageStatusLong->initAlert();
                             <?php $alertStorageStatusLong->updateMessage("alertMsg"); ?>
                         }
                     }
-                    $test_button.html('<i class="fas fa-cloud-upload-alt fa-sm"></i> <?php esc_html_e('Test Storage', 'gamb-duplica-wp'); ?>');
+                    $test_button.html('<i class="fas fa-cloud-upload-alt fa-sm"></i> <?php esc_html_e('Test Storage', 'GambDuplicaWP'); ?>');
                     return '';
                 },
                 function (result, data, funcData, textStatus, jqXHR) {
-                    $test_button.html('<i class="fas fa-cloud-upload-alt fa-sm"></i> <?php esc_html_e('Test Storage', 'gamb-duplica-wp'); ?>');
+                    $test_button.html('<i class="fas fa-cloud-upload-alt fa-sm"></i> <?php esc_html_e('Test Storage', 'GambDuplicaWP'); ?>');
                     <?php $alertStorageStatus->showAlert(); ?>
                     let alertMsg = "<i class='fas fa-exclamation-triangle'></i> <?php esc_html_e('AJAX error while testing storage', 'gamb-duplica-wp'); ?>";
                     <?php $alertStorageStatus->updateMessage("alertMsg"); ?>

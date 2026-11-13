@@ -1,19 +1,19 @@
 <?php
 
-namespace VendorDuplicator\Spatie\Dropbox;
+namespace VendorGambDuplicaWP\Spatie\Dropbox;
 
 use Exception;
-use VendorDuplicator\GrahamCampbell\GuzzleFactory\GuzzleFactory;
-use VendorDuplicator\GuzzleHttp\Client as GuzzleClient;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\GuzzleHttp\Exception\ClientException;
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\PumpStream;
-use VendorDuplicator\GuzzleHttp\Psr7\StreamWrapper;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
-use VendorDuplicator\Spatie\Dropbox\Exceptions\BadRequest;
+use VendorGambDuplicaWP\GrahamCampbell\GuzzleFactory\GuzzleFactory;
+use VendorGambDuplicaWP\GuzzleHttp\Client as GuzzleClient;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ClientException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\PumpStream;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\StreamWrapper;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Spatie\Dropbox\Exceptions\BadRequest;
 class Client
 {
     const THUMBNAIL_FORMAT_JPEG = 'jpeg';
@@ -38,7 +38,7 @@ class Client
     protected $appKey;
     /** @var string */
     protected $appSecret;
-    /** @var \VendorDuplicator\GuzzleHttp\Client */
+    /** @var \VendorGambDuplicaWP\GuzzleHttp\Client */
     protected $client;
     /** @var int */
     protected $maxChunkSize;
@@ -348,8 +348,8 @@ class Client
      * @param int $type
      * @param Psr7\Stream $stream
      * @param int $chunkSize
-     * @param \VendorDuplicator\Spatie\Dropbox\UploadSessionCursor|null $cursor
-     * @return \VendorDuplicator\Spatie\Dropbox\UploadSessionCursor
+     * @param \VendorGambDuplicaWP\Spatie\Dropbox\UploadSessionCursor|null $cursor
+     * @return \VendorGambDuplicaWP\Spatie\Dropbox\UploadSessionCursor
      * @throws Exception
      */
     protected function uploadChunk($type, &$stream, $chunkSize, $cursor = null): UploadSessionCursor
@@ -406,7 +406,7 @@ class Client
      * @param UploadSessionCursor $cursor
      * @param bool $close
      *
-     * @return \VendorDuplicator\Spatie\Dropbox\UploadSessionCursor
+     * @return \VendorGambDuplicaWP\Spatie\Dropbox\UploadSessionCursor
      */
     public function uploadSessionAppend($contents, UploadSessionCursor $cursor, bool $close = \false): UploadSessionCursor
     {
@@ -423,7 +423,7 @@ class Client
      * @link https://www.dropbox.com/developers/documentation/http/documentation#files-upload_session-finish
      *
      * @param string|resource|StreamInterface $contents
-     * @param \VendorDuplicator\Spatie\Dropbox\UploadSessionCursor $cursor
+     * @param \VendorGambDuplicaWP\Spatie\Dropbox\UploadSessionCursor $cursor
      * @param string $path
      * @param string|array $mode
      * @param bool $autorename
@@ -480,7 +480,7 @@ class Client
      * @param array $arguments
      * @param string|resource|StreamInterface $body
      *
-     * @return \VendorDuplicator\Psr\Http\Message\ResponseInterface
+     * @return \VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface
      *
      * @throws \Exception
      */
@@ -526,7 +526,7 @@ class Client
     /**
      * @param $contents
      *
-     * @return \VendorDuplicator\GuzzleHttp\Psr7\PumpStream|\GuzzleHttp\Psr7\Stream|StreamInterface
+     * @return \VendorGambDuplicaWP\GuzzleHttp\Psr7\PumpStream|\GuzzleHttp\Psr7\Stream|StreamInterface
      */
     protected function getStream($contents)
     {

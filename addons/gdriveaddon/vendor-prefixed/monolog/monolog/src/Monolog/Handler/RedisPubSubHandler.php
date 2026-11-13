@@ -9,11 +9,11 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Formatter\LineFormatter;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Formatter\LineFormatter;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Logger;
 /**
  * Sends the message to a Redis Pub/Sub channel using PUBLISH
  *
@@ -37,7 +37,7 @@ class RedisPubSubHandler extends AbstractProcessingHandler
      */
     public function __construct($redis, string $key, $level = Logger::DEBUG, bool $bubble = \true)
     {
-        if (!($redis instanceof \VendorDuplicator\Predis\Client || $redis instanceof \Redis)) {
+        if (!($redis instanceof \VendorGambDuplicaWP\Predis\Client || $redis instanceof \Redis)) {
             throw new \InvalidArgumentException('Predis\Client or Redis instance required');
         }
         $this->redisClient = $redis;

@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Utils;
+namespace VendorGambDuplicaWP\Google\Utils;
 
 /**
  * Implementation of levels 1-3 of the URI Template spec.

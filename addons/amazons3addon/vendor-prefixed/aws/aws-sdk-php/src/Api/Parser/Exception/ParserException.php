@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser\Exception;
+namespace VendorGambDuplicaWP\Aws\Api\Parser\Exception;
 
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
-use VendorDuplicator\Aws\ResponseContainerInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\ResponseContainerInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 class ParserException extends \RuntimeException implements MonitoringEventsInterface, ResponseContainerInterface
 {
     use HasMonitoringEventsTrait;

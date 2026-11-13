@@ -1,11 +1,11 @@
 <?php
 
-namespace gamb-duplica-wp\Core;
+namespace GambDuplicaWP\Core;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 use Exception;
 
 /**
@@ -566,7 +566,7 @@ class CapMng
                     'Without this capability, gamb-duplica-wp is not visible. This is the basis of all the other capabilities listed below.',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_BASIC',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_BASIC',
             ],
             self::CAP_CREATE         => [
                 'parent'       => self::CAP_BASIC,
@@ -575,7 +575,7 @@ class CapMng
                     'The capability to create and delete Backups.',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_CREATE',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_CREATE',
             ],
             self::CAP_SCHEDULE       => [
                 'parent'       => self::CAP_CREATE,
@@ -584,7 +584,7 @@ class CapMng
                     'The capability to manage Backup Schedules.',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_SCHEDULE',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_SCHEDULE',
             ],
             self::CAP_STORAGE        => [
                 'parent'       => self::CAP_CREATE,
@@ -593,7 +593,7 @@ class CapMng
                     'The capability to create and modify storage. Those with the "Backup Create" capability can select existing storage but cannot edit it',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_STORAGE',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_STORAGE',
             ],
             self::CAP_BACKUP_RESTORE => [
                 'parent'       => self::CAP_BASIC,
@@ -602,7 +602,7 @@ class CapMng
                     'The capability to set up and execute a recovery point',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_BACKUP_RESTORE',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_BACKUP_RESTORE',
             ],
             self::CAP_IMPORT         => [
                 'parent'       => self::CAP_BACKUP_RESTORE,
@@ -611,7 +611,7 @@ class CapMng
                     'The capability to import a Backup and overwrite the current site.',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_IMPORT',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_IMPORT',
             ],
             self::CAP_EXPORT         => [
                 'parent'       => self::CAP_BASIC,
@@ -620,7 +620,7 @@ class CapMng
                     'The capability to download existing Backup.',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_EXPORT',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_EXPORT',
             ],
             self::CAP_SETTINGS       => [
                 'parent'       => self::CAP_BASIC,
@@ -629,7 +629,7 @@ class CapMng
                     'The capability to change settings.',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_SETTINGS',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_SETTINGS',
             ],
             self::CAP_LICENSE        => [
                 'parent'       => self::CAP_SETTINGS,
@@ -638,7 +638,7 @@ class CapMng
                     'The capability to change the license settings.',
                     'gamb-duplica-wp'
                 ),
-                'disConstName' => 'gamb-duplica-wp_DISABLE_CAP_LICENSE',
+                'disConstName' => 'GambDuplicaWP_DISABLE_CAP_LICENSE',
             ],
         ];
     }

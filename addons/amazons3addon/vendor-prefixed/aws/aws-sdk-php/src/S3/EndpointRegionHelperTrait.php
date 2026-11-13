@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Arn\ArnInterface;
-use VendorDuplicator\Aws\Arn\S3\OutpostsArnInterface;
-use VendorDuplicator\Aws\Endpoint\PartitionEndpointProvider;
-use VendorDuplicator\Aws\Exception\InvalidRegionException;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Arn\ArnInterface;
+use VendorGambDuplicaWP\Aws\Arn\S3\OutpostsArnInterface;
+use VendorGambDuplicaWP\Aws\Endpoint\PartitionEndpointProvider;
+use VendorGambDuplicaWP\Aws\Exception\InvalidRegionException;
 /**
  * @internal
  */
@@ -36,7 +36,7 @@ trait EndpointRegionHelperTrait
     }
     private function isMatchingSigningRegion($arnRegion, $clientRegion, $service, PartitionEndpointProvider $provider)
     {
-        $arnRegion = \VendorDuplicator\Aws\strip_fips_pseudo_regions(strtolower($arnRegion));
+        $arnRegion = \VendorGambDuplicaWP\Aws\strip_fips_pseudo_regions(strtolower($arnRegion));
         $clientRegion = strtolower($clientRegion);
         if ($arnRegion === $clientRegion) {
             return \true;
@@ -55,7 +55,7 @@ trait EndpointRegionHelperTrait
             } else {
                 $region = $arn->getRegion();
             }
-            if (\VendorDuplicator\Aws\is_fips_pseudo_region($region)) {
+            if (\VendorGambDuplicaWP\Aws\is_fips_pseudo_region($region)) {
                 throw new InvalidRegionException('Fips is currently not supported with S3 Outposts access' . ' points. Please provide a non-fips region or do not supply an' . ' access point ARN.');
             }
         }

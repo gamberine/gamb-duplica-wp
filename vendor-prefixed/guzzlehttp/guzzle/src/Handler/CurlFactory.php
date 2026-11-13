@@ -1,17 +1,17 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Handler;
+namespace VendorGambDuplicaWP\GuzzleHttp\Handler;
 
-use VendorDuplicator\GuzzleHttp\Exception\ConnectException;
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\GuzzleHttp\Promise as P;
-use VendorDuplicator\GuzzleHttp\Promise\FulfilledPromise;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
-use VendorDuplicator\GuzzleHttp\Psr7\LazyOpenStream;
-use VendorDuplicator\GuzzleHttp\TransferStats;
-use VendorDuplicator\GuzzleHttp\Utils;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ConnectException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise as P;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\FulfilledPromise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\LazyOpenStream;
+use VendorGambDuplicaWP\GuzzleHttp\TransferStats;
+use VendorGambDuplicaWP\GuzzleHttp\Utils;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 /**
  * Creates curl resources from a request
  *
@@ -182,7 +182,7 @@ class CurlFactory implements CurlFactoryInterface
         $sanitizedError = self::sanitizeCurlError($ctx['error'] ?? '', $uri);
         $message = \sprintf('cURL error %s: %s (%s)', $ctx['errno'], $sanitizedError, 'see https://curl.haxx.se/libcurl/c/libcurl-errors.html');
         if ('' !== $sanitizedError) {
-            $redactedUriString = \VendorDuplicator\GuzzleHttp\Psr7\Utils::redactUserInfo($uri)->__toString();
+            $redactedUriString = \VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils::redactUserInfo($uri)->__toString();
             if ($redactedUriString !== '' && \false === \strpos($sanitizedError, $redactedUriString)) {
                 $message .= \sprintf(' for %s', $redactedUriString);
             }
@@ -201,7 +201,7 @@ class CurlFactory implements CurlFactoryInterface
         if ('' === $baseUriString) {
             return $error;
         }
-        $redactedUriString = \VendorDuplicator\GuzzleHttp\Psr7\Utils::redactUserInfo($baseUri)->__toString();
+        $redactedUriString = \VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils::redactUserInfo($baseUri)->__toString();
         return str_replace($baseUriString, $redactedUriString, $error);
     }
     /**
@@ -352,11 +352,11 @@ class CurlFactory implements CurlFactoryInterface
         }
         if (!isset($options['sink'])) {
             // Use a default temp stream if no sink was set.
-            $options['sink'] = \VendorDuplicator\GuzzleHttp\Psr7\Utils::tryFopen('php://temp', 'w+');
+            $options['sink'] = \VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils::tryFopen('php://temp', 'w+');
         }
         $sink = $options['sink'];
         if (!\is_string($sink)) {
-            $sink = \VendorDuplicator\GuzzleHttp\Psr7\Utils::streamFor($sink);
+            $sink = \VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils::streamFor($sink);
         } elseif (!\is_dir(\dirname($sink))) {
             // Ensure that the directory exists before failing in curl.
             throw new \RuntimeException(\sprintf('Directory %s does not exist for sink value of %s', \dirname($sink), $sink));

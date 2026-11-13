@@ -4,11 +4,11 @@
  * @package gamb-duplica-wp
  */
 
-namespace gamb-duplica-wp\Utils;
+namespace GambDuplicaWP\Utils;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use Exception;
 use ZipArchive;
 
@@ -106,6 +106,8 @@ class ZipArchiveExtended
      */
     public function addEmptyDir($path)
     {
+        if ($path === '' || $path === '.') { return true; } // A raiz do pacote não é uma entrada ZIP.
+        if (!ZipIntegrityValidator::isSafePath($path)) { throw new \RuntimeException('Caminho inválido no arquivo ZIP.'); }
         return $this->zipArchive->addEmptyDir($path);
     }
 
@@ -126,6 +128,7 @@ class ZipArchiveExtended
         if (strlen($archivePath) === 0) {
             $archivePath = basename($filepath);
         }
+        if (!ZipIntegrityValidator::isSafePath($archivePath)) { throw new \RuntimeException('Caminho inválido no arquivo ZIP.'); }
         if ($maxSize > 0 && filesize($filepath) > $maxSize) {
             if (($content = file_get_contents($filepath, false, null, 0, $maxSize)) === false) {
                 return false;
@@ -135,7 +138,10 @@ class ZipArchiveExtended
             $result = $this->zipArchive->addFile($filepath, $archivePath);
         }
         if ($result && $this->encrypt) {
-            $this->zipArchive->setEncryptionName($archivePath, ZipArchive::EM_AES_256);
+            if (!$this->zipArchive->setEncryptionName($archivePath, ZipArchive::EM_AES_256)) {
+                $this->zipArchive->deleteName($archivePath);
+                throw new \RuntimeException('Não foi possível criptografar uma entrada do ZIP.');
+            }
         }
         if ($result && !$this->compressed) {
             $this->zipArchive->setCompressionName($archivePath, ZipArchive::CM_STORE);
@@ -154,12 +160,16 @@ class ZipArchiveExtended
      */
     public function addFileFromString($archivePath, $content, $maxSize = 0)
     {
+        if (!ZipIntegrityValidator::isSafePath($archivePath)) { throw new \RuntimeException('Caminho inválido no arquivo ZIP.'); }
         if ($maxSize > 0 && strlen($content) > $maxSize) {
             $content = substr($content, 0, $maxSize);
         }
         $result = $this->zipArchive->addFromString($archivePath, $content);
         if ($result && $this->encrypt) {
-            $this->zipArchive->setEncryptionName($archivePath, ZipArchive::EM_AES_256);
+            if (!$this->zipArchive->setEncryptionName($archivePath, ZipArchive::EM_AES_256)) {
+                $this->zipArchive->deleteName($archivePath);
+                throw new \RuntimeException('Não foi possível criptografar uma entrada do ZIP.');
+            }
         }
         if ($result && !$this->compressed) {
             $this->zipArchive->setCompressionName($archivePath, ZipArchive::CM_STORE);
@@ -186,7 +196,7 @@ class ZipArchiveExtended
                 $this->zipArchive->setPassword('');
             }
         }
-        return $result;
+        return $result === true;
     }
 
     /**
@@ -271,6 +281,9 @@ class ZipArchiveExtended
                 $isEncryptAvailable = false;
                 return false;
             }
+            if (method_exists(ZipArchive::class, 'isEncryptionMethodSupported')) {
+                return $isEncryptAvailable = ZipArchive::isEncryptionMethodSupported(ZipArchive::EM_AES_256, true);
+            }
 
             if (version_compare(self::getLibzipVersion(), '1.2.0', '<')) {
                 $isEncryptAvailable = false;
@@ -290,6 +303,7 @@ class ZipArchiveExtended
      */
     public static function getLibzipVersion()
     {
+        if (defined('ZipArchive::LIBZIP_VERSION')) { return constant('ZipArchive::LIBZIP_VERSION'); }
         static $libzipVersion = null;
 
         if (is_null($libzipVersion)) {
@@ -317,6 +331,9 @@ class ZipArchiveExtended
       */
     public function setEncrypt($encrypt, $password = '')
     {
+        if ($encrypt && (!self::isEncryptionAvaliable() || $password === '')) {
+            throw new \RuntimeException('A criptografia ZIP solicitada requer suporte AES-256 e uma senha não vazia.');
+        }
         $this->encrypt = (self::isEncryptionAvaliable() && $encrypt);
 
         if ($this->encrypt) {

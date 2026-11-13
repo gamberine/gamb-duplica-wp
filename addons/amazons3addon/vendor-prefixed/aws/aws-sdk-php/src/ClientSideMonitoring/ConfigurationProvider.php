@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\ClientSideMonitoring;
+namespace VendorGambDuplicaWP\Aws\ClientSideMonitoring;
 
-use VendorDuplicator\Aws\AbstractConfigurationProvider;
-use VendorDuplicator\Aws\CacheInterface;
-use VendorDuplicator\Aws\ClientSideMonitoring\Exception\ConfigurationException;
-use VendorDuplicator\Aws\ConfigurationProviderInterface;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Aws\AbstractConfigurationProvider;
+use VendorGambDuplicaWP\Aws\CacheInterface;
+use VendorGambDuplicaWP\Aws\ClientSideMonitoring\Exception\ConfigurationException;
+use VendorGambDuplicaWP\Aws\ConfigurationProviderInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
 /**
  * A configuration provider is a function that accepts no arguments and returns
  * a promise that is fulfilled with a {@see \Aws\ClientSideMonitoring\ConfigurationInterface}
@@ -131,7 +131,7 @@ class ConfigurationProvider extends AbstractConfigurationProvider implements Con
             if (!@is_readable($filename)) {
                 return self::reject("Cannot read CSM config from {$filename}");
             }
-            $data = \VendorDuplicator\Aws\parse_ini_file($filename, \true);
+            $data = \VendorGambDuplicaWP\Aws\parse_ini_file($filename, \true);
             if ($data === \false) {
                 return self::reject("Invalid config file: {$filename}");
             }

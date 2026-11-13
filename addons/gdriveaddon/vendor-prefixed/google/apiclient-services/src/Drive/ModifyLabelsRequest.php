@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class ModifyLabelsRequest extends \VendorDuplicator\Google\Collection
+class ModifyLabelsRequest extends \VendorGambDuplicaWP\Google\Collection
 {
     protected $collection_key = 'labelModifications';
     /**
@@ -56,4 +56,4 @@ class ModifyLabelsRequest extends \VendorDuplicator\Google\Collection
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ModifyLabelsRequest::class, 'VendorDuplicator\Google_Service_Drive_ModifyLabelsRequest');
+class_alias(ModifyLabelsRequest::class, 'VendorGambDuplicaWP\Google_Service_Drive_ModifyLabelsRequest');

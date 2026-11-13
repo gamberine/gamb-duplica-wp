@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Configuration;
+namespace VendorGambDuplicaWP\Aws\Configuration;
 
 class ConfigurationResolver
 {
@@ -84,7 +84,7 @@ class ConfigurationResolver
         }
         // Use INI_SCANNER_NORMAL instead of INI_SCANNER_TYPED for PHP 5.5 compatibility
         //TODO change after deprecation
-        $data = @\VendorDuplicator\Aws\parse_ini_file($filename, \true, \INI_SCANNER_NORMAL);
+        $data = @\VendorGambDuplicaWP\Aws\parse_ini_file($filename, \true, \INI_SCANNER_NORMAL);
         if (isset($options['section']) && isset($options['subsection']) && isset($options['key'])) {
             return self::retrieveValueFromIniSubsection($data, $profile, $filename, $expectedType, $options);
         }
@@ -142,7 +142,7 @@ class ConfigurationResolver
      */
     private static function convertType($value, $type)
     {
-        if ($type === 'bool' && !is_null($convertedValue = \VendorDuplicator\Aws\boolean_value($value))) {
+        if ($type === 'bool' && !is_null($convertedValue = \VendorGambDuplicaWP\Aws\boolean_value($value))) {
             return $convertedValue;
         }
         if ($type === 'int' && filter_var($value, \FILTER_VALIDATE_INT)) {
@@ -167,7 +167,7 @@ class ConfigurationResolver
         if ($data === \false || !isset($data[$profile][$section]) || !isset($data["{$section} {$data[$profile][$section]}"])) {
             return null;
         }
-        $services_section = \VendorDuplicator\Aws\parse_ini_section_with_subsections($filename, "services {$data[$profile]['services']}");
+        $services_section = \VendorGambDuplicaWP\Aws\parse_ini_section_with_subsections($filename, "services {$data[$profile]['services']}");
         if (!isset($services_section[$options['subsection']][$options['key']])) {
             return null;
         }

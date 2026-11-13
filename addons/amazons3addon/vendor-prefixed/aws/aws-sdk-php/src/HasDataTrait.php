@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
 /**
  * Trait implementing ToArrayInterface, \ArrayAccess, \Countable, and

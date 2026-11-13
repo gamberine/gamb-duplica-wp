@@ -7,12 +7,12 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 ?>
 <script>
     DUPX.finalTests = {
-        frontendTest: <?php echo json_encode(\gamb-duplica-wp\Installer\Utils\Tests\WP\TestsExecuter::getFrontendUrl()); ?>,
-        backendTest: <?php echo json_encode(\gamb-duplica-wp\Installer\Utils\Tests\WP\TestsExecuter::getBackendUrl()); ?>,
+        frontendTest: <?php echo json_encode(\GambDuplicaWP\Installer\Utils\Tests\WP\TestsExecuter::getFrontendUrl()); ?>,
+        backendTest: <?php echo json_encode(\GambDuplicaWP\Installer\Utils\Tests\WP\TestsExecuter::getBackendUrl()); ?>,
         afterCallback: null,
         testsResults: {
             'wp_frontend': {

@@ -8,7 +8,7 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\License\License;
 
 /**
  * Variables
@@ -126,7 +126,7 @@ use gamb-duplica-wp\Addons\ProBase\License\License;
                 <a href="<?php echo esc_url(License::getUpsellURL()); ?>" target='_blank'>
                     <?php esc_html_e('Upgrade Here', 'gamb-duplica-wp'); ?>
                 </a>&nbsp;|&nbsp;
-                <a href="<?php echo esc_html(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL); ?>how-does-gamb-duplica-wp-handle-multisite-support" target="_blank">
+                <a href="<?php echo esc_html(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL); ?>how-does-gamb-duplica-wp-handle-multisite-support" target="_blank">
                     <?php esc_html_e('Multisite Plus Feature Overview', 'gamb-duplica-wp'); ?>
                 </a>
             </div>

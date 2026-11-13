@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Signature;
+namespace VendorGambDuplicaWP\Aws\Signature;
 
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\AWS\CRT\Auth\SignatureType;
-use VendorDuplicator\AWS\CRT\Auth\SigningAlgorithm;
-use VendorDuplicator\AWS\CRT\Auth\SigningConfigAWS;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\AWS\CRT\Auth\SignatureType;
+use VendorGambDuplicaWP\AWS\CRT\Auth\SigningAlgorithm;
+use VendorGambDuplicaWP\AWS\CRT\Auth\SigningConfigAWS;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Amazon S3 signature version 4 support.
  */

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Exception;
+namespace VendorGambDuplicaWP\GuzzleHttp\Exception;
 
-use VendorDuplicator\GuzzleHttp\BodySummarizer;
-use VendorDuplicator\GuzzleHttp\BodySummarizerInterface;
-use VendorDuplicator\Psr\Http\Client\RequestExceptionInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\BodySummarizer;
+use VendorGambDuplicaWP\GuzzleHttp\BodySummarizerInterface;
+use VendorGambDuplicaWP\Psr\Http\Client\RequestExceptionInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * HTTP Request exception
  */
@@ -65,7 +65,7 @@ class RequestException extends TransferException implements RequestExceptionInte
             $label = 'Unsuccessful request';
             $className = __CLASS__;
         }
-        $uri = \VendorDuplicator\GuzzleHttp\Psr7\Utils::redactUserInfo($request->getUri());
+        $uri = \VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils::redactUserInfo($request->getUri());
         // Client Error: `GET /` resulted in a `404 Not Found` response:
         // <html> ... (truncated)
         $message = \sprintf('%s: `%s %s` resulted in a `%s %s` response', $label, $request->getMethod(), $uri->__toString(), $response->getStatusCode(), $response->getReasonPhrase());

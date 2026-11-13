@@ -10,21 +10,21 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescUsers;
-use gamb-duplica-wp\Installer\Core\Deploy\Database\DbCleanup;
-use gamb-duplica-wp\Installer\Core\Deploy\Database\DbDumpIterator;
-use gamb-duplica-wp\Installer\Core\Deploy\Database\DbUserMode;
-use gamb-duplica-wp\Installer\Core\Deploy\Database\DbUtils;
-use gamb-duplica-wp\Installer\Core\Deploy\Database\QueryFixes;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\AbstractJsonSerializable;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescUsers;
+use GambDuplicaWP\Installer\Core\Deploy\Database\DbCleanup;
+use GambDuplicaWP\Installer\Core\Deploy\Database\DbDumpIterator;
+use GambDuplicaWP\Installer\Core\Deploy\Database\DbUserMode;
+use GambDuplicaWP\Installer\Core\Deploy\Database\DbUtils;
+use GambDuplicaWP\Installer\Core\Deploy\Database\QueryFixes;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
+use VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapDB;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 require_once(DUPX_INIT . '/api/class.cpnl.ctrl.php');
 

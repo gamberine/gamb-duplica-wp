@@ -10,10 +10,10 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Curves;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves;
 
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Prime;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Prime;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 class prime239v1 extends Prime
 {
     public function __construct()

@@ -7,8 +7,8 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Core\Addons\AddonsManager;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Core\Addons\AddonsManager;
 
 defined("ABSPATH") or die("");
 
@@ -110,15 +110,15 @@ if ($storage->getId() < 0) {
         DupPro.Storage.Autofill = function (mode) {
         <?php if (AddonsManager::getInstance()->isAddonEnabled('AmazonS3Addon')) : ?>
             switch (parseInt(mode)) {
-                case <?php echo (int) \gamb-duplica-wp\Addons\AmazonS3Addon\Models\BackblazeStorage::getSType(); ?>:
+                case <?php echo (int) \GambDuplicaWP\Addons\AmazonS3Addon\Models\BackblazeStorage::getSType(); ?>:
                     autoFillRegion(mode, 1);
                     break;
-                case <?php echo (int) \gamb-duplica-wp\Addons\AmazonS3Addon\Models\DreamStorage::getSType(); ?>:
-                case <?php echo (int) \gamb-duplica-wp\Addons\AmazonS3Addon\Models\VultrStorage::getSType(); ?>:
-                case <?php echo (int) \gamb-duplica-wp\Addons\AmazonS3Addon\Models\DigitalOceanStorage::getSType(); ?>:
+                case <?php echo (int) \GambDuplicaWP\Addons\AmazonS3Addon\Models\DreamStorage::getSType(); ?>:
+                case <?php echo (int) \GambDuplicaWP\Addons\AmazonS3Addon\Models\VultrStorage::getSType(); ?>:
+                case <?php echo (int) \GambDuplicaWP\Addons\AmazonS3Addon\Models\DigitalOceanStorage::getSType(); ?>:
                     autoFillRegion(mode, 0);
                     break;
-                case <?php echo (int) \gamb-duplica-wp\Addons\AmazonS3Addon\Models\WasabiStorage::getSType(); ?>:
+                case <?php echo (int) \GambDuplicaWP\Addons\AmazonS3Addon\Models\WasabiStorage::getSType(); ?>:
                     let wasabiRegion   = $("#s3_region_" + mode);
                     let wasabiEndpoint = $("#s3_endpoint_" + mode);
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Doctrine\Common\Cache\Cache;
+use VendorGambDuplicaWP\Doctrine\Common\Cache\Cache;
 class DoctrineCacheAdapter implements CacheInterface, Cache
 {
     /** @var Cache */

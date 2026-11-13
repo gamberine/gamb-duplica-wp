@@ -1,10 +1,10 @@
 <?php
 
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\Local\DefaultLocalStorage;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Models\Storages\UnknownStorage;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\Local\DefaultLocalStorage;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Models\Storages\UnknownStorage;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 
 defined("ABSPATH") or die("");
 abstract class GAMB_DUPLICA_WP_Upload_Status

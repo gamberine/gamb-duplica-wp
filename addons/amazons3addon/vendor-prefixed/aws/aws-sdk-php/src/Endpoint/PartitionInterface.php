@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint;
 
 /**
  * Represents a section of the AWS cloud.

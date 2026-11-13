@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\WpCliAddon;
+namespace GambDuplicaWP\Addons\WpCliAddon;
 
 use GAMB_DUPLICA_WP_Archive_Build_Mode;
 use GAMB_DUPLICA_WP_Global_Entity;
@@ -17,14 +17,14 @@ use GAMB_DUPLICA_WP_PackageStatus;
 use GAMB_DUPLICA_WP_PackageType;
 use GAMB_DUPLICA_WP_Server;
 use GAMB_DUPLICA_WP_ZipArchive_Mode;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Utils\LockUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Utils\LockUtil;
 use Error;
 use Exception;
 use WP_CLI;
 
-class gamb-duplica-wpCli
+class GambDuplicaWPCli
 {
     /**
      * gamb-duplica-wpCli constructor.
@@ -44,7 +44,7 @@ class gamb-duplica-wpCli
     public function info()
     {
         WP_CLI::line('gamb-duplica-wp WP-CLI Addon');
-        WP_CLI::line('gamb-duplica-wp Version: ' . gamb-duplica-wp_PRO_VERSION);
+        WP_CLI::line('gamb-duplica-wp Version: ' . GambDuplicaWP_PRO_VERSION);
         WP_CLI::line('PHP Version: ' . PHP_VERSION);
         global $wp_version;
         WP_CLI::line('WordPress Version: ' . $wp_version);
@@ -98,7 +98,7 @@ class gamb-duplica-wpCli
 
             $tempalteId = $assocArgs['template'];
 
-            if (!is_writable(gamb-duplica-wp_PRO_SSDIR_PATH_TMP)) {
+            if (!is_writable(GambDuplicaWP_PRO_SSDIR_PATH_TMP)) {
                 throw new Exception('Current user does not have permission to write to the gamb-duplica-wp temporary directory');
             }
 

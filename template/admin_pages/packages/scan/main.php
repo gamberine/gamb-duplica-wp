@@ -14,8 +14,8 @@ defined("ABSPATH") or die("");
  * @var array<string, mixed> $tplData
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
 
 $blur             = $tplData['blur'];
 $package_list_url = ControllersManager::getMenuLink(ControllersManager::PACKAGES_SUBMENU_SLUG);

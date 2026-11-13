@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
 
 defined("ABSPATH") or die("");
 
@@ -115,8 +115,8 @@ $architecture     = SnapUtil::getArchitectureString();
                         recommended to use PHP %2$s or higher for improved stability.',
                         'gamb-duplica-wp'
                     ),
-                    gamb-duplica-wp_PRO_PHP_MINIMUM_VERSION,
-                    gamb-duplica-wp_PRO_PHP_SUGGESTED_VERSION
+                    GambDuplicaWP_PRO_PHP_MINIMUM_VERSION,
+                    GambDuplicaWP_PRO_PHP_SUGGESTED_VERSION
                 )
             );?>
         </div>
@@ -151,7 +151,7 @@ $architecture     = SnapUtil::getArchitectureString();
                         An attempt is made to override this value if the server allows it. A value of 0 (recommended) indicates that PHP has no time limits.',
                         'gamb-duplica-wp'
                     ),
-                    gamb-duplica-wp_PRO_SCAN_TIMEOUT
+                    GambDuplicaWP_PRO_SCAN_TIMEOUT
                 )
             ); ?>
             &nbsp;
@@ -177,8 +177,8 @@ $architecture     = SnapUtil::getArchitectureString();
                     '1: memory limit, 2: link start, 3: link end',
                     'gamb-duplica-wp'
                 ),
-                gamb-duplica-wp_PRO_MIN_MEMORY_LIMIT,
-                "<i><a href='" . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . "how-to-manage-server-resources-cpu-memory-disk' target='_blank'>",
+                GambDuplicaWP_PRO_MIN_MEMORY_LIMIT,
+                "<i><a href='" . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . "how-to-manage-server-resources-cpu-memory-disk' target='_blank'>",
                 "</a></i>"
             ),
             [
@@ -205,7 +205,7 @@ $architecture     = SnapUtil::getArchitectureString();
                     '1: link start, 2: link end',
                     'gamb-duplica-wp'
                 ),
-                "<i><a href='" . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . "how-to-resolve-file-io-related-build-issues' target='_blank'>",
+                "<i><a href='" . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . "how-to-resolve-file-io-related-build-issues' target='_blank'>",
                 "</a></i>"
             ),
             [

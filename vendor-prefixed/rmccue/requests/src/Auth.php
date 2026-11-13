@@ -5,9 +5,9 @@
  *
  * @package Requests\Authentication
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Hooks;
+use VendorGambDuplicaWP\WpOrg\Requests\Hooks;
 /**
  * Authentication provider interface
  *
@@ -16,7 +16,7 @@ use VendorDuplicator\WpOrg\Requests\Hooks;
  * Parameters should be passed via the constructor where possible, as this
  * makes it much easier for users to use your provider.
  *
- * @see \VendorDuplicator\WpOrg\Requests\Hooks
+ * @see \VendorGambDuplicaWP\WpOrg\Requests\Hooks
  *
  * @package Requests\Authentication
  */
@@ -29,8 +29,8 @@ interface Auth
      * has set an instance as the 'auth' option. Use this callback to register all the
      * hooks you'll need.
      *
-     * @see \VendorDuplicator\WpOrg\Requests\Hooks::register()
-     * @param \VendorDuplicator\WpOrg\Requests\Hooks $hooks Hook system
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Hooks::register()
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Hooks $hooks Hook system
      */
     public function register(Hooks $hooks);
 }

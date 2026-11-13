@@ -5,13 +5,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace  gamb-duplica-wp\Installer\Core\Deploy\Chunk;
+namespace  GambDuplicaWP\Installer\Core\Deploy\Chunk;
 
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Utils\Log\LogHandler;
-use gamb-duplica-wp\Libs\Chunking\Persistance\FileJsonPersistanceAdapter;
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\Log\LogHandler;
+use GambDuplicaWP\Libs\Chunking\Persistance\FileJsonPersistanceAdapter;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
 use DUPX_S3_Funcs;
 
 class SiteUpdateChunkPersistanceAdapter extends FileJsonPersistanceAdapter

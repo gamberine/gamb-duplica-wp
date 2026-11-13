@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-namespace gamb-duplica-wp\Views;
+namespace GambDuplicaWP\Views;
 
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
 
 class ViewHelper
 {
@@ -31,7 +31,7 @@ class ViewHelper
      */
     public static function adminLogoHeader()
     {
-        if (!ControllersManager::getInstance()->isgamb-duplica-wpPage()) {
+        if (!ControllersManager::getInstance()->isGambDuplicaWPPage()) {
             return;
         }
 
@@ -47,7 +47,7 @@ class ViewHelper
      */
     public static function addBodyClass($classes)
     {
-        if (ControllersManager::getInstance()->isgamb-duplica-wpPage()) {
+        if (ControllersManager::getInstance()->isGambDuplicaWPPage()) {
             $classes .= ' gamb-duplica-wp-page';
         }
         return $classes;

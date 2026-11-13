@@ -7,28 +7,28 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Core\Deploy\DupArchive\Daws;
-use gamb-duplica-wp\Installer\Core\Deploy\Files\FilterMng;
-use gamb-duplica-wp\Installer\Core\Deploy\Files\Filters;
-use gamb-duplica-wp\Installer\Core\Deploy\Files\RemoveFiles;
-use gamb-duplica-wp\Installer\Core\Deploy\Multisite;
-use gamb-duplica-wp\Installer\Core\Deploy\ServerConfigs;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Utils\Log\LogHandler;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
-use gamb-duplica-wp\Libs\DupArchive\DupArchive;
-use gamb-duplica-wp\Libs\Index\FileIndexManager;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\AbstractJsonSerializable;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\Shell\Shell;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Core\Deploy\DupArchive\Daws;
+use GambDuplicaWP\Installer\Core\Deploy\Files\FilterMng;
+use GambDuplicaWP\Installer\Core\Deploy\Files\Filters;
+use GambDuplicaWP\Installer\Core\Deploy\Files\RemoveFiles;
+use GambDuplicaWP\Installer\Core\Deploy\Multisite;
+use GambDuplicaWP\Installer\Core\Deploy\ServerConfigs;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\Log\LogHandler;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Libs\DupArchive\DupArchive;
+use GambDuplicaWP\Libs\Index\FileIndexManager;
+use VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Shell\Shell;
 
 class GAMB_DUPLICA_WP_Extraction extends AbstractJsonSerializable
 {
@@ -883,7 +883,7 @@ class GAMB_DUPLICA_WP_Extraction extends AbstractJsonSerializable
                     "archive file path:<br/>" .
                     'The packaged zip file was not found or has become unreadable.' .
                     'Be sure the zip package is in the same directory as the installer file.  ' .
-                    'If you are trying to reinstall a package you can copy the package from the "' . gamb-duplica-wp_PRO_SSDIR_NAME . '" ' .
+                    'If you are trying to reinstall a package you can copy the package from the "' . GambDuplicaWP_PRO_SSDIR_NAME . '" ' .
                     'directory back up to your root which is the same location as your installer file.'
                 );
             }

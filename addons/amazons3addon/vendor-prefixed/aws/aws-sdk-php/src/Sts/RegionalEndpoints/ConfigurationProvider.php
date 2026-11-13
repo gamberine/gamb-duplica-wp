@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\Sts\RegionalEndpoints;
+namespace VendorGambDuplicaWP\Aws\Sts\RegionalEndpoints;
 
-use VendorDuplicator\Aws\AbstractConfigurationProvider;
-use VendorDuplicator\Aws\CacheInterface;
-use VendorDuplicator\Aws\ConfigurationProviderInterface;
-use VendorDuplicator\Aws\Sts\RegionalEndpoints\Exception\ConfigurationException;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Aws\AbstractConfigurationProvider;
+use VendorGambDuplicaWP\Aws\CacheInterface;
+use VendorGambDuplicaWP\Aws\ConfigurationProviderInterface;
+use VendorGambDuplicaWP\Aws\Sts\RegionalEndpoints\Exception\ConfigurationException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
 /**
  * A configuration provider is a function that returns a promise that is
  * fulfilled with a {@see \Aws\Sts\RegionalEndpoints\ConfigurationInterface}
@@ -126,7 +126,7 @@ class ConfigurationProvider extends AbstractConfigurationProvider implements Con
             if (!@is_readable($filename)) {
                 return self::reject("Cannot read configuration from {$filename}");
             }
-            $data = \VendorDuplicator\Aws\parse_ini_file($filename, \true);
+            $data = \VendorGambDuplicaWP\Aws\parse_ini_file($filename, \true);
             if ($data === \false) {
                 return self::reject("Invalid config file: {$filename}");
             }

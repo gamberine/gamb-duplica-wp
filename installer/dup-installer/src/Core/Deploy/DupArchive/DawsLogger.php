@@ -7,10 +7,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\DupArchive;
+namespace GambDuplicaWP\Installer\Core\Deploy\DupArchive;
 
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\DupArchive\DupArchiveLoggerBase;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\DupArchive\DupArchiveLoggerBase;
 use Exception;
 
 /**

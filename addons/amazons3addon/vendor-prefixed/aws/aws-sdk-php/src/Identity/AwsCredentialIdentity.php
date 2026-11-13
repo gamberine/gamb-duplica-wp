@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Identity;
+namespace VendorGambDuplicaWP\Aws\Identity;
 
 /**
  * Denotes the use of standard AWS credentials.

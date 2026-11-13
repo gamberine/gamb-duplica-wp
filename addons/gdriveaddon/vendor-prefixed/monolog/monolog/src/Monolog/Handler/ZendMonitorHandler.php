@@ -9,11 +9,11 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Monolog\Formatter\NormalizerFormatter;
-use VendorDuplicator\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Formatter\NormalizerFormatter;
+use VendorGambDuplicaWP\Monolog\Logger;
 /**
  * Handler sending logs to Zend Monitor
  *
@@ -35,7 +35,7 @@ class ZendMonitorHandler extends AbstractProcessingHandler
      */
     public function __construct($level = Logger::DEBUG, bool $bubble = \true)
     {
-        if (!function_exists('VendorDuplicator\zend_monitor_custom_event')) {
+        if (!function_exists('VendorGambDuplicaWP\zend_monitor_custom_event')) {
             throw new MissingExtensionException('You must have Zend Server installed with Zend Monitor enabled in order to use this handler');
         }
         //zend monitor constants are not defined if zend monitor is not enabled.

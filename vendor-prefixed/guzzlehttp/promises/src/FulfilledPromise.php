@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\GuzzleHttp\Promise;
+namespace VendorGambDuplicaWP\GuzzleHttp\Promise;
 
 /**
  * A promise that has been fulfilled.

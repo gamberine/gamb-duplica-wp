@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive\Utils;
+namespace GambDuplicaWP\Libs\DupArchive\Utils;
 
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Libs\Scan\ScanIterator;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Scan\ScanIterator;
 use Exception;
 use stdClass;
 

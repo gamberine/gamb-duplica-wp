@@ -15,16 +15,16 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Prime as PrimeCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
-use VendorDuplicator\phpseclib3\Exception\BadConfigurationException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedCurveException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Prime as PrimeCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadConfigurationException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedCurveException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * XML Formatted EC Key Handler
  *
@@ -184,7 +184,7 @@ abstract class XML
             if ($name === \false) {
                 throw new UnsupportedCurveException('Curve with OID of ' . $oid . ' is not supported');
             }
-            $curve = '\VendorDuplicator\\phpseclib3\Crypt\EC\Curves\\' . $name;
+            $curve = '\VendorGambDuplicaWP\\phpseclib3\Crypt\EC\Curves\\' . $name;
             if (!class_exists($curve)) {
                 throw new UnsupportedCurveException('Named Curve of ' . $name . ' is not supported');
             }
@@ -303,7 +303,7 @@ abstract class XML
      * Convert a public key to the appropriate format
      *
      * @param BaseCurve $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @param array $options optional
      * @return string
      */

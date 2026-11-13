@@ -5,18 +5,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params;
+namespace GambDuplicaWP\Installer\Core\Params;
 
-use gamb-duplica-wp\Installer\Core\Bootstrap;
-use gamb-duplica-wp\Installer\Core\Hooks\HooksMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamForm;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamsDescriptors;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamItem;
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Libs\Snap\SnapString;
+use GambDuplicaWP\Installer\Core\Bootstrap;
+use GambDuplicaWP\Installer\Core\Hooks\HooksMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamForm;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamsDescriptors;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamItem;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapString;
 
 /**
  * Params Manager

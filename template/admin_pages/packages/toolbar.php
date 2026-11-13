@@ -7,12 +7,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\ImportPageController;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Controllers\ImportPageController;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Views\ViewHelper;
 
 defined("ABSPATH") or die("");
 

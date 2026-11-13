@@ -6,14 +6,14 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\FtpAddon\Models;
+namespace GambDuplicaWP\Addons\FtpAddon\Models;
 
 use GAMB_DUPLICA_WP_Global_Entity;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
 use Exception;
 
 class FTPStorage extends AbstractStorageEntity
@@ -73,7 +73,7 @@ class FTPStorage extends AbstractStorageEntity
                 $this->config['passive_mode'],
                 0,
                 !$global->ssl_disableverify,
-                $global->ssl_useservercerts ? '' : gamb-duplica-wp_PRO_CERT_PATH
+                $global->ssl_useservercerts ? '' : GambDuplicaWP_PRO_CERT_PATH
             );
         } else {
             $this->adapter = new FTPStorageAdapter(

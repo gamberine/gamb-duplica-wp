@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\AmazonS3Storage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\AmazonS3Storage;
 
 defined("ABSPATH") or die("");
 
@@ -53,9 +53,9 @@ $tplMng->render('admin_pages/storages/parts/provider_head');
                     '1,3 represents <a> tag, 2,4 represents </a> tag',
                     'gamb-duplica-wp'
                 ),
-                '<a target="_blank" href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'amazon-s3-step-by-step') . '">',
+                '<a target="_blank" href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'amazon-s3-step-by-step') . '">',
                 '</a>',
-                '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'amazon-s3-policy-setup') . '" target="_blank">',
+                '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'amazon-s3-policy-setup') . '" target="_blank">',
                 '</a>'
             );
             ?>

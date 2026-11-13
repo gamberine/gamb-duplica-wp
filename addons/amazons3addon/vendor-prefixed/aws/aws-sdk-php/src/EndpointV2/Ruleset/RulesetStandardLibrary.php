@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2\Ruleset;
+namespace VendorGambDuplicaWP\Aws\EndpointV2\Ruleset;
 
-use VendorDuplicator\Aws\Exception\UnresolvedEndpointException;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedEndpointException;
 /**
  * Provides functions and actions to be performed for endpoint evaluation.
  * This is an internal only class and is not subject to backwards-compatibility guarantees.

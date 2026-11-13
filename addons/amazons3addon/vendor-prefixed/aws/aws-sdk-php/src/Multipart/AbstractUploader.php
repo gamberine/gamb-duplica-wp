@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Multipart;
+namespace VendorGambDuplicaWP\Aws\Multipart;
 
-use VendorDuplicator\Aws\AwsClientInterface as Client;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Aws\AwsClientInterface as Client;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
 use InvalidArgumentException as IAE;
-use VendorDuplicator\Psr\Http\Message\StreamInterface as Stream;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface as Stream;
 abstract class AbstractUploader extends AbstractUploadManager
 {
     /** @var Stream Source of the data to be uploaded. */

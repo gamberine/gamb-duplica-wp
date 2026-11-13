@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\HashingStream;
-use VendorDuplicator\Aws\Multipart\AbstractUploader;
-use VendorDuplicator\Aws\PhpHash;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\Psr\Http\Message\StreamInterface as Stream;
-use VendorDuplicator\Aws\S3\Exception\S3MultipartUploadException;
+use VendorGambDuplicaWP\Aws\HashingStream;
+use VendorGambDuplicaWP\Aws\Multipart\AbstractUploader;
+use VendorGambDuplicaWP\Aws\PhpHash;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface as Stream;
+use VendorGambDuplicaWP\Aws\S3\Exception\S3MultipartUploadException;
 /**
  * Encapsulates the execution of a multipart upload to S3 or Glacier.
  */

@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Crypto;
+namespace VendorGambDuplicaWP\Aws\S3\Crypto;
 
-use VendorDuplicator\Aws\Crypto\MaterialsProvider;
-use VendorDuplicator\Aws\Crypto\MetadataEnvelope;
-use VendorDuplicator\Aws\Crypto\MetadataStrategyInterface;
+use VendorGambDuplicaWP\Aws\Crypto\MaterialsProvider;
+use VendorGambDuplicaWP\Aws\Crypto\MetadataEnvelope;
+use VendorGambDuplicaWP\Aws\Crypto\MetadataStrategyInterface;
 trait CryptoParamsTrait
 {
     protected function getMaterialsProvider(array $args)

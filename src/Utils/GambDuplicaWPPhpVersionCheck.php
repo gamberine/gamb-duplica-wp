@@ -7,12 +7,12 @@
 
 defined('ABSPATH') || exit;
 // In the future it will be included on both PRO and LITE so you need to check if the define exists.
-if (!class_exists('gamb-duplica-wpPhpVersionCheck')) {
+if (!class_exists('GambDuplicaWPPhpVersionCheck')) {
 
     /**
      * PHP Version
      */
-    class gamb-duplica-wpPhpVersionCheck // phpcs:ignore 
+    class GambDuplicaWPPhpVersionCheck // phpcs:ignore 
     {
         /** @var string */
         protected static $minVer = '';

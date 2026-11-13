@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params\Models;
+namespace GambDuplicaWP\Installer\Core\Params\Models;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\AbstractJsonSerializable;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable;
 use DUPX_ArchiveConfig;
 use Exception;
 

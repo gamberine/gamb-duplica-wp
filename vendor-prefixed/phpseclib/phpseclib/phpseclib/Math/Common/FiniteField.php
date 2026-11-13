@@ -9,7 +9,7 @@
  * @copyright 2017 Jim Wigginton
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  */
-namespace VendorDuplicator\phpseclib3\Math\Common;
+namespace VendorGambDuplicaWP\phpseclib3\Math\Common;
 
 /**
  * Finite Fields

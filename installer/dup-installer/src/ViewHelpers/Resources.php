@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\ViewHelpers;
+namespace GambDuplicaWP\Installer\ViewHelpers;
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Core\InstState;
 
 class Resources
 {

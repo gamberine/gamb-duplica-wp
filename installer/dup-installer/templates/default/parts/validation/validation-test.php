@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

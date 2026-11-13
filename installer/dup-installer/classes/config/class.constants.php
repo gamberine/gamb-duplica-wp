@@ -12,9 +12,9 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Bootstrap;
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
-use gamb-duplica-wp\Libs\Shell\Shell;
+use GambDuplicaWP\Installer\Core\Bootstrap;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Libs\Shell\Shell;
 
 class DUPX_Constants
 {
@@ -55,8 +55,8 @@ class DUPX_Constants
         $GLOBALS['DEBUG_JS']     = false;
 
         //CONSTANTS
-        if (!defined("gamb-duplica-wp_PRO_SSDIR_NAME")) {
-            define("gamb-duplica-wp_PRO_SSDIR_NAME", 'wp-snapshots-dup-pro');  //This should match gamb-duplica-wp_PRO_SSDIR_NAME in gamb-duplica-wp.php
+        if (!defined("GambDuplicaWP_PRO_SSDIR_NAME")) {
+            define("GambDuplicaWP_PRO_SSDIR_NAME", 'wp-snapshots-dup-pro');  //This should match gamb-duplica-wp_PRO_SSDIR_NAME in gamb-duplica-wp.php
         }
 
         //GLOBALS

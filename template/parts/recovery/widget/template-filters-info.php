@@ -1,9 +1,9 @@
 <?php
 
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Package\Recovery\RecoveryStatus;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Package\Recovery\RecoveryStatus;
+use GambDuplicaWP\Views\ViewHelper;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

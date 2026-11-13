@@ -6,12 +6,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Create;
+namespace GambDuplicaWP\Package\Create;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Package\Create\DupArchive\PackageDupArchiveCreateState;
-use gamb-duplica-wp\Package\Create\DupArchive\PackageDupArchiveExpandState;
+use GambDuplicaWP\Package\Create\DupArchive\PackageDupArchiveCreateState;
+use GambDuplicaWP\Package\Create\DupArchive\PackageDupArchiveExpandState;
 
 /**
  * Backup build progress

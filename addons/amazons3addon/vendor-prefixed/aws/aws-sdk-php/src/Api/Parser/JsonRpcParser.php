@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser;
+namespace VendorGambDuplicaWP\Aws\Api\Parser;
 
-use VendorDuplicator\Aws\Api\Operation;
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Result;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Api\Operation;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Result;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 /**
  * @internal Implements JSON-RPC parsing (e.g., DynamoDB)
  */

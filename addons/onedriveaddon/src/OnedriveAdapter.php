@@ -1,14 +1,14 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\OneDriveAddon;
+namespace GambDuplicaWP\Addons\OneDriveAddon;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
-use gamb-duplica-wp\Utils\OAuth\TokenEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
+use GambDuplicaWP\Utils\OAuth\TokenEntity;
 use Exception;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Requests;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Response;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use VendorGambDuplicaWP\WpOrg\Requests\Response;
 
 /**
  * @method OneDriveStoragePathInfo getPathInfo($path)

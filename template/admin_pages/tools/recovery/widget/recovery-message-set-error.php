@@ -29,7 +29,7 @@ defined("ABSPATH") or die("");
                 '%1$s and %2$s represents the opening and closing HTML tags for an anchor or link',
                 'gamb-duplica-wp'
             ),
-            '<a href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-handle-recovery-install-setup-launch-issues" target="_blank">',
+            '<a href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-handle-recovery-install-setup-launch-issues" target="_blank">',
             '</a>'
         );
         ?>

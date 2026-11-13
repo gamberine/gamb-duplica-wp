@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn\S3;
+namespace VendorGambDuplicaWP\Aws\Arn\S3;
 
-use VendorDuplicator\Aws\Arn\AccessPointArn as BaseAccessPointArn;
-use VendorDuplicator\Aws\Arn\AccessPointArnInterface;
-use VendorDuplicator\Aws\Arn\ArnInterface;
-use VendorDuplicator\Aws\Arn\Exception\InvalidArnException;
+use VendorGambDuplicaWP\Aws\Arn\AccessPointArn as BaseAccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\AccessPointArnInterface;
+use VendorGambDuplicaWP\Aws\Arn\ArnInterface;
+use VendorGambDuplicaWP\Aws\Arn\Exception\InvalidArnException;
 /**
  * @internal
  */

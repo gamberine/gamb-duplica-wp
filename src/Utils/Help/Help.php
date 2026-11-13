@@ -1,19 +1,19 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Help;
+namespace GambDuplicaWP\Utils\Help;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Controllers\HelpPageController;
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Controllers\SchedulePageController;
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Utils\ExpireOptions;
+use GambDuplicaWP\Controllers\HelpPageController;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Controllers\SchedulePageController;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\ExpireOptions;
 
 /*
  * Dynamic Help from site documentation
@@ -306,7 +306,7 @@ class Help
      */
     private static function getCacheFilePath()
     {
-        return gamb-duplica-wp_PRO_SSDIR_PATH . '/cache_' . md5(CryptBlowfish::getDefaultKey()) . '/gamb-duplica-wp_pro_help_cache.json';
+        return GambDuplicaWP_PRO_SSDIR_PATH . '/cache_' . md5(CryptBlowfish::getDefaultKey()) . '/gamb-duplica-wp_pro_help_cache.json';
     }
 
     /**

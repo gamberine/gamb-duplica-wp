@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\WpOrg\Requests\Exception;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Exception;
 
-use VendorDuplicator\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
 /**
  * Exception for when an incorrect number of arguments are passed to a method.
  *
@@ -26,7 +26,7 @@ final class ArgumentCount extends Exception
      * @param int    $received The actual argument count received.
      * @param string $type     Exception type.
      *
-     * @return \VendorDuplicator\WpOrg\Requests\Exception\ArgumentCount
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Exception\ArgumentCount
      */
     public static function create($expected, $received, $type)
     {

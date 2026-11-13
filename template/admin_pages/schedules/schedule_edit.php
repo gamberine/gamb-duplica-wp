@@ -6,10 +6,10 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Controllers\SchedulePageController;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Controllers\SchedulePageController;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
 
 /**
  * Variables

@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Create;
+namespace GambDuplicaWP\Package\Create;
 
 use GAMB_DUPLICA_WP_DB;
 use Exception;

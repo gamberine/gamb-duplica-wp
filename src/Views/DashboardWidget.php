@@ -1,15 +1,15 @@
 <?php
 
-namespace gamb-duplica-wp\Views;
+namespace GambDuplicaWP\Views;
 
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Template_Entity;
 use GAMB_DUPLICA_WP_PackageStatus;
 use GAMB_DUPLICA_WP_Schedule_Entity;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
 
 /**
  * Dashboard widget

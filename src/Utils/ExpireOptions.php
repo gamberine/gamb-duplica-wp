@@ -7,10 +7,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Utils;
+namespace GambDuplicaWP\Utils;
 
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Libs\Snap\SnapDB;
 
 final class ExpireOptions
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Exception;
+namespace VendorGambDuplicaWP\Aws\Exception;
 
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
 class CouldNotCreateChecksumException extends \RuntimeException implements MonitoringEventsInterface
 {
     use HasMonitoringEventsTrait;

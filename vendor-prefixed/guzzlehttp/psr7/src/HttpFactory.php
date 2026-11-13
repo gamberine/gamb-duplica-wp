@@ -1,20 +1,20 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\GuzzleHttp\Psr7;
+namespace VendorGambDuplicaWP\GuzzleHttp\Psr7;
 
-use VendorDuplicator\Psr\Http\Message\RequestFactoryInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseFactoryInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\ServerRequestFactoryInterface;
-use VendorDuplicator\Psr\Http\Message\ServerRequestInterface;
-use VendorDuplicator\Psr\Http\Message\StreamFactoryInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
-use VendorDuplicator\Psr\Http\Message\UploadedFileFactoryInterface;
-use VendorDuplicator\Psr\Http\Message\UploadedFileInterface;
-use VendorDuplicator\Psr\Http\Message\UriFactoryInterface;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestFactoryInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseFactoryInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ServerRequestFactoryInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ServerRequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamFactoryInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UploadedFileFactoryInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UploadedFileInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriFactoryInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 /**
  * Implements all of the PSR-17 interfaces.
  *

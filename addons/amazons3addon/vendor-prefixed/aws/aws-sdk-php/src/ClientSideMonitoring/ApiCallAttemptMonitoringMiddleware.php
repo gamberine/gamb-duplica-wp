@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\ClientSideMonitoring;
+namespace VendorGambDuplicaWP\Aws\ClientSideMonitoring;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\ResponseContainerInterface;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\ResponseContainerInterface;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * @internal
  */
@@ -45,7 +45,7 @@ class ApiCallAttemptMonitoringMiddleware extends AbstractMonitoringMiddleware
             return ['AttemptLatency' => self::getResultAttemptLatency($klass), 'DestinationIp' => self::getResultDestinationIp($klass), 'DnsLatency' => self::getResultDnsLatency($klass), 'HttpStatusCode' => self::getResultHttpStatusCode($klass), 'XAmzId2' => self::getResultHeader($klass, 'x-amz-id-2'), 'XAmzRequestId' => self::getResultHeader($klass, 'x-amz-request-id'), 'XAmznRequestId' => self::getResultHeader($klass, 'x-amzn-RequestId')];
         }
         if ($klass instanceof AwsException) {
-            return ['AttemptLatency' => self::getAwsExceptionAttemptLatency($klass), 'VendorDuplicator\\AwsException' => substr(self::getAwsExceptionErrorCode($klass), 0, 128), 'VendorDuplicator\\AwsExceptionMessage' => substr(self::getAwsExceptionMessage($klass), 0, 512), 'DestinationIp' => self::getAwsExceptionDestinationIp($klass), 'DnsLatency' => self::getAwsExceptionDnsLatency($klass), 'HttpStatusCode' => self::getAwsExceptionHttpStatusCode($klass), 'XAmzId2' => self::getAwsExceptionHeader($klass, 'x-amz-id-2'), 'XAmzRequestId' => self::getAwsExceptionHeader($klass, 'x-amz-request-id'), 'XAmznRequestId' => self::getAwsExceptionHeader($klass, 'x-amzn-RequestId')];
+            return ['AttemptLatency' => self::getAwsExceptionAttemptLatency($klass), 'VendorGambDuplicaWP\\AwsException' => substr(self::getAwsExceptionErrorCode($klass), 0, 128), 'VendorGambDuplicaWP\\AwsExceptionMessage' => substr(self::getAwsExceptionMessage($klass), 0, 512), 'DestinationIp' => self::getAwsExceptionDestinationIp($klass), 'DnsLatency' => self::getAwsExceptionDnsLatency($klass), 'HttpStatusCode' => self::getAwsExceptionHttpStatusCode($klass), 'XAmzId2' => self::getAwsExceptionHeader($klass, 'x-amz-id-2'), 'XAmzRequestId' => self::getAwsExceptionHeader($klass, 'x-amz-request-id'), 'XAmznRequestId' => self::getAwsExceptionHeader($klass, 'x-amzn-RequestId')];
         }
         if ($klass instanceof \Exception) {
             return ['HttpStatusCode' => self::getExceptionHttpStatusCode($klass), 'SdkException' => substr(self::getExceptionCode($klass), 0, 128), 'SdkExceptionMessage' => substr(self::getExceptionMessage($klass), 0, 512), 'XAmzId2' => self::getExceptionHeader($klass, 'x-amz-id-2'), 'XAmzRequestId' => self::getExceptionHeader($klass, 'x-amz-request-id'), 'XAmznRequestId' => self::getExceptionHeader($klass, 'x-amzn-RequestId')];

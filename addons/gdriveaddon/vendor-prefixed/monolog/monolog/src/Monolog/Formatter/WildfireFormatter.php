@@ -9,9 +9,9 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Formatter;
+namespace VendorGambDuplicaWP\Monolog\Formatter;
 
-use VendorDuplicator\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Logger;
 /**
  * Serializes a log message according to Wildfire's header requirements
  *

@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive\Processors;
+namespace GambDuplicaWP\Libs\DupArchive\Processors;
 
 /**
  *Failure class

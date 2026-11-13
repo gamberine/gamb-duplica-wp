@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Sts\Exception;
+namespace VendorGambDuplicaWP\Aws\Sts\Exception;
 
-use VendorDuplicator\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
 /**
  * AWS Security Token Service exception.
  */

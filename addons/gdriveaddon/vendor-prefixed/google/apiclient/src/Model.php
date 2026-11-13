@@ -15,9 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google;
+namespace VendorGambDuplicaWP\Google;
 
-use VendorDuplicator\Google\Exception as GoogleException;
+use VendorGambDuplicaWP\Google\Exception as GoogleException;
 use ReflectionObject;
 use ReflectionProperty;
 use stdClass;
@@ -224,7 +224,7 @@ class Model implements \ArrayAccess
     }
     /**
      * Verify if $obj is an array.
-     * @throws \VendorDuplicator\Google\Exception Thrown if $obj isn't an array.
+     * @throws \VendorGambDuplicaWP\Google\Exception Thrown if $obj isn't an array.
      * @param array $obj Items that should be validated.
      * @param string $method Method expecting an array as an argument.
      */

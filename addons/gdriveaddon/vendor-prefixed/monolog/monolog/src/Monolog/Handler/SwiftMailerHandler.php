@@ -9,14 +9,14 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Utils;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Monolog\Formatter\LineFormatter;
-use VendorDuplicator\Swift_Message;
-use VendorDuplicator\Swift;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Utils;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Formatter\LineFormatter;
+use VendorGambDuplicaWP\Swift_Message;
+use VendorGambDuplicaWP\Swift;
 /**
  * SwiftMailerHandler uses Swift_Mailer to send the emails
  *
@@ -37,7 +37,7 @@ class SwiftMailerHandler extends MailHandler
      * @param \Swift_Mailer          $mailer  The mailer to use
      * @param callable|Swift_Message $message An example message for real messages, only the body will be replaced
      */
-    public function __construct(\VendorDuplicator\Swift_Mailer $mailer, $message, $level = Logger::ERROR, bool $bubble = \true)
+    public function __construct(\VendorGambDuplicaWP\Swift_Mailer $mailer, $message, $level = Logger::ERROR, bool $bubble = \true)
     {
         parent::__construct($level, $bubble);
         @trigger_error('The SwiftMailerHandler is deprecated since Monolog 2.6. Use SymfonyMailerHandler instead.', \E_USER_DEPRECATED);

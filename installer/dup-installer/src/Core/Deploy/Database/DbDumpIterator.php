@@ -5,9 +5,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace  gamb-duplica-wp\Installer\Core\Deploy\Database;
+namespace  GambDuplicaWP\Installer\Core\Deploy\Database;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use DUPX_Package;
 use Iterator;
 

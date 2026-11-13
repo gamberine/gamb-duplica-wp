@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapURL;
 
 /**
  *  A stub for returning an object
@@ -81,10 +81,10 @@ class DUPX_API_ROUTE
  *  The DUPX_API_SERVER object is used to listen for and process
  *  routable template calls.  The root for this api stack starts with
  *  https://website.com/dup-installer/api/router.php/cpnl/create_token/
- * 
+ *
  *  This will display the GUI for the api and is the starting point
  *  for processing api requets.
- * 
+ *
  * <code>
  *  //Register API Engine
  *  $API_SERVER = new DUPX_API_SERVER();
@@ -330,7 +330,7 @@ class DUPX_API_Server
 
     /**
      * Returns the base operation portion of a template
-     * example:  "/cpnl/is_active/host?s=1" 
+     * example:  "/cpnl/is_active/host?s=1"
      * returns: "/cpnl/is_active/"
      */
     private function get_operation($template)

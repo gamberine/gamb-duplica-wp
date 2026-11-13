@@ -4,8 +4,8 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
 
 defined("ABSPATH") or die("");
 

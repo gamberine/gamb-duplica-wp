@@ -1,17 +1,17 @@
 <?php
 
-namespace VendorDuplicator\Aws\Exception;
+namespace VendorGambDuplicaWP\Aws\Exception;
 
-use VendorDuplicator\Aws\Api\Shape;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\HasDataTrait;
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
-use VendorDuplicator\Aws\ResponseContainerInterface;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\JmesPath\Env as JmesPath;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\HasDataTrait;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\ResponseContainerInterface;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\JmesPath\Env as JmesPath;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Represents an AWS exception that is thrown when a command fails.
  */

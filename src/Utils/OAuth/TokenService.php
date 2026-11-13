@@ -1,9 +1,9 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\OAuth;
+namespace GambDuplicaWP\Utils\OAuth;
 
-use gamb-duplica-wp\Utils\ExpireOptions;
-use gamb-duplica-wp\Utils\OAuth\TokenEntity;
+use GambDuplicaWP\Utils\ExpireOptions;
+use GambDuplicaWP\Utils\OAuth\TokenEntity;
 
 /**
  * This class is responsible for handling communication with the OAuth2 servers.
@@ -33,8 +33,8 @@ class TokenService
     private static function getServerCandidates()
     {
         return [
-            gamb-duplica-wp_PRO_PRIMARY_OAUTH_SERVER,
-            gamb-duplica-wp_PRO_SECONDARY_OAUTH_SERVER,
+            GambDuplicaWP_PRO_PRIMARY_OAUTH_SERVER,
+            GambDuplicaWP_PRO_SECONDARY_OAUTH_SERVER,
         ];
     }
 

@@ -15,12 +15,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Cache;
+namespace VendorGambDuplicaWP\Google\Auth\Cache;
 
 use DateTime;
 use DateTimeInterface;
 use DateTimeZone;
-use VendorDuplicator\Psr\Cache\CacheItemInterface;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemInterface;
 use TypeError;
 /**
  * A cache item.

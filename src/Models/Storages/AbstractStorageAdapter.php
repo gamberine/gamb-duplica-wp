@@ -1,8 +1,8 @@
 <?php
 
-namespace gamb-duplica-wp\Models\Storages;
+namespace GambDuplicaWP\Models\Storages;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 abstract class AbstractStorageAdapter
 {

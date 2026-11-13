@@ -6,8 +6,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
 
 /**
  * Variables
@@ -64,7 +64,7 @@ add_action('the_editor', function ($editorMarkup) {
                     <div class="preview-version">
                         <?php
                         esc_html_e("version: ", 'gamb-duplica-wp');
-                        echo esc_html(gamb-duplica-wp_PRO_VERSION);
+                        echo esc_html(GambDuplicaWP_PRO_VERSION);
                         ?> <br/>
                         » <a href="javascript:void(0)">
                             <?php esc_html_e("info", 'gamb-duplica-wp'); ?>

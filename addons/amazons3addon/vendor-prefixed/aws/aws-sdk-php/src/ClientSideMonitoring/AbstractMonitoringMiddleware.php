@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorDuplicator\Aws\ClientSideMonitoring;
+namespace VendorGambDuplicaWP\Aws\ClientSideMonitoring;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
-use VendorDuplicator\Aws\ResponseContainerInterface;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\ResponseContainerInterface;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * @internal
  */
@@ -107,7 +107,7 @@ abstract class AbstractMonitoringMiddleware implements MonitoringMiddlewareInter
     }
     private function getNewEvent(CommandInterface $cmd, RequestInterface $request)
     {
-        $event = ['Api' => $cmd->getName(), 'ClientId' => $this->getClientId(), 'Region' => $this->getRegion(), 'Service' => $this->getService(), 'Timestamp' => (int) floor(microtime(\true) * 1000), 'UserAgent' => substr($request->getHeaderLine('User-Agent') . ' ' . \VendorDuplicator\Aws\default_user_agent(), 0, 256), 'Version' => 1];
+        $event = ['Api' => $cmd->getName(), 'ClientId' => $this->getClientId(), 'Region' => $this->getRegion(), 'Service' => $this->getService(), 'Timestamp' => (int) floor(microtime(\true) * 1000), 'UserAgent' => substr($request->getHeaderLine('User-Agent') . ' ' . \VendorGambDuplicaWP\Aws\default_user_agent(), 0, 256), 'Version' => 1];
         return $event;
     }
     private function getHost()

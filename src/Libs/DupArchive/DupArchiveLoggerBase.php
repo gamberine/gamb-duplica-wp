@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive;
+namespace GambDuplicaWP\Libs\DupArchive;
 
 abstract class DupArchiveLoggerBase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Package\Create\Scan;
+namespace GambDuplicaWP\Package\Create\Scan;
 
 class ScanResult
 {

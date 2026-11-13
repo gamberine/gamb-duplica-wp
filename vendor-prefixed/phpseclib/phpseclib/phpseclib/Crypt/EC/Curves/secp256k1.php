@@ -12,11 +12,11 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Curves;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves;
 
 //use phpseclib3\Crypt\EC\BaseCurves\Prime;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\KoblitzPrime;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\KoblitzPrime;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 //class secp256k1 extends Prime
 class secp256k1 extends KoblitzPrime
 {

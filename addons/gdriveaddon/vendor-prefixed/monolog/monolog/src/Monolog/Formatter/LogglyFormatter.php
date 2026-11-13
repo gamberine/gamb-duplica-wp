@@ -9,7 +9,7 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Formatter;
+namespace VendorGambDuplicaWP\Monolog\Formatter;
 
 /**
  * Encodes message information into JSON in a format compatible with Loggly.
@@ -30,7 +30,7 @@ class LogglyFormatter extends JsonFormatter
      * Appends the 'timestamp' parameter for indexing by Loggly.
      *
      * @see https://www.loggly.com/docs/automated-parsing/#json
-     * @see \VendorDuplicator\Monolog\Formatter\JsonFormatter::format()
+     * @see \VendorGambDuplicaWP\Monolog\Formatter\JsonFormatter::format()
      */
     public function format(array $record): string
     {

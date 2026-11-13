@@ -1,0 +1,4 @@
+.dup-header.dup-styles { box-sizing: border-box; width: calc(100% + 20px); gap: 20px; flex-wrap: wrap; padding: 20px; border-color: #173d61; }
+.dup-header.dup-styles > img { width: 320px; height: auto; max-width: 100%; flex: 0 1 320px; min-width: 0; }
+.dup-header.dup-styles > .dup-global-help { flex: 0 0 auto; color: #173d61; text-decoration: underline; }
+@media (max-width: 782px) { .dup-header.dup-styles { width: calc(100% + 10px); padding: 16px 10px; gap: 12px; } }

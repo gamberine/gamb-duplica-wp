@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Addons;
+namespace GambDuplicaWP\Core\Addons;
 
 abstract class AbstractAddonCore
 {
@@ -109,7 +109,7 @@ abstract class AbstractAddonCore
             return false;
         }
 
-        if (version_compare(gamb-duplica-wp_PRO_VERSION, $this->addonData['requiresDuplcator'], '<')) {
+        if (version_compare(GambDuplicaWP_PRO_VERSION, $this->addonData['requiresDuplcator'], '<')) {
             return false;
         }
 

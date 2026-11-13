@@ -5,10 +5,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params\Items;
+namespace GambDuplicaWP\Installer\Core\Params\Items;
 
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 /**
  * this class handles the entire block selection block.

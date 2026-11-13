@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2;
+namespace VendorGambDuplicaWP\Aws\EndpointV2;
 
 /**
  * Provides Endpoint-related artifacts used for endpoint resolution
@@ -51,7 +51,7 @@ class EndpointDefinitionProvider
     }
     private static function getLatest($service)
     {
-        $manifest = \VendorDuplicator\Aws\manifest();
+        $manifest = \VendorGambDuplicaWP\Aws\manifest();
         return $manifest[$service]['versions']['latest'];
     }
 }

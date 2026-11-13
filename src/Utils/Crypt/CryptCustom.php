@@ -5,9 +5,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Utils\Crypt;
+namespace GambDuplicaWP\Utils\Crypt;
 
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 //GAMB_DUPLICA_WP_Crypt
 class CryptCustom implements CryptInterface

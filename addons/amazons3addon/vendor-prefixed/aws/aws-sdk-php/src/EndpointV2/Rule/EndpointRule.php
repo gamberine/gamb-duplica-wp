@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2\Rule;
+namespace VendorGambDuplicaWP\Aws\EndpointV2\Rule;
 
-use VendorDuplicator\Aws\EndpointV2\Ruleset\RulesetStandardLibrary;
-use VendorDuplicator\Aws\EndpointV2\Ruleset\RulesetEndpoint;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\RulesetStandardLibrary;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\RulesetEndpoint;
 class EndpointRule extends AbstractRule
 {
     /** @var array */

@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Spatie\Dropbox\Exceptions;
+namespace VendorGambDuplicaWP\Spatie\Dropbox\Exceptions;
 
 use Exception;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 class BadRequest extends Exception
 {
     /**
-     * @var \VendorDuplicator\Psr\Http\Message\ResponseInterface
+     * @var \VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface
      */
     public $response;
     /**

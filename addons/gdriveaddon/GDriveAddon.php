@@ -19,12 +19,12 @@
  * @link      https://gamb-duplica-wp.com/
  */
 
-namespace gamb-duplica-wp\Addons\GDriveAddon;
+namespace GambDuplicaWP\Addons\GDriveAddon;
 
-use gamb-duplica-wp\Addons\GDriveAddon\Models\GDriveStorage;
-use gamb-duplica-wp\Addons\GDriveAddon\Utils\Autoloader;
-use gamb-duplica-wp\Core\Addons\AbstractAddonCore;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Addons\GDriveAddon\Models\GDriveStorage;
+use GambDuplicaWP\Addons\GDriveAddon\Utils\Autoloader;
+use GambDuplicaWP\Core\Addons\AbstractAddonCore;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 class GDriveAddon extends AbstractAddonCore
 {

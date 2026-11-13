@@ -15,10 +15,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\App;
-use VendorDuplicator\Google\Service\Drive\AppList;
+use VendorGambDuplicaWP\Google\Service\Drive\App;
+use VendorGambDuplicaWP\Google\Service\Drive\AppList;
 /**
  * The "apps" collection of methods.
  * Typical usage is:
@@ -27,7 +27,7 @@ use VendorDuplicator\Google\Service\Drive\AppList;
  *   $apps = $driveService->apps;
  *  </code>
  */
-class Apps extends \VendorDuplicator\Google\Service\Resource
+class Apps extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Gets a specific app. (apps.get)
@@ -35,7 +35,7 @@ class Apps extends \VendorDuplicator\Google\Service\Resource
      * @param string $appId The ID of the app.
      * @param array $optParams Optional parameters.
      * @return App
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($appId, $optParams = [])
     {
@@ -62,7 +62,7 @@ class Apps extends \VendorDuplicator\Google\Service\Resource
      * 47, with some extensions from Unicode's LDML format
      * (http://www.unicode.org/reports/tr35/).
      * @return AppList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listApps($optParams = [])
     {
@@ -72,4 +72,4 @@ class Apps extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Apps::class, 'VendorDuplicator\Google_Service_Drive_Resource_Apps');
+class_alias(Apps::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Apps');

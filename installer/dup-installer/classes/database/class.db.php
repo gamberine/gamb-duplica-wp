@@ -10,7 +10,7 @@
  */
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 class DUPX_DB
 {
     const DELETE_CHUNK_SIZE          = 500;

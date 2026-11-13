@@ -10,12 +10,12 @@
  * @package SC\DUPX\Log
  */
 
-namespace gamb-duplica-wp\Installer\Utils\Log;
+namespace GambDuplicaWP\Installer\Utils\Log;
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\ViewHelpers\Resources;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\ViewHelpers\Resources;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use Error;
 use Exception;
 

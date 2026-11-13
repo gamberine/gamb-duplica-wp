@@ -10,12 +10,12 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Curve25519;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Curve448;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Curve25519;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Curve448;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Montgomery Public Key Handler
  *
@@ -55,7 +55,7 @@ abstract class MontgomeryPublic
      * Convert an EC public key to the appropriate format
      *
      * @param MontgomeryCurve $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @return string
      */
     public static function savePublicKey(MontgomeryCurve $curve, array $publicKey)

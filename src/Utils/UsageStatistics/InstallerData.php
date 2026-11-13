@@ -1,11 +1,11 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\UsageStatistics;
+namespace GambDuplicaWP\Utils\UsageStatistics;
 
 use GAMB_DUPLICA_WP_DB;
-use gamb-duplica-wp\Core\MigrationMng;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Core\MigrationMng;
+use GambDuplicaWP\Libs\Snap\SnapDB;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use wpdb;
 
 class InstallerData

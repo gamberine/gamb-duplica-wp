@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Psr\Http\Message;
+namespace VendorGambDuplicaWP\Psr\Http\Message;
 
 /**
  * Representation of an outgoing, server-side response.

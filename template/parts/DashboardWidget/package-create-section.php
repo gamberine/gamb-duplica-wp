@@ -7,9 +7,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Core\CapMng;
 
 defined("ABSPATH") or die("");
 

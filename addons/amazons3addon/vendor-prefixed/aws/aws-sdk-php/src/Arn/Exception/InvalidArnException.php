@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn\Exception;
+namespace VendorGambDuplicaWP\Aws\Arn\Exception;
 
 /**
  * Represents a failed attempt to construct an Arn

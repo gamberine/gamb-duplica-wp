@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params\Items;
+namespace GambDuplicaWP\Installer\Core\Params\Items;
 
 /**
  * this class manages a password type input with the hide / show password button

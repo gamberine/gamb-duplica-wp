@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\JmesPath;
+namespace VendorGambDuplicaWP\JmesPath;
 
 /**
  * Uses an external tree visitor to interpret an AST.

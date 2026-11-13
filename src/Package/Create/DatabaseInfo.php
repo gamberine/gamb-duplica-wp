@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Create;
+namespace GambDuplicaWP\Package\Create;
 
-use gamb-duplica-wp\Installer\Package\DescriptorDBInfo;
-use gamb-duplica-wp\Installer\Package\DescriptorDBTableInfo;
+use GambDuplicaWP\Installer\Package\DescriptorDBInfo;
+use GambDuplicaWP\Installer\Package\DescriptorDBTableInfo;
 use Exception;
 use ReflectionClass;
 

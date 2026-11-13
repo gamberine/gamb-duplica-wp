@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn\S3;
+namespace VendorGambDuplicaWP\Aws\Arn\S3;
 
-use VendorDuplicator\Aws\Arn\Arn;
-use VendorDuplicator\Aws\Arn\Exception\InvalidArnException;
-use VendorDuplicator\Aws\Arn\ResourceTypeAndIdTrait;
+use VendorGambDuplicaWP\Aws\Arn\Arn;
+use VendorGambDuplicaWP\Aws\Arn\Exception\InvalidArnException;
+use VendorGambDuplicaWP\Aws\Arn\ResourceTypeAndIdTrait;
 /**
  * This class represents an S3 Outposts bucket ARN, which is in the
  * following format:

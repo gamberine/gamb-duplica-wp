@@ -26,14 +26,14 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\AsymmetricKey;
-use VendorDuplicator\phpseclib3\Crypt\DSA\Parameters;
-use VendorDuplicator\phpseclib3\Crypt\DSA\PrivateKey;
-use VendorDuplicator\phpseclib3\Crypt\DSA\PublicKey;
-use VendorDuplicator\phpseclib3\Exception\InsufficientSetupException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\AsymmetricKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DSA\Parameters;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DSA\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DSA\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Exception\InsufficientSetupException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Pure-PHP FIPS 186-4 compliant implementation of DSA.
  *

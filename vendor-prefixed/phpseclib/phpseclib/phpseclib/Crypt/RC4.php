@@ -39,9 +39,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\StreamCipher;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\StreamCipher;
 /**
  * Pure-PHP implementation of RC4.
  *
@@ -50,17 +50,17 @@ use VendorDuplicator\phpseclib3\Crypt\Common\StreamCipher;
 class RC4 extends StreamCipher
 {
     /**
-     * @see \VendorDuplicator\phpseclib3\Crypt\RC4::_crypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\RC4::_crypt()
      */
     const ENCRYPT = 0;
     /**
-     * @see \VendorDuplicator\phpseclib3\Crypt\RC4::_crypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\RC4::_crypt()
      */
     const DECRYPT = 1;
     /**
      * Key Length (in bytes)
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\RC4::setKeyLength()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\RC4::setKeyLength()
      * @var int
      */
     protected $key_length = 128;
@@ -68,7 +68,7 @@ class RC4 extends StreamCipher
     /**
      * The mcrypt specific name of the cipher
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
      * @var string
      */
     protected $cipher_name_mcrypt = 'arcfour';
@@ -91,7 +91,7 @@ class RC4 extends StreamCipher
      *
      * This is mainly just a wrapper to set things up for \phpseclib3\Crypt\Common\SymmetricKey::isValidEngine()
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      * @param int $engine
      * @return bool
      */
@@ -145,7 +145,7 @@ class RC4 extends StreamCipher
     /**
      * Encrypts a message.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      * @see self::crypt()
      * @param string $plaintext
      * @return string $ciphertext
@@ -163,7 +163,7 @@ class RC4 extends StreamCipher
      * $this->decrypt($this->encrypt($plaintext)) == $this->encrypt($this->encrypt($plaintext)).
      * At least if the continuous buffer is disabled.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
      * @see self::crypt()
      * @param string $ciphertext
      * @return string $plaintext
@@ -196,7 +196,7 @@ class RC4 extends StreamCipher
     /**
      * Setup the key (expansion)
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::_setupKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::_setupKey()
      */
     protected function setupKey()
     {

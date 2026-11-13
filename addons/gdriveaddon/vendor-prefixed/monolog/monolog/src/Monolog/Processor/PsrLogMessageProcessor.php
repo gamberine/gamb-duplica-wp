@@ -9,9 +9,9 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Processor;
+namespace VendorGambDuplicaWP\Monolog\Processor;
 
-use VendorDuplicator\Monolog\Utils;
+use VendorGambDuplicaWP\Monolog\Utils;
 /**
  * Processes a record's message according to PSR-3 rules
  *
@@ -52,7 +52,7 @@ class PsrLogMessageProcessor implements ProcessorInterface
             if (is_null($val) || is_scalar($val) || is_object($val) && method_exists($val, "__toString")) {
                 $replacements[$placeholder] = $val;
             } elseif ($val instanceof \DateTimeInterface) {
-                if (!$this->dateFormat && $val instanceof \VendorDuplicator\Monolog\DateTimeImmutable) {
+                if (!$this->dateFormat && $val instanceof \VendorGambDuplicaWP\Monolog\DateTimeImmutable) {
                     // handle monolog dates using __toString if no specific dateFormat was asked for
                     // so that it follows the useMicroseconds flag
                     $replacements[$placeholder] = (string) $val;

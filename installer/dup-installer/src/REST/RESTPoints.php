@@ -1,17 +1,17 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\REST;
+namespace GambDuplicaWP\Installer\REST;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use Exception;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Requests;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Response;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use VendorGambDuplicaWP\WpOrg\Requests\Response;
 
 class RESTPoints
 {
-    const gamb-duplica-wp_NAMESPACE = 'gamb-duplica-wp/v1/';
+    const GambDuplicaWP_NAMESPACE = 'gamb-duplica-wp/v1/';
 
     /** @var string */
     private $nonce = '';
@@ -210,6 +210,6 @@ class RESTPoints
      */
     private function getRestUrl($subPath = '')
     {
-        return $this->url ? $this->url . '/' . self::gamb-duplica-wp_NAMESPACE . $subPath : '';
+        return $this->url ? $this->url . '/' . self::GambDuplicaWP_NAMESPACE . $subPath : '';
     }
 }

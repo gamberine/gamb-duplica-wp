@@ -1,18 +1,18 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Parser;
+namespace VendorGambDuplicaWP\Aws\S3\Parser;
 
-use VendorDuplicator\Aws\Api\ErrorParser\XmlErrorParser;
-use VendorDuplicator\Aws\Api\Parser\AbstractParser;
-use VendorDuplicator\Aws\Api\Parser\Exception\ParserException;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\GuzzleHttp\Psr7\Utils;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Api\ErrorParser\XmlErrorParser;
+use VendorGambDuplicaWP\Aws\Api\Parser\AbstractParser;
+use VendorGambDuplicaWP\Aws\Api\Parser\Exception\ParserException;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 /**
  * Custom S3 parser on top of the S3 protocol parser
  * for handling specific S3 parsing scenarios.

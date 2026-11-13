@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 /**
  * Requests for PHP
@@ -52,7 +52,7 @@ class Requests extends WpOrg\Requests\Requests
      */
     public static function autoloader($class)
     {
-        if (\class_exists('VendorDuplicator\WpOrg\Requests\Autoload') === \false) {
+        if (\class_exists('VendorGambDuplicaWP\WpOrg\Requests\Autoload') === \false) {
             require_once \dirname(__DIR__) . '/src/Autoload.php';
         }
         return WpOrg\Requests\Autoload::load($class);
@@ -83,4 +83,4 @@ class Requests extends WpOrg\Requests\Requests
  * @deprecated 2.0.0 Use `WpOrg\Requests\Requests` instead for the actual functionality and
  *                   use `WpOrg\Requests\Autoload` for the autoloading.
  */
-\class_alias('VendorDuplicator\Requests', 'Requests', \false);
+\class_alias('VendorGambDuplicaWP\Requests', 'Requests', \false);

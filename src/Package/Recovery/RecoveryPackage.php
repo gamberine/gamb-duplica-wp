@@ -5,18 +5,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Recovery;
+namespace GambDuplicaWP\Package\Recovery;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_File_Type;
 use GAMB_DUPLICA_WP_PackageStatus;
-use gamb-duplica-wp\Controllers\RecoveryController;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Package\Recovery\RecoveryStatus;
-use gamb-duplica-wp\Utils\PHPExecCheck;
+use GambDuplicaWP\Controllers\RecoveryController;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Package\Recovery\RecoveryStatus;
+use GambDuplicaWP\Utils\PHPExecCheck;
 use Error;
 use Exception;
 
@@ -119,7 +119,7 @@ class RecoveryPackage extends BackupPackage
     {
         switch ($this->getPathMode()) {
             case self::PATH_MODE_BACKUP:
-                return gamb-duplica-wp_PRO_PATH_RECOVER;
+                return GambDuplicaWP_PRO_PATH_RECOVER;
             case self::PATH_MODE_CUSTOM:
                 return GAMB_DUPLICA_WP_Global_Entity::getInstance()->getRecoveryCustomPath();
             case self::PATH_MODE_BRIDGE:
@@ -140,7 +140,7 @@ class RecoveryPackage extends BackupPackage
     {
         switch ($this->getPathMode()) {
             case self::PATH_MODE_BACKUP:
-                return gamb-duplica-wp_PRO_URL_RECOVER;
+                return GambDuplicaWP_PRO_URL_RECOVER;
             case self::PATH_MODE_CUSTOM:
                 return GAMB_DUPLICA_WP_Global_Entity::getInstance()->getRecoveryCustomURL();
             case self::PATH_MODE_BRIDGE:
@@ -162,7 +162,7 @@ class RecoveryPackage extends BackupPackage
     public static function isRecoverPath($path)
     {
         $result = preg_match(
-            '/[\/]' . preg_quote(gamb-duplica-wp_PRO_SSDIR_NAME, '/') . '[\/]' . preg_quote(gamb-duplica-wp_PRO_RECOVER_DIR_NAME, '/') . '[\/]/',
+            '/[\/]' . preg_quote(GambDuplicaWP_PRO_SSDIR_NAME, '/') . '[\/]' . preg_quote(GambDuplicaWP_PRO_RECOVER_DIR_NAME, '/') . '[\/]/',
             $path
         );
         return ($result === 1);
@@ -364,7 +364,7 @@ class RecoveryPackage extends BackupPackage
         if (strlen($customFolder) > 0) {
             $path = $customFolder;
         } else {
-            $path = gamb-duplica-wp_PRO_PATH_RECOVER;
+            $path = GambDuplicaWP_PRO_PATH_RECOVER;
         }
 
         if (!file_exists($path) && !wp_mkdir_p($path)) {
@@ -386,7 +386,7 @@ class RecoveryPackage extends BackupPackage
         if (strlen($customFolder) > 0) {
             $path = $customFolder;
         } else {
-            $path = gamb-duplica-wp_PRO_PATH_RECOVER;
+            $path = GambDuplicaWP_PRO_PATH_RECOVER;
         }
 
         return sprintf(
@@ -526,8 +526,8 @@ class RecoveryPackage extends BackupPackage
      */
     public static function removeRecoveryFolder()
     {
-        if (file_exists(gamb-duplica-wp_PRO_PATH_RECOVER)) {
-            SnapIO::rrmdir(gamb-duplica-wp_PRO_PATH_RECOVER);
+        if (file_exists(GambDuplicaWP_PRO_PATH_RECOVER)) {
+            SnapIO::rrmdir(GambDuplicaWP_PRO_PATH_RECOVER);
         }
 
         if (strlen(GAMB_DUPLICA_WP_Global_Entity::getInstance()->getRecoveryCustomPath()) > 0) {

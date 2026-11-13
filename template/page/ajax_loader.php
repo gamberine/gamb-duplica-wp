@@ -21,7 +21,7 @@ defined("ABSPATH") or die("");
 <div id="dup-ajax-loader" class="dup-styles" >
     <div id="dup-ajax-loader-img-wrapper" >
         <img 
-            src="<?php echo esc_url(gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/img/gamb-duplica-wp-logo-icon.svg'); ?>" 
+            src="<?php echo esc_url(GambDuplicaWP_PRO_PLUGIN_URL . 'assets/img/gamb-duplica-wp-logo-icon.svg'); ?>"
             alt="<?php esc_html_e('wait ...', 'gamb-duplica-wp'); ?>"
         >
     </div>

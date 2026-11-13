@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\JmesPath\Env as JmesPath;
+use VendorGambDuplicaWP\JmesPath\Env as JmesPath;
 /**
  * AWS result.
  */

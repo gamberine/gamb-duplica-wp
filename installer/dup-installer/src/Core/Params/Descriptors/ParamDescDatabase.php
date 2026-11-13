@@ -10,20 +10,20 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params\Descriptors;
+namespace GambDuplicaWP\Installer\Core\Params\Descriptors;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Addons\ProBase\License;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamsDescriptors;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamItem;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamForm;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamOption;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamFormTables;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamFormPass;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Addons\ProBase\License;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamsDescriptors;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamItem;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamForm;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamOption;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamFormTables;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamFormPass;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Core\InstState;
 
 /**
  * class where all parameters are initialized. Used by the param manager

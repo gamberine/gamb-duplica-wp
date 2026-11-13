@@ -15,9 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\HttpHandler;
+namespace VendorGambDuplicaWP\Google\Auth\HttpHandler;
 
-use VendorDuplicator\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
 /**
  * Stores an HTTP Client in order to prevent multiple instantiations.
  */

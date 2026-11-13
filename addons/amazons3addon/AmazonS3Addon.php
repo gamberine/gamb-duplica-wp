@@ -19,20 +19,20 @@
  * @link      https://gamb-duplica-wp.com/
  */
 
-namespace gamb-duplica-wp\Addons\AmazonS3Addon;
+namespace GambDuplicaWP\Addons\AmazonS3Addon;
 
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\AmazonS3Storage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\AmazonS3CompatibleStorage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\BackblazeStorage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\CloudflareStorage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\DigitalOceanStorage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\DreamStorage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\GoogleCloudStorage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\VultrStorage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\WasabiStorage;
-use gamb-duplica-wp\Addons\AmazonS3Addon\Utils\Autoloader;
-use gamb-duplica-wp\Core\Addons\AbstractAddonCore;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\AmazonS3Storage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\AmazonS3CompatibleStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\BackblazeStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\CloudflareStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\DigitalOceanStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\DreamStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\GoogleCloudStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\VultrStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\WasabiStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Utils\Autoloader;
+use GambDuplicaWP\Core\Addons\AbstractAddonCore;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 /**
  * Storage ftp/sftp addon class
@@ -138,7 +138,7 @@ class AmazonS3Addon extends AbstractAddonCore
         }
 
         foreach ($storages as $storage) {
-            if (!$storage instanceof \gamb-duplica-wp\Addons\AmazonS3Addon\Models\AmazonS3Storage) {
+            if (!$storage instanceof \GambDuplicaWP\Addons\AmazonS3Addon\Models\AmazonS3Storage) {
                 continue;
             }
 

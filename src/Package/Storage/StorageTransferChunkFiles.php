@@ -5,16 +5,16 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Storage;
+namespace GambDuplicaWP\Package\Storage;
 
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Upload_Info;
-use gamb-duplica-wp\Libs\Chunking\ChunkingManager;
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
-use gamb-duplica-wp\Libs\Chunking\Iterators\TimeoutFileCopyIterator;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use gamb-duplica-wp\Models\Storages\Local\LocalStorageAdapter;
+use GambDuplicaWP\Libs\Chunking\ChunkingManager;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use GambDuplicaWP\Libs\Chunking\Iterators\TimeoutFileCopyIterator;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Models\Storages\Local\LocalStorageAdapter;
 use Exception;
 
 /**

@@ -7,11 +7,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\RESTPoints;
+namespace GambDuplicaWP\RESTPoints;
 
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Core\CapMng;
 
-class Versions extends \gamb-duplica-wp\Core\REST\AbstractRESTPoint
+class Versions extends \GambDuplicaWP\Core\REST\AbstractRESTPoint
 {
     /**
      * return REST point route string
@@ -37,7 +37,7 @@ class Versions extends \gamb-duplica-wp\Core\REST\AbstractRESTPoint
         $response = $responseBase;
 
         $response['wp']  = $wp_version;
-        $response['dup'] = gamb-duplica-wp_PRO_VERSION;
+        $response['dup'] = GambDuplicaWP_PRO_VERSION;
 
         return new \WP_REST_Response($response, 200);
     }
@@ -50,8 +50,9 @@ class Versions extends \gamb-duplica-wp\Core\REST\AbstractRESTPoint
      */
     public function permission(\WP_REST_Request $request) // @phpstan-ignore missingType.generics
     {
-        if (!CapMng::can(CapMng::CAP_BASIC, false) || !check_ajax_referer('wp_rest', false, false)) {
-            return new \WP_Error('rest_forbidden', esc_html__('You cannot execute this action.', 'gamb-duplica-wp'));
+        $nonce = $request->get_header('X-WP-Nonce') ?: $request->get_param('_wpnonce');
+        if (!CapMng::can(CapMng::CAP_BASIC, false) || !wp_verify_nonce((string) $nonce, 'wp_rest')) {
+            return new \WP_Error('rest_forbidden', esc_html__('You cannot execute this action.', 'gamb-duplica-wp'), ['status' => is_user_logged_in() ? 403 : 401]);
         }
         return true;
     }

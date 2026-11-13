@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint;
 
-use VendorDuplicator\Aws\Exception\UnresolvedEndpointException;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedEndpointException;
 /**
  * Endpoint providers.
  *

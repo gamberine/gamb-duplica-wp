@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\GDriveAddon\Models\GDriveStorage;
+use GambDuplicaWP\Addons\GDriveAddon\Models\GDriveStorage;
 
 defined("ABSPATH") or die("");
 
@@ -46,7 +46,7 @@ $tplMng->render('admin_pages/storages/parts/provider_head');
                     >
                         <i class="fa fa-plug"></i> <?php esc_html_e('Connect to Google Drive', 'gamb-duplica-wp'); ?>
                         <img
-                            src="<?php echo esc_url(gamb-duplica-wp_PRO_IMG_URL . '/google-drive.svg'); ?>"
+                            src="<?php echo esc_url(GambDuplicaWP_PRO_IMG_URL . '/google-drive.svg'); ?>"
                             style='vertical-align: middle; margin:-2px 0 0 3px; height:18px; width:18px'
                         />
                     </button>

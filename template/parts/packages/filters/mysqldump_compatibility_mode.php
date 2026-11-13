@@ -54,7 +54,7 @@ if ($dbbuild_mode != 'MYSQLDUMP') {
                         '1 and 2 are opening and closing anchor/link tags',
                         'gamb-duplica-wp'
                     ),
-                    '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-fix-database-write-issues') . '" target="_blank">',
+                    '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-fix-database-write-issues') . '" target="_blank">',
                     '</a>'
                 );
             ?>
@@ -104,7 +104,7 @@ if ($dbbuild_mode != 'MYSQLDUMP') {
             </div>
             <div class="dup-tabs-opts-help">
                 <?php esc_html_e("Compatibility mode settings are not persistent.  They must be enabled with every new build.", 'gamb-duplica-wp'); ?>&nbsp;
-                <a href="<?php echo esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-fix-database-write-issues');?>" target="_blank">
+                <a href="<?php echo esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-fix-database-write-issues');?>" target="_blank">
                     [<?php esc_html_e('full overview', 'gamb-duplica-wp'); ?>]
                 </a>
             </div>

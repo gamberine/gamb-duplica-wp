@@ -29,15 +29,15 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\System\SSH;
+namespace VendorGambDuplicaWP\phpseclib3\System\SSH;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\PublicKey;
-use VendorDuplicator\phpseclib3\Crypt\PublicKeyLoader;
-use VendorDuplicator\phpseclib3\Crypt\RSA;
-use VendorDuplicator\phpseclib3\Exception\BadConfigurationException;
-use VendorDuplicator\phpseclib3\Net\SSH2;
-use VendorDuplicator\phpseclib3\System\SSH\Agent\Identity;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\PublicKeyLoader;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadConfigurationException;
+use VendorGambDuplicaWP\phpseclib3\Net\SSH2;
+use VendorGambDuplicaWP\phpseclib3\System\SSH\Agent\Identity;
 /**
  * Pure-PHP ssh-agent client identity factory
  *

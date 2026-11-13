@@ -1,8 +1,8 @@
 <?php
 
-namespace gamb-duplica-wp\Models;
+namespace GambDuplicaWP\Models;
 
-use gamb-duplica-wp\Core\Models\AbstractEntitySingleton;
+use GambDuplicaWP\Core\Models\AbstractEntitySingleton;
 use Exception;
 
 class DynamicGlobalEntity extends AbstractEntitySingleton

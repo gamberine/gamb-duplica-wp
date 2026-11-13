@@ -9,11 +9,11 @@
  * @copyright 2017 Jim Wigginton
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  */
-namespace VendorDuplicator\phpseclib3\Math\PrimeField;
+namespace VendorGambDuplicaWP\phpseclib3\Math\PrimeField;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer as Base;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer as Base;
 /**
  * Prime Finite Fields
  *

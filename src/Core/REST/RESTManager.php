@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\REST;
+namespace GambDuplicaWP\Core\REST;
 
 final class RESTManager
 {
@@ -46,8 +46,8 @@ final class RESTManager
     private function getRestPoints()
     {
         $basicRestPoints   = [];
-        $basicRestPoints[] = new \gamb-duplica-wp\RESTPoints\Versions();
-        $basicRestPoints[] = new \gamb-duplica-wp\RESTPoints\SubsiteActions();
+        $basicRestPoints[] = new \GambDuplicaWP\RESTPoints\Versions();
+        $basicRestPoints[] = new \GambDuplicaWP\RESTPoints\SubsiteActions();
 
         return array_filter(
             apply_filters(

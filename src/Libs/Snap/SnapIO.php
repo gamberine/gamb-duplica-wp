@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Snap;
+namespace GambDuplicaWP\Libs\Snap;
 
 use Error;
 use Exception;
@@ -1309,8 +1309,9 @@ INDEXPHP;
         header('Content-Type: application/octet-stream');
         header('Content-Disposition: attachment; filename="' . $downloadName . '"');
         header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
+        header('Cache-Control: private, no-store, max-age=0');
+        header('Pragma: no-cache');
+        header('X-Content-Type-Options: nosniff');
         header('Content-Length: ' . filesize($filepath));
         flush(); // Flush system output buffer
 

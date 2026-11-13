@@ -15,10 +15,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\Comment;
-use VendorDuplicator\Google\Service\Drive\CommentList;
+use VendorGambDuplicaWP\Google\Service\Drive\Comment;
+use VendorGambDuplicaWP\Google\Service\Drive\CommentList;
 /**
  * The "comments" collection of methods.
  * Typical usage is:
@@ -27,7 +27,7 @@ use VendorDuplicator\Google\Service\Drive\CommentList;
  *   $comments = $driveService->comments;
  *  </code>
  */
-class Comments extends \VendorDuplicator\Google\Service\Resource
+class Comments extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Creates a comment on a file. (comments.create)
@@ -36,7 +36,7 @@ class Comments extends \VendorDuplicator\Google\Service\Resource
      * @param Comment $postBody
      * @param array $optParams Optional parameters.
      * @return Comment
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function create($fileId, Comment $postBody, $optParams = [])
     {
@@ -50,7 +50,7 @@ class Comments extends \VendorDuplicator\Google\Service\Resource
      * @param string $fileId The ID of the file.
      * @param string $commentId The ID of the comment.
      * @param array $optParams Optional parameters.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function delete($fileId, $commentId, $optParams = [])
     {
@@ -68,7 +68,7 @@ class Comments extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool includeDeleted Whether to return deleted comments. Deleted
      * comments will not include their original content.
      * @return Comment
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($fileId, $commentId, $optParams = [])
     {
@@ -91,7 +91,7 @@ class Comments extends \VendorDuplicator\Google\Service\Resource
      * @opt_param string startModifiedTime The minimum value of 'modifiedTime' for
      * the result comments (RFC 3339 date-time).
      * @return CommentList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listComments($fileId, $optParams = [])
     {
@@ -107,7 +107,7 @@ class Comments extends \VendorDuplicator\Google\Service\Resource
      * @param Comment $postBody
      * @param array $optParams Optional parameters.
      * @return Comment
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function update($fileId, $commentId, Comment $postBody, $optParams = [])
     {
@@ -117,4 +117,4 @@ class Comments extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Comments::class, 'VendorDuplicator\Google_Service_Drive_Resource_Comments');
+class_alias(Comments::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Comments');

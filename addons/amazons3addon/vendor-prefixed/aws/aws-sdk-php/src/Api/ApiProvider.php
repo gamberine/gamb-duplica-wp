@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api;
+namespace VendorGambDuplicaWP\Aws\Api;
 
-use VendorDuplicator\Aws\Exception\UnresolvedApiException;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedApiException;
 /**
  * API providers.
  *
@@ -83,7 +83,7 @@ class ApiProvider
      */
     public static function defaultProvider()
     {
-        return new self(__DIR__ . '/../data', \VendorDuplicator\Aws\manifest());
+        return new self(__DIR__ . '/../data', \VendorGambDuplicaWP\Aws\manifest());
     }
     /**
      * Loads API data after resolving the version to the latest, compatible,
@@ -174,7 +174,7 @@ class ApiProvider
         $version = $this->manifest[$service]['versions'][$version];
         $path = "{$this->modelsDir}/{$service}/{$version}/{$type}.json";
         try {
-            return \VendorDuplicator\Aws\load_compiled_json($path);
+            return \VendorGambDuplicaWP\Aws\load_compiled_json($path);
         } catch (\InvalidArgumentException $e) {
             return null;
         }

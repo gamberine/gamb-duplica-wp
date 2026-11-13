@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\About as AboutModel;
+use VendorGambDuplicaWP\Google\Service\Drive\About as AboutModel;
 /**
  * The "about" collection of methods.
  * Typical usage is:
@@ -26,7 +26,7 @@ use VendorDuplicator\Google\Service\Drive\About as AboutModel;
  *   $about = $driveService->about;
  *  </code>
  */
-class About extends \VendorDuplicator\Google\Service\Resource
+class About extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Gets information about the user, the user's Drive, and system capabilities.
@@ -34,7 +34,7 @@ class About extends \VendorDuplicator\Google\Service\Resource
      *
      * @param array $optParams Optional parameters.
      * @return AboutModel
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($optParams = [])
     {
@@ -44,4 +44,4 @@ class About extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(About::class, 'VendorDuplicator\Google_Service_Drive_Resource_About');
+class_alias(About::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_About');

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Psr\Log;
+namespace VendorGambDuplicaWP\Psr\Log;
 
 /**
  * Describes log levels.

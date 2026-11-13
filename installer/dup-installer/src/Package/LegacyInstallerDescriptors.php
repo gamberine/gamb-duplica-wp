@@ -6,7 +6,7 @@
  * @copyright (c) 2024, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Package;
+namespace GambDuplicaWP\Installer\Package;
 
 /**
  * This class is used to manage old installer files previously version 4.5.20

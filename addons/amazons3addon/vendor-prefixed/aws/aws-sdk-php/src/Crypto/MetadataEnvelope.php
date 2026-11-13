@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\Aws\HasDataTrait;
+use VendorGambDuplicaWP\Aws\HasDataTrait;
 use ArrayAccess;
 use IteratorAggregate;
 use InvalidArgumentException;

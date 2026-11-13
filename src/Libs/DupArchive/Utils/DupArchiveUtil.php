@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive\Utils;
+namespace GambDuplicaWP\Libs\DupArchive\Utils;
 
-use gamb-duplica-wp\Libs\DupArchive\DupArchiveLoggerBase;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\DupArchive\DupArchiveLoggerBase;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 class DupArchiveUtil
 {

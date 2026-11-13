@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Credentials;
+namespace VendorGambDuplicaWP\Aws\Credentials;
 
 /**
  * @internal

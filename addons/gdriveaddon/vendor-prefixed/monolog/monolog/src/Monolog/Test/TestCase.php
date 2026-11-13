@@ -9,11 +9,11 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Test;
+namespace VendorGambDuplicaWP\Monolog\Test;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\DateTimeImmutable;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\DateTimeImmutable;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
 /**
  * Lets you easily generate log records and a dummy formatter for testing purposes
  *

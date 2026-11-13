@@ -10,11 +10,11 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\RSA\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\RSA\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys\PuTTY as Progenitor;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys\PuTTY as Progenitor;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * PuTTY Formatted RSA Key Handler
  *
@@ -27,7 +27,7 @@ abstract class PuTTY extends Progenitor
      *
      * @var string
      */
-    const PUBLIC_HANDLER = 'VendorDuplicator\phpseclib3\Crypt\RSA\Formats\Keys\OpenSSH';
+    const PUBLIC_HANDLER = 'VendorGambDuplicaWP\phpseclib3\Crypt\RSA\Formats\Keys\OpenSSH';
     /**
      * Algorithm Identifier
      *

@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Views\ViewHelper;
 
 defined("ABSPATH") or die("");
 
@@ -83,7 +83,7 @@ $purgeCaches = $tplData['installerCleanupPurge'];
                     '%1$s and %2$s represents the opening and closing HTML tags for an anchor or link',
                     'gamb-duplica-wp'
                 ),
-                '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'which-files-need-to-be-removed-after-an-install') . '" target="_blank">',
+                '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'which-files-need-to-be-removed-after-an-install') . '" target="_blank">',
                 '</a>'
             );
             ?>

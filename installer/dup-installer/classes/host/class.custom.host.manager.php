@@ -12,11 +12,11 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginsManager;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamForm;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginsManager;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamForm;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 
 require_once(DUPX_INIT . '/classes/host/interface.host.php');
 require_once(DUPX_INIT . '/classes/host/class.godaddy.host.php');

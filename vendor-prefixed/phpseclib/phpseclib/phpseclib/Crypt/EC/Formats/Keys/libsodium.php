@@ -14,11 +14,11 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Ed25519;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedFormatException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Ed25519;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedFormatException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * libsodium Key Handler
  *
@@ -73,7 +73,7 @@ abstract class libsodium
      * Convert an EC public key to the appropriate format
      *
      * @param Ed25519 $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @return string
      */
     public static function savePublicKey(Ed25519 $curve, array $publicKey)
@@ -85,7 +85,7 @@ abstract class libsodium
      *
      * @param BigInteger $privateKey
      * @param Ed25519 $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @param string $secret optional
      * @param string $password optional
      * @return string

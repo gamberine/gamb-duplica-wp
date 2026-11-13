@@ -12,10 +12,10 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\DSA\Formats\Signature;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\DSA\Formats\Signature;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * SSH2 Signature Handler
  *

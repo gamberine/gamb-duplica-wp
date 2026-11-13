@@ -5,18 +5,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\Models\AbstractEntityList;
-use gamb-duplica-wp\Core\Models\UpdateFromInputInterface;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Utils\Settings\ModelMigrateSettingsInterface;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use Vendorgamb-duplica-wp\Cron\CronExpression;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\Models\AbstractEntityList;
+use GambDuplicaWP\Core\Models\UpdateFromInputInterface;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Utils\Settings\ModelMigrateSettingsInterface;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use VendorGambDuplicaWP\Cron\CronExpression;
 
 /**
  * Schedule entity

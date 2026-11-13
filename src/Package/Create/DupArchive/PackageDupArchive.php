@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Create\DupArchive;
+namespace GambDuplicaWP\Package\Create\DupArchive;
 
 use GAMB_DUPLICA_WP_Constants;
 use GAMB_DUPLICA_WP_Global_Entity;
@@ -18,13 +18,13 @@ use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_PackageStatus;
 use GAMB_DUPLICA_WP_Server;
 use GAMB_DUPLICA_WP_U;
-use gamb-duplica-wp\Libs\DupArchive\DupArchiveEngine;
-use gamb-duplica-wp\Libs\DupArchive\States\DupArchiveExpandState;
-use gamb-duplica-wp\Libs\Snap\Snap32BitSizeLimitException;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Package\Create\BuildProgress;
+use GambDuplicaWP\Libs\DupArchive\DupArchiveEngine;
+use GambDuplicaWP\Libs\DupArchive\States\DupArchiveExpandState;
+use GambDuplicaWP\Libs\Snap\Snap32BitSizeLimitException;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Package\Create\BuildProgress;
 use Exception;
 
 /**
@@ -70,7 +70,7 @@ class PackageDupArchive
             $filterExts  = empty($archive->FilterExts)  ? 'not set' : $archive->FilterExts;
             $filterOn    = ($archive->FilterOn) ? 'ON' : 'OFF';
 
-            $scanFilepath            = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/{$package->getNameHash()}_scan.json";
+            $scanFilepath            = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/{$package->getNameHash()}_scan.json";
             $skipArchiveFinalization = false;
             try {
                 $scanReport = $package->getScanReportFromJson($scanFilepath, true);
@@ -183,7 +183,7 @@ class PackageDupArchive
                         '1 and 2 are opening and closing anchor tags',
                         'gamb-duplica-wp'
                     ),
-                    '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-file-io-related-build-issues') . '" target="_blank">',
+                    '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-file-io-related-build-issues') . '" target="_blank">',
                     '</a>'
                 );
                 $global->addTextFix($err, $fix);
@@ -210,7 +210,7 @@ class PackageDupArchive
                     $expandState->archivePath            = $archivePath;
                     $expandState->working                = true;
                     $expandState->timeSliceInSecs        = self::WORKER_TIME_IN_SEC;
-                    $expandState->basePath               = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/validate';
+                    $expandState->basePath               = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/validate';
                     $expandState->validateOnly           = true;
                     $expandState->validatiOnType         = DupArchiveExpandState::VALIDATION_STANDARD;
                     $expandState->working                = true;

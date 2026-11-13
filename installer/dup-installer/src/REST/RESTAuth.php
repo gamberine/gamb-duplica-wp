@@ -1,10 +1,10 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\REST;
+namespace GambDuplicaWP\Installer\REST;
 
-use Vendorgamb-duplica-wp\WpOrg\Requests\Auth;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Auth\Basic;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Hooks;
+use VendorGambDuplicaWP\WpOrg\Requests\Auth;
+use VendorGambDuplicaWP\WpOrg\Requests\Auth\Basic;
+use VendorGambDuplicaWP\WpOrg\Requests\Hooks;
 
 class RESTAuth implements Auth
 {

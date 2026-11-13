@@ -15,26 +15,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\AccessToken;
+namespace VendorGambDuplicaWP\Google\AccessToken;
 
 use DateTime;
 use DomainException;
 use Exception;
-use VendorDuplicator\ExpiredException;
-use VendorDuplicator\Firebase\JWT\ExpiredException as ExpiredExceptionV3;
-use VendorDuplicator\Firebase\JWT\JWT;
-use VendorDuplicator\Firebase\JWT\Key;
-use VendorDuplicator\Firebase\JWT\SignatureInvalidException;
-use VendorDuplicator\Google\Auth\Cache\MemoryCacheItemPool;
-use VendorDuplicator\Google\Exception as GoogleException;
-use VendorDuplicator\GuzzleHttp\Client;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\ExpiredException;
+use VendorGambDuplicaWP\Firebase\JWT\ExpiredException as ExpiredExceptionV3;
+use VendorGambDuplicaWP\Firebase\JWT\JWT;
+use VendorGambDuplicaWP\Firebase\JWT\Key;
+use VendorGambDuplicaWP\Firebase\JWT\SignatureInvalidException;
+use VendorGambDuplicaWP\Google\Auth\Cache\MemoryCacheItemPool;
+use VendorGambDuplicaWP\Google\Exception as GoogleException;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
 use InvalidArgumentException;
 use LogicException;
-use VendorDuplicator\phpseclib3\Crypt\AES;
-use VendorDuplicator\phpseclib3\Crypt\PublicKeyLoader;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\phpseclib3\Crypt\AES;
+use VendorGambDuplicaWP\phpseclib3\Crypt\PublicKeyLoader;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
 /**
  * Wrapper around Google Access Tokens which provides convenience functions
  *
@@ -53,7 +53,7 @@ class Verify
      */
     private $cache;
     /**
-     * @var \VendorDuplicator\Firebase\JWT\JWT
+     * @var \VendorGambDuplicaWP\Firebase\JWT\JWT
      */
     public $jwt;
     /**
@@ -135,7 +135,7 @@ class Verify
      * Retrieve and cache a certificates file.
      *
      * @param string $url location
-     * @throws \VendorDuplicator\Google\Exception
+     * @throws \VendorGambDuplicaWP\Google\Exception
      * @return array certificates
      */
     private function retrieveCertsFromLocation($url)

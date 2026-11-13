@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\AWS\CRT\CRT;
-use VendorDuplicator\Aws\Exception\CommonRuntimeException;
-use VendorDuplicator\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\AWS\CRT\CRT;
+use VendorGambDuplicaWP\Aws\Exception\CommonRuntimeException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
 use InvalidArgumentException;
 trait CalculatesChecksumTrait
 {

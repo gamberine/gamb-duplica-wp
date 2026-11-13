@@ -6,18 +6,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Models\Storages\Local;
+namespace GambDuplicaWP\Models\Storages\Local;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Upload_Info;
 use GAMB_DUPLICA_WP_PackageStatus;
-use gamb-duplica-wp\Core\Upgrade\UpgradeFunctions;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Core\Upgrade\UpgradeFunctions;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 use Exception;
 use wpdb;
 
@@ -46,7 +46,7 @@ class DefaultLocalStorage extends LocalStorage
         return array_merge(
             $config,
             [
-                'storage_folder'    => gamb-duplica-wp_PRO_SSDIR_PATH,
+                'storage_folder'    => GambDuplicaWP_PRO_SSDIR_PATH,
                 'max_packages'      => 20,
                 'filter_protection' => true,
             ]
@@ -77,7 +77,7 @@ class DefaultLocalStorage extends LocalStorage
     {
         parent::__wakeup();
         // Force storage folder value, it can be changed by user and must be updated after migration
-        $this->config['storage_folder'] = gamb-duplica-wp_PRO_SSDIR_PATH;
+        $this->config['storage_folder'] = GambDuplicaWP_PRO_SSDIR_PATH;
     }
 
     /**
@@ -209,7 +209,7 @@ class DefaultLocalStorage extends LocalStorage
      */
     public function copyFromDefault(GAMB_DUPLICA_WP_Package $package, GAMB_DUPLICA_WP_Package_Upload_Info $upload_info)
     {
-        GAMB_DUPLICA_WP_Log::infoTrace("SUCCESS: Backup is in default location: " . gamb-duplica-wp_PRO_SSDIR_PATH);
+        GAMB_DUPLICA_WP_Log::infoTrace("SUCCESS: Backup is in default location: " . GambDuplicaWP_PRO_SSDIR_PATH);
         // It's the default local storage location so do nothing - it's already there
         $upload_info->copied_archive   = true;
         $upload_info->copied_installer = true;
@@ -322,10 +322,10 @@ class DefaultLocalStorage extends LocalStorage
             return true;
         }
 
-        $path_ssdir_tmp        = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP);
-        $path_ssdir_tmp_import = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP_IMPORT);
-        $path_plugin           = SnapIO::safePath(gamb-duplica-wp____PATH);
-        $path_import           = SnapIO::safePath(gamb-duplica-wp_PRO_PATH_IMPORTS);
+        $path_ssdir_tmp        = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP);
+        $path_ssdir_tmp_import = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP_IMPORT);
+        $path_plugin           = SnapIO::safePath(GambDuplicaWP____PATH);
+        $path_import           = SnapIO::safePath(GambDuplicaWP_PRO_PATH_IMPORTS);
 
         //snapshot tmp directory
         wp_mkdir_p($path_ssdir_tmp);
@@ -357,9 +357,9 @@ class DefaultLocalStorage extends LocalStorage
     protected static function addIndexToOldDirs()
     {
         $paths = [
-            SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_INSTALLER),
-            SnapIO::safePathTrailingslashit(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . 'extras',
-            SnapIO::safePath(gamb-duplica-wp_PRO_PATH_RECOVER),
+            SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_INSTALLER),
+            SnapIO::safePathTrailingslashit(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . 'extras',
+            SnapIO::safePath(GambDuplicaWP_PRO_PATH_RECOVER),
         ];
 
         $customRecoveryPath = GAMB_DUPLICA_WP_Global_Entity::getInstance()->getRecoveryCustomPath();

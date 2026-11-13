@@ -8,7 +8,7 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\SettingsPageController;
 
 /**
  * Variables
@@ -43,8 +43,8 @@ global $wpdb;
                     supports popen or exec and mysqldump you can try to enable Shell Execution from the settings menu.',
                     'gamb-duplica-wp'
                 ),
-                GAMB_DUPLICA_WP_U::byteSize(gamb-duplica-wp_PRO_SCAN_DB_ALL_SIZE),
-                number_format(gamb-duplica-wp_PRO_SCAN_DB_ALL_ROWS)
+                GAMB_DUPLICA_WP_U::byteSize(GambDuplicaWP_PRO_SCAN_DB_ALL_SIZE),
+                number_format(GambDuplicaWP_PRO_SCAN_DB_ALL_ROWS)
             ),
             ['i' => []]
         ); ?>
@@ -60,8 +60,8 @@ global $wpdb;
                     Individual tables will not trigger a notice message, but can help narrow down issues if they occur later on.',
                     'gamb-duplica-wp'
                 ),
-                GAMB_DUPLICA_WP_U::byteSize(gamb-duplica-wp_PRO_SCAN_DB_TBL_SIZE),
-                number_format(gamb-duplica-wp_PRO_SCAN_DB_TBL_ROWS)
+                GAMB_DUPLICA_WP_U::byteSize(GambDuplicaWP_PRO_SCAN_DB_TBL_SIZE),
+                number_format(GambDuplicaWP_PRO_SCAN_DB_TBL_ROWS)
             ),
             ['i' => []]
         );

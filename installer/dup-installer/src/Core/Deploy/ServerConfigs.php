@@ -5,17 +5,17 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace  gamb-duplica-wp\Installer\Core\Deploy;
+namespace  GambDuplicaWP\Installer\Core\Deploy;
 
 use GAMB_DUPLICA_WP_Extraction;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\InstallerOrigFileMng;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\InstallerOrigFileMng;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use DUPX_ArchiveConfig;
 use DUPX_DB;
 use DUPX_DB_Functions;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 use DUPX_NOTICE_ITEM;
 use DUPX_NOTICE_MANAGER;
 use DUPX_Package;

@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Used to compress request payloads if the service/operation support it.
  *

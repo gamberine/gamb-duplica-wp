@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
 class PsrCacheAdapter implements CacheInterface
 {
     /** @var CacheItemPoolInterface */

@@ -5,13 +5,13 @@
  *
  * @package Requests\Utilities
  */
-namespace VendorDuplicator\WpOrg\Requests\Utility;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Utility;
 
 use ArrayAccess;
 use ArrayIterator;
 use IteratorAggregate;
 use ReturnTypeWillChange;
-use VendorDuplicator\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
 /**
  * Case-insensitive dictionary, suitable for HTTP headers
  *
@@ -73,7 +73,7 @@ class CaseInsensitiveDictionary implements ArrayAccess, IteratorAggregate
      * @param string $offset Item name
      * @param string $value Item value
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On attempting to use dictionary as list (`invalidset`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On attempting to use dictionary as list (`invalidset`)
      */
     #[ReturnTypeWillChange]
     public function offsetSet($offset, $value)

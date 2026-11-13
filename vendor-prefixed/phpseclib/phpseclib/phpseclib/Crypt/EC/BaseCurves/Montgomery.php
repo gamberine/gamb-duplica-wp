@@ -21,12 +21,12 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves;
 
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Curve25519;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\phpseclib3\Math\PrimeField;
-use VendorDuplicator\phpseclib3\Math\PrimeField\Integer as PrimeInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Curve25519;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Math\PrimeField;
+use VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer as PrimeInteger;
 /**
  * Curves over y^2 = x^3 + a*x + x
  *
@@ -217,7 +217,7 @@ class Montgomery extends Base
      *
      *   x=X/Z
      *
-     * @return \VendorDuplicator\phpseclib3\Math\PrimeField\Integer[]
+     * @return \VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer[]
      */
     public function convertToInternal(array $p)
     {
@@ -233,7 +233,7 @@ class Montgomery extends Base
     /**
      * Returns the affine point
      *
-     * @return \VendorDuplicator\phpseclib3\Math\PrimeField\Integer[]
+     * @return \VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer[]
      */
     public function convertToAffine(array $p)
     {

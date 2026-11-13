@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Token;
+namespace VendorGambDuplicaWP\Aws\Token;
 
-use VendorDuplicator\Aws\Identity\BearerTokenIdentity;
-use VendorDuplicator\Aws\Token\TokenInterface;
+use VendorGambDuplicaWP\Aws\Identity\BearerTokenIdentity;
+use VendorGambDuplicaWP\Aws\Token\TokenInterface;
 /**
  * Basic implementation of the AWS Token interface that allows callers to
  * pass in an AWS token in the constructor.

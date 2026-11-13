@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2\Rule;
+namespace VendorGambDuplicaWP\Aws\EndpointV2\Rule;
 
-use VendorDuplicator\Aws\EndpointV2\Ruleset\RulesetStandardLibrary;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\RulesetStandardLibrary;
 class TreeRule extends AbstractRule
 {
     /** @var array */

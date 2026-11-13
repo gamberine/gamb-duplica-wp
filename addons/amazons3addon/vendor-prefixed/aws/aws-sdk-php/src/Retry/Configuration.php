@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Retry;
+namespace VendorGambDuplicaWP\Aws\Retry;
 
-use VendorDuplicator\Aws\Retry\Exception\ConfigurationException;
+use VendorGambDuplicaWP\Aws\Retry\Exception\ConfigurationException;
 class Configuration implements ConfigurationInterface
 {
     private $mode;

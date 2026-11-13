@@ -7,18 +7,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Controllers;
+namespace GambDuplicaWP\Core\Controllers;
 
-use gamb-duplica-wp\Controllers\HelpPageController;
-use gamb-duplica-wp\Controllers\MainPageController;
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Controllers\ImportPageController;
-use gamb-duplica-wp\Controllers\ImportInstallerPageController;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Controllers\EmailSummaryPreviewPageController;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Controllers\HelpPageController;
+use GambDuplicaWP\Controllers\MainPageController;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Controllers\ImportPageController;
+use GambDuplicaWP\Controllers\ImportInstallerPageController;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Controllers\EmailSummaryPreviewPageController;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 /**
  * ControllersManager
@@ -87,7 +87,7 @@ final class ControllersManager
      *
      * @return boolean
      */
-    public function isgamb-duplica-wpPage(): bool
+    public function isGambDuplicaWPPage(): bool
     {
         foreach (self::getMenuPages() as $menuPage) {
             if (!$menuPage->isEnabled()) {

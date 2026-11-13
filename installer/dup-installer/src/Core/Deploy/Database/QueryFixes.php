@@ -5,16 +5,16 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\Database;
+namespace GambDuplicaWP\Installer\Core\Deploy\Database;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\AbstractJsonSerializable;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable;
 use DUPX_ArchiveConfig;
 use DUPX_DB_Functions;
 use DUPX_DB_Tables;
 use DUPX_DBInstall;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 
 class QueryFixes extends AbstractJsonSerializable
 {

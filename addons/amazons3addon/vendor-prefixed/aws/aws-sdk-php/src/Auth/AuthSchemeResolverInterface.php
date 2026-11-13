@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Auth;
+namespace VendorGambDuplicaWP\Aws\Auth;
 
-use VendorDuplicator\Aws\Identity\IdentityInterface;
+use VendorGambDuplicaWP\Aws\Identity\IdentityInterface;
 /**
  * An AuthSchemeResolver object determines which auth scheme will be used for request signing.
  */

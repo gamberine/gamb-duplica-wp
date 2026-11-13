@@ -4,8 +4,8 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Libs\Shell\Shell;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Libs\Shell\Shell;
 
 defined("ABSPATH") or die("");
 
@@ -78,7 +78,7 @@ $mysqlDumpFound  = (bool) $mysqlDumpPath;
                         '%1$s and %2$s are the opening and closing tags of a link.',
                         'gamb-duplica-wp'
                     ),
-                    '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'what-host-providers-are-recommended-for-gamb-duplica-wp/')
+                    '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'what-host-providers-are-recommended-for-gamb-duplica-wp/')
                     . '" target="_blank">',
                     '</a>'
                 );
@@ -111,7 +111,7 @@ $mysqlDumpFound  = (bool) $mysqlDumpPath;
                         '%1$s and %2$s are the opening and closing tags of a link.',
                         'gamb-duplica-wp'
                     ),
-                    '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-dependency-checks') . '" target="_blank">',
+                    '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-dependency-checks') . '" target="_blank">',
                     '</a>'
                 );
                 ?>

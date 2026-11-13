@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\Aws\S3\Exception\PermanentRedirectException;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\Aws\S3\Exception\PermanentRedirectException;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Throws a PermanentRedirectException exception when a 301 redirect is
  * encountered.

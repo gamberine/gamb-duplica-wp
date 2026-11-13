@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service;
+namespace VendorGambDuplicaWP\Google\Service;
 
-use VendorDuplicator\Google\Client;
+use VendorGambDuplicaWP\Google\Client;
 /**
  * Service definition for Drive (v3).
  *
@@ -31,7 +31,7 @@ use VendorDuplicator\Google\Client;
  *
  * @author Google, Inc.
  */
-class Drive extends \VendorDuplicator\Google\Service
+class Drive extends \VendorGambDuplicaWP\Google\Service
 {
     /** See, edit, create, and delete all of your Google Drive files. */
     const DRIVE = "https://www.googleapis.com/auth/drive";
@@ -93,4 +93,4 @@ class Drive extends \VendorDuplicator\Google\Service
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Drive::class, 'VendorDuplicator\Google_Service_Drive');
+class_alias(Drive::class, 'VendorGambDuplicaWP\Google_Service_Drive');

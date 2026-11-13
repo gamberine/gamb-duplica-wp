@@ -10,9 +10,9 @@
  * @package SC\DUPX\Log
  */
 
-namespace gamb-duplica-wp\Installer\Utils\Log;
+namespace GambDuplicaWP\Installer\Utils\Log;
 
-use gamb-duplica-wp\Installer\Core\Bootstrap;
+use GambDuplicaWP\Installer\Core\Bootstrap;
 
 class LogHandler
 {

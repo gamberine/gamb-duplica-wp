@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\PageAction;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\PageAction;
 
 defined("ABSPATH") or die("");
 
@@ -65,7 +65,7 @@ $resetSettingsDialog->initConfirm();
         // which: 0=installer, 1=archive, 2=sql file, 3=log
         DupPro.Pack.DownloadTraceLog = function() {
             var actionLocation = ajaxurl + '?action=gamb-duplica-wp_pro_get_trace_log&nonce=' 
-            + '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_get_trace_log')); ?>';
+            + '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_get_trace_log')); ?>';
             location.href = actionLocation;
         };
 

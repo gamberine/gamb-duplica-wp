@@ -10,9 +10,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Math\BigInteger\Engines\GMP;
+namespace VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\GMP;
 
-use VendorDuplicator\phpseclib3\Math\BigInteger\Engines\GMP;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\GMP;
 /**
  * GMP Modular Exponentiation Engine
  *

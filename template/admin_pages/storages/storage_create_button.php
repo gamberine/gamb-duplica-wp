@@ -7,8 +7,8 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Core\CapMng;
 
 defined("ABSPATH") or die("");
 

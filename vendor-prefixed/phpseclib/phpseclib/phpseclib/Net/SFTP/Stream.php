@@ -12,11 +12,11 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Net\SFTP;
+namespace VendorGambDuplicaWP\phpseclib3\Net\SFTP;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\PrivateKey;
-use VendorDuplicator\phpseclib3\Net\SFTP;
-use VendorDuplicator\phpseclib3\Net\SSH2;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Net\SFTP;
+use VendorGambDuplicaWP\phpseclib3\Net\SSH2;
 /**
  * SFTP Stream Wrapper
  *

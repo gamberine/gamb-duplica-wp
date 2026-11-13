@@ -1,10 +1,10 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\OneDriveAddon;
+namespace GambDuplicaWP\Addons\OneDriveAddon;
 
-use gamb-duplica-wp\Addons\OneDriveAddon\Models\OneDriveStorage;
-use gamb-duplica-wp\Core\Addons\AbstractAddonCore;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Addons\OneDriveAddon\Models\OneDriveStorage;
+use GambDuplicaWP\Core\Addons\AbstractAddonCore;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 class OneDriveAddon extends AbstractAddonCore
 {

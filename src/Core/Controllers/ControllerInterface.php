@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Controllers;
+namespace GambDuplicaWP\Core\Controllers;
 
 interface ControllerInterface
 {

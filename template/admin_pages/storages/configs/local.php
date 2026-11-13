@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Models\Storages\Local\LocalStorage;
+use GambDuplicaWP\Models\Storages\Local\LocalStorage;
 
 defined("ABSPATH") or die("");
 
@@ -31,7 +31,7 @@ $tplMng->render('admin_pages/storages/parts/provider_head');
 ?>
 <tr valign="top">
     <th scope="row">
-        <?php $home_path = gamb-duplica-wp_pro_get_home_path(); ?>
+        <?php $home_path = GambDuplicaWP_pro_get_home_path(); ?>
         <label onclick="jQuery('#_local_storage_folder').val('<?php echo esc_js($home_path); ?>')">
         <?php esc_html_e("Storage Folder", 'gamb-duplica-wp'); ?>
         </label>
@@ -129,7 +129,7 @@ $tplMng->render('admin_pages/storages/parts/provider_head');
             requirementType: 'string',
             validateString: function(value) {
                 <?php
-                $home_path             = gamb-duplica-wp_pro_get_home_path();
+                $home_path             = GambDuplicaWP_pro_get_home_path();
                 $wp_upload_dir         = wp_upload_dir();
                 $wp_upload_dir_basedir = str_replace('\\', '/', $wp_upload_dir['basedir']);
                 ?>

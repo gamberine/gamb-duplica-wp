@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser;
+namespace VendorGambDuplicaWP\Aws\Api\Parser;
 
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 /**
  * @internal Implements REST-XML parsing (e.g., S3, CloudFront, etc...)
  */

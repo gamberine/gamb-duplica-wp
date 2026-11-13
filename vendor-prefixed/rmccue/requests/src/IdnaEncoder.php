@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * IDNA URL encoder
  *
@@ -27,7 +27,7 @@ class IdnaEncoder
     /**
      * Maximum length of a IDNA URL in ASCII.
      *
-     * @see \VendorDuplicator\WpOrg\Requests\IdnaEncoder::to_ascii()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\IdnaEncoder::to_ascii()
      *
      * @since 2.0.0
      *
@@ -53,7 +53,7 @@ class IdnaEncoder
      *
      * @param string|Stringable $hostname Hostname
      * @return string Punycode-encoded hostname
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string or a stringable object.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string or a stringable object.
      */
     public static function encode($hostname)
     {
@@ -72,10 +72,10 @@ class IdnaEncoder
      * @param string $text ASCII or UTF-8 string (max length 64 characters)
      * @return string ASCII string
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception Provided string longer than 64 ASCII characters (`idna.provided_too_long`)
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception Prepared string longer than 64 ASCII characters (`idna.prepared_too_long`)
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception Provided string already begins with xn-- (`idna.provided_is_prefixed`)
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception Encoded string longer than 64 ASCII characters (`idna.encoded_too_long`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception Provided string longer than 64 ASCII characters (`idna.provided_too_long`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception Prepared string longer than 64 ASCII characters (`idna.prepared_too_long`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception Provided string already begins with xn-- (`idna.provided_is_prefixed`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception Encoded string longer than 64 ASCII characters (`idna.encoded_too_long`)
      */
     public static function to_ascii($text)
     {
@@ -149,7 +149,7 @@ class IdnaEncoder
      * @param string $input Text to convert.
      * @return array Unicode code points
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception Invalid UTF-8 codepoint (`idna.invalidcodepoint`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception Invalid UTF-8 codepoint (`idna.invalidcodepoint`)
      */
     protected static function utf8_to_codepoints($input)
     {
@@ -213,7 +213,7 @@ class IdnaEncoder
      * @param string $input UTF-8 encoded string to encode
      * @return string Punycode-encoded string
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On character outside of the domain (never happens with Punycode) (`idna.character_outside_domain`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On character outside of the domain (never happens with Punycode) (`idna.character_outside_domain`)
      */
     public static function punycode_encode($input)
     {
@@ -324,7 +324,7 @@ class IdnaEncoder
      * @param int $digit Digit in the range 0-35
      * @return string Single character corresponding to digit
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On invalid digit (`idna.invalid_digit`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On invalid digit (`idna.invalid_digit`)
      */
     protected static function digit_to_char($digit)
     {

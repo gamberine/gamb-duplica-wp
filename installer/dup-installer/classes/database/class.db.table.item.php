@@ -12,12 +12,12 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescMultisite;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescUsers;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescMultisite;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescUsers;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 
 /**
  * This class manages the installer table, all table management refers to the table name in the original site.
@@ -408,7 +408,7 @@ class DUPX_DB_Table_item
      */
     protected function restoreBackupCheck()
     {
-        if (!$this->havePrefix || $this->tableWithoutPrefix != DUPX_DB_Functions::TABLE_NAME_gamb-duplica-wp_PACKAGES) {
+        if (!$this->havePrefix || $this->tableWithoutPrefix != DUPX_DB_Functions::TABLE_NAME_GambDuplicaWP_PACKAGES) {
             return true;
         }
 

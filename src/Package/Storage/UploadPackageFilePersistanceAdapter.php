@@ -5,12 +5,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Storage;
+namespace GambDuplicaWP\Package\Storage;
 
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Upload_Info;
-use gamb-duplica-wp\Libs\Chunking\Persistance\PersistanceAdapterInterface;
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use GambDuplicaWP\Libs\Chunking\Persistance\PersistanceAdapterInterface;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
 
 class UploadPackageFilePersistanceAdapter implements PersistanceAdapterInterface
 {

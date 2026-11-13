@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Email;
+namespace GambDuplicaWP\Utils\Email;
 
 class EmailHelper
 {

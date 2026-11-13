@@ -6,11 +6,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive\Info;
+namespace GambDuplicaWP\Libs\DupArchive\Info;
 
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveDirectoryHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveFileHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveDirectoryHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveFileHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
 
 class DupArchiveInfo
 {

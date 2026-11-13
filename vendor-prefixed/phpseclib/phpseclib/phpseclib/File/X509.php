@@ -21,22 +21,22 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\File;
+namespace VendorGambDuplicaWP\phpseclib3\File;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\PrivateKey;
-use VendorDuplicator\phpseclib3\Crypt\Common\PublicKey;
-use VendorDuplicator\phpseclib3\Crypt\DSA;
-use VendorDuplicator\phpseclib3\Crypt\EC;
-use VendorDuplicator\phpseclib3\Crypt\Hash;
-use VendorDuplicator\phpseclib3\Crypt\PublicKeyLoader;
-use VendorDuplicator\phpseclib3\Crypt\Random;
-use VendorDuplicator\phpseclib3\Crypt\RSA;
-use VendorDuplicator\phpseclib3\Crypt\RSA\Formats\Keys\PSS;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\File\ASN1\Element;
-use VendorDuplicator\phpseclib3\File\ASN1\Maps;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DSA;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Hash;
+use VendorGambDuplicaWP\phpseclib3\Crypt\PublicKeyLoader;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Random;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA\Formats\Keys\PSS;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1\Element;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1\Maps;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Pure-PHP X.509 Parser
  *
@@ -54,37 +54,37 @@ class X509
     /**
      * Return internal array representation
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::getDN()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::getDN()
      */
     const DN_ARRAY = 0;
     /**
      * Return string
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::getDN()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::getDN()
      */
     const DN_STRING = 1;
     /**
      * Return ASN.1 name string
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::getDN()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::getDN()
      */
     const DN_ASN1 = 2;
     /**
      * Return OpenSSL compatible array
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::getDN()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::getDN()
      */
     const DN_OPENSSL = 3;
     /**
      * Return canonical ASN.1 RDNs string
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::getDN()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::getDN()
      */
     const DN_CANON = 4;
     /**
      * Return name hash for file indexing
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::getDN()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::getDN()
      */
     const DN_HASH = 5;
     /**
@@ -92,25 +92,25 @@ class X509
      *
      * ie. a base64-encoded PEM with a header and a footer
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveX509()
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveCSR()
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveCRL()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveX509()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveCSR()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveCRL()
      */
     const FORMAT_PEM = 0;
     /**
      * Save as DER
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveX509()
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveCSR()
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveCRL()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveX509()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveCSR()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveCRL()
      */
     const FORMAT_DER = 1;
     /**
      * Save as a SPKAC
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveX509()
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveCSR()
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveCRL()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveX509()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveCSR()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveCRL()
      *
      * Only works on CSRs. Not currently supported.
      */
@@ -120,9 +120,9 @@ class X509
      *
      * Used only by the load*() functions
      *
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveX509()
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveCSR()
-     * @see \VendorDuplicator\phpseclib3\File\X509::saveCRL()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveX509()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveCSR()
+     * @see \VendorGambDuplicaWP\phpseclib3\File\X509::saveCRL()
      */
     const FORMAT_AUTO_DETECT = 3;
     /**
@@ -2345,7 +2345,7 @@ class X509
         }
         $altName = [];
         if (isset($subject->domains) && count($subject->domains)) {
-            $altName = array_map(['\VendorDuplicator\\phpseclib3\File\X509', 'dnsName'], $subject->domains);
+            $altName = array_map(['\VendorGambDuplicaWP\\phpseclib3\File\X509', 'dnsName'], $subject->domains);
         }
         if (isset($subject->ipAddresses) && count($subject->ipAddresses)) {
             // should an IP address appear as the CN if no domain name is specified? idk

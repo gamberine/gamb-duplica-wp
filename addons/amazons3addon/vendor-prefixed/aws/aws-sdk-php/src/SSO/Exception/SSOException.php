@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\SSO\Exception;
+namespace VendorGambDuplicaWP\Aws\SSO\Exception;
 
-use VendorDuplicator\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
 /**
  * Represents an error interacting with the **AWS Single Sign-On** service.
  */

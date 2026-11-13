@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Psr\Http\Client;
+namespace VendorGambDuplicaWP\Psr\Http\Client;
 
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Thrown when the request cannot be completed because of network issues.
  *

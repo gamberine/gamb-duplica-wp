@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Core\Controllers\SubMenuItem;
+use GambDuplicaWP\Core\Controllers\SubMenuItem;
 
 defined("ABSPATH") or die("");
 

@@ -12,7 +12,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 
 class DUPX_Validation_test_db_excluded extends DUPX_Validation_abstract_item
 {

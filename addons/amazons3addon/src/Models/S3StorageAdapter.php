@@ -6,15 +6,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\AmazonS3Addon\Models;
+namespace GambDuplicaWP\Addons\AmazonS3Addon\Models;
 
 use Exception;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use Vendorgamb-duplica-wp\Aws\S3\S3Client;
-use Vendorgamb-duplica-wp\GuzzleHttp\Client;
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use Vendorgamb-duplica-wp\Aws\Handler\GuzzleV6\GuzzleHandler;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use VendorGambDuplicaWP\Aws\S3\S3Client;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use VendorGambDuplicaWP\Aws\Handler\GuzzleV6\GuzzleHandler;
 
 /**
  * Description of cls-ftp-chunker

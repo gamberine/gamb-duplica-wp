@@ -8,8 +8,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Addons\DropboxAddon\Models\DropboxStorage;
-use gamb-duplica-wp\Core\Views\TplMng;
+use GambDuplicaWP\Addons\DropboxAddon\Models\DropboxStorage;
+use GambDuplicaWP\Core\Views\TplMng;
 
 /**
  * Variables

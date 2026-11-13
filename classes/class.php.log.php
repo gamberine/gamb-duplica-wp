@@ -2,8 +2,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Libs\Snap\SnapOS;
-use gamb-duplica-wp\Libs\Shell\Shell;
+use GambDuplicaWP\Libs\Snap\SnapOS;
+use GambDuplicaWP\Libs\Shell\Shell;
 
 class GAMB_DUPLICA_WP_PHP_Log
 {
@@ -302,10 +302,10 @@ class GAMB_DUPLICA_WP_PHP_Log
         $possible_places    = [
 
             // Look into root
-            gamb-duplica-wp_pro_get_home_path(),
+            GambDuplicaWP_pro_get_home_path(),
 
             // Look out of root
-            dirname(gamb-duplica-wp_pro_get_home_path()),
+            dirname(GambDuplicaWP_pro_get_home_path()),
 
             //Other places
             '/etc/httpd/logs',
@@ -316,10 +316,10 @@ class GAMB_DUPLICA_WP_PHP_Log
             '/var/www',
 
             // Some wierd cases
-            gamb-duplica-wp_pro_get_home_path() . '/logs',
-            gamb-duplica-wp_pro_get_home_path() . '/log',
-            dirname(gamb-duplica-wp_pro_get_home_path()) . '/logs',
-            dirname(gamb-duplica-wp_pro_get_home_path()) . '/log',
+            GambDuplicaWP_pro_get_home_path() . '/logs',
+            GambDuplicaWP_pro_get_home_path() . '/log',
+            dirname(GambDuplicaWP_pro_get_home_path()) . '/logs',
+            dirname(GambDuplicaWP_pro_get_home_path()) . '/log',
             '/etc/httpd/log',
             '/var/logs/apache2',
             '/var/logs/httpd',

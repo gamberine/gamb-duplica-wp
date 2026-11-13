@@ -5,11 +5,11 @@
  *
  * @package Requests\EventDispatcher
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\HookManager;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\HookManager;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * Handles adding and dispatching events
  *
@@ -29,9 +29,9 @@ class Hooks implements HookManager
      * @param string $hook Hook name
      * @param callable $callback Function/method to call on event
      * @param int $priority Priority number. <0 is executed earlier, >0 is executed later
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $hook argument is not a string.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $callback argument is not callable.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $priority argument is not an integer.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $hook argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $callback argument is not callable.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $priority argument is not an integer.
      */
     public function register($hook, $callback, $priority = 0)
     {
@@ -57,8 +57,8 @@ class Hooks implements HookManager
      * @param string $hook Hook name
      * @param array $parameters Parameters to pass to callbacks
      * @return boolean Successfulness
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $hook argument is not a string.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $parameters argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $hook argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $parameters argument is not an array.
      */
     public function dispatch($hook, $parameters = [])
     {

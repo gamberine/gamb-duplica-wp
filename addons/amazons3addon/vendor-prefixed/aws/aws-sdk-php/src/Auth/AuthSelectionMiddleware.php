@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Auth;
+namespace VendorGambDuplicaWP\Aws\Auth;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\CommandInterface;
 use Closure;
-use VendorDuplicator\GuzzleHttp\Promise\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\Promise;
 /**
  * Handles auth scheme resolution. If a service models and auth scheme using
  * the `auth` trait and the operation or metadata levels, this middleware will

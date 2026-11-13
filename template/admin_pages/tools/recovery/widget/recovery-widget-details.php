@@ -8,7 +8,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Controllers\RecoveryController;
+use GambDuplicaWP\Controllers\RecoveryController;
 
 /**
  * Variables

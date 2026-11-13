@@ -15,35 +15,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google;
+namespace VendorGambDuplicaWP\Google;
 
 use BadMethodCallException;
 use DomainException;
-use VendorDuplicator\Google\AccessToken\Revoke;
-use VendorDuplicator\Google\AccessToken\Verify;
-use VendorDuplicator\Google\Auth\ApplicationDefaultCredentials;
-use VendorDuplicator\Google\Auth\Cache\MemoryCacheItemPool;
-use VendorDuplicator\Google\Auth\Credentials\ServiceAccountCredentials;
-use VendorDuplicator\Google\Auth\Credentials\UserRefreshCredentials;
-use VendorDuplicator\Google\Auth\CredentialsLoader;
-use VendorDuplicator\Google\Auth\FetchAuthTokenCache;
-use VendorDuplicator\Google\Auth\GetUniverseDomainInterface;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\Google\Auth\OAuth2;
-use VendorDuplicator\Google\AuthHandler\AuthHandlerFactory;
-use VendorDuplicator\Google\Http\REST;
-use VendorDuplicator\GuzzleHttp\Client as GuzzleClient;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\GuzzleHttp\Ring\Client\StreamHandler;
+use VendorGambDuplicaWP\Google\AccessToken\Revoke;
+use VendorGambDuplicaWP\Google\AccessToken\Verify;
+use VendorGambDuplicaWP\Google\Auth\ApplicationDefaultCredentials;
+use VendorGambDuplicaWP\Google\Auth\Cache\MemoryCacheItemPool;
+use VendorGambDuplicaWP\Google\Auth\Credentials\ServiceAccountCredentials;
+use VendorGambDuplicaWP\Google\Auth\Credentials\UserRefreshCredentials;
+use VendorGambDuplicaWP\Google\Auth\CredentialsLoader;
+use VendorGambDuplicaWP\Google\Auth\FetchAuthTokenCache;
+use VendorGambDuplicaWP\Google\Auth\GetUniverseDomainInterface;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\Google\Auth\OAuth2;
+use VendorGambDuplicaWP\Google\AuthHandler\AuthHandlerFactory;
+use VendorGambDuplicaWP\Google\Http\REST;
+use VendorGambDuplicaWP\GuzzleHttp\Client as GuzzleClient;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Ring\Client\StreamHandler;
 use InvalidArgumentException;
 use LogicException;
-use VendorDuplicator\Monolog\Handler\StreamHandler as MonologStreamHandler;
-use VendorDuplicator\Monolog\Handler\SyslogHandler as MonologSyslogHandler;
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Log\LoggerInterface;
+use VendorGambDuplicaWP\Monolog\Handler\StreamHandler as MonologStreamHandler;
+use VendorGambDuplicaWP\Monolog\Handler\SyslogHandler as MonologSyslogHandler;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Log\LoggerInterface;
 use UnexpectedValueException;
 /**
  * The Google API Client
@@ -748,7 +748,7 @@ class Client
      * @template T
      * @param RequestInterface $request
      * @param class-string<T>|false|null $expectedClass
-     * @throws \VendorDuplicator\Google\Exception
+     * @throws \VendorGambDuplicaWP\Google\Exception
      * @return mixed|T|ResponseInterface
      */
     public function execute(RequestInterface $request, $expectedClass = null)
@@ -780,7 +780,7 @@ class Client
      */
     public function isAppEngine()
     {
-        return isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'], 'VendorDuplicator\\Google App Engine') !== \false;
+        return isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'], 'VendorGambDuplicaWP\\Google App Engine') !== \false;
     }
     public function setConfig($name, $value)
     {
@@ -795,7 +795,7 @@ class Client
      * alias for setAuthConfig
      *
      * @param string $file the configuration file
-     * @throws \VendorDuplicator\Google\Exception
+     * @throws \VendorGambDuplicaWP\Google\Exception
      * @deprecated
      */
     public function setAuthConfigFile($file)
@@ -808,7 +808,7 @@ class Client
      * the "Download JSON" button on in the Google Developer
      * Console.
      * @param string|array $config the configuration json
-     * @throws \VendorDuplicator\Google\Exception
+     * @throws \VendorGambDuplicaWP\Google\Exception
      */
     public function setAuthConfig($config)
     {
@@ -981,9 +981,9 @@ class Client
     protected function createDefaultHttpClient()
     {
         $guzzleVersion = null;
-        if (defined('VendorDuplicator\GuzzleHttp\ClientInterface::MAJOR_VERSION')) {
+        if (defined('VendorGambDuplicaWP\GuzzleHttp\ClientInterface::MAJOR_VERSION')) {
             $guzzleVersion = ClientInterface::MAJOR_VERSION;
-        } elseif (defined('VendorDuplicator\GuzzleHttp\ClientInterface::VERSION')) {
+        } elseif (defined('VendorGambDuplicaWP\GuzzleHttp\ClientInterface::VERSION')) {
             $guzzleVersion = (int) substr(ClientInterface::VERSION, 0, 1);
         }
         if (5 === $guzzleVersion) {

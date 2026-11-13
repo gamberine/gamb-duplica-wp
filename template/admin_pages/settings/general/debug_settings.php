@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Utils\Logging\TraceLogMng;
+use GambDuplicaWP\Utils\Logging\TraceLogMng;
 
 defined("ABSPATH") or die("");
 

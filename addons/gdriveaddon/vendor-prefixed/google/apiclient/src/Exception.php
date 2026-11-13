@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google;
+namespace VendorGambDuplicaWP\Google;
 
 use Exception as BaseException;
 class Exception extends BaseException

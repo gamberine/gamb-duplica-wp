@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Views\AdminNotices;
 
 defined("ABSPATH") or die("");
 
@@ -29,7 +29,7 @@ defined("ABSPATH") or die("");
         );
     }
 
-    if (gamb-duplica-wp_PRO_DEBUG_TPL_OUTPUT_INVALID && isset($tplData['invalidOutput']) && strlen($tplData['invalidOutput']) > 0) { // @phpstan-ignore-line
+    if (GambDuplicaWP_PRO_DEBUG_TPL_OUTPUT_INVALID && isset($tplData['invalidOutput']) && strlen($tplData['invalidOutput']) > 0) { // @phpstan-ignore-line
         AdminNotices::displayGeneralAdminNotice(
             '<b>Invalid output on actions execution</b><hr>' . $tplData['invalidOutput'],
             AdminNotices::GEN_ERROR_NOTICE,
@@ -47,7 +47,7 @@ defined("ABSPATH") or die("");
     ?>
 </div>
 <?php
-if (gamb-duplica-wp_PRO_DEBUG_TPL_DATA) { // @phpstan-ignore-line
+if (GambDuplicaWP_PRO_DEBUG_TPL_DATA) { // @phpstan-ignore-line
     ?>
     <pre style="font-size: 12px; max-height: 300px; overflow: auto; border: 1px solid black; padding: 10px;"><?php
         var_dump($tplData);

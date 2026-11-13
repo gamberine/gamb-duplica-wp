@@ -9,10 +9,10 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Processor;
+namespace VendorGambDuplicaWP\Monolog\Processor;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Psr\Log\LogLevel;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Psr\Log\LogLevel;
 /**
  * Injects line/file:class/function where the log message came from
  *
@@ -46,7 +46,7 @@ class IntrospectionProcessor implements ProcessorInterface
     public function __construct($level = Logger::DEBUG, array $skipClassesPartials = [], int $skipStackFramesCount = 0)
     {
         $this->level = Logger::toMonologLevel($level);
-        $this->skipClassesPartials = array_merge(['VendorDuplicator\\Monolog\\'], $skipClassesPartials);
+        $this->skipClassesPartials = array_merge(['VendorGambDuplicaWP\\Monolog\\'], $skipClassesPartials);
         $this->skipStackFramesCount = $skipStackFramesCount;
     }
     /**

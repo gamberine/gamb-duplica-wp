@@ -1,16 +1,16 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Arn\ArnParser;
-use VendorDuplicator\Aws\Arn\ObjectLambdaAccessPointArn;
-use VendorDuplicator\Aws\ClientResolver;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Endpoint\EndpointProvider;
-use VendorDuplicator\Aws\Endpoint\PartitionEndpointProvider;
-use VendorDuplicator\GuzzleHttp\Exception\InvalidArgumentException;
-use VendorDuplicator\GuzzleHttp\Psr7\Uri;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Arn\ArnParser;
+use VendorGambDuplicaWP\Aws\Arn\ObjectLambdaAccessPointArn;
+use VendorGambDuplicaWP\Aws\ClientResolver;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Endpoint\EndpointProvider;
+use VendorGambDuplicaWP\Aws\Endpoint\PartitionEndpointProvider;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\InvalidArgumentException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Uri;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Used to update the URL used for S3 requests to support:
  * S3 Accelerate, S3 DualStack or Both. It will build to
@@ -144,8 +144,8 @@ class S3EndpointMiddleware
     {
         if ($command->getName() == 'WriteGetObjectResponse') {
             $dnsSuffix = $this->endpointProvider->getPartition($this->region, 's3')->getDnsSuffix();
-            $fips = \VendorDuplicator\Aws\is_fips_pseudo_region($this->region) ? "-fips" : "";
-            $region = \VendorDuplicator\Aws\strip_fips_pseudo_regions($this->region);
+            $fips = \VendorGambDuplicaWP\Aws\is_fips_pseudo_region($this->region) ? "-fips" : "";
+            $region = \VendorGambDuplicaWP\Aws\strip_fips_pseudo_regions($this->region);
             $host = "{$command['RequestRoute']}.s3-object-lambda{$fips}.{$region}.{$dnsSuffix}";
             $uri = $request->getUri();
             $request = $request->withUri($uri->withHost($host)->withPath($this->getBucketlessPath($uri->getPath(), $command)));

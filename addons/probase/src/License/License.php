@@ -6,15 +6,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\ProBase\License;
+namespace GambDuplicaWP\Addons\ProBase\License;
 
-use gamb-duplica-wp\Addons\ProBase\Vendor\EDD\EDD_SL_Plugin_Updater;
+use GambDuplicaWP\Addons\ProBase\Vendor\EDD\EDD_SL_Plugin_Updater;
 use GAMB_DUPLICA_WP_Schedule_Entity;
-use gamb-duplica-wp\Addons\ProBase\DrmHandler;
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Installer\Addons\ProBase\AbstractLicense;
-use gamb-duplica-wp\Utils\ExpireOptions;
+use GambDuplicaWP\Addons\ProBase\DrmHandler;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Installer\Addons\ProBase\AbstractLicense;
+use GambDuplicaWP\Utils\ExpireOptions;
 
 final class License extends AbstractLicense
 {
@@ -204,7 +204,7 @@ final class License extends AbstractLicense
         }
 
         $dpro_edd_opts = [
-            'version'     => gamb-duplica-wp_PRO_VERSION,
+            'version'     => GambDuplicaWP_PRO_VERSION,
             'license'     => self::getLicenseKey(),
             'item_name'   => self::EDD_DUPPRO_ITEM_NAME,
             'author'      => 'Snap Creek Software',
@@ -213,7 +213,7 @@ final class License extends AbstractLicense
 
         self::$edd_updater = new EDD_SL_Plugin_Updater(
             self::EDD_DUPPRO_STORE_URL,
-            gamb-duplica-wp____FILE,
+            GambDuplicaWP____FILE,
             $dpro_edd_opts
         );
     }
@@ -239,7 +239,7 @@ final class License extends AbstractLicense
      */
     public static function getUpsellURL()
     {
-        return gamb-duplica-wp_PRO_BLOG_URL . 'my-account/';
+        return GambDuplicaWP_PRO_BLOG_URL . 'my-account/';
     }
 
     /**
@@ -253,9 +253,9 @@ final class License extends AbstractLicense
             !CapMng::can(CapMng::CAP_LICENSE, false) ||
             empty(self::getLicenseKey())
         ) {
-            return gamb-duplica-wp_PRO_BLOG_URL . 'my-account/';
+            return GambDuplicaWP_PRO_BLOG_URL . 'my-account/';
         } else {
-            return gamb-duplica-wp_PRO_BLOG_URL . 'checkout?edd_license_key=' . self::getLicenseKey();
+            return GambDuplicaWP_PRO_BLOG_URL . 'checkout?edd_license_key=' . self::getLicenseKey();
         }
     }
 
@@ -275,7 +275,7 @@ final class License extends AbstractLicense
                     '%1$s and %2$s represents the opening and closing HTML tags for an anchor or link',
                     'gamb-duplica-wp'
                 ),
-                '<a href="' . gamb-duplica-wp_PRO_BLOG_URL . 'my-account/support/" target="_blank">',
+                '<a href="' . GambDuplicaWP_PRO_BLOG_URL . 'my-account/support/" target="_blank">',
                 '</a>'
             );
             $result .= '<br>';

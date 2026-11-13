@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Signature;
+namespace VendorGambDuplicaWP\Aws\Signature;
 
-use VendorDuplicator\Aws\Credentials\Credentials;
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Credentials\Credentials;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 class S3ExpressSignature extends S3SignatureV4
 {
     public function signRequest(RequestInterface $request, CredentialsInterface $credentials, $signingService = 's3express')

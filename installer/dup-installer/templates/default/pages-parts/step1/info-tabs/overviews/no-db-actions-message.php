@@ -5,7 +5,7 @@
  * @package templates/default
  */
 
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 
 $overwriteMode = (InstState::getInstance()->getMode() === InstState::MODE_OVR_INSTALL);
 ?>

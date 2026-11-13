@@ -9,8 +9,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Utils\Email\EmailHelper;
-use gamb-duplica-wp\Utils\Email\EmailSummary;
+use GambDuplicaWP\Utils\Email\EmailHelper;
+use GambDuplicaWP\Utils\Email\EmailSummary;
 
 /**
  * Variables
@@ -65,7 +65,7 @@ if (count($tplData['schedules']) > 0 && count($tplData['storages']) > 0) {
                         <tr <?php EmailHelper::printStyle('tr'); ?>>
                             <td <?php EmailHelper::printStyle('td logo txt-center'); ?>>
                                <img 
-                                    src="<?php echo esc_url(gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/img/email-logo.png'); ?>"
+                                    src="<?php echo esc_url(GambDuplicaWP_PRO_PLUGIN_URL . 'assets/img/email-logo.png'); ?>"
                                     alt="logo"
                                     <?php EmailHelper::printStyle('img'); ?>
                                 > 
@@ -243,7 +243,7 @@ if (count($tplData['schedules']) > 0 && count($tplData['storages']) > 0) {
                                         '%1$s and %2$s are opening and closing link tags to the documentation.',
                                         'gamb-duplica-wp'
                                     ),
-                                    '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-disable-email-summaries/') .
+                                    '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-disable-email-summaries/') .
                                     '" style="' . esc_attr(EmailHelper::getStyle('footer-link')) . '">',
                                     '</a>'
                                 );

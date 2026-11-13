@@ -5,7 +5,7 @@
  *
  * @package Requests\Utilities
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
 /**
  * Capability interface declaring the known capabilities.

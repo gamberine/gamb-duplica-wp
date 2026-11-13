@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 // Don't redefine the functions if included multiple times.
-if (!\function_exists('VendorDuplicator\GuzzleHttp\describe_type')) {
+if (!\function_exists('VendorGambDuplicaWP\GuzzleHttp\describe_type')) {
     require __DIR__ . '/functions.php';
 }

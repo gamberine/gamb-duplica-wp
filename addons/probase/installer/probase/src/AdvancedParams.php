@@ -10,11 +10,11 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3
  */
 
-namespace gamb-duplica-wp\Installer\Addons\ProBase;
+namespace GambDuplicaWP\Installer\Addons\ProBase;
 
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\DescriptorInterface;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamForm;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\DescriptorInterface;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamForm;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 use DUPX_U;
 
 class AdvancedParams implements DescriptorInterface

@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Retry;
+namespace VendorGambDuplicaWP\Aws\Retry;
 
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\ResultInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\ResultInterface;
 trait RetryHelperTrait
 {
     private function addRetryHeader($request, $retries, $delayBy)

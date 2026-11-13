@@ -10,19 +10,19 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys\JWK as Progenitor;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Ed25519;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\secp256k1;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\secp256r1;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\secp384r1;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\secp521r1;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedCurveException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys\JWK as Progenitor;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Ed25519;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\secp256k1;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\secp256r1;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\secp384r1;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\secp521r1;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedCurveException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * JWK Formatted EC Handler
  *
@@ -65,7 +65,7 @@ abstract class JWK extends Progenitor
             default:
                 throw new \Exception('Only EC and OKP JWK keys are supported');
         }
-        $curve = '\VendorDuplicator\\phpseclib3\Crypt\EC\Curves\\' . str_replace('P-', 'nistp', $key->crv);
+        $curve = '\VendorGambDuplicaWP\\phpseclib3\Crypt\EC\Curves\\' . str_replace('P-', 'nistp', $key->crv);
         $curve = new $curve();
         if ($curve instanceof TwistedEdwardsCurve) {
             $QA = self::extractPoint(Strings::base64url_decode($key->x), $curve);
@@ -111,7 +111,7 @@ abstract class JWK extends Progenitor
      * Return the array superstructure for an EC public key
      *
      * @param BaseCurve $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @return array
      */
     private static function savePublicKeyHelper(BaseCurve $curve, array $publicKey)
@@ -125,7 +125,7 @@ abstract class JWK extends Progenitor
      * Convert an EC public key to the appropriate format
      *
      * @param BaseCurve $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @param array $options optional
      * @return string
      */
@@ -139,7 +139,7 @@ abstract class JWK extends Progenitor
      *
      * @param BigInteger $privateKey
      * @param Ed25519 $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @param string $secret optional
      * @param string $password optional
      * @param array $options optional

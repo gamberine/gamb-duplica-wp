@@ -9,21 +9,21 @@
  *
  * @package Requests
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Auth\Basic;
-use VendorDuplicator\WpOrg\Requests\Capability;
-use VendorDuplicator\WpOrg\Requests\Cookie\Jar;
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Hooks;
-use VendorDuplicator\WpOrg\Requests\IdnaEncoder;
-use VendorDuplicator\WpOrg\Requests\Iri;
-use VendorDuplicator\WpOrg\Requests\Proxy\Http;
-use VendorDuplicator\WpOrg\Requests\Response;
-use VendorDuplicator\WpOrg\Requests\Transport\Curl;
-use VendorDuplicator\WpOrg\Requests\Transport\Fsockopen;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Auth\Basic;
+use VendorGambDuplicaWP\WpOrg\Requests\Capability;
+use VendorGambDuplicaWP\WpOrg\Requests\Cookie\Jar;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Hooks;
+use VendorGambDuplicaWP\WpOrg\Requests\IdnaEncoder;
+use VendorGambDuplicaWP\WpOrg\Requests\Iri;
+use VendorGambDuplicaWP\WpOrg\Requests\Proxy\Http;
+use VendorGambDuplicaWP\WpOrg\Requests\Response;
+use VendorGambDuplicaWP\WpOrg\Requests\Transport\Curl;
+use VendorGambDuplicaWP\WpOrg\Requests\Transport\Fsockopen;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * Requests for PHP
  *
@@ -93,8 +93,8 @@ class Requests
     /**
      * Option defaults.
      *
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::get_default_options()
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::request() for values returned by this method
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::get_default_options()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::request() for values returned by this method
      *
      * @since 2.0.0
      *
@@ -132,8 +132,8 @@ class Requests
     /**
      * Default certificate path.
      *
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::get_certificate_path()
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::set_certificate_path()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::get_certificate_path()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::set_certificate_path()
      *
      * @var string
      */
@@ -221,8 +221,8 @@ class Requests
      * Get a working transport.
      *
      * @param array<string, bool> $capabilities Optional. Associative array of capabilities to test against, i.e. `['<capability>' => true]`.
-     * @return \VendorDuplicator\WpOrg\Requests\Transport
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception If no valid transport is found (`notransport`).
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Transport
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception If no valid transport is found (`notransport`).
      */
     protected static function get_transport(array $capabilities = [])
     {
@@ -249,11 +249,11 @@ class Requests
         return self::get_transport_class($capabilities) !== '';
     }
     /**#@+
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::request()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::request()
      * @param string $url
      * @param array $headers
      * @param array $options
-     * @return \VendorDuplicator\WpOrg\Requests\Response
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Response
      */
     /**
      * Send a GET request
@@ -285,12 +285,12 @@ class Requests
     }
     /**#@-*/
     /**#@+
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::request()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::request()
      * @param string $url
      * @param array $headers
      * @param array $data
      * @param array $options
-     * @return \VendorDuplicator\WpOrg\Requests\Response
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Response
      */
     /**
      * Send a POST request
@@ -382,12 +382,12 @@ class Requests
      * @param array|null $data Data to send either as a query string for GET/HEAD requests, or in the body for POST requests
      * @param string $type HTTP request type (use Requests constants)
      * @param array $options Options for the request (see description for more information)
-     * @return \VendorDuplicator\WpOrg\Requests\Response
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Response
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string or Stringable.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $type argument is not a string.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On invalid URLs (`nonhttp`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string or Stringable.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $type argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On invalid URLs (`nonhttp`)
      */
     public static function request($url, $headers = [], $data = [], $type = self::GET, $options = [])
     {
@@ -461,8 +461,8 @@ class Requests
      * @param array $options Global and default options (see {@see \WpOrg\Requests\Requests::request()})
      * @return array Responses (either \WpOrg\Requests\Response or a \WpOrg\Requests\Exception object)
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $requests argument is not an array or iterable object with array access.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $requests argument is not an array or iterable object with array access.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
      */
     public static function request_multiple($requests, $options = [])
     {
@@ -531,7 +531,7 @@ class Requests
     /**
      * Get the default options
      *
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::request() for values returned by this method
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::request() for values returned by this method
      * @param boolean $multirequest Is this a multirequest?
      * @return array Default option values
      */
@@ -558,7 +558,7 @@ class Requests
      *
      * @param string|Stringable|bool $path Certificate path, pointing to a PEM file.
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string, Stringable or boolean.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string, Stringable or boolean.
      */
     public static function set_certificate_path($path)
     {
@@ -579,7 +579,7 @@ class Requests
      * @param array $options Options for the request
      * @return void
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception When the $url is not an http(s) URL.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception When the $url is not an http(s) URL.
      */
     protected static function set_defaults(&$url, &$headers, &$data, &$type, &$options)
     {
@@ -632,11 +632,11 @@ class Requests
      * @param array $req_headers Original $headers array passed to {@link request()}, in case we need to follow redirects
      * @param array $req_data Original $data array passed to {@link request()}, in case we need to follow redirects
      * @param array $options Original $options array passed to {@link request()}, in case we need to follow redirects
-     * @return \VendorDuplicator\WpOrg\Requests\Response
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Response
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On missing head/body separator (`requests.no_crlf_separator`)
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On missing head/body separator (`noversion`)
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On missing head/body separator (`toomanyredirects`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On missing head/body separator (`requests.no_crlf_separator`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On missing head/body separator (`noversion`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On missing head/body separator (`toomanyredirects`)
      */
     protected static function parse_response($headers, $url, $req_headers, $req_data, $options)
     {
@@ -783,7 +783,7 @@ class Requests
      * @param iterable $dictionary Dictionary of header values
      * @return array List of headers
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not iterable.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not iterable.
      */
     public static function flatten($dictionary)
     {
@@ -805,7 +805,7 @@ class Requests
      * @param string $data Compressed data in one of the above formats
      * @return string Decompressed string
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string.
      */
     public static function decompress($data)
     {
@@ -865,7 +865,7 @@ class Requests
      * @param string $gz_data String to decompress.
      * @return string|bool False on failure.
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string.
      */
     public static function compatible_gzinflate($gz_data)
     {

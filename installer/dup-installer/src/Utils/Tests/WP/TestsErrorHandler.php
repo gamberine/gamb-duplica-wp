@@ -14,7 +14,7 @@
  * @package SC\DUPX\U
  */
 
-namespace gamb-duplica-wp\Installer\Utils\Tests\WP;
+namespace GambDuplicaWP\Installer\Utils\Tests\WP;
 
 use Error;
 use Exception;

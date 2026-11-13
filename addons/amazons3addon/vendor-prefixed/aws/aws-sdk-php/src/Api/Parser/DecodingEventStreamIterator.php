@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser;
+namespace VendorGambDuplicaWP\Aws\Api\Parser;
 
 use Iterator;
-use VendorDuplicator\Aws\Api\DateTimeResult;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
-use VendorDuplicator\Aws\Api\Parser\Exception\ParserException;
+use VendorGambDuplicaWP\Aws\Api\DateTimeResult;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\Api\Parser\Exception\ParserException;
 /**
  * @internal Implements a decoder for a binary encoded event stream that will
  * decode, validate, and provide individual events from the stream.

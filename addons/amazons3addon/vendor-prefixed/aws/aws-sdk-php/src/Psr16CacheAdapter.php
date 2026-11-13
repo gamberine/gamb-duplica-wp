@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Psr\SimpleCache\CacheInterface as SimpleCacheInterface;
+use VendorGambDuplicaWP\Psr\SimpleCache\CacheInterface as SimpleCacheInterface;
 class Psr16CacheAdapter implements CacheInterface
 {
     /** @var SimpleCacheInterface */

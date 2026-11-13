@@ -10,12 +10,12 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\StreamCipher;
-use VendorDuplicator\phpseclib3\Exception\BadDecryptionException;
-use VendorDuplicator\phpseclib3\Exception\InsufficientSetupException;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\StreamCipher;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadDecryptionException;
+use VendorGambDuplicaWP\phpseclib3\Exception\InsufficientSetupException;
 /**
  * Pure-PHP implementation of Salsa20.
  *
@@ -43,11 +43,11 @@ class Salsa20 extends StreamCipher
     protected $key_length = 32;
     // = 256 bits
     /**
-     * @see \VendorDuplicator\phpseclib3\Crypt\Salsa20::crypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Salsa20::crypt()
      */
     const ENCRYPT = 0;
     /**
-     * @see \VendorDuplicator\phpseclib3\Crypt\Salsa20::crypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Salsa20::crypt()
      */
     const DECRYPT = 1;
     /**
@@ -201,7 +201,7 @@ class Salsa20 extends StreamCipher
     /**
      * Encrypts a message.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      * @see self::crypt()
      * @param string $plaintext
      * @return string $ciphertext
@@ -220,7 +220,7 @@ class Salsa20 extends StreamCipher
      * $this->decrypt($this->encrypt($plaintext)) == $this->encrypt($this->encrypt($plaintext)).
      * At least if the continuous buffer is disabled.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
      * @see self::crypt()
      * @param string $ciphertext
      * @return string $plaintext

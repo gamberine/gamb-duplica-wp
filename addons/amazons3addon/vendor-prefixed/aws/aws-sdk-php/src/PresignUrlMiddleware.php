@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Signature\SignatureV4;
-use VendorDuplicator\Aws\Endpoint\EndpointProvider;
-use VendorDuplicator\GuzzleHttp\Psr7\Uri;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Signature\SignatureV4;
+use VendorGambDuplicaWP\Aws\Endpoint\EndpointProvider;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Uri;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * @internal Adds computed values to service operations that need presigned url.
  */
@@ -64,9 +64,9 @@ class PresignUrlMiddleware
         // Avoid infinite recursion by flagging the new command.
         $newCmd['__skip' . $cmdName] = \true;
         // Serialize a request for the operation.
-        $request = \VendorDuplicator\Aws\serialize($newCmd);
+        $request = \VendorGambDuplicaWP\Aws\serialize($newCmd);
         // Create the new endpoint for the target endpoint.
-        if ($this->endpointProvider instanceof \VendorDuplicator\Aws\EndpointV2\EndpointProviderV2) {
+        if ($this->endpointProvider instanceof \VendorGambDuplicaWP\Aws\EndpointV2\EndpointProviderV2) {
             $providerArgs = array_merge($this->client->getEndpointProviderArgs(), ['Region' => $cmd['SourceRegion']]);
             $endpoint = $this->endpointProvider->resolveEndpoint($providerArgs)->getUrl();
         } else {

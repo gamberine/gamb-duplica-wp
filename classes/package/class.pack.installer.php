@@ -9,35 +9,35 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Installer\Package\DescriptorFileInfo;
-use gamb-duplica-wp\Installer\Package\DescriptorPackageInfo;
-use gamb-duplica-wp\Installer\Package\DescriptorPlugin;
-use gamb-duplica-wp\Installer\Package\DescriptorTheme;
-use gamb-duplica-wp\Installer\Package\DescriptorWpInfo;
-use gamb-duplica-wp\Installer\Package\InstallerDescriptors;
-use gamb-duplica-wp\Libs\DupArchive\DupArchiveEngine;
-use gamb-duplica-wp\Libs\Index\FileIndexManager;
-use gamb-duplica-wp\Libs\Shell\Shell;
-use gamb-duplica-wp\Libs\Snap\SnapCode;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapOrigFileManager;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\WpConfig\WPConfigTransformer;
-use gamb-duplica-wp\Models\BrandEntity;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\Create\BuildProgress;
-use gamb-duplica-wp\Libs\Scan\ScanIterator;
-use gamb-duplica-wp\Libs\Scan\ScanNodeInfo;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Utils\ZipArchiveExtended;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\AbstractJsonSerializable;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Installer\Package\DescriptorFileInfo;
+use GambDuplicaWP\Installer\Package\DescriptorPackageInfo;
+use GambDuplicaWP\Installer\Package\DescriptorPlugin;
+use GambDuplicaWP\Installer\Package\DescriptorTheme;
+use GambDuplicaWP\Installer\Package\DescriptorWpInfo;
+use GambDuplicaWP\Installer\Package\InstallerDescriptors;
+use GambDuplicaWP\Libs\DupArchive\DupArchiveEngine;
+use GambDuplicaWP\Libs\Index\FileIndexManager;
+use GambDuplicaWP\Libs\Shell\Shell;
+use GambDuplicaWP\Libs\Snap\SnapCode;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapOrigFileManager;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\WpConfig\WPConfigTransformer;
+use GambDuplicaWP\Models\BrandEntity;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Create\BuildProgress;
+use GambDuplicaWP\Libs\Scan\ScanIterator;
+use GambDuplicaWP\Libs\Scan\ScanNodeInfo;
+use GambDuplicaWP\Libs\Snap\SnapDB;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\ZipArchiveExtended;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable;
 
 class GAMB_DUPLICA_WP_Installer extends AbstractJsonSerializable
 {
@@ -123,7 +123,7 @@ class GAMB_DUPLICA_WP_Installer extends AbstractJsonSerializable
     {
         $this->origFileManger = new SnapOrigFileManager(
             GAMB_DUPLICA_WP_Archive::getArchiveListPaths('home'),
-            gamb-duplica-wp_PRO_SSDIR_PATH_TMP,
+            GambDuplicaWP_PRO_SSDIR_PATH_TMP,
             $this->Package->getPackageHash()
         );
 
@@ -174,7 +174,7 @@ class GAMB_DUPLICA_WP_Installer extends AbstractJsonSerializable
      */
     public function getSafeFilePath()
     {
-        return SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH . "/" . $this->getInstallerLocalName());
+        return SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH . "/" . $this->getInstallerLocalName());
     }
 
     /**
@@ -285,8 +285,8 @@ class GAMB_DUPLICA_WP_Installer extends AbstractJsonSerializable
     {
         $success            = true;
         $archive_filepath   = SnapIO::safePath("{$this->Package->StorePath}/{$this->Package->Archive->File}");
-        $installer_filepath = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . "/" . $this->getInstallerLocalName();
-        $template_filepath  = gamb-duplica-wp____PATH . '/installer/installer.tpl';
+        $installer_filepath = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . "/" . $this->getInstallerLocalName();
+        $template_filepath  = GambDuplicaWP____PATH . '/installer/installer.tpl';
         // Replace the @@ARCHIVE@@ token
         $header             = <<<HEADER
 <?php
@@ -304,17 +304,17 @@ HEADER;
         // $csrf_class_contents = file_get_contents($csrf_class_filepath);
 
         $dupExpanderCoder  = '';
-        $bootPath          = gamb-duplica-wp____PATH . '/installer/dup-installer/src/Bootstrap/';
+        $bootPath          = GambDuplicaWP____PATH . '/installer/dup-installer/src/Bootstrap/';
         $dupExpanderCoder .= SnapCode::getSrcClassCode($bootPath . 'BootstrapRunner.php') . "\n";
-        $dupExpanderCoder .= SnapCode::getSrcClassCode(gamb-duplica-wp____PATH . '/src/Libs/Shell/Shell.php') . "\n";
-        $dupExpanderCoder .= SnapCode::getSrcClassCode(gamb-duplica-wp____PATH . '/src/Libs/Shell/ShellOutput.php') . "\n";
+        $dupExpanderCoder .= SnapCode::getSrcClassCode(GambDuplicaWP____PATH . '/src/Libs/Shell/Shell.php') . "\n";
+        $dupExpanderCoder .= SnapCode::getSrcClassCode(GambDuplicaWP____PATH . '/src/Libs/Shell/ShellOutput.php') . "\n";
         $dupExpanderCoder .= SnapCode::getSrcClassCode($bootPath . 'BootstrapUtils.php') . "\n";
         $dupExpanderCoder .= SnapCode::getSrcClassCode($bootPath . 'BootstrapView.php') . "\n";
         $dupExpanderCoder .= SnapCode::getSrcClassCode($bootPath . 'LogHandler.php') . "\n";
-        $dupExpanderCoder .= SnapCode::getSrcClassCode(gamb-duplica-wp____PATH . '/installer/dup-installer/src/Utils/SecureCsrf.php') . "\n";
+        $dupExpanderCoder .= SnapCode::getSrcClassCode(GambDuplicaWP____PATH . '/installer/dup-installer/src/Utils/SecureCsrf.php') . "\n";
 
         if ($this->Package->build_progress->current_build_mode == GAMB_DUPLICA_WP_Archive_Build_Mode::DupArchive) {
-            $dupLib            = gamb-duplica-wp____PATH . '/src/Libs/DupArchive/';
+            $dupLib            = GambDuplicaWP____PATH . '/src/Libs/DupArchive/';
             $dupExpanderCoder .= SnapCode::getSrcClassCode($dupLib . 'DupArchive.php') . "\n";
             $dupExpanderCoder .= SnapCode::getSrcClassCode($dupLib . 'DupArchiveExpandBasicEngine.php') . "\n";
             $dupExpanderCoder .= SnapCode::getSrcClassCode($dupLib . 'Headers/AbstractDupArchiveHeader.php') . "\n";
@@ -338,7 +338,7 @@ HEADER;
         $replace_array          = [
             $dupExpanderCoder,
             (string) $this->Package->Archive->File,
-            gamb-duplica-wp_PRO_VERSION,
+            GambDuplicaWP_PRO_VERSION,
             (string) filesize($archive_filepath),
             $package_hash,
             $secondary_package_hash,
@@ -371,13 +371,13 @@ HEADER;
 
         $global                  = GAMB_DUPLICA_WP_Global_Entity::getInstance();
         $success                 = true;
-        $archive_config_filepath = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . "/{$this->Package->getNameHash()}_archive.txt";
+        $archive_config_filepath = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . "/{$this->Package->getNameHash()}_archive.txt";
         $ac                      = new ArchiveDescriptor();
         $extension               = strtolower($this->Package->Archive->Format);
 
         //READ-ONLY: COMPARE VALUES
         $ac->created                 = $this->Package->getCreated();
-        $ac->version_dup             = gamb-duplica-wp_PRO_VERSION;
+        $ac->version_dup             = GambDuplicaWP_PRO_VERSION;
         $ac->version_wp              = $this->Package->VersionWP;
         $ac->version_db              = $this->Package->VersionDB;
         $ac->version_php             = $this->Package->VersionPHP;
@@ -506,109 +506,109 @@ HEADER;
         $result = [];
 
         $result[] = [
-            'sourcePath'  => SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . "/" . $this->getInstallerLocalName(),
+            'sourcePath'  => SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . "/" . $this->getInstallerLocalName(),
             'archivePath' => $this->getInstallerBackupName(),
             'label'       => 'installer backup file',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/installer/dup-installer',
+            'sourcePath'  => GambDuplicaWP____PATH . '/installer/dup-installer',
             'archivePath' => 'dup-installer',
             'label'       => 'dup installer folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/Snap',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/Snap',
             'archivePath' => 'dup-installer/libs/Snap',
             'label'       => 'dup snaplib folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/Shell',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/Shell',
             'archivePath' => 'dup-installer/libs/Shell',
             'label'       => 'dup shell folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/Chunking',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/Chunking',
             'archivePath' => 'dup-installer/libs/Chunking',
             'label'       => 'dup snaplib folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/DupArchive',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/DupArchive',
             'archivePath' => 'dup-installer/libs/DupArchive',
             'label'       => 'dup snaplib folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/Binary',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/Binary',
             'archivePath' => 'dup-installer/libs/Binary',
             'label'       => 'dup snaplib folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/Index',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/Index',
             'archivePath' => 'dup-installer/libs/Index',
             'label'       => 'dup snaplib folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/Scan',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/Scan',
             'archivePath' => 'dup-installer/libs/Scan',
             'label'       => 'dup snaplib folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/WpConfig',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/WpConfig',
             'archivePath' => 'dup-installer/libs/WpConfig',
             'label'       => 'lib config folder',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/src/Libs/Certificates',
+            'sourcePath'  => GambDuplicaWP____PATH . '/src/Libs/Certificates',
             'archivePath' => 'dup-installer/libs/Certificates',
             'label'       => 'SSL certificates',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/vendor-prefixed/andreamk/jsonserialize',
+            'sourcePath'  => GambDuplicaWP____PATH . '/vendor-prefixed/andreamk/jsonserialize',
             'archivePath' => 'dup-installer/vendor-prefixed/andreamk/jsonserialize',
             'label'       => 'Requests library',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/vendor-prefixed/rmccue/requests',
+            'sourcePath'  => GambDuplicaWP____PATH . '/vendor-prefixed/rmccue/requests',
             'archivePath' => 'dup-installer/vendor-prefixed/rmccue/requests',
             'label'       => 'Requests library',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/assets/js/gamb-duplica-wp-tooltip.js',
+            'sourcePath'  => GambDuplicaWP____PATH . '/assets/js/gamb-duplica-wp-tooltip.js',
             'archivePath' => 'dup-installer/assets/js/gamb-duplica-wp-tooltip.js',
             'label'       => 'gamb-duplica-wp tooltip script',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/assets/js/popper',
+            'sourcePath'  => GambDuplicaWP____PATH . '/assets/js/popper',
             'archivePath' => 'dup-installer/assets/js/popper',
             'label'       => 'popper js',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/assets/js/tippy',
+            'sourcePath'  => GambDuplicaWP____PATH . '/assets/js/tippy',
             'archivePath' => 'dup-installer/assets/js/tippy',
             'label'       => 'tippy js',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/assets/js/select2',
+            'sourcePath'  => GambDuplicaWP____PATH . '/assets/js/select2',
             'archivePath' => 'dup-installer/assets/js/select2',
             'label'       => 'select2 js',
         ];
 
         $result[] = [
-            'sourcePath'  => gamb-duplica-wp____PATH . '/assets/css/font-awesome',
+            'sourcePath'  => GambDuplicaWP____PATH . '/assets/css/font-awesome',
             'archivePath' => 'dup-installer/assets/font-awesome',
             'label'       => 'font awesome',
         ];
@@ -620,19 +620,19 @@ HEADER;
         ];
 
         $result[] = [
-            'sourcePath'  => SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . "/{$this->Package->getNameHash()}_archive.txt",
+            'sourcePath'  => SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . "/{$this->Package->getNameHash()}_archive.txt",
             'archivePath' => 'dup-installer/' . $dscMng->getName(InstallerDescriptors::TYPE_ARCHIVE_CONFIG),
             'label'       => 'archive descriptor file',
         ];
 
         $result[] = [
-            'sourcePath'  => SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . "/{$this->Package->getNameHash()}_scan.json",
+            'sourcePath'  => SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . "/{$this->Package->getNameHash()}_scan.json",
             'archivePath' => 'dup-installer/' . $dscMng->getName(InstallerDescriptors::TYPE_SCAN),
             'label'       => 'scan file',
         ];
 
         $result[] = [
-            'sourcePath'  => SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . '/' . $this->Package->getIndexFileName(),
+            'sourcePath'  => SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . '/' . $this->Package->getIndexFileName(),
             'archivePath' => 'dup-installer/' . $dscMng->getName(InstallerDescriptors::TYPE_INDEX),
             'label'       => 'index file',
         ];
@@ -643,7 +643,7 @@ HEADER;
             'label'       => 'manual extract file',
         ];
 
-        foreach (\gamb-duplica-wp\Core\Addons\AddonsManager::getInstance()->getEnabledAddons() as $addon) {
+        foreach (\GambDuplicaWP\Core\Addons\AddonsManager::getInstance()->getEnabledAddons() as $addon) {
             if (!is_readable($addon->getAddonInstallerPath())) {
                 continue;
             }
@@ -968,7 +968,7 @@ HEADER;
         }
 
         try {
-            $archive_config_filepath = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . "/{$this->Package->getNameHash()}_archive.txt";
+            $archive_config_filepath = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . "/{$this->Package->getNameHash()}_archive.txt";
             // No sense keeping these files
             @unlink($archive_config_filepath);
             $this->origFileManger->deleteMainFolder();
@@ -988,7 +988,7 @@ HEADER;
      */
     protected static function isIndexIncludeInstallerFiles(): bool
     {
-        return gamb-duplica-wp_PRO_INDEX_INCLUDE_INSTALLER_FILES;
+        return GambDuplicaWP_PRO_INDEX_INCLUDE_INSTALLER_FILES;
     }
 
     /**
@@ -1050,7 +1050,7 @@ HEADER;
      */
     private function dupArchiveAddExtra(): bool
     {
-        $logger = new \gamb-duplica-wp\Package\Create\DupArchive\Logger();
+        $logger = new \GambDuplicaWP\Package\Create\DupArchive\Logger();
         DupArchiveEngine::init($logger, null);
 
         $archivePath   = $this->getArchiveFullPath();
@@ -1139,48 +1139,12 @@ HEADER;
      */
     private function zipArchiveCheck()
     {
-        /* ------ ZIP CONSISTENCY CHECK ------ */
-        GAMB_DUPLICA_WP_Log::trace("Running ZipArchive consistency check");
-        $zip = new ZipArchive();
-
-        // ZipArchive::CHECKCONS will enforce additional consistency checks
-        $res = $zip->open($this->getArchiveFullPath(), ZipArchive::CHECKCONS);
-        if ($res !== true) {
-            $consistency_error = sprintf(__('ERROR: Cannot open created archive. Error code = %1$s', 'gamb-duplica-wp'), $res);
-            GAMB_DUPLICA_WP_Log::trace($consistency_error);
-            switch ($res) {
-                case ZipArchive::ER_NOZIP:
-                    $consistency_error = __('ERROR: Archive is not valid zip archive.', 'gamb-duplica-wp');
-                    break;
-                case ZipArchive::ER_INCONS:
-                    $consistency_error = __("ERROR: Archive doesn't pass consistency check.", 'gamb-duplica-wp');
-                    break;
-                case ZipArchive::ER_CRC:
-                    $consistency_error = __("ERROR: Archive checksum is bad.", 'gamb-duplica-wp');
-                    break;
-            }
-
-            throw new \Exception($consistency_error);
-        }
-
-        $failed = false;
-        foreach ($this->getInstallerPathsForIntegrityCheck() as $path) {
-            if ($zip->locateName($path) === false) {
-                $failed = true;
-                $msg    = sprintf(__('Couldn\'t find %1$s in archive', 'gamb-duplica-wp'), $path);
-                GAMB_DUPLICA_WP_Log::infoTrace($msg);
-            }
-        }
-
-        if ($failed) {
-            GAMB_DUPLICA_WP_Log::info(__('ARCHIVE CONSISTENCY TEST: FAIL', 'gamb-duplica-wp'));
-            throw new \Exception("Zip for Backup " . $this->Package->ID . " didn't passed consistency test");
-        } else {
-            GAMB_DUPLICA_WP_Log::info(__('ARCHIVE CONSISTENCY TEST: PASS', 'gamb-duplica-wp'));
-            GAMB_DUPLICA_WP_Log::trace("Zip for Backup " . $this->Package->ID . " passed consistency test");
-        }
-
-        $zip->close();
+        \GambDuplicaWP\Utils\ZipIntegrityValidator::validate(
+            $this->getArchiveFullPath(),
+            $this->Package->Archive->getArchivePassword(),
+            $this->getInstallerPathsForIntegrityCheck()
+        );
+        GAMB_DUPLICA_WP_Log::info('ARCHIVE CONSISTENCY TEST: PASS (all entries: size and CRC)');
     }
 
     /**
@@ -1190,7 +1154,7 @@ HEADER;
      */
     private function shellZipAddExtra(): bool
     {
-        $tmpExtraFolder = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . '/extras/';
+        $tmpExtraFolder = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . '/extras/';
 
         if (file_exists($tmpExtraFolder)) {
             if (SnapIO::rrmdir($tmpExtraFolder) === false) {
@@ -1253,7 +1217,7 @@ HEADER;
             return false;
         }
         $filesToValidate = $this->getInstallerPathsForIntegrityCheck();
-        GAMB_DUPLICA_WP_Log::infoTrace('CHECK FILES ' . \gamb-duplica-wp\Libs\Snap\SnapLog::v2str($filesToValidate));
+        GAMB_DUPLICA_WP_Log::infoTrace('CHECK FILES ' . \GambDuplicaWP\Libs\Snap\SnapLog::v2str($filesToValidate));
 
         $params = '-Z1';
 
@@ -1377,7 +1341,7 @@ HEADER;
      */
     private function getManualExtractFilePath()
     {
-        $tmp = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP);
+        $tmp = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP);
         return $tmp . '/dup-manual-extract__' . $this->Package->getPackageHash();
     }
 

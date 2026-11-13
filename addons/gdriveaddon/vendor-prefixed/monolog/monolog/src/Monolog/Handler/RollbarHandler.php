@@ -9,11 +9,11 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Rollbar\RollbarLogger;
+use VendorGambDuplicaWP\Rollbar\RollbarLogger;
 use Throwable;
-use VendorDuplicator\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Logger;
 /**
  * Sends errors to Rollbar
  *

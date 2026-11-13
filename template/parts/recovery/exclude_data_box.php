@@ -7,13 +7,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\RecoveryController;
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\Recovery\RecoveryStatus;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Controllers\RecoveryController;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Recovery\RecoveryStatus;
+use GambDuplicaWP\Views\ViewHelper;
 
 defined("ABSPATH") or die("");
 

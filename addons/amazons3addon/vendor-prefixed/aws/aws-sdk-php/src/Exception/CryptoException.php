@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Exception;
+namespace VendorGambDuplicaWP\Aws\Exception;
 
 /**
  * This class represents exceptions related to logic surrounding client-side

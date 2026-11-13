@@ -12,8 +12,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 /**
  * Notice manager
@@ -70,7 +70,7 @@ final class DUPX_NOTICE_MANAGER
      */
     public function saveNotices(): bool
     {
-        if (class_exists(\gamb-duplica-wp\Installer\Utils\Log\Log::class, false)) {
+        if (class_exists(\GambDuplicaWP\Installer\Utils\Log\Log::class, false)) {
             Log::info('SAVE NOTICES', Log::LV_DEBUG);
         }
         $notices = [
@@ -105,7 +105,7 @@ final class DUPX_NOTICE_MANAGER
     private function loadNotices()
     {
         if (file_exists($this->persistanceFile)) {
-            if (class_exists(\gamb-duplica-wp\Installer\Utils\Log\Log::class, false)) {
+            if (class_exists(\GambDuplicaWP\Installer\Utils\Log\Log::class, false)) {
                 Log::info('LOAD NOTICES', Log::LV_DEBUG);
             }
             $json    = file_get_contents($this->persistanceFile);
@@ -139,7 +139,7 @@ final class DUPX_NOTICE_MANAGER
      */
     public function resetNotices()
     {
-        if (class_exists(\gamb-duplica-wp\Installer\Utils\Log\Log::class, false)) {
+        if (class_exists(\GambDuplicaWP\Installer\Utils\Log\Log::class, false)) {
             Log::info('RESET NOTICES', Log::LV_DEBUG);
         }
         $this->nextStepNotices   = [];

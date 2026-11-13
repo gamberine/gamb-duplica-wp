@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
 
 defined("ABSPATH") or die("");
 
@@ -255,7 +255,7 @@ $alert6->initAlert();
                     action: 'gamb-duplica-wp_pro_manual_transfer_storage',
                     package_id: <?php echo (int) $package->ID; ?>,
                     storage_ids: selected_storage_ids,
-                    nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_manual_transfer_storage')); ?>'
+                    nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_manual_transfer_storage')); ?>'
                 }
 
                 $.ajax({
@@ -290,7 +290,7 @@ $alert6->initAlert();
         DupPro.Pack.Transfer.StopBuild = function () {
             $("#dup-pro-stop-transfer-btn").prop("disabled", true);
             
-            gamb-duplica-wp.Util.ajaxWrapper(
+            GambDuplicaWP.Util.ajaxWrapper(
                 {
                     action: 'gamb-duplica-wp_pro_package_stop_build',
                     package_id: activePackageId,
@@ -342,11 +342,11 @@ $alert6->initAlert();
         /*  METHOD: Retreive Backup state */
         DupPro.Pack.Transfer.GetPackageState = function () {
             var package_id = <?php echo (int) $package->ID; ?>;
-            gamb-duplica-wp.Util.ajaxWrapper(
+            GambDuplicaWP.Util.ajaxWrapper(
                 {
                     action: 'gamb-duplica-wp_pro_packages_details_transfer_get_package_vm',
                     package_id: package_id,
-                    nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_packages_details_transfer_get_package_vm')); ?>'
+                    nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_packages_details_transfer_get_package_vm')); ?>'
                 },
                 function (result, data, funcData, textStatus, jqXHR) {
                     var vm = funcData.vm;
@@ -431,13 +431,13 @@ $alert6->initAlert();
                 </tr>`;
 
                 $("#dup-transfer-transfer-log table tbody").append(row_html);
-                $('#dup-pack-details-trans-log-count').html('<?php esc_html_e('Log Items:', 'gamb-duplica-wp') ?> ' + (i + 1) );
+                $('#dup-pack-details-trans-log-count').html('<?php esc_html_e('Log Items:', 'GambDuplicaWP') ?> ' + (i + 1) );
             }
 
             if (i == 0)
             {
                 var row_html = '<tr><td colspan="5" style="text-align:center">' + 
-                    '<?php esc_html_e('- No transactions found for this Backup -', 'gamb-duplica-wp'); ?></td></tr>';
+                    '<?php esc_html_e('- No transactions found for this Backup -', 'GambDuplicaWP'); ?></td></tr>';
                 $("#dup-transfer-transfer-log table tbody").append(row_html);
             }
         };

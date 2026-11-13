@@ -20,11 +20,11 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Index\FileIndexManager;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Package\Create\BuildProgress;
-use gamb-duplica-wp\Utils\ZipArchiveExtended;
+use GambDuplicaWP\Libs\Index\FileIndexManager;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Package\Create\BuildProgress;
+use GambDuplicaWP\Utils\ZipArchiveExtended;
 
 class GAMB_DUPLICA_WP_ZipArchive
 {
@@ -127,7 +127,7 @@ class GAMB_DUPLICA_WP_ZipArchive
 
         //LOAD SCAN REPORT
         try {
-            $scanReport = $this->package->getScanReportFromJson(gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/{$this->package->getNameHash()}_scan.json");
+            $scanReport = $this->package->getScanReportFromJson(GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/{$this->package->getNameHash()}_scan.json");
         } catch (GAMB_DUPLICA_WP_NoScanFileException $ex) {
             GAMB_DUPLICA_WP_Log::trace("**** scan file doesn't exist!!");
             GAMB_DUPLICA_WP_Log::error($ex->getMessage(), '', false);
@@ -319,7 +319,7 @@ class GAMB_DUPLICA_WP_ZipArchive
         $filterOn    = ($this->package->Archive->FilterOn) ? 'ON' : 'OFF';
         $compression = $build_progress->current_build_compression ? 'ON' : 'OFF';
         $this->zipArchive->setCompressed($build_progress->current_build_compression);
-        $scanFilepath = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/{$this->package->getNameHash()}_scan.json";
+        $scanFilepath = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/{$this->package->getNameHash()}_scan.json";
         $targetRoot   = GAMB_DUPLICA_WP_Archive::getTargetRootPath();
 
         //LOAD SCAN REPORT

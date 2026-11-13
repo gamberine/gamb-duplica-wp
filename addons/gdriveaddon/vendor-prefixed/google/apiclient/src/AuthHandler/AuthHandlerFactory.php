@@ -15,10 +15,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\AuthHandler;
+namespace VendorGambDuplicaWP\Google\AuthHandler;
 
 use Exception;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
 class AuthHandlerFactory
 {
     /**
@@ -30,9 +30,9 @@ class AuthHandlerFactory
     public static function build($cache = null, array $cacheConfig = [])
     {
         $guzzleVersion = null;
-        if (defined('VendorDuplicator\GuzzleHttp\ClientInterface::MAJOR_VERSION')) {
+        if (defined('VendorGambDuplicaWP\GuzzleHttp\ClientInterface::MAJOR_VERSION')) {
             $guzzleVersion = ClientInterface::MAJOR_VERSION;
-        } elseif (defined('VendorDuplicator\GuzzleHttp\ClientInterface::VERSION')) {
+        } elseif (defined('VendorGambDuplicaWP\GuzzleHttp\ClientInterface::VERSION')) {
             $guzzleVersion = (int) substr(ClientInterface::VERSION, 0, 1);
         }
         switch ($guzzleVersion) {

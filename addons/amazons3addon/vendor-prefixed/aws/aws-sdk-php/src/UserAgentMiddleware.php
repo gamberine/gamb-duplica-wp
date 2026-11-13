@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\EndpointDiscovery\Configuration;
+use VendorGambDuplicaWP\Aws\EndpointDiscovery\Configuration;
 use Closure;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Builds and injects the user agent header values.
  * This middleware must be appended into step where all the
@@ -247,7 +247,7 @@ class UserAgentMiddleware
             return;
         }
         $retryMode = '';
-        if ($retries instanceof \VendorDuplicator\Aws\Retry\Configuration) {
+        if ($retries instanceof \VendorGambDuplicaWP\Aws\Retry\Configuration) {
             $retryMode = $retries->getMode();
         } elseif (is_array($retries) && isset($retries["mode"])) {
             $retryMode = $retries["mode"];

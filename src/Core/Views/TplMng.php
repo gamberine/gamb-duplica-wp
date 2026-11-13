@@ -7,10 +7,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Views;
+namespace GambDuplicaWP\Core\Views;
 
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 final class TplMng
 {
@@ -43,7 +43,7 @@ final class TplMng
      */
     private function __construct()
     {
-        $this->mainFolder = gamb-duplica-wp____PATH . '/template/';
+        $this->mainFolder = GambDuplicaWP____PATH . '/template/';
     }
 
     /**

@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\Credentials;
+namespace VendorGambDuplicaWP\Aws\Credentials;
 
-use VendorDuplicator\Aws;
-use VendorDuplicator\Aws\Api\DateTimeResult;
-use VendorDuplicator\Aws\CacheInterface;
-use VendorDuplicator\Aws\Exception\CredentialsException;
-use VendorDuplicator\Aws\Sts\StsClient;
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Aws;
+use VendorGambDuplicaWP\Aws\Api\DateTimeResult;
+use VendorGambDuplicaWP\Aws\CacheInterface;
+use VendorGambDuplicaWP\Aws\Exception\CredentialsException;
+use VendorGambDuplicaWP\Aws\Sts\StsClient;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 /**
  * Credential providers are functions that accept no arguments and return a
  * promise that is fulfilled with an {@see \Aws\Credentials\CredentialsInterface}
@@ -422,7 +422,7 @@ class CredentialProvider
             if (!@is_readable($filename)) {
                 return self::reject("Cannot read process credentials from {$filename}");
             }
-            $data = \VendorDuplicator\Aws\parse_ini_file($filename, \true, \INI_SCANNER_RAW);
+            $data = \VendorGambDuplicaWP\Aws\parse_ini_file($filename, \true, \INI_SCANNER_RAW);
             if ($data === \false) {
                 return self::reject("Invalid credentials file: {$filename}");
             }
@@ -532,11 +532,11 @@ class CredentialProvider
      */
     private static function loadProfiles($filename)
     {
-        $profileData = \VendorDuplicator\Aws\parse_ini_file($filename, \true, \INI_SCANNER_RAW);
+        $profileData = \VendorGambDuplicaWP\Aws\parse_ini_file($filename, \true, \INI_SCANNER_RAW);
         // If loading .aws/credentials, also load .aws/config when AWS_SDK_LOAD_NONDEFAULT_CONFIG is set
         if ($filename === self::getHomeDir() . '/.aws/credentials' && getenv('AWS_SDK_LOAD_NONDEFAULT_CONFIG')) {
             $configFilename = self::getHomeDir() . '/.aws/config';
-            $configProfileData = \VendorDuplicator\Aws\parse_ini_file($configFilename, \true, \INI_SCANNER_RAW);
+            $configProfileData = \VendorGambDuplicaWP\Aws\parse_ini_file($configFilename, \true, \INI_SCANNER_RAW);
             foreach ($configProfileData as $name => $profile) {
                 // standardize config profile names
                 $name = str_replace('profile ', '', $name);
@@ -556,10 +556,10 @@ class CredentialProvider
         $credFile = self::getHomeDir() . '/.aws/credentials';
         $configFile = self::getHomeDir() . '/.aws/config';
         if (file_exists($credFile)) {
-            $profiles = \VendorDuplicator\Aws\parse_ini_file($credFile, \true, \INI_SCANNER_RAW);
+            $profiles = \VendorGambDuplicaWP\Aws\parse_ini_file($credFile, \true, \INI_SCANNER_RAW);
         }
         if (file_exists($configFile)) {
-            $configProfileData = \VendorDuplicator\Aws\parse_ini_file($configFile, \true, \INI_SCANNER_RAW);
+            $configProfileData = \VendorGambDuplicaWP\Aws\parse_ini_file($configFile, \true, \INI_SCANNER_RAW);
             foreach ($configProfileData as $name => $profile) {
                 // standardize config profile names
                 $name = str_replace('profile ', '', $name);

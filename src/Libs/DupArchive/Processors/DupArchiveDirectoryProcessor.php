@@ -6,12 +6,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive\Processors;
+namespace GambDuplicaWP\Libs\DupArchive\Processors;
 
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveDirectoryHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
-use gamb-duplica-wp\Libs\DupArchive\States\DupArchiveCreateState;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveDirectoryHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Libs\DupArchive\States\DupArchiveCreateState;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 class DupArchiveDirectoryProcessor
 {

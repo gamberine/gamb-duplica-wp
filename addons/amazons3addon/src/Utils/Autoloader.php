@@ -7,10 +7,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
- namespace gamb-duplica-wp\Addons\AmazonS3Addon\Utils;
+ namespace GambDuplicaWP\Addons\AmazonS3Addon\Utils;
 
-use gamb-duplica-wp\Addons\AmazonS3Addon\AmazonS3Addon;
-use gamb-duplica-wp\Utils\AbstractAutoloader;
+use GambDuplicaWP\Addons\AmazonS3Addon\AmazonS3Addon;
+use GambDuplicaWP\Utils\AbstractAutoloader;
 
 /**
  * Autoloader calss, dont user gamb-duplica-wp library here

@@ -28,13 +28,13 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Exception\InsufficientSetupException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\phpseclib3\Math\PrimeField;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Exception\InsufficientSetupException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Math\PrimeField;
 /**
  * @author  Jim Wigginton <terrafrost@php.net>
  * @author  Andreas Fischer <bantu@phpbb.com>
@@ -370,7 +370,7 @@ class Hash
                     $this->paddingType = self::PADDING_SHA3;
                 }
                 $this->parameters = ['capacity' => 1600 - $this->blockSize, 'rate' => $this->blockSize, 'length' => $this->length, 'padding' => $this->paddingType];
-                $hash = ['VendorDuplicator\phpseclib3\Crypt\Hash', \PHP_INT_SIZE == 8 ? 'sha3_64' : 'sha3_32'];
+                $hash = ['VendorGambDuplicaWP\phpseclib3\Crypt\Hash', \PHP_INT_SIZE == 8 ? 'sha3_64' : 'sha3_32'];
             }
         }
         if ($hash == 'sha512/224' || $hash == 'sha512/256') {
@@ -388,7 +388,7 @@ class Hash
                     }
                 }
                 $this->parameters = compact('initial');
-                $hash = ['VendorDuplicator\phpseclib3\Crypt\Hash', \PHP_INT_SIZE == 8 ? 'sha512_64' : 'sha512'];
+                $hash = ['VendorGambDuplicaWP\phpseclib3\Crypt\Hash', \PHP_INT_SIZE == 8 ? 'sha512_64' : 'sha512'];
             }
         }
         if (is_array($hash)) {

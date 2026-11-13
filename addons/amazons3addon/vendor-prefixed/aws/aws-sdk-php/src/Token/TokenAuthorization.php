@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Token;
+namespace VendorGambDuplicaWP\Aws\Token;
 
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Interface used to provide interchangeable strategies for adding authorization
  * to requests using the various AWS signature protocols.

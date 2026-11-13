@@ -11,9 +11,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Pro;
+namespace GambDuplicaWP\Pro;
 
-class Requirements implements \gamb-duplica-wp\Core\RequirementsInterface
+class Requirements implements \GambDuplicaWP\Core\RequirementsInterface
 {
     const DUP_LITE_PLUGIN_KEY = 'gamb-duplica-wp/gamb-duplica-wp.php';
 
@@ -43,7 +43,7 @@ class Requirements implements \gamb-duplica-wp\Core\RequirementsInterface
         $result           = true;
         self::$pluginFile = $pluginFile;
 
-        if (self::isPluginActive(self::DUP_LITE_PLUGIN_KEY)) {
+        if (plugin_basename($pluginFile) !== self::DUP_LITE_PLUGIN_KEY && self::isPluginActive(self::DUP_LITE_PLUGIN_KEY)) {
             add_action('admin_init', [self::class, 'addLiteEnableNotice']);
             $pluginUrl                 = (is_multisite() ? network_admin_url('plugins.php') : admin_url('plugins.php'));
             self::$deactivationMessage = sprintf(

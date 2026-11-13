@@ -8,10 +8,10 @@
 
 defined('ABSPATH') || exit;
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Core\Views\Notifications;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Core\Views\Notifications;
+use GambDuplicaWP\Models\SystemGlobalEntity;
 
 /**
  * Variables
@@ -37,7 +37,7 @@ $offset      = ($currentPage - 1) * $perPage;
 
 $global = GAMB_DUPLICA_WP_Global_Entity::getInstance();
 
-do_action(Notifications::gamb-duplica-wp_PRO_BEFORE_PACKAGES_HOOK);
+do_action(Notifications::GambDuplicaWP_PRO_BEFORE_PACKAGES_HOOK);
 ?>
 
 <form

@@ -10,9 +10,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Math\BigInteger\Engines;
+namespace VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines;
 
-use VendorDuplicator\phpseclib3\Exception\BadConfigurationException;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadConfigurationException;
 /**
  * GMP Engine.
  *

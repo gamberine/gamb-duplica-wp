@@ -29,17 +29,17 @@ define('DUPX_VERSION', '4.5.21');
 define('DUPX_INIT', str_replace('\\', '/', __DIR__));
 define('DUPX_ROOT', preg_match('/^[\\\\\/]?$/', dirname(DUPX_INIT)) ? '/' : dirname(DUPX_INIT));
 
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 require_once(DUPX_INIT . '/src/Utils/Autoloader.php');
-gamb-duplica-wp\Installer\Utils\Autoloader::register();
+GambDuplicaWP\Installer\Utils\Autoloader::register();
 
 try {
     /**
      * init constants and include
      */
-    gamb-duplica-wp\Installer\Core\Bootstrap::init();
+    GambDuplicaWP\Installer\Core\Bootstrap::init();
     Log::setThrowExceptionOnError(true);
     Log::logTime('INIT END', Log::LV_DETAILED);
 

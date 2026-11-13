@@ -10,13 +10,13 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\AsymmetricKey;
-use VendorDuplicator\phpseclib3\Crypt\Common\PrivateKey;
-use VendorDuplicator\phpseclib3\Crypt\Common\PublicKey;
-use VendorDuplicator\phpseclib3\Exception\NoKeyLoadedException;
-use VendorDuplicator\phpseclib3\File\X509;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\AsymmetricKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Exception\NoKeyLoadedException;
+use VendorGambDuplicaWP\phpseclib3\File\X509;
 /**
  * PublicKeyLoader
  *

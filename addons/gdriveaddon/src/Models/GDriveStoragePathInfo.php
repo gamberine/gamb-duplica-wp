@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\GDriveAddon\Models;
+namespace GambDuplicaWP\Addons\GDriveAddon\Models;
 
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
-use Vendorgamb-duplica-wp\Google\Service\Drive\DriveFile;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
+use VendorGambDuplicaWP\Google\Service\Drive\DriveFile;
 
 class GDriveStoragePathInfo extends StoragePathInfo
 {

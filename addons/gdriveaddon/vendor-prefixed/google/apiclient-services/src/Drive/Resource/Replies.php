@@ -15,10 +15,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\Reply;
-use VendorDuplicator\Google\Service\Drive\ReplyList;
+use VendorGambDuplicaWP\Google\Service\Drive\Reply;
+use VendorGambDuplicaWP\Google\Service\Drive\ReplyList;
 /**
  * The "replies" collection of methods.
  * Typical usage is:
@@ -27,7 +27,7 @@ use VendorDuplicator\Google\Service\Drive\ReplyList;
  *   $replies = $driveService->replies;
  *  </code>
  */
-class Replies extends \VendorDuplicator\Google\Service\Resource
+class Replies extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Creates a reply to a comment. (replies.create)
@@ -37,7 +37,7 @@ class Replies extends \VendorDuplicator\Google\Service\Resource
      * @param Reply $postBody
      * @param array $optParams Optional parameters.
      * @return Reply
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function create($fileId, $commentId, Reply $postBody, $optParams = [])
     {
@@ -52,7 +52,7 @@ class Replies extends \VendorDuplicator\Google\Service\Resource
      * @param string $commentId The ID of the comment.
      * @param string $replyId The ID of the reply.
      * @param array $optParams Optional parameters.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function delete($fileId, $commentId, $replyId, $optParams = [])
     {
@@ -71,7 +71,7 @@ class Replies extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool includeDeleted Whether to return deleted replies. Deleted
      * replies will not include their original content.
      * @return Reply
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($fileId, $commentId, $replyId, $optParams = [])
     {
@@ -93,7 +93,7 @@ class Replies extends \VendorDuplicator\Google\Service\Resource
      * on the next page. This should be set to the value of 'nextPageToken' from the
      * previous response.
      * @return ReplyList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listReplies($fileId, $commentId, $optParams = [])
     {
@@ -110,7 +110,7 @@ class Replies extends \VendorDuplicator\Google\Service\Resource
      * @param Reply $postBody
      * @param array $optParams Optional parameters.
      * @return Reply
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function update($fileId, $commentId, $replyId, Reply $postBody, $optParams = [])
     {
@@ -120,4 +120,4 @@ class Replies extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Replies::class, 'VendorDuplicator\Google_Service_Drive_Resource_Replies');
+class_alias(Replies::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Replies');

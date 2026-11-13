@@ -11,15 +11,15 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescUsers;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescUsers;
+use GambDuplicaWP\Libs\Snap\SnapDB;
 
 class DUPX_DB_Functions
 {
-    const TABLE_NAME_gamb-duplica-wp_PACKAGES = 'gamb-duplica-wp_backups';
-    const TABLE_NAME_DUPLICAT_ENTITIES   = 'gamb-duplica-wp_entities';
+    const TABLE_NAME_GambDuplicaWP_PACKAGES = 'gamb_duplica_wp_backups';
+    const TABLE_NAME_DUPLICAT_ENTITIES   = 'gamb_duplica_wp_entities';
     const TABLE_NAME_WP_USERS            = 'users';
     const TABLE_NAME_WP_USERMETA         = 'usermeta';
 
@@ -455,7 +455,7 @@ class DUPX_DB_Functions
         if (is_null($prefix)) {
             $prefix = PrmMng::getInstance()->getValue(PrmMng::PARAM_DB_TABLE_PREFIX);
         }
-        return $prefix . self::TABLE_NAME_gamb-duplica-wp_PACKAGES;
+        return $prefix . self::TABLE_NAME_GambDuplicaWP_PACKAGES;
     }
 
     /**
@@ -785,7 +785,7 @@ class DUPX_DB_Functions
      *
      * @return false|string gamb-duplica-wp Pro version
      */
-    public function getgamb-duplica-wpVersion($prefix)
+    public function getGambDuplicaWPVersion($prefix)
     {
         $optionsTable = self::getOptionsTableName($prefix);
         $sql          = "SELECT `option_value` FROM `{$optionsTable}` WHERE `option_name` = 'gamb-duplica-wp_pro_plugin_version'";

@@ -6,14 +6,14 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Ajax\ServicesStorage;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Ajax\ServicesStorage;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
 
 /**
  * Variables
@@ -310,7 +310,7 @@ jQuery(document).ready(function($) {
            }
         })
         .fail(function() {
-            result =  '<i class="fas fa-exclamation-triangle"></i> <?php esc_html_e('Unable to get schedule data.', 'gamb-duplica-wp')?>';
+            result =  '<i class="fas fa-exclamation-triangle"></i> <?php esc_html_e('Unable to get schedule data.', 'GambDuplicaWP')?>';
         });
         return result;
     };

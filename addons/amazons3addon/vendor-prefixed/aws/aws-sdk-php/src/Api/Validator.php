@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api;
+namespace VendorGambDuplicaWP\Aws\Api;
 
-use VendorDuplicator\Aws;
+use VendorGambDuplicaWP\Aws;
 /**
  * Validates a schema against a hash of input.
  */
@@ -117,7 +117,7 @@ class Validator
         $type = gettype($value);
         if (!isset($valid[$type])) {
             if ($type != 'object' || !method_exists($value, '__toString')) {
-                $this->addError('must be an fopen resource, a ' . 'VendorDuplicator\\GuzzleHttp\Stream\StreamInterface object, or something ' . 'that can be cast to a string. Found ' . Aws\describe_type($value));
+                $this->addError('must be an fopen resource, a ' . 'VendorGambDuplicaWP\\GuzzleHttp\Stream\StreamInterface object, or something ' . 'that can be cast to a string. Found ' . Aws\describe_type($value));
             }
         }
     }

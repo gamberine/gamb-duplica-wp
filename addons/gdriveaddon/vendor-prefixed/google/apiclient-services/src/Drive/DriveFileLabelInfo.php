@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class DriveFileLabelInfo extends \VendorDuplicator\Google\Collection
+class DriveFileLabelInfo extends \VendorGambDuplicaWP\Google\Collection
 {
     protected $collection_key = 'labels';
     protected $labelsType = Label::class;
@@ -38,4 +38,4 @@ class DriveFileLabelInfo extends \VendorDuplicator\Google\Collection
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DriveFileLabelInfo::class, 'VendorDuplicator\Google_Service_Drive_DriveFileLabelInfo');
+class_alias(DriveFileLabelInfo::class, 'VendorGambDuplicaWP\Google_Service_Drive_DriveFileLabelInfo');

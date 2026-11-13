@@ -5,8 +5,8 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Utils\Help\Help;
-use gamb-duplica-wp\Utils\Support\SupportToolkit;
+use GambDuplicaWP\Utils\Help\Help;
+use GambDuplicaWP\Utils\Support\SupportToolkit;
 
 defined("ABSPATH") or die("");
 
@@ -20,7 +20,7 @@ defined("ABSPATH") or die("");
 ?>
 <div id="gamb-duplica-wp-help-wrapper">
     <div id="gamb-duplica-wp-help-header">
-        <img src="<?php echo esc_url(gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/img/gamb-duplica-wp-header-logo.svg'); ?>" />
+        <img src="<?php echo esc_url(GambDuplicaWP_PRO_PLUGIN_URL . 'assets/img/gamb-duplica-wp-header-logo.svg'); ?>" />
     </div>
     <div id="gamb-duplica-wp-help-content">
         <div id="gamb-duplica-wp-help-search">
@@ -45,7 +45,7 @@ defined("ABSPATH") or die("");
                     <?php esc_html_e("Browse documentation, reference material, and tutorials for gamb-duplica-wp.", "gamb-duplica-wp"); ?>
                 </p>
                 <a 
-                    href="<?php echo esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'docs'); ?>" 
+                    href="<?php echo esc_url(GambDuplicaWP_PRO_BLOG_URL . 'docs'); ?>"
                     rel="noopener noreferrer" 
                     target="_blank" 
                     class="button">
@@ -75,7 +75,7 @@ defined("ABSPATH") or die("");
                     ); ?>
                 </p>
                 <a 
-                    href="<?php echo esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'my-account/support/'); ?>" 
+                    href="<?php echo esc_url(GambDuplicaWP_PRO_BLOG_URL . 'my-account/support/'); ?>"
                     rel="noopener noreferrer" 
                     target="_blank" 
                     class="button">

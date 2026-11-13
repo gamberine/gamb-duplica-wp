@@ -30,10 +30,10 @@
  * @license  http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link     http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\BlockCipher;
-use VendorDuplicator\phpseclib3\Exception\BadModeException;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\BlockCipher;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadModeException;
 /**
  * Pure-PHP implementation of RC2.
  *
@@ -43,14 +43,14 @@ class RC2 extends BlockCipher
     /**
      * Block Length of the cipher
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::block_size
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::block_size
      * @var int
      */
     protected $block_size = 8;
     /**
      * The Key
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::key
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::key
      * @see self::setKey()
      * @var string
      */
@@ -58,7 +58,7 @@ class RC2 extends BlockCipher
     /**
      * The Original (unpadded) Key
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::key
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::key
      * @see self::setKey()
      * @see self::encrypt()
      * @see self::decrypt()
@@ -68,7 +68,7 @@ class RC2 extends BlockCipher
     /**
      * Key Length (in bytes)
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\RC2::setKeyLength()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\RC2::setKeyLength()
      * @var int
      */
     protected $key_length = 16;
@@ -76,14 +76,14 @@ class RC2 extends BlockCipher
     /**
      * The mcrypt specific name of the cipher
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
      * @var string
      */
     protected $cipher_name_mcrypt = 'rc2';
     /**
      * Optimizing value while CFB-encrypting
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::cfb_init_len
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::cfb_init_len
      * @var int
      */
     protected $cfb_init_len = 500;
@@ -149,7 +149,7 @@ class RC2 extends BlockCipher
      *
      * This is mainly just a wrapper to set things up for \phpseclib3\Crypt\Common\SymmetricKey::isValidEngine()
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::__construct()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::__construct()
      * @param int $engine
      * @return bool
      */
@@ -206,7 +206,7 @@ class RC2 extends BlockCipher
      * has more then 128 bytes in it, and set $key to a single null byte if
      * it is empty.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setKey()
      * @param string $key
      * @param int|boolean $t1 optional Effective key length in bits.
      * @throws \LengthException if the key length isn't supported
@@ -295,8 +295,8 @@ class RC2 extends BlockCipher
     /**
      * Encrypts a block
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encryptBlock()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encryptBlock()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::encrypt()
      * @param string $in
      * @return string
      */
@@ -334,8 +334,8 @@ class RC2 extends BlockCipher
     /**
      * Decrypts a block
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decryptBlock()
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decryptBlock()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::decrypt()
      * @param string $in
      * @return string
      */
@@ -373,7 +373,7 @@ class RC2 extends BlockCipher
     /**
      * Creates the key schedule
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setupKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setupKey()
      */
     protected function setupKey()
     {
@@ -391,7 +391,7 @@ class RC2 extends BlockCipher
     /**
      * Setup the performance-optimized function for de/encrypt()
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::setupInlineCrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::setupInlineCrypt()
      */
     protected function setupInlineCrypt()
     {

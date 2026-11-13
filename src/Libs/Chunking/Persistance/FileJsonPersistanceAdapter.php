@@ -5,10 +5,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Chunking\Persistance;
+namespace GambDuplicaWP\Libs\Chunking\Persistance;
 
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
 use Exception;
 
 class FileJsonPersistanceAdapter implements PersistanceAdapterInterface

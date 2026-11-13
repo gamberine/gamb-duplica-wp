@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Upgrade;
+namespace GambDuplicaWP\Core\Upgrade;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
@@ -14,16 +14,16 @@ use GAMB_DUPLICA_WP_Package_Template_Entity;
 use GAMB_DUPLICA_WP_PackageStatus;
 use GAMB_DUPLICA_WP_Schedule_Entity;
 use GAMB_DUPLICA_WP_Secure_Global_Entity;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Core\Models\AbstractEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\Local\DefaultLocalStorage;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Utils\Email\EmailSummary;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Core\Models\AbstractEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\Local\DefaultLocalStorage;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Utils\Email\EmailSummary;
 use Error;
 use Exception;
 

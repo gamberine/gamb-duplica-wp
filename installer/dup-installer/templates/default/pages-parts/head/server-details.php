@@ -1,7 +1,7 @@
 <?php
 
-use gamb-duplica-wp\Libs\Snap\FunctionalityCheck;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\FunctionalityCheck;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 $archiveConfig = DUPX_ArchiveConfig::getInstance();
 ?>

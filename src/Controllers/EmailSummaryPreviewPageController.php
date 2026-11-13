@@ -7,12 +7,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\AbstractBlankPageController;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Utils\Email\EmailSummary;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\AbstractBlankPageController;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Utils\Email\EmailSummary;
 
 class EmailSummaryPreviewPageController extends AbstractBlankPageController
 {

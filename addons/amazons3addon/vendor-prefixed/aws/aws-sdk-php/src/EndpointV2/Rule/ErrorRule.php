@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2\Rule;
+namespace VendorGambDuplicaWP\Aws\EndpointV2\Rule;
 
-use VendorDuplicator\Aws\EndpointV2\Ruleset\RulesetStandardLibrary;
-use VendorDuplicator\Aws\Exception\UnresolvedEndpointException;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\RulesetStandardLibrary;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedEndpointException;
 class ErrorRule extends AbstractRule
 {
     /** @var array */

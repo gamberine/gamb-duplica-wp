@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Auth\Exception;
+namespace VendorGambDuplicaWP\Aws\Auth\Exception;
 
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
 /**
  * Represents an error when attempting to resolve authentication.
  */

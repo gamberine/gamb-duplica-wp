@@ -82,7 +82,7 @@ $nonce = wp_create_nonce('gamb-duplica-wp_pro_export_settings');
     DupPro.Tools.ExportDialog = function () 
     {
         var url = "#TB_inline?width=610&height=250&inlineId=modal-window-export";
-        tb_show("<?php esc_html_e("Export gamb-duplica-wp Pro Data ?", 'gamb-duplica-wp') ?>", url);
+        tb_show("<?php esc_html_e("Export GambDuplicaWP Pro Data ?", 'gamb-duplica-wp') ?>", url);
         jQuery('#TB_window').addClass(<?php echo json_encode(GAMB_DUPLICA_WP_UI_Dialog::TB_WINDOW_CLASS); ?>);
         return false;
     }

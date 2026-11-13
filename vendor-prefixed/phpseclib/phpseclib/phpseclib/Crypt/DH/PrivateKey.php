@@ -8,10 +8,10 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\DH;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\DH;
 
-use VendorDuplicator\phpseclib3\Crypt\Common;
-use VendorDuplicator\phpseclib3\Crypt\DH;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DH;
 /**
  * DH Private Key
  *
@@ -23,13 +23,13 @@ final class PrivateKey extends DH
     /**
      * Private Key
      *
-     * @var \VendorDuplicator\phpseclib3\Math\BigInteger
+     * @var \VendorGambDuplicaWP\phpseclib3\Math\BigInteger
      */
     protected $privateKey;
     /**
      * Public Key
      *
-     * @var \VendorDuplicator\phpseclib3\Math\BigInteger
+     * @var \VendorGambDuplicaWP\phpseclib3\Math\BigInteger
      */
     protected $publicKey;
     /**

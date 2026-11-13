@@ -5,12 +5,12 @@
  *
  * @package Requests\Authentication
  */
-namespace VendorDuplicator\WpOrg\Requests\Auth;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Auth;
 
-use VendorDuplicator\WpOrg\Requests\Auth;
-use VendorDuplicator\WpOrg\Requests\Exception\ArgumentCount;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Hooks;
+use VendorGambDuplicaWP\WpOrg\Requests\Auth;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\ArgumentCount;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Hooks;
 /**
  * Basic Authentication provider
  *
@@ -41,8 +41,8 @@ class Basic implements Auth
      *
      * @param array|null $args Array of user and password. Must have exactly two elements
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not an array or null.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\ArgumentCount   On incorrect number of array elements (`authbasicbadargs`).
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not an array or null.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\ArgumentCount   On incorrect number of array elements (`authbasicbadargs`).
      */
     public function __construct($args = null)
     {
@@ -60,9 +60,9 @@ class Basic implements Auth
     /**
      * Register the necessary callbacks
      *
-     * @see \VendorDuplicator\WpOrg\Requests\Auth\Basic::curl_before_send()
-     * @see \VendorDuplicator\WpOrg\Requests\Auth\Basic::fsockopen_header()
-     * @param \VendorDuplicator\WpOrg\Requests\Hooks $hooks Hook system
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Auth\Basic::curl_before_send()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Auth\Basic::fsockopen_header()
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Hooks $hooks Hook system
      */
     public function register(Hooks $hooks)
     {

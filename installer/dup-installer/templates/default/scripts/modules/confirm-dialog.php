@@ -5,7 +5,7 @@
  * @package templates/default
  */
 
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 ?>

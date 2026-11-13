@@ -19,8 +19,8 @@ defined("ABSPATH") or die("");
 $package      = $tplData['package'];
 $global       = GAMB_DUPLICA_WP_Global_Entity::getInstance();
 $totalSizeMax = ($global->getBuildMode() == GAMB_DUPLICA_WP_Archive_Build_Mode::ZipArchive)
-        ? gamb-duplica-wp_PRO_SCAN_SITE_ZIP_ARCHIVE_WARNING_SIZE
-        : gamb-duplica-wp_PRO_SCAN_SITE_WARNING_SIZE;
+        ? GambDuplicaWP_PRO_SCAN_SITE_ZIP_ARCHIVE_WARNING_SIZE
+        : GambDuplicaWP_PRO_SCAN_SITE_WARNING_SIZE;
 ?>
 <div class="scan-item">
     <div class='title' onclick="DupPro.Pack.toggleScanItem(this);">
@@ -62,7 +62,7 @@ $totalSizeMax = ($global->getBuildMode() == GAMB_DUPLICA_WP_Archive_Build_Mode::
                 <li><?php esc_html_e('Apply the "Quick Filters" below or click the back button to apply on previous page.', 'gamb-duplica-wp'); ?> </li>
                 <li>
                     <?php esc_html_e('See the FAQ link to adjust this hosts timeout limits: ', 'gamb-duplica-wp'); ?>
-                    &nbsp;<a href="<?php echo esc_html(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL); ?>how-to-handle-server-timeout-issues" target="_blank">
+                    &nbsp;<a href="<?php echo esc_html(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL); ?>how-to-handle-server-timeout-issues" target="_blank">
                         <?php esc_html_e('What can I try for Timeout Issues?', 'gamb-duplica-wp'); ?>
                     </a>
                 </li>
@@ -87,7 +87,7 @@ $totalSizeMax = ($global->getBuildMode() == GAMB_DUPLICA_WP_Archive_Build_Mode::
                                             <br><br><b>Right click on tree node to open the bulk actions menu</b>',
                                             'gamb-duplica-wp'
                                         ),
-                                        GAMB_DUPLICA_WP_U::byteSize(gamb-duplica-wp_PRO_SCAN_WARN_FILE_SIZE)
+                                        GAMB_DUPLICA_WP_U::byteSize(GambDuplicaWP_PRO_SCAN_WARN_FILE_SIZE)
                                     ),
                                     [
                                         'br' => [],

@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core;
+namespace GambDuplicaWP\Core;
 
 if (!interface_exists(RequirementsInterface::class, false)) {
 

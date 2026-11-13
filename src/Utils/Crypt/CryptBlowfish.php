@@ -5,21 +5,21 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Utils\Crypt;
+namespace GambDuplicaWP\Utils\Crypt;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\WpConfig\WPConfigTransformer;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\WpConfig\WPConfigTransformer;
 use Error;
 use Exception;
-use Vendorgamb-duplica-wp\phpseclib3\Crypt\Blowfish;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Blowfish;
 
 class CryptBlowfish implements CryptInterface
 {
     const AUTH_DEFINE_NAME_OLD = 'DUP_SECURE_KEY'; // OLD define name
-    const AUTH_DEFINE_NAME     = 'gamb-duplica-wp_AUTH_KEY';
+    const AUTH_DEFINE_NAME     = 'GambDuplicaWP_AUTH_KEY';
     const AUTO_SALT_LEN        = 32;
 
     /** @var string */

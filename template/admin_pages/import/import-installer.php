@@ -5,9 +5,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\ImportPageController;
-use gamb-duplica-wp\Package\Import\PackageImporter;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Controllers\ImportPageController;
+use GambDuplicaWP\Package\Import\PackageImporter;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
 
 defined("ABSPATH") or die("");
 

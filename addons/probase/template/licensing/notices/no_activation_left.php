@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Addons\ProBase\LicensingController;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Addons\ProBase\LicensingController;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
 
 defined("ABSPATH") or die("");
 
@@ -23,7 +23,7 @@ $licensing_tab_url = ControllersManager::getMenuLink(
     ControllersManager::SETTINGS_SUBMENU_SLUG,
     SettingsPageController::L2_SLUG_GENERAL
 );
-$dashboard_url     = gamb-duplica-wp_PRO_BLOG_URL . 'my-account';
+$dashboard_url     = GambDuplicaWP_PRO_BLOG_URL . 'my-account';
 $img_url           = plugins_url('gamb-duplica-wp/assets/img/warning.png');
 
 ?>

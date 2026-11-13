@@ -1,9 +1,9 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\UsageStatistics;
+namespace GambDuplicaWP\Utils\UsageStatistics;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapLog;
 use Error;
 use Exception;
 use WP_Error;
@@ -44,7 +44,7 @@ class CommStats
      */
     public static function disableUsageTracking()
     {
-        if (gamb-duplica-wp_USTATS_DISALLOW) { // @phpstan-ignore-line
+        if (GambDuplicaWP_USTATS_DISALLOW) { // @phpstan-ignore-line
             // Don't use StatsBootstrap::isTrackingAllowed beacause on disalbe usage tracking i necessary disable the tracking on server
             return false;
         }
@@ -127,8 +127,8 @@ class CommStats
      */
     public static function getRemoteHost()
     {
-        if (gamb-duplica-wp_CUSTOM_STATS_REMOTE_HOST != '') {  // @phpstan-ignore-line
-            return gamb-duplica-wp_CUSTOM_STATS_REMOTE_HOST;
+        if (GambDuplicaWP_CUSTOM_STATS_REMOTE_HOST != '') {  // @phpstan-ignore-line
+            return GambDuplicaWP_CUSTOM_STATS_REMOTE_HOST;
         } else {
             return self::DEFAULT_REMOTE_HOST;
         }

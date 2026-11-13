@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\ParagonIE\ConstantTime;
+namespace VendorGambDuplicaWP\ParagonIE\ConstantTime;
 
 use TypeError;
 /**
@@ -32,7 +32,7 @@ use TypeError;
  * Binary string operators that don't choke on
  * mbstring.func_overload
  *
- * @package VendorDuplicator\ParagonIE\ConstantTime
+ * @package VendorGambDuplicaWP\ParagonIE\ConstantTime
  */
 abstract class Binary
 {

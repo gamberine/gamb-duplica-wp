@@ -5,12 +5,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Core\Models\AbstractEntitySingleton;
-use gamb-duplica-wp\Core\Models\UpdateFromInputInterface;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Utils\Settings\ModelMigrateSettingsInterface;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Core\Models\AbstractEntitySingleton;
+use GambDuplicaWP\Core\Models\UpdateFromInputInterface;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\Settings\ModelMigrateSettingsInterface;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 
 /**
  * Secure Global Entity. Used to store settings requiring encryption.

@@ -28,7 +28,7 @@ defined("ABSPATH") or die("");
             <b><?php esc_html_e("New to gamb-duplica-wp?", 'gamb-duplica-wp'); ?></b><br />
             <a
                 class="dup-quick-start-link"
-                href="<?php echo esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'knowledge-base-article-categories/quick-start/'); ?>"
+                href="<?php echo esc_url(GambDuplicaWP_PRO_BLOG_URL . 'knowledge-base-article-categories/quick-start/'); ?>"
                 target="_blank">
                 <?php esc_html_e("Visit the 'Quick Start' guide!", 'gamb-duplica-wp'); ?>
             </a>

@@ -9,19 +9,19 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Elastic\Elasticsearch\Response\Elasticsearch;
+use VendorGambDuplicaWP\Elastic\Elasticsearch\Response\Elasticsearch;
 use Throwable;
 use RuntimeException;
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Monolog\Formatter\ElasticsearchFormatter;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Formatter\ElasticsearchFormatter;
 use InvalidArgumentException;
-use VendorDuplicator\Elasticsearch\Common\Exceptions\RuntimeException as ElasticsearchRuntimeException;
-use VendorDuplicator\Elasticsearch\Client;
-use VendorDuplicator\Elastic\Elasticsearch\Exception\InvalidArgumentException as ElasticInvalidArgumentException;
-use VendorDuplicator\Elastic\Elasticsearch\Client as Client8;
+use VendorGambDuplicaWP\Elasticsearch\Common\Exceptions\RuntimeException as ElasticsearchRuntimeException;
+use VendorGambDuplicaWP\Elasticsearch\Client;
+use VendorGambDuplicaWP\Elastic\Elasticsearch\Exception\InvalidArgumentException as ElasticInvalidArgumentException;
+use VendorGambDuplicaWP\Elastic\Elasticsearch\Client as Client8;
 /**
  * Elasticsearch handler
  *

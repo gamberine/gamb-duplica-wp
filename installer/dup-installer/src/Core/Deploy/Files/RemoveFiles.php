@@ -1,17 +1,17 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\Files;
+namespace GambDuplicaWP\Installer\Core\Deploy\Files;
 
 use GAMB_DUPLICA_WP_Extraction;
-use gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginsManager;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
+use GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginsManager;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapWP;
 use DUPX_ArchiveConfig;
 use DUPX_Custom_Host_Manager;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 use DUPX_NOTICE_ITEM;
 use DUPX_NOTICE_MANAGER;
 use Error;

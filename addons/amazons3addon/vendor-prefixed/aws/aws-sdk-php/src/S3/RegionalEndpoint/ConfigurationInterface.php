@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\RegionalEndpoint;
+namespace VendorGambDuplicaWP\Aws\S3\RegionalEndpoint;
 
 /**
  * Provides access to S3 regional endpoints configuration options: endpoints_type

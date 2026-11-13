@@ -15,14 +15,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Http;
+namespace VendorGambDuplicaWP\Google\Http;
 
-use VendorDuplicator\Google\Client;
-use VendorDuplicator\Google\Exception as GoogleException;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\GuzzleHttp\Psr7\Uri;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Google\Client;
+use VendorGambDuplicaWP\Google\Exception as GoogleException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Uri;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Manage large file uploads, which may be media but can be any type
  * of sizable data.

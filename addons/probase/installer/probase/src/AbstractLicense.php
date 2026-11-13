@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Addons\ProBase;
+namespace GambDuplicaWP\Installer\Addons\ProBase;
 
 use Exception;
 

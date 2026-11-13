@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Views;
+namespace GambDuplicaWP\Views;
 
 class UserUIOptions
 {

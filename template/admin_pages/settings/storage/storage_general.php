@@ -6,8 +6,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 /**
  * Variables
@@ -30,7 +30,7 @@ $global = GAMB_DUPLICA_WP_Global_Entity::getInstance();
     <p>
         <?php esc_html_e("Default Local Storage Path", 'gamb-duplica-wp'); ?>:
         <b>
-            <?php echo esc_html(SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH)); ?>
+            <?php echo esc_html(SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH)); ?>
         </b>
     </p>
 

@@ -5,23 +5,23 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\Database;
+namespace GambDuplicaWP\Installer\Core\Deploy\Database;
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Core\Params\Descriptors\ParamDescUsers;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Models\ImportUser;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\ViewHelpers\Resources;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\AbstractJsonSerializable;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Core\Params\Descriptors\ParamDescUsers;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Models\ImportUser;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\ViewHelpers\Resources;
+use VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable;
+use GambDuplicaWP\Libs\Snap\SnapDB;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use DUPX_ArchiveConfig;
 use DUPX_DB;
 use DUPX_DB_Functions;
 use DUPX_DB_Tables;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 use DUPX_NOTICE_ITEM;
 use DUPX_NOTICE_MANAGER;
 use DUPX_UpdateEngine;

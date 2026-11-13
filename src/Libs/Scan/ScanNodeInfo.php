@@ -1,10 +1,10 @@
 <?php
 
-namespace gamb-duplica-wp\Package\Create\Scan;
-namespace gamb-duplica-wp\Libs\Scan;
+namespace GambDuplicaWP\Package\Create\Scan;
+namespace GambDuplicaWP\Libs\Scan;
 
-use gamb-duplica-wp\Libs\Index\FileNodeInfo;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Index\FileNodeInfo;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 class ScanNodeInfo extends FileNodeInfo
 {

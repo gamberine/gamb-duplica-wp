@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Identity\S3;
+namespace VendorGambDuplicaWP\Aws\Identity\S3;
 
-use VendorDuplicator\Aws\Credentials\Credentials;
+use VendorGambDuplicaWP\Aws\Credentials\Credentials;
 class S3ExpressIdentity extends Credentials
 {
 }

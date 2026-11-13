@@ -9,7 +9,7 @@
  * @link    http://www.php-fig.org/psr/psr-2/
  */
 
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 class GAMB_DUPLICA_WP_WPEngine_Host implements GAMB_DUPLICA_WP_Host_interface
 {

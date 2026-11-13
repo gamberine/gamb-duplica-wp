@@ -5,21 +5,21 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
 use GAMB_DUPLICA_WP_Handler;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_File_Type;
 use GAMB_DUPLICA_WP_Schedule_Entity;
-use gamb-duplica-wp\Addons\OneDriveAddon\Models\OneDriveStorage;
-use gamb-duplica-wp\Controllers\SchedulePageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\StorageAuthInterface;
-use gamb-duplica-wp\Models\Storages\UnknownStorage;
+use GambDuplicaWP\Addons\OneDriveAddon\Models\OneDriveStorage;
+use GambDuplicaWP\Controllers\SchedulePageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\StorageAuthInterface;
+use GambDuplicaWP\Models\Storages\UnknownStorage;
 use Exception;
 
 class ServicesStorage extends AbstractAjaxService

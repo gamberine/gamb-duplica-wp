@@ -15,10 +15,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth;
+namespace VendorGambDuplicaWP\Google\Auth;
 
-use VendorDuplicator\Google\Auth\Credentials\GCECredentials;
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\Google\Auth\Credentials\GCECredentials;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
 /**
  * A class to implement caching for calls to GCECredentials::onGce. This class
  * is used automatically when you pass a `Psr\Cache\CacheItemPoolInterface`

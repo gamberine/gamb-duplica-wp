@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Parser;
+namespace VendorGambDuplicaWP\Aws\S3\Parser;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\Aws\S3\CalculatesChecksumTrait;
-use VendorDuplicator\Aws\S3\Exception\S3Exception;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\Aws\S3\CalculatesChecksumTrait;
+use VendorGambDuplicaWP\Aws\S3\Exception\S3Exception;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * A custom s3 result mutator that validates the response checksums.
  *

@@ -10,16 +10,16 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params\Descriptors;
+namespace GambDuplicaWP\Installer\Core\Params\Descriptors;
 
 use GAMB_DUPLICA_WP_Extraction;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamItem;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamForm;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamOption;
-use gamb-duplica-wp\Installer\Package\PComponents;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamItem;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamForm;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamOption;
+use GambDuplicaWP\Installer\Package\PComponents;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 use DUPX_ArchiveConfig;
 use DUPX_DBInstall;
 

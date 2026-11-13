@@ -10,9 +10,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Math\BigInteger\Engines\BCMath;
+namespace VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\BCMath;
 
-use VendorDuplicator\phpseclib3\Math\BigInteger\Engines\BCMath\Reductions\Barrett;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\BCMath\Reductions\Barrett;
 /**
  * PHP Default Modular Exponentiation Engine
  *

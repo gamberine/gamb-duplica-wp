@@ -5,10 +5,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params\Items;
+namespace GambDuplicaWP\Installer\Core\Params\Items;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 /**
  * this class handles the entire block selection block.
@@ -38,7 +38,7 @@ class ParamFormPlugins extends ParamForm
      */
     protected function pluginSelectHtml()
     {
-        $pluginsManager = \gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginsManager::getInstance();
+        $pluginsManager = \GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginsManager::getInstance();
         $plugns_list    = $pluginsManager->getPlugins();
 
         $attrs                       = [
@@ -93,7 +93,7 @@ class ParamFormPlugins extends ParamForm
      */
     protected function pluginsSelector()
     {
-        $pluginsManager = \gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginsManager::getInstance();
+        $pluginsManager = \GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginsManager::getInstance();
         $plugns_list    = $pluginsManager->getPlugins();
         $paramsManager  = PrmMng::getInstance();
         $subsiteId      = $paramsManager->getValue(PrmMng::PARAM_SUBSITE_ID);
@@ -127,7 +127,7 @@ class ParamFormPlugins extends ParamForm
                     ?>
                     <li class="<?php echo \DUPX_U::esc_attr($status); ?>" data-filter-target="orig-<?php echo \DUPX_U::esc_attr($status); ?>" >
                         <a href="#">
-                            <?php echo \DUPX_U::esc_html(\gamb-duplica-wp\Installer\Core\Deploy\Plugins\PluginItem::getStatusLabel($status)); ?>
+                            <?php echo \DUPX_U::esc_html(\GambDuplicaWP\Installer\Core\Deploy\Plugins\PluginItem::getStatusLabel($status)); ?>
                             <span class="count"> (<?php echo $count; ?>)</span>
                         </a>
                     </li>

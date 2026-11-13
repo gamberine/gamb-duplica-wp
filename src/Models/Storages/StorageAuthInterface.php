@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Models\Storages;
+namespace GambDuplicaWP\Models\Storages;
 
 interface StorageAuthInterface
 {

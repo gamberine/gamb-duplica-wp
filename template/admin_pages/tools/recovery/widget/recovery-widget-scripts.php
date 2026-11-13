@@ -22,19 +22,19 @@ defined("ABSPATH") or die("");
         let errorMsgContent = <?php echo json_encode($tplMng->render('admin_pages/tools/recovery/widget/recovery-message-set-error', [], false)); ?>;
 
         DupPro.Pack.removeRecoveryMessages();
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_pro_set_recovery',
                 recovery_package: packageId,
-                fromPageTab: <?php echo json_encode(\gamb-duplica-wp\Core\Controllers\ControllersManager::getUniqueIdOfCurrentPage()); ?>,
-                nonce: '<?php echo wp_create_nonce('gamb-duplica-wp_pro_set_recovery'); ?>'
+                fromPageTab: <?php echo json_encode(\GambDuplicaWP\Core\Controllers\ControllersManager::getUniqueIdOfCurrentPage()); ?>,
+                nonce: '<?php echo wp_create_nonce('GambDuplicaWP_pro_set_recovery'); ?>'
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 if (topHeaderMessage) {
                     DupPro.addAdminMessage(okMsgContent, 'notice', {
                         updateCallback: function (msgNode) {
                             msgNode.find('.recovery-set-message-ok').html(funcData.adminMessage);
-                            gamb-duplica-wpTooltip.reload();
+                            GambDuplicaWPTooltip.reload();
                             msgNode.find('.dup-pro-recovery-download-launcher').click(function () {
                                 DupPro.Pack.downloadLauncher();
                             });
@@ -71,11 +71,11 @@ defined("ABSPATH") or die("");
         let errorMsgContent = <?php echo json_encode($tplMng->render('admin_pages/tools/recovery/widget/recovery-message-reset-error', [], false)); ?>;
 
         DupPro.Pack.removeRecoveryMessages();
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_pro_reset_recovery',
-                nonce: '<?php echo wp_create_nonce('gamb-duplica-wp_pro_reset_recovery'); ?>',
-                fromPageTab: <?php echo json_encode(\gamb-duplica-wp\Core\Controllers\ControllersManager::getUniqueIdOfCurrentPage()); ?>,
+                nonce: '<?php echo wp_create_nonce('GambDuplicaWP_pro_reset_recovery'); ?>',
+                fromPageTab: <?php echo json_encode(\GambDuplicaWP\Core\Controllers\ControllersManager::getUniqueIdOfCurrentPage()); ?>,
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 DupPro.addAdminMessage(okMsgContent, 'notice');
@@ -102,11 +102,11 @@ defined("ABSPATH") or die("");
         let errorMsgContent = <?php echo json_encode($tplMng->render('admin_pages/tools/recovery/widget/recovery-message-reset-error', [], false)); ?>;
 
         DupPro.Pack.removeRecoveryMessages();
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_pro_get_recovery_widget',
-                nonce: '<?php echo wp_create_nonce('gamb-duplica-wp_pro_get_recovery_widget'); ?>',
-                fromPageTab: <?php echo json_encode(\gamb-duplica-wp\Core\Controllers\ControllersManager::getUniqueIdOfCurrentPage()); ?>,
+                nonce: '<?php echo wp_create_nonce('GambDuplicaWP_pro_get_recovery_widget'); ?>',
+                fromPageTab: <?php echo json_encode(\GambDuplicaWP\Core\Controllers\ControllersManager::getUniqueIdOfCurrentPage()); ?>,
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 if (typeof callbackOnSuccess === "function") {
@@ -135,9 +135,9 @@ defined("ABSPATH") or die("");
 
         wrapper.closest('.dup-pro-import-box').find('.box-title .badge').each(function () {
             if (wrapper.find('.dup-pro-recovery-active-link-header .dup-pro-recovery-status').hasClass('green')) {
-                jQuery(this).removeClass('badge-warn').addClass('badge-pass').text('<?php echo esc_js(__('Good', 'gamb-duplica-wp')) ?>');
+                jQuery(this).removeClass('badge-warn').addClass('badge-pass').text('<?php echo esc_js(__('Good', 'GambDuplicaWP')) ?>');
             } else {
-                jQuery(this).removeClass('badge-pass').addClass('badge-warn').text('<?php echo esc_js(__('Notice', 'gamb-duplica-wp')) ?>');
+                jQuery(this).removeClass('badge-pass').addClass('badge-warn').text('<?php echo esc_js(__('Notice', 'GambDuplicaWP')) ?>');
             }
         });
 
@@ -171,10 +171,10 @@ defined("ABSPATH") or die("");
     };
 
     DupPro.Pack.downloadLauncher = function () {
-        gamb-duplica-wp.Util.ajaxWrapper(
+        GambDuplicaWP.Util.ajaxWrapper(
             {
                 action: 'gamb-duplica-wp_pro_disaster_launcher_download',
-                nonce: '<?php echo wp_create_nonce('gamb-duplica-wp_pro_disaster_launcher_download'); ?>'
+                nonce: '<?php echo wp_create_nonce('GambDuplicaWP_pro_disaster_launcher_download'); ?>'
             },
             function (result, data, funcData, textStatus, jqXHR) {
                 if (funcData.success) {
@@ -214,7 +214,7 @@ defined("ABSPATH") or die("");
             }
         });
 
-        gamb-duplica-wpTooltip.reload();
+        GambDuplicaWPTooltip.reload();
 
         widgetWrapper.find('.dup-pro-recovery-windget-refresh').off().click(function () {
             DupPro.Pack.UpdatgeRecoveryWidget(function (funcData, data, textStatus, jqXHR) {

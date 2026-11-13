@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\AwsClientInterface;
-use VendorDuplicator\Aws\S3\Exception\DeleteMultipleObjectsException;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\PromisorInterface;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Aws\AwsClientInterface;
+use VendorGambDuplicaWP\Aws\S3\Exception\DeleteMultipleObjectsException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromisorInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
 /**
  * Efficiently deletes many objects from a single Amazon S3 bucket using an
  * iterator that yields keys. Deletes are made using the DeleteObjects API

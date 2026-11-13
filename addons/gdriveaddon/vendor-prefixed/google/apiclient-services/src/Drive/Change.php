@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class Change extends \VendorDuplicator\Google\Model
+class Change extends \VendorGambDuplicaWP\Google\Model
 {
     /**
      * @var string
@@ -213,4 +213,4 @@ class Change extends \VendorDuplicator\Google\Model
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Change::class, 'VendorDuplicator\Google_Service_Drive_Change');
+class_alias(Change::class, 'VendorGambDuplicaWP\Google_Service_Drive_Change');

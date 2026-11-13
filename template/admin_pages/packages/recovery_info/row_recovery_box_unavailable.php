@@ -7,8 +7,8 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Package\Recovery\RecoveryStatus;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Package\Recovery\RecoveryStatus;
+use GambDuplicaWP\Views\ViewHelper;
 
 defined("ABSPATH") or die("");
 

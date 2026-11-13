@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\DefaultsMode;
+namespace VendorGambDuplicaWP\Aws\DefaultsMode;
 
 /**
  * Provides access to defaultsMode configuration

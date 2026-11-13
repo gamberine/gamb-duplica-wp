@@ -39,7 +39,7 @@ esc_html_e(
 <br>
 <b><?php esc_html_e('Details:', 'gamb-duplica-wp'); ?></b><br>
 <?php esc_html_e('JSON Service:', 'gamb-duplica-wp'); ?> /wp-admin/admin-ajax.php?action=gamb-duplica-wp_pro_package_scan<br>
-<?php esc_html_e('Scan Path:', 'gamb-duplica-wp'); ?> [<?php echo esc_html(gamb-duplica-wp_pro_get_home_path()); ?>]<br><br>
+<?php esc_html_e('Scan Path:', 'gamb-duplica-wp'); ?> [<?php echo esc_html(GambDuplicaWP_pro_get_home_path()); ?>]<br><br>
 
 <b><?php esc_html_e('More Information:', 'gamb-duplica-wp'); ?></b><br>
 <?php
@@ -48,6 +48,6 @@ printf(
         'Please see the online FAQ titled %1$s"How to resolve scanner warnings/errors and timeout issues?"%2$s',
         'gamb-duplica-wp'
     ),
-    '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-scanner-warnings-errors-and-timeout-issues') . '" target="_blank">',
+    '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-scanner-warnings-errors-and-timeout-issues') . '" target="_blank">',
     '</a>'
 );

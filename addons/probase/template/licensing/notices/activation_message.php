@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 defined("ABSPATH") or die("");
 
@@ -83,7 +83,7 @@ if (isset($tplData['license_request_error'])) {
                     ],
                 ]
             ),
-            esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'my-account/support/')
+            esc_url(GambDuplicaWP_PRO_BLOG_URL . 'my-account/support/')
         );
         ?>
     </p>

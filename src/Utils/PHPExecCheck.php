@@ -5,14 +5,14 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Utils;
+namespace GambDuplicaWP\Utils;
 
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use Error;
 use Exception;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Requests;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Auth\Basic;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Response;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use VendorGambDuplicaWP\WpOrg\Requests\Auth\Basic;
+use VendorGambDuplicaWP\WpOrg\Requests\Response;
 
 /**
  * PHP check utility

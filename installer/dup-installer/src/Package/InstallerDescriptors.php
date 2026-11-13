@@ -6,7 +6,7 @@
  * @copyright (c) 2024, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Package;
+namespace GambDuplicaWP\Installer\Package;
 
 class InstallerDescriptors
 {

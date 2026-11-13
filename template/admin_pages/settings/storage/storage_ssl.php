@@ -6,7 +6,7 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\SettingsPageController;
 
 /**
  * Variables

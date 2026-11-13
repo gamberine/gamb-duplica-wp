@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto\Polyfill;
+namespace VendorGambDuplicaWP\Aws\Crypto\Polyfill;
 
-use VendorDuplicator\Aws\Exception\CryptoPolyfillException;
+use VendorGambDuplicaWP\Aws\Exception\CryptoPolyfillException;
 /**
  * Trait NeedsTrait
  */

@@ -15,12 +15,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\CredentialSource;
+namespace VendorGambDuplicaWP\Google\Auth\CredentialSource;
 
-use VendorDuplicator\Google\Auth\ExternalAccountCredentialSourceInterface;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpClientCache;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\Google\Auth\ExternalAccountCredentialSourceInterface;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpClientCache;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
 use InvalidArgumentException;
 use UnexpectedValueException;
 /**

@@ -7,9 +7,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Ajax\ServicesTools;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Utils\Support\SupportToolkit;
+use GambDuplicaWP\Ajax\ServicesTools;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Utils\Support\SupportToolkit;
 
 defined("ABSPATH") or die("");
 

@@ -10,17 +10,17 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Binary as BinaryCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Prime as PrimeCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedCurveException;
-use VendorDuplicator\phpseclib3\File\ASN1;
-use VendorDuplicator\phpseclib3\File\ASN1\Maps;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Binary as BinaryCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Prime as PrimeCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedCurveException;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1\Maps;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Generic EC Key Parsing Helper functions
  *
@@ -213,7 +213,7 @@ trait Common
             throw new \RuntimeException('No parameters are present');
         }
         if (isset($params['namedCurve'])) {
-            $curve = '\VendorDuplicator\\phpseclib3\Crypt\EC\Curves\\' . $params['namedCurve'];
+            $curve = '\VendorGambDuplicaWP\\phpseclib3\Crypt\EC\Curves\\' . $params['namedCurve'];
             if (!class_exists($curve)) {
                 throw new UnsupportedCurveException('Named Curve of ' . $params['namedCurve'] . ' is not supported');
             }
@@ -351,7 +351,7 @@ trait Common
                     continue;
                 }
                 $testName = $file->getBasename('.php');
-                $class = 'VendorDuplicator\\phpseclib3\Crypt\EC\Curves\\' . $testName;
+                $class = 'VendorGambDuplicaWP\\phpseclib3\Crypt\EC\Curves\\' . $testName;
                 $reflect = new \ReflectionClass($class);
                 if ($reflect->isFinal()) {
                     continue;

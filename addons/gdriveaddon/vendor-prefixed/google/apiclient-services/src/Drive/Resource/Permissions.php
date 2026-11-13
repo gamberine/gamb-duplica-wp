@@ -15,10 +15,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\Permission;
-use VendorDuplicator\Google\Service\Drive\PermissionList;
+use VendorGambDuplicaWP\Google\Service\Drive\Permission;
+use VendorGambDuplicaWP\Google\Service\Drive\PermissionList;
 /**
  * The "permissions" collection of methods.
  * Typical usage is:
@@ -27,7 +27,7 @@ use VendorDuplicator\Google\Service\Drive\PermissionList;
  *   $permissions = $driveService->permissions;
  *  </code>
  */
-class Permissions extends \VendorDuplicator\Google\Service\Resource
+class Permissions extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Creates a permission for a file or shared drive. **Warning:** Concurrent
@@ -63,7 +63,7 @@ class Permissions extends \VendorDuplicator\Google\Service\Resource
      * the file ID parameter refers to a shared drive and the requester is an
      * administrator of the domain to which the shared drive belongs.
      * @return Permission
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function create($fileId, Permission $postBody, $optParams = [])
     {
@@ -88,7 +88,7 @@ class Permissions extends \VendorDuplicator\Google\Service\Resource
      * administrator; if set to true, then the requester will be granted access if
      * the file ID parameter refers to a shared drive and the requester is an
      * administrator of the domain to which the shared drive belongs.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function delete($fileId, $permissionId, $optParams = [])
     {
@@ -112,7 +112,7 @@ class Permissions extends \VendorDuplicator\Google\Service\Resource
      * the file ID parameter refers to a shared drive and the requester is an
      * administrator of the domain to which the shared drive belongs.
      * @return Permission
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($fileId, $permissionId, $optParams = [])
     {
@@ -144,7 +144,7 @@ class Permissions extends \VendorDuplicator\Google\Service\Resource
      * the file ID parameter refers to a shared drive and the requester is an
      * administrator of the domain to which the shared drive belongs.
      * @return PermissionList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listPermissions($fileId, $optParams = [])
     {
@@ -175,7 +175,7 @@ class Permissions extends \VendorDuplicator\Google\Service\Resource
      * the file ID parameter refers to a shared drive and the requester is an
      * administrator of the domain to which the shared drive belongs.
      * @return Permission
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function update($fileId, $permissionId, Permission $postBody, $optParams = [])
     {
@@ -185,4 +185,4 @@ class Permissions extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Permissions::class, 'VendorDuplicator\Google_Service_Drive_Resource_Permissions');
+class_alias(Permissions::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Permissions');

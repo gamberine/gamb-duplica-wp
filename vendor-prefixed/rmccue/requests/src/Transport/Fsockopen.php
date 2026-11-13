@@ -5,17 +5,17 @@
  *
  * @package Requests\Transport
  */
-namespace VendorDuplicator\WpOrg\Requests\Transport;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Transport;
 
-use VendorDuplicator\WpOrg\Requests\Capability;
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Port;
-use VendorDuplicator\WpOrg\Requests\Requests;
-use VendorDuplicator\WpOrg\Requests\Ssl;
-use VendorDuplicator\WpOrg\Requests\Transport;
-use VendorDuplicator\WpOrg\Requests\Utility\CaseInsensitiveDictionary;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Capability;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Port;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use VendorGambDuplicaWP\WpOrg\Requests\Ssl;
+use VendorGambDuplicaWP\WpOrg\Requests\Transport;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\CaseInsensitiveDictionary;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * fsockopen HTTP transport
  *
@@ -62,12 +62,12 @@ final class Fsockopen implements Transport
      * @param array $options Request options, see {@see \WpOrg\Requests\Requests::response()} for documentation
      * @return string Raw HTTP result
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string or Stringable.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $headers argument is not an array.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $data parameter is not an array or string.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception       On failure to connect to socket (`fsockopenerror`)
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception       On socket timeout (`timeout`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string or Stringable.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $headers argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $data parameter is not an array or string.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception       On failure to connect to socket (`fsockopenerror`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception       On socket timeout (`timeout`)
      */
     public function request($url, $headers = [], $data = [], $options = [])
     {
@@ -295,8 +295,8 @@ final class Fsockopen implements Transport
      * @param array $options Global options, see {@see \WpOrg\Requests\Requests::response()} for documentation
      * @return array Array of \WpOrg\Requests\Response objects (may contain \WpOrg\Requests\Exception or string responses as well)
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $requests argument is not an array or iterable object with array access.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $requests argument is not an array or iterable object with array access.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
      */
     public function request_multiple($requests, $options)
     {
@@ -399,8 +399,8 @@ final class Fsockopen implements Transport
      * @param resource $context Stream context
      * @return bool
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On failure to connect via TLS (`fsockopen.ssl.connect_error`)
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On not obtaining a match for the host (`fsockopen.ssl.no_match`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On failure to connect via TLS (`fsockopen.ssl.connect_error`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On not obtaining a match for the host (`fsockopen.ssl.no_match`)
      */
     public function verify_certificate_from_context($host, $context)
     {

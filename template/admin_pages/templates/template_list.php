@@ -6,8 +6,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
 
 /**
  * Variables

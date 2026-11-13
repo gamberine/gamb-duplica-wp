@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint\UseDualstackEndpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint\UseDualstackEndpoint;
 
 interface ConfigurationInterface
 {

@@ -40,7 +40,7 @@ if ($hasShellZip) {
                 '%1$s and %2$s are html anchor tags or link',
                 'gamb-duplica-wp'
             ),
-            '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-work-with-the-different-zip-engines') . '" target="_blank">',
+            '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-work-with-the-different-zip-engines') . '" target="_blank">',
             '</a> '
         );
         printf(
@@ -49,7 +49,7 @@ if ($hasShellZip) {
                 '%1$s and %2$s are html anchor tags or link',
                 'gamb-duplica-wp'
             ),
-            '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'what-host-providers-are-recommended-for-gamb-duplica-wp/') . '" target="_blank">',
+            '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'what-host-providers-are-recommended-for-gamb-duplica-wp/') . '" target="_blank">',
             '</a> '
         );
         ?>

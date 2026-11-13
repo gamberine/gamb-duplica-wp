@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class AppIcons extends \VendorDuplicator\Google\Model
+class AppIcons extends \VendorGambDuplicaWP\Google\Model
 {
     /**
      * @var string
@@ -75,4 +75,4 @@ class AppIcons extends \VendorDuplicator\Google\Model
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppIcons::class, 'VendorDuplicator\Google_Service_Drive_AppIcons');
+class_alias(AppIcons::class, 'VendorGambDuplicaWP\Google_Service_Drive_AppIcons');

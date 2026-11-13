@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Create\BuildComponents;
 
 defined("ABSPATH") or die("");
 

@@ -5,18 +5,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
-use gamb-duplica-wp\Ajax\ServicesBrand;
-use gamb-duplica-wp\Ajax\ServicesDashboard;
-use gamb-duplica-wp\Ajax\ServicesImport;
-use gamb-duplica-wp\Ajax\ServicesNotifications;
-use gamb-duplica-wp\Ajax\ServicesPackage;
-use gamb-duplica-wp\Ajax\ServicesRecovery;
-use gamb-duplica-wp\Ajax\ServicesSchedule;
-use gamb-duplica-wp\Ajax\ServicesSettings;
-use gamb-duplica-wp\Ajax\ServicesStorage;
-use gamb-duplica-wp\Ajax\ServicesTools;
+use GambDuplicaWP\Ajax\ServicesBrand;
+use GambDuplicaWP\Ajax\ServicesDashboard;
+use GambDuplicaWP\Ajax\ServicesImport;
+use GambDuplicaWP\Ajax\ServicesNotifications;
+use GambDuplicaWP\Ajax\ServicesPackage;
+use GambDuplicaWP\Ajax\ServicesRecovery;
+use GambDuplicaWP\Ajax\ServicesSchedule;
+use GambDuplicaWP\Ajax\ServicesSettings;
+use GambDuplicaWP\Ajax\ServicesStorage;
+use GambDuplicaWP\Ajax\ServicesTools;
 
 class AjaxServicesUtils
 {

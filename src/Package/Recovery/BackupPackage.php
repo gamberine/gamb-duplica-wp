@@ -5,13 +5,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Recovery;
+namespace GambDuplicaWP\Package\Recovery;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_Package;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Package\Import\PackageImporter;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Package\Import\PackageImporter;
 
 class BackupPackage extends PackageImporter
 {

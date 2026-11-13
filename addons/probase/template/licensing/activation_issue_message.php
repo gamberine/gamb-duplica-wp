@@ -4,9 +4,9 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Addons\ProBase\License\LicenseNotices;
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\License\LicenseNotices;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
 
 defined("ABSPATH") or die("");
 
@@ -38,7 +38,7 @@ esc_html_e('If license activation fails please wait ~ one hour and retry.', 'gam
             '1 and 2 represent opening and closing anchor tags (<a> and </a>)',
             'gamb-duplica-wp'
         ),
-        '<a target="_blank" href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-license-activation-issues/') . '">',
+        '<a target="_blank" href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-license-activation-issues/') . '">',
         '</a>'
     );
     ?>
@@ -50,7 +50,7 @@ esc_html_e('If license activation fails please wait ~ one hour and retry.', 'gam
             '1 and 2 represent opening and closing anchor tags (<a> and </a>)',
             'gamb-duplica-wp'
         ),
-        '<a target="_blank" href="' . esc_url(gamb-duplica-wp_PRO_BLOG_URL) . '">',
+        '<a target="_blank" href="' . esc_url(GambDuplicaWP_PRO_BLOG_URL) . '">',
         '</a>'
     );
     ?>

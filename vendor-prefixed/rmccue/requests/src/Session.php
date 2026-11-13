@@ -5,13 +5,13 @@
  *
  * @package Requests\SessionHandler
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Cookie\Jar;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Iri;
-use VendorDuplicator\WpOrg\Requests\Requests;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Cookie\Jar;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Iri;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * Session handler for persistent requests and default parameters
  *
@@ -67,10 +67,10 @@ class Session
      * @param array $data Default data for requests
      * @param array $options Default options for requests
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string, Stringable or null.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $headers argument is not an array.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $data argument is not an array.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $url argument is not a string, Stringable or null.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $headers argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $data argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
      */
     public function __construct($url = null, $headers = [], $data = [], $options = [])
     {
@@ -136,11 +136,11 @@ class Session
         unset($this->options[$name]);
     }
     /**#@+
-     * @see \VendorDuplicator\WpOrg\Requests\Session::request()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Session::request()
      * @param string $url
      * @param array $headers
      * @param array $options
-     * @return \VendorDuplicator\WpOrg\Requests\Response
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Response
      */
     /**
      * Send a GET request
@@ -165,12 +165,12 @@ class Session
     }
     /**#@-*/
     /**#@+
-     * @see \VendorDuplicator\WpOrg\Requests\Session::request()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Session::request()
      * @param string $url
      * @param array $headers
      * @param array $data
      * @param array $options
-     * @return \VendorDuplicator\WpOrg\Requests\Response
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Response
      */
     /**
      * Send a POST request
@@ -205,16 +205,16 @@ class Session
      * This method initiates a request and sends it via a transport before
      * parsing.
      *
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::request()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::request()
      *
      * @param string $url URL to request
      * @param array $headers Extra headers to send with the request
      * @param array|null $data Data to send either as a query string for GET/HEAD requests, or in the body for POST requests
      * @param string $type HTTP request type (use \WpOrg\Requests\Requests constants)
      * @param array $options Options for the request (see {@see \WpOrg\Requests\Requests::request()})
-     * @return \VendorDuplicator\WpOrg\Requests\Response
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Response
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception On invalid URLs (`nonhttp`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception On invalid URLs (`nonhttp`)
      */
     public function request($url, $headers = [], $data = [], $type = Requests::GET, $options = [])
     {
@@ -224,14 +224,14 @@ class Session
     /**
      * Send multiple HTTP requests simultaneously
      *
-     * @see \VendorDuplicator\WpOrg\Requests\Requests::request_multiple()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Requests::request_multiple()
      *
      * @param array $requests Requests data (see {@see \WpOrg\Requests\Requests::request_multiple()})
      * @param array $options Global and default options (see {@see \WpOrg\Requests\Requests::request()})
      * @return array Responses (either \WpOrg\Requests\Response or a \WpOrg\Requests\Exception object)
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $requests argument is not an array or iterable object with array access.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $requests argument is not an array or iterable object with array access.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $options argument is not an array.
      */
     public function request_multiple($requests, $options = [])
     {

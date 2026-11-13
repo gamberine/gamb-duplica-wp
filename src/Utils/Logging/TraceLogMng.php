@@ -1,11 +1,11 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Logging;
+namespace GambDuplicaWP\Utils\Logging;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
 use Error;
 use Exception;
 
@@ -22,8 +22,8 @@ final class TraceLogMng
     const NAME_PREFIX            = 'dup_trace_';
     const NAME_SUFFIX            = '_log.txt';
     const NAME_BACKUP_SUFFIX     = '_log_bak.txt';
-    const TRACE_PATH             = gamb-duplica-wp_PRO_SSDIR_PATH;
-    const TRACE_URL              = gamb-duplica-wp_PRO_SSDIR_URL;
+    const TRACE_PATH             = GambDuplicaWP_PRO_SSDIR_PATH;
+    const TRACE_URL              = GambDuplicaWP_PRO_SSDIR_URL;
     const MAX_FILE_SIZE          = 2 * MB_IN_BYTES;
     const DEFAULT_MAX_TOTAL_SIZE = 10 * MB_IN_BYTES;
     const TRACE_MAX_SIZE_KEY     = 'trace_max_total_size';

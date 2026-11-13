@@ -15,20 +15,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth;
+namespace VendorGambDuplicaWP\Google\Auth;
 
 use DomainException;
-use VendorDuplicator\Google\Auth\Credentials\AppIdentityCredentials;
-use VendorDuplicator\Google\Auth\Credentials\GCECredentials;
-use VendorDuplicator\Google\Auth\Credentials\ServiceAccountCredentials;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpClientCache;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\Google\Auth\Middleware\AuthTokenMiddleware;
-use VendorDuplicator\Google\Auth\Middleware\ProxyAuthTokenMiddleware;
-use VendorDuplicator\Google\Auth\Subscriber\AuthTokenSubscriber;
-use VendorDuplicator\GuzzleHttp\Client;
+use VendorGambDuplicaWP\Google\Auth\Credentials\AppIdentityCredentials;
+use VendorGambDuplicaWP\Google\Auth\Credentials\GCECredentials;
+use VendorGambDuplicaWP\Google\Auth\Credentials\ServiceAccountCredentials;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpClientCache;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\Google\Auth\Middleware\AuthTokenMiddleware;
+use VendorGambDuplicaWP\Google\Auth\Middleware\ProxyAuthTokenMiddleware;
+use VendorGambDuplicaWP\Google\Auth\Subscriber\AuthTokenSubscriber;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
 use InvalidArgumentException;
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
 /**
  * ApplicationDefaultCredentials obtains the default credentials for
  * authorizing a request to a Google service.

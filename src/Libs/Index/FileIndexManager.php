@@ -6,9 +6,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Index;
+namespace GambDuplicaWP\Libs\Index;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use Generator;
 
 /**

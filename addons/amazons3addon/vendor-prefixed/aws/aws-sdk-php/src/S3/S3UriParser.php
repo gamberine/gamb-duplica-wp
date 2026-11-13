@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Arn\Exception\InvalidArnException;
-use VendorDuplicator\Aws\Arn\S3\AccessPointArn;
-use VendorDuplicator\Aws\Arn\ArnParser;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\Aws\Arn\Exception\InvalidArnException;
+use VendorGambDuplicaWP\Aws\Arn\S3\AccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\ArnParser;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 /**
  * Extracts a region, bucket, key, and and if a URI is in path-style
  */

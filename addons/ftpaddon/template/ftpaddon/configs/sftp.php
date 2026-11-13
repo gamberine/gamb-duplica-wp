@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\FtpAddon\Models\SFTPStorage;
+use GambDuplicaWP\Addons\FtpAddon\Models\SFTPStorage;
 
 defined("ABSPATH") or die("");
 
@@ -254,7 +254,7 @@ $tplMng->render('admin_pages/storages/parts/provider_head');
 <?php $tplMng->render('admin_pages/storages/parts/provider_foot'); ?>
 <script>
     jQuery(document).ready(function ($) {
-        gamb-duplica-wpReadPrivateKey = function (file_obj)
+        GambDuplicaWPReadPrivateKey = function (file_obj)
         {
             var files = file_obj.files;
             var private_key = files[0];

@@ -13,14 +13,14 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Deploy\Multisite;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Utils\Log\LogHandler;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\ReplaceEngine\ReplaceMng;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
+use GambDuplicaWP\Installer\Core\Deploy\Multisite;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\Log\LogHandler;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\ReplaceEngine\ReplaceMng;
+use GambDuplicaWP\Libs\Snap\SnapDB;
 
 class DUPX_UpdateEngine
 {

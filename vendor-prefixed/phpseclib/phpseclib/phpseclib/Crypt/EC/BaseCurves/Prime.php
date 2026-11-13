@@ -18,13 +18,13 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
-use VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer;
-use VendorDuplicator\phpseclib3\Math\PrimeField;
-use VendorDuplicator\phpseclib3\Math\PrimeField\Integer as PrimeInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer;
+use VendorGambDuplicaWP\phpseclib3\Math\PrimeField;
+use VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer as PrimeInteger;
 /**
  * Curves over y^2 = x^3 + a*x + b
  *
@@ -35,7 +35,7 @@ class Prime extends Base
     /**
      * Prime Field Integer factory
      *
-     * @var \VendorDuplicator\phpseclib3\Math\PrimeFields
+     * @var \VendorGambDuplicaWP\phpseclib3\Math\PrimeFields
      */
     protected $factory;
     /**
@@ -666,7 +666,7 @@ class Prime extends Base
      * To convert a Jacobian Coordinate to an Affine Point
      * you do (x / z^2, y / z^3)
      *
-     * @return \VendorDuplicator\phpseclib3\Math\PrimeField\Integer[]
+     * @return \VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer[]
      */
     public function convertToAffine(array $p)
     {
@@ -681,7 +681,7 @@ class Prime extends Base
     /**
      * Converts an affine point to a jacobian coordinate
      *
-     * @return \VendorDuplicator\phpseclib3\Math\PrimeField\Integer[]
+     * @return \VendorGambDuplicaWP\phpseclib3\Math\PrimeField\Integer[]
      */
     public function convertToInternal(array $p)
     {

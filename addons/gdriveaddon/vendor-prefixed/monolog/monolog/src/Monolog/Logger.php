@@ -9,13 +9,13 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog;
+namespace VendorGambDuplicaWP\Monolog;
 
 use DateTimeZone;
-use VendorDuplicator\Monolog\Handler\HandlerInterface;
-use VendorDuplicator\Psr\Log\LoggerInterface;
-use VendorDuplicator\Psr\Log\InvalidArgumentException;
-use VendorDuplicator\Psr\Log\LogLevel;
+use VendorGambDuplicaWP\Monolog\Handler\HandlerInterface;
+use VendorGambDuplicaWP\Psr\Log\LoggerInterface;
+use VendorGambDuplicaWP\Psr\Log\InvalidArgumentException;
+use VendorGambDuplicaWP\Psr\Log\LogLevel;
 use Throwable;
 use Stringable;
 /**
@@ -392,7 +392,7 @@ class Logger implements LoggerInterface, ResettableInterface
     /**
      * Gets the name of the logging level.
      *
-     * @throws \VendorDuplicator\Psr\Log\InvalidArgumentException If level is not defined
+     * @throws \VendorGambDuplicaWP\Psr\Log\InvalidArgumentException If level is not defined
      *
      * @phpstan-param  Level     $level
      * @phpstan-return LevelName
@@ -408,7 +408,7 @@ class Logger implements LoggerInterface, ResettableInterface
      * Converts PSR-3 levels to Monolog ones if necessary
      *
      * @param  string|int                        $level Level number (monolog) or name (PSR-3)
-     * @throws \VendorDuplicator\Psr\Log\InvalidArgumentException If level is not defined
+     * @throws \VendorGambDuplicaWP\Psr\Log\InvalidArgumentException If level is not defined
      *
      * @phpstan-param  Level|LevelName|LogLevel::* $level
      * @phpstan-return Level

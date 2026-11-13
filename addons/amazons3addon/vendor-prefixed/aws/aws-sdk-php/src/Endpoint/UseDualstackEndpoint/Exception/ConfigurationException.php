@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint\UseDualstackEndpoint\Exception;
+namespace VendorGambDuplicaWP\Aws\Endpoint\UseDualstackEndpoint\Exception;
 
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
 /**
  * Represents an error interacting with configuration for useDualstackRegion
  */

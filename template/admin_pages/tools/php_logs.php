@@ -86,7 +86,7 @@ if ($log_path !== false) {
             installation ( %1$s ) and name of file to be %2$s. That will solve this problem.',
             'gamb-duplica-wp'
         ),
-        '<i><b>' . gamb-duplica-wp_pro_get_home_path() . '</b></i>',
+        '<i><b>' . GambDuplicaWP_pro_get_home_path() . '</b></i>',
         '<b>error.log</b>'
     );
 }

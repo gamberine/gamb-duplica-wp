@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\CacheInterface;
-use VendorDuplicator\Aws\LruArrayCache;
-use VendorDuplicator\Aws\Result;
-use VendorDuplicator\Aws\S3\Exception\S3Exception;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\Stream;
-use VendorDuplicator\GuzzleHttp\Psr7\CachingStream;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Aws\CacheInterface;
+use VendorGambDuplicaWP\Aws\LruArrayCache;
+use VendorGambDuplicaWP\Aws\Result;
+use VendorGambDuplicaWP\Aws\S3\Exception\S3Exception;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Stream;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\CachingStream;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 /**
  * Amazon S3 stream wrapper to use "s3://<bucket>/<key>" files with PHP
  * streams, supporting "r", "w", "a", "x".
@@ -356,7 +356,7 @@ class StreamWrapper
         $this->openedBucketPrefix = $params['Key'];
         // Filter our "/" keys added by the console as directories, and ensure
         // that if a filter function is provided that it passes the filter.
-        $this->objectIterator = \VendorDuplicator\Aws\flatmap($this->getClient()->getPaginator('ListObjects', $op), function (Result $result) use ($filterFn) {
+        $this->objectIterator = \VendorGambDuplicaWP\Aws\flatmap($this->getClient()->getPaginator('ListObjects', $op), function (Result $result) use ($filterFn) {
             $contentsAndPrefixes = $result->search('[Contents[], CommonPrefixes[]][]');
             // Filter out dir place holder keys and use the filter fn.
             return array_filter($contentsAndPrefixes, function ($key) use ($filterFn) {

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\GuzzleHttp\Psr7\Uri;
-use VendorDuplicator\Aws\Signature\SignatureTrait;
-use VendorDuplicator\Aws\Signature\SignatureV4 as SignatureV4;
-use VendorDuplicator\Aws\Api\TimestampShape as TimestampShape;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Uri;
+use VendorGambDuplicaWP\Aws\Signature\SignatureTrait;
+use VendorGambDuplicaWP\Aws\Signature\SignatureV4 as SignatureV4;
+use VendorGambDuplicaWP\Aws\Api\TimestampShape as TimestampShape;
 /**
  * Encapsulates the logic for getting the data for an S3 object POST upload form
  *

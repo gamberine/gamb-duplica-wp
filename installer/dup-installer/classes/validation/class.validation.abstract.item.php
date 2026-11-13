@@ -12,7 +12,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 
 /**
  * Validation abstract item

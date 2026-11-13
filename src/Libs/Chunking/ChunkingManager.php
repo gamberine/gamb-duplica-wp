@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Chunking;
+namespace GambDuplicaWP\Libs\Chunking;
 
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
-use gamb-duplica-wp\Libs\Chunking\Persistance\NoPersistanceAdapter;
-use gamb-duplica-wp\Libs\Chunking\Persistance\PersistanceAdapterInterface;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use GambDuplicaWP\Libs\Chunking\Persistance\NoPersistanceAdapter;
+use GambDuplicaWP\Libs\Chunking\Persistance\PersistanceAdapterInterface;
 use Error;
 use Exception;
 

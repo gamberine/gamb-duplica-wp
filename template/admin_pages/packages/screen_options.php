@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Views\UserUIOptions;
+use GambDuplicaWP\Views\UserUIOptions;
 
 defined("ABSPATH") or die("");
 

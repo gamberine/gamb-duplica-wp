@@ -7,8 +7,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapOS;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapOS;
 
 $paramsManager = PrmMng::getInstance();
 $archiveConfig = DUPX_ArchiveConfig::getInstance();

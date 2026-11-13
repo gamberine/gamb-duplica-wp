@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\UsageStatistics;
+namespace GambDuplicaWP\Utils\UsageStatistics;
 
 use GAMB_DUPLICA_WP_DB;
 use GAMB_DUPLICA_WP_Package;
@@ -8,21 +8,21 @@ use GAMB_DUPLICA_WP_Package_Template_Entity;
 use GAMB_DUPLICA_WP_PackageStatus;
 use GAMB_DUPLICA_WP_PackageType;
 use GAMB_DUPLICA_WP_Schedule_Entity;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\MigrationMng;
-use gamb-duplica-wp\Core\Upgrade\UpgradePlugin;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Models\MigrateData;
-use gamb-duplica-wp\Libs\Snap\SnapDB;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Models\BrandEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\Local\LocalStorage;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\MigrationMng;
+use GambDuplicaWP\Core\Upgrade\UpgradePlugin;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Models\MigrateData;
+use GambDuplicaWP\Libs\Snap\SnapDB;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Models\BrandEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\Local\LocalStorage;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 use wpdb;
 
 class PluginData
@@ -487,7 +487,7 @@ class PluginData
             'identifier'     => $this->identifier,
             'plugin'         => $this->plugin,
             'plugin_status'  => $this->pluginStatus,
-            'plugin_version' => gamb-duplica-wp_PRO_VERSION,
+            'plugin_version' => GambDuplicaWP_PRO_VERSION,
             'php_version'    => SnapUtil::getVersion(phpversion(), 3),
             'wp_version'     => get_bloginfo('version'),
         ];

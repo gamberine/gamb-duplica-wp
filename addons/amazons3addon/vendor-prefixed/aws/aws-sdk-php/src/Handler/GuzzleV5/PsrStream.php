@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Handler\GuzzleV5;
+namespace VendorGambDuplicaWP\Aws\Handler\GuzzleV5;
 
-use VendorDuplicator\GuzzleHttp\Stream\StreamDecoratorTrait;
-use VendorDuplicator\GuzzleHttp\Stream\StreamInterface as GuzzleStreamInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface as Psr7StreamInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Stream\StreamDecoratorTrait;
+use VendorGambDuplicaWP\GuzzleHttp\Stream\StreamInterface as GuzzleStreamInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface as Psr7StreamInterface;
 /**
  * Adapts a Guzzle 5 Stream to a PSR-7 Stream.
  *

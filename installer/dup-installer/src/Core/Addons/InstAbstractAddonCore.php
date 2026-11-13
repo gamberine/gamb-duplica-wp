@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Addons;
+namespace GambDuplicaWP\Installer\Core\Addons;
 
 abstract class InstAbstractAddonCore
 {

@@ -15,19 +15,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth;
+namespace VendorGambDuplicaWP\Google\Auth;
 
-use VendorDuplicator\Firebase\JWT\JWT;
-use VendorDuplicator\Firebase\JWT\Key;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpClientCache;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\GuzzleHttp\Psr7\Query;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\GuzzleHttp\Psr7\Utils;
+use VendorGambDuplicaWP\Firebase\JWT\JWT;
+use VendorGambDuplicaWP\Firebase\JWT\Key;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpClientCache;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Query;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils;
 use InvalidArgumentException;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 /**
  * OAuth2 supports authentication by OAuth2 2-legged flows.
  *
@@ -423,9 +423,9 @@ class OAuth2 implements FetchAuthTokenInterface
      *         the OAuth2 class instance.
      * @throws \UnexpectedValueException If the token is invalid
      * @throws \InvalidArgumentException If more than one value for allowed_algs is supplied
-     * @throws \VendorDuplicator\Firebase\JWT\SignatureInvalidException If the signature is invalid.
-     * @throws \VendorDuplicator\Firebase\JWT\BeforeValidException If the token is not yet valid.
-     * @throws \VendorDuplicator\Firebase\JWT\ExpiredException If the token has expired.
+     * @throws \VendorGambDuplicaWP\Firebase\JWT\SignatureInvalidException If the signature is invalid.
+     * @throws \VendorGambDuplicaWP\Firebase\JWT\BeforeValidException If the token is not yet valid.
+     * @throws \VendorGambDuplicaWP\Firebase\JWT\ExpiredException If the token has expired.
      * @return null|object
      */
     public function verifyIdToken($publicKey = null, $allowed_algs = [])

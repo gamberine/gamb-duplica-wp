@@ -5,16 +5,16 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace  gamb-duplica-wp\Installer\Core\Deploy\Database;
+namespace  GambDuplicaWP\Installer\Core\Deploy\Database;
 
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 use DUPX_ArchiveConfig;
 use DUPX_DB;
 use DUPX_DB_Functions;
 use DUPX_DBInstall;
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 use DUPX_NOTICE_ITEM;
 use DUPX_NOTICE_MANAGER;
 
@@ -75,7 +75,7 @@ class DbCleanup
             self::deletePackageInBackup();
         } else {
             Log::info("EMPTY PACKAGES TABLE");
-            self::emptygamb-duplica-wpPackages();
+            self::emptyGambDuplicaWPPackages();
         }
     }
 
@@ -159,7 +159,7 @@ class DbCleanup
      *
      * @return int return number of packages deleted
      */
-    protected static function emptygamb-duplica-wpPackages()
+    protected static function emptyGambDuplicaWPPackages()
     {
         Log::info("CLEAN PACKAGES");
         $dbh           = DUPX_DB_Functions::getInstance()->dbConnection();

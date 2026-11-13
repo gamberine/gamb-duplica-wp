@@ -21,10 +21,10 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Utils\Logging\TraceLogMng;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Utils\Logging\TraceLogMng;
 
 class GAMB_DUPLICA_WP_Log
 {
@@ -61,7 +61,7 @@ class GAMB_DUPLICA_WP_Log
             throw new Exception("A name value is required to open a file log.");
         }
         self::close();
-        if ((self::$logFileHandle = @fopen(gamb-duplica-wp_PRO_SSDIR_PATH . "/{$nameHash}_log.txt", "a+")) === false) {
+        if ((self::$logFileHandle = @fopen(GambDuplicaWP_PRO_SSDIR_PATH . "/{$nameHash}_log.txt", "a+")) === false) {
             self::$logFileHandle = null;
             return false;
         } else {

@@ -1,31 +1,45 @@
-=== gamb-duplica-wp - Backups & Migration Plugin - Cloud Backups, Scheduled Backups, & More  ===
-Contributors: seedprod, smub, andreamk
-Tags: backup, database backup, wordpress backup, cloud backup, migration
+=== Gamb Duplica WP ===
+Contributors: gamberine
+Tags: backup, migration, zip, database
 Requires at least: 5.3
-Tested up to: 6.7.99
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 4.5.21
-License: GPLv2
+Stable tag: 5.0.0
+License: GPL-3.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-The best WordPress backup and migration plugin. Quickly and easily backup ,migrate, copy, move, or clone your site from one location to another. Simplify backups & migrations without limits.
+Cópias de segurança e preparação de pacotes de recuperação para WordPress.
 
-== Description ==
+== Descrição ==
 
-= WordPress Backup & Migration Plugin =
+Distribuição independente derivada de uma base modificada do Duplicator Pro 4.5.21.
+Os avisos de autoria e licença dos componentes incorporados são preservados.
+Não são fornecidas assinatura comercial, chaves ou credenciais de integrações.
 
-[gamb-duplica-wp PRO](https://gamb-duplica-wp.com) provides a simple way to move WordPress sites, create reliable backups, or clone a site for staging. With gamb-duplica-wp, you can easily migrate, transfer, or clone your WordPress site between domains or hosts with no downtime. Create full backups of your website, or package your entire site to download and install elsewhere with only a few steps.
+O backup manual local inclui banco, arquivos e instalador. ZIP pelo PHP exige
+ZipArchive habilitado no servidor web. DAF é um formato próprio e não equivale
+a ZIP. Agendamento, nuvem, multisite e migração completa entre servidores não
+foram homologados nesta auditoria.
 
-At gamb-duplica-wp, reliabilty, security, and ease of use are our top priorities. Our variety of cloud backup integrations and easy migration wizard make gamb-duplica-wp the most beginner-friendly backup and migration plugin on the market. You don't have to hire a developer. Create a backup and migrate sites in just a few minutes.
+== Instalação e operação ==
 
-gamb-duplica-wp Pro comes with scheduled backups, cloud storage integrations, multisite support, and more. 
+Confira o SHA-256 do pacote, instale e homologue em ambiente isolado.
+Gere uma cópia, aguarde a conclusão e ensaie a recuperação antes de uso operacional.
+Proteja o diretório de backups contra acesso HTTP direto. Não publique pacotes reais.
 
-== Screenshots ==
+Diretório padrão: wp-content/gamb-duplica-wp-backups.
+Pacotes anteriores em backups-dup-pro não são migrados nem excluídos automaticamente.
+Downloads assinados exigem reserva de seus tokens. A telemetria está desabilitada.
 
-== Frequently Asked Questions ==
+== Registro de versões ==
 
-== Changelog ==
+= 5.0.0 =
+Recuperação de inicialização e autoload, identificadores PHP/SQL/JavaScript válidos,
+identidade própria, proteção de ZIP, validação de integridade, testes e auditoria.
 
-Please see the following url:
-[https://gamb-duplica-wp.com/knowledge-base/changelog](https://gamb-duplica-wp.com/knowledge-base/changelog)
+= 4.5.21-audit =
+Base histórica não operacional, com credencial removida antes da importação pública.
 
-== Upgrade Notice ==
+== Documentação ==
+
+https://github.com/gamberine/gamb-duplica-wp

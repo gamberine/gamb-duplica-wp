@@ -4,8 +4,8 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Package\NameFormat;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Package\NameFormat;
+use GambDuplicaWP\Views\ViewHelper;
 
 defined("ABSPATH") or die("");
 

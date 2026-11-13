@@ -9,12 +9,12 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Utils;
-use VendorDuplicator\Monolog\Formatter\NormalizerFormatter;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Utils;
+use VendorGambDuplicaWP\Monolog\Formatter\NormalizerFormatter;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
 /**
  * Class to record a log on a NewRelic application.
  * Enabling New Relic High Security mode may prevent capture of useful information.

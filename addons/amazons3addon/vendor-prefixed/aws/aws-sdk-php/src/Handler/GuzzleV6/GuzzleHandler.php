@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorDuplicator\Aws\Handler\GuzzleV6;
+namespace VendorGambDuplicaWP\Aws\Handler\GuzzleV6;
 
 use Exception;
-use VendorDuplicator\GuzzleHttp\Exception\ConnectException;
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Client;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\GuzzleHttp\TransferStats;
-use VendorDuplicator\Psr\Http\Message\RequestInterface as Psr7Request;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ConnectException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\TransferStats;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface as Psr7Request;
 /**
  * A request handler that sends PSR-7-compatible requests with Guzzle 6.
  */
@@ -32,7 +32,7 @@ class GuzzleHandler
      */
     public function __invoke(Psr7Request $request, array $options = [])
     {
-        $request = $request->withHeader('User-Agent', $request->getHeaderLine('User-Agent') . ' ' . \VendorDuplicator\GuzzleHttp\default_user_agent());
+        $request = $request->withHeader('User-Agent', $request->getHeaderLine('User-Agent') . ' ' . \VendorGambDuplicaWP\GuzzleHttp\default_user_agent());
         return $this->client->sendAsync($request, $this->parseOptions($options))->otherwise(static function ($e) {
             $error = ['exception' => $e, 'connection_error' => $e instanceof ConnectException, 'response' => null];
             if ($e instanceof RequestException && $e->getResponse()) {

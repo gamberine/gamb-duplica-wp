@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Credentials;
+namespace VendorGambDuplicaWP\Aws\Credentials;
 
-use VendorDuplicator\Aws\Identity\AwsCredentialIdentity;
+use VendorGambDuplicaWP\Aws\Identity\AwsCredentialIdentity;
 /**
  * Basic implementation of the AWS Credentials interface that allows callers to
  * pass in the AWS Access Key and AWS Secret Access Key in the constructor.

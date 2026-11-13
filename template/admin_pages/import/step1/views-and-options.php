@@ -5,9 +5,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
 
 defined("ABSPATH") or die("");
 
@@ -58,7 +58,7 @@ $importSettingsUrl = $ctrlMng->getMenuLink(
                 <?php } ?>
                 <li>
                     <span class="link-style no-decoration dup-pro-open-help-link">
-                        <a href="<?php echo esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'import-install'); ?>" target="_blank">
+                        <a href="<?php echo esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'import-install'); ?>" target="_blank">
                             <?php esc_html_e('Quick Start', 'gamb-duplica-wp'); ?>
                         </a>&nbsp;
                         <i class="fas fa-external-link-alt fa-small" ></i>

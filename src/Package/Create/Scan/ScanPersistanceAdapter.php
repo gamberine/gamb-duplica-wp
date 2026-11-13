@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
- namespace gamb-duplica-wp\Package\Create\Scan;
+ namespace GambDuplicaWP\Package\Create\Scan;
 
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
-use gamb-duplica-wp\Libs\Chunking\Persistance\FileJsonPersistanceAdapter;
-use gamb-duplica-wp\Package\Create\Scan\ScanResult;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use GambDuplicaWP\Libs\Chunking\Persistance\FileJsonPersistanceAdapter;
+use GambDuplicaWP\Package\Create\Scan\ScanResult;
 use Exception;
 
 class ScanPersistanceAdapter extends FileJsonPersistanceAdapter
@@ -30,7 +30,7 @@ class ScanPersistanceAdapter extends FileJsonPersistanceAdapter
         if (empty($hash)) {
             throw new Exception('hash can\'t be empty');
         }
-        $path             = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' . $hash . self::PERSSITANCE_FILE_POSTFIX;
+        $path             = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' . $hash . self::PERSSITANCE_FILE_POSTFIX;
         $this->scanResult = $scanResult;
         parent::__construct($path);
     }

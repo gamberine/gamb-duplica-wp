@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Libs\Index;
+namespace GambDuplicaWP\Libs\Index;
 
 interface IndexListInfoInterface
 {

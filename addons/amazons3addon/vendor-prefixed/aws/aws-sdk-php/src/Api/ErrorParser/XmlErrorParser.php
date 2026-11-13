@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\ErrorParser;
+namespace VendorGambDuplicaWP\Aws\Api\ErrorParser;
 
-use VendorDuplicator\Aws\Api\Parser\PayloadParserTrait;
-use VendorDuplicator\Aws\Api\Parser\XmlParser;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Api\Parser\PayloadParserTrait;
+use VendorGambDuplicaWP\Aws\Api\Parser\XmlParser;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * Parses XML errors.
  */

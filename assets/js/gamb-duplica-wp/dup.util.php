@@ -6,13 +6,13 @@ defined("ABSPATH") or die("");
 ?>
 
 <script>
-gamb-duplica-wp.Util.ajaxProgress = null;
+GambDuplicaWP.Util.ajaxProgress = null;
 
-gamb-duplica-wp.Util.ajaxProgressShow = function () {
-    if (gamb-duplica-wp.Util.ajaxProgress === null) {
-        gamb-duplica-wp.Util.ajaxProgress = jQuery('#dup-ajax-loader')
+GambDuplicaWP.Util.ajaxProgressShow = function () {
+    if (GambDuplicaWP.Util.ajaxProgress === null) {
+        GambDuplicaWP.Util.ajaxProgress = jQuery('#dup-ajax-loader')
     }
-    gamb-duplica-wp.Util.ajaxProgress
+    GambDuplicaWP.Util.ajaxProgress
         .stop(true, true)
         .css('display', 'block')
         .delay(1000)
@@ -21,11 +21,11 @@ gamb-duplica-wp.Util.ajaxProgressShow = function () {
         }, 500);
 }
 
-gamb-duplica-wp.Util.ajaxProgressHide = function () {
-    if (gamb-duplica-wp.Util.ajaxProgress === null) {
+GambDuplicaWP.Util.ajaxProgressHide = function () {
+    if (GambDuplicaWP.Util.ajaxProgress === null) {
         return;
     }
-    gamb-duplica-wp.Util.ajaxProgress
+    GambDuplicaWP.Util.ajaxProgress
         .stop(true, true)
         .delay(500)
         .animate({
@@ -37,7 +37,7 @@ gamb-duplica-wp.Util.ajaxProgressHide = function () {
         });
 }
 
-gamb-duplica-wp.Util.ajaxWrapper = function (ajaxData, callbackSuccess, callbackFail, options = {}) {
+GambDuplicaWP.Util.ajaxWrapper = function (ajaxData, callbackSuccess, callbackFail, options = {}) {
     let opts  = jQuery.extend({
         showProgress: true,
         timeout: 30000
@@ -51,7 +51,7 @@ gamb-duplica-wp.Util.ajaxWrapper = function (ajaxData, callbackSuccess, callback
         data: ajaxData,
         beforeSend: function( xhr ) {
             if (opts.showProgress) {
-                gamb-duplica-wp.Util.ajaxProgressShow();
+                GambDuplicaWP.Util.ajaxProgressShow();
             }
         },
         success: function (result, textStatus, jqXHR) {
@@ -66,7 +66,7 @@ gamb-duplica-wp.Util.ajaxWrapper = function (ajaxData, callbackSuccess, callback
                         message = '';
                     }
                 } else {
-                    message = '<?php echo esc_js(__('RESPONSE SUCCESS', 'gamb-duplica-wp')); ?>';
+                    message = '<?php echo esc_js(__('RESPONSE SUCCESS', 'GambDuplicaWP')); ?>';
                 }
                 if (message != null && String(message).length) {
                     DupPro.addAdminMessage(message, 'notice');
@@ -80,7 +80,7 @@ gamb-duplica-wp.Util.ajaxWrapper = function (ajaxData, callbackSuccess, callback
                         message = error.message;
                     }
                 } else {
-                    message = '<?php echo esc_js(__('RESPONSE ERROR!', 'gamb-duplica-wp')); ?>' + '<br><br>' + result.data.message;
+                    message = '<?php echo esc_js(__('RESPONSE ERROR!', 'GambDuplicaWP')); ?>' + '<br><br>' + result.data.message;
                 }
                 if (message != null && String(message).length) {
                     DupPro.addAdminMessage(message, 'error');
@@ -94,7 +94,7 @@ gamb-duplica-wp.Util.ajaxWrapper = function (ajaxData, callbackSuccess, callback
             );
         },
         complete: function () {
-            gamb-duplica-wp.Util.ajaxProgressHide();
+            GambDuplicaWP.Util.ajaxProgressHide();
         }
     });
 };
@@ -105,7 +105,7 @@ gamb-duplica-wp.Util.ajaxWrapper = function (ajaxData, callbackSuccess, callback
  *
  * @param {size} int bytes size
  */
-gamb-duplica-wp.Util.humanFileSize = function(size) {
+GambDuplicaWP.Util.humanFileSize = function(size) {
     if (size < 0) {
         return "unknown";
     }
@@ -117,11 +117,11 @@ gamb-duplica-wp.Util.humanFileSize = function(size) {
     }
 };
 
-gamb-duplica-wp.Util.isEmpty = function (val) {
+GambDuplicaWP.Util.isEmpty = function (val) {
     return (val === undefined || val == null || val.length <= 0) ? true : false;
 };
 
-gamb-duplica-wp.Util.toggleShow = function (selector, show = 'auto') {
+GambDuplicaWP.Util.toggleShow = function (selector, show = 'auto') {
     var element = jQuery(selector);
     if (show === 'auto') {
         show = !element.is(":visible");
@@ -136,7 +136,7 @@ gamb-duplica-wp.Util.toggleShow = function (selector, show = 'auto') {
 };
 
 
-gamb-duplica-wp.Util.dynamicFormSubmit = function (url, method, params) {
+GambDuplicaWP.Util.dynamicFormSubmit = function (url, method, params) {
     var form = jQuery('<form>', {
         method: method,
         action: url

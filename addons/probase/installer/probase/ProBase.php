@@ -17,10 +17,10 @@
  * @link      http://snapcreek.com
  */
 
-namespace gamb-duplica-wp\Installer\Addons\ProBase;
+namespace GambDuplicaWP\Installer\Addons\ProBase;
 
-use gamb-duplica-wp\Installer\Core\Hooks\HooksMng;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamItem;
+use GambDuplicaWP\Installer\Core\Hooks\HooksMng;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamItem;
 
 /**
  * Version Pro Base Installer addon class
@@ -31,7 +31,7 @@ use gamb-duplica-wp\Installer\Core\Params\Items\ParamItem;
  * @license  https://www.gnu.org/licenses/gpl-3.0.html GPLv3
  * @link     http://snapcreek.com
  */
-class ProBase extends \gamb-duplica-wp\Installer\Core\Addons\InstAbstractAddonCore
+class ProBase extends \GambDuplicaWP\Installer\Core\Addons\InstAbstractAddonCore
 {
     /**
      * Main init addon

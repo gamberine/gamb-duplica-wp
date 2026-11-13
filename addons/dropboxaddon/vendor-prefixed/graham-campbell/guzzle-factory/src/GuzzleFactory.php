@@ -9,17 +9,17 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\GrahamCampbell\GuzzleFactory;
+namespace VendorGambDuplicaWP\GrahamCampbell\GuzzleFactory;
 
-use VendorDuplicator\GuzzleHttp\BodySummarizer;
-use VendorDuplicator\GuzzleHttp\Client;
-use VendorDuplicator\GuzzleHttp\Exception\ConnectException;
-use VendorDuplicator\GuzzleHttp\Exception\TransferException;
-use VendorDuplicator\GuzzleHttp\HandlerStack;
-use VendorDuplicator\GuzzleHttp\Middleware;
-use VendorDuplicator\GuzzleHttp\Utils;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\BodySummarizer;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ConnectException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\TransferException;
+use VendorGambDuplicaWP\GuzzleHttp\HandlerStack;
+use VendorGambDuplicaWP\GuzzleHttp\Middleware;
+use VendorGambDuplicaWP\GuzzleHttp\Utils;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * This is the guzzle factory class.
  *
@@ -63,7 +63,7 @@ final class GuzzleFactory
      * @param int[]|null $codes
      * @param int|null   $retries
      *
-     * @return \VendorDuplicator\GuzzleHttp\Client
+     * @return \VendorGambDuplicaWP\GuzzleHttp\Client
      */
     public static function make(array $options = [], ?int $backoff = null, ?array $codes = null, ?int $retries = null)
     {
@@ -77,9 +77,9 @@ final class GuzzleFactory
      * @param int|null                      $backoff
      * @param int[]|null                    $codes
      * @param int|null                      $retries
-     * @param \VendorDuplicator\GuzzleHttp\HandlerStack|null $stack
+     * @param \VendorGambDuplicaWP\GuzzleHttp\HandlerStack|null $stack
      *
-     * @return \VendorDuplicator\GuzzleHttp\HandlerStack
+     * @return \VendorGambDuplicaWP\GuzzleHttp\HandlerStack
      */
     public static function handler(?int $backoff = null, ?array $codes = null, ?int $retries = null, ?HandlerStack $stack = null)
     {
@@ -95,7 +95,7 @@ final class GuzzleFactory
      *
      * @param callable|null $handler
      *
-     * @return \VendorDuplicator\GuzzleHttp\HandlerStack
+     * @return \VendorGambDuplicaWP\GuzzleHttp\HandlerStack
      */
     public static function innerHandler(?callable $handler = null): HandlerStack
     {

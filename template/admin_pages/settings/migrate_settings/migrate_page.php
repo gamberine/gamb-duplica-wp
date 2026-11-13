@@ -6,7 +6,7 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\License\License;
 
 /**
  * Variables

@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Exception;
+namespace VendorGambDuplicaWP\Aws\S3\Exception;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\Multipart\UploadState;
-class S3MultipartUploadException extends \VendorDuplicator\Aws\Exception\MultipartUploadException
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Multipart\UploadState;
+class S3MultipartUploadException extends \VendorGambDuplicaWP\Aws\Exception\MultipartUploadException
 {
     /** @var string Bucket of the transfer object */
     private $bucket;

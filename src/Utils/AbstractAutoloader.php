@@ -7,18 +7,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Utils;
+namespace GambDuplicaWP\Utils;
 
 /**
  * Autoloader calss, dont user gamb-duplica-wp library here
  */
 abstract class AbstractAutoloader
 {
-    const ROOT_NAMESPACE                 = 'gamb-duplica-wp\\';
+    const ROOT_NAMESPACE                 = 'GambDuplicaWP\\';
     const ROOT_INSTALLER_NAMESPACE       = self::ROOT_NAMESPACE . 'Installer\\';
     const ROOT_ADDON_NAMESPACE           = self::ROOT_NAMESPACE . 'Addons\\';
     const ROOT_ADDON_INSTALLER_NAMESPACE = self::ROOT_INSTALLER_NAMESPACE . 'Addons\\';
-    const ROOT_VENDOR                    = 'Vendorgamb-duplica-wp\\';
+    const ROOT_VENDOR                    = 'VendorGambDuplicaWP\\';
 
     /**
      * Register autoloader function
@@ -56,13 +56,13 @@ abstract class AbstractAutoloader
     protected static function getAddonFile($class)
     {
         $matches = null;
-        if (preg_match('/^\\\\?gamb-duplica-wp(?:\\\\Installer)?\\\\Addons\\\\(.+?)\\\\(.+)$/', $class, $matches) !== 1) {
+        if (preg_match('/^\\\\?GambDuplicaWP(?:\\\\Installer)?\\\\Addons\\\\(.+?)\\\\(.+)$/', $class, $matches) !== 1) {
             return false;
         }
 
         $addonName = $matches[1];
         $subClass  = $matches[2];
-        $basePath  = gamb-duplica-wp____PATH . '/addons/' . strtolower($addonName) . '/';
+        $basePath  = GambDuplicaWP____PATH . '/addons/' . strtolower($addonName) . '/';
 
         if (strpos($class, self::ROOT_ADDON_INSTALLER_NAMESPACE) === 0) {
             $basePath .= 'installer/' . strtolower($addonName) . '/';

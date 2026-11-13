@@ -30,10 +30,10 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Net;
+namespace VendorGambDuplicaWP\phpseclib3\Net;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Exception\FileNotFoundException;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Exception\FileNotFoundException;
 /**
  * Pure-PHP implementations of SFTP.
  *
@@ -46,20 +46,20 @@ class SFTP extends SSH2
      *
      * \phpseclib3\Net\SSH2::exec() uses 0 and \phpseclib3\Net\SSH2::read() / \phpseclib3\Net\SSH2::write() use 1.
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::send_channel_packet()
-     * @see \VendorDuplicator\phpseclib3\Net\SSH2::get_channel_packet()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::send_channel_packet()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SSH2::get_channel_packet()
      */
     const CHANNEL = 0x100;
     /**
      * Reads data from a local file.
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SFTP::put()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SFTP::put()
      */
     const SOURCE_LOCAL_FILE = 1;
     /**
      * Reads data from a string.
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SFTP::put()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SFTP::put()
      */
     // this value isn't really used anymore but i'm keeping it reserved for historical reasons
     const SOURCE_STRING = 2;
@@ -67,19 +67,19 @@ class SFTP extends SSH2
      * Reads data from callback:
      * function callback($length) returns string to proceed, null for EOF
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SFTP::put()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SFTP::put()
      */
     const SOURCE_CALLBACK = 16;
     /**
      * Resumes an upload
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SFTP::put()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SFTP::put()
      */
     const RESUME = 4;
     /**
      * Append a local file to an already existing remote file
      *
-     * @see \VendorDuplicator\phpseclib3\Net\SFTP::put()
+     * @see \VendorGambDuplicaWP\phpseclib3\Net\SFTP::put()
      */
     const RESUME_START = 8;
     /**

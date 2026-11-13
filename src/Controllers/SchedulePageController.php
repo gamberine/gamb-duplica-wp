@@ -7,18 +7,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
 use GAMB_DUPLICA_WP_Schedule_Entity;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Addons\ProBase\License\LicenseNotices;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Controllers\AbstractMenuPageController;
-use gamb-duplica-wp\Core\Controllers\PageAction;
-use gamb-duplica-wp\Core\Upgrade\UpgradePlugin;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\License\LicenseNotices;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Controllers\AbstractMenuPageController;
+use GambDuplicaWP\Core\Controllers\PageAction;
+use GambDuplicaWP\Core\Upgrade\UpgradePlugin;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 class SchedulePageController extends AbstractMenuPageController
 {

@@ -1,27 +1,27 @@
 jQuery(document).ready(function ($) {
-    if (typeof gamb-duplica-wp === 'undefined') {
-        gamb-duplica-wp = {};
-        gamb-duplica-wp.Help = {};
+    if (typeof GambDuplicaWP === 'undefined') {
+        GambDuplicaWP = {};
+        GambDuplicaWP.Help = {};
     }
 
-    gamb-duplica-wp.Help.Data = null;
+    GambDuplicaWP.Help.Data = null;
 
-    gamb-duplica-wp.Help.isDataLoaded = function() {
-        return gamb-duplica-wp.Help.Data !== null;
+    GambDuplicaWP.Help.isDataLoaded = function() {
+        return GambDuplicaWP.Help.Data !== null;
     };
 
-    gamb-duplica-wp.Help.ToggleCategory = function(categoryHeader) {
+    GambDuplicaWP.Help.ToggleCategory = function(categoryHeader) {
         $(categoryHeader).find(".fa-angle-right").toggleClass("fa-rotate-90");
         $(categoryHeader).siblings(".gamb-duplica-wp-help-article-list").slideToggle();
         $(categoryHeader).siblings(".gamb-duplica-wp-help-category-list").slideToggle();
     };
 
-    gamb-duplica-wp.Help.Search = function(search) {
+    GambDuplicaWP.Help.Search = function(search) {
         let results   = $("#gamb-duplica-wp-help-search-results");
         let noResults = $("#gamb-duplica-wp-help-search-results-empty");
         let context   = $("#gamb-duplica-wp-context-articles");
         let articles  = $(".gamb-duplica-wp-help-article");
-        let regex     = gamb-duplica-wp.Help.GetRegex(search);
+        let regex     = GambDuplicaWP.Help.GetRegex(search);
 
         if (search.length === 0 && regex === null) {
             context.show();
@@ -57,8 +57,8 @@ jQuery(document).ready(function ($) {
         }
     };
 
-    gamb-duplica-wp.Help.Load = function(url) {
-        if (gamb-duplica-wp.Help.isDataLoaded()) {
+    GambDuplicaWP.Help.Load = function(url) {
+        if (GambDuplicaWP.Help.isDataLoaded()) {
             return;
         }
 
@@ -66,34 +66,34 @@ jQuery(document).ready(function ($) {
             type: 'GET',
             url: url,
             beforeSend: function(xhr) {
-                gamb-duplica-wp.Util.ajaxProgressShow();
+                GambDuplicaWP.Util.ajaxProgressShow();
             },
             success: function (result) {
-                gamb-duplica-wp.Help.Data = result;
+                GambDuplicaWP.Help.Data = result;
                 //because ajax is async we need to open the modal here for first time
-                gamb-duplica-wp.Help.Display();
+                GambDuplicaWP.Help.Display();
             },
             error: function (result) {
                 DupPro.addAdminMessage(l10nDupDynamicHelp.failedLoad, 'error');
             },
             complete: function () {
-                gamb-duplica-wp.Util.ajaxProgressHide();
+                GambDuplicaWP.Util.ajaxProgressHide();
             },
         });
     };
 
-    gamb-duplica-wp.Help.Display = function() {
-        if (!gamb-duplica-wp.Help.isDataLoaded()) {
+    GambDuplicaWP.Help.Display = function() {
+        if (!GambDuplicaWP.Help.isDataLoaded()) {
             throw 'gamb-duplica-wp.Help.Data is null';
         }
 
-        let box = new gamb-duplica-wpModalBox({
-            htmlContent: gamb-duplica-wp.Help.Data,
+        let box = new GambDuplicaWPModalBox({
+            htmlContent: GambDuplicaWP.Help.Data,
         });
         box.open();
     };
 
-    gamb-duplica-wp.Help.GetRegex = function(search = '') {
+    GambDuplicaWP.Help.GetRegex = function(search = '') {
         let regexStr = '';
         let regex = null;
 
@@ -116,10 +116,10 @@ jQuery(document).ready(function ($) {
 
 
     $("body").on("click", ".gamb-duplica-wp-help-category header", function() {
-        gamb-duplica-wp.Help.ToggleCategory(this);
+        GambDuplicaWP.Help.ToggleCategory(this);
     });
 
     $("body").on("keyup", "#gamb-duplica-wp-help-search input", function() {
-        gamb-duplica-wp.Help.Search($(this).val().toLowerCase());
+        GambDuplicaWP.Help.Search($(this).val().toLowerCase());
     });
 });

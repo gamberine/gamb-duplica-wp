@@ -1,11 +1,11 @@
 <?php
 
-namespace gamb-duplica-wp\Libs\DupArchive;
+namespace GambDuplicaWP\Libs\DupArchive;
 
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveDirectoryHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveFileHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveGlobHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveDirectoryHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveFileHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveGlobHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
 use Error;
 use Exception;
 

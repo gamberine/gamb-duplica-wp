@@ -5,15 +5,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Models\Storages;
+namespace GambDuplicaWP\Models\Storages;
 
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Upload_Info;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Models\Storages\Local\DefaultLocalStorage;
-use gamb-duplica-wp\Models\Storages\Local\LocalStorage;
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Models\Storages\Local\DefaultLocalStorage;
+use GambDuplicaWP\Models\Storages\Local\LocalStorage;
+use GambDuplicaWP\Views\AdminNotices;
 use Exception;
 
 class StoragesUtil

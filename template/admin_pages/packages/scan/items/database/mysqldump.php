@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\SettingsPageController;
 
 defined("ABSPATH") or die("");
 

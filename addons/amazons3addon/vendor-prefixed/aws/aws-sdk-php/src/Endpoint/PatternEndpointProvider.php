@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint;
 
 /**
  * Provides endpoints based on an endpoint pattern configuration array.

@@ -20,12 +20,12 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\DSA\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\DSA\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys\PKCS8 as Progenitor;
-use VendorDuplicator\phpseclib3\File\ASN1;
-use VendorDuplicator\phpseclib3\File\ASN1\Maps;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys\PKCS8 as Progenitor;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1\Maps;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * PKCS#8 Formatted DSA Key Handler
  *

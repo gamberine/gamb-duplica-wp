@@ -8,8 +8,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Package\Recovery\RecoveryStatus;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Package\Recovery\RecoveryStatus;
+use GambDuplicaWP\Views\ViewHelper;
 
 /**
  * Variables

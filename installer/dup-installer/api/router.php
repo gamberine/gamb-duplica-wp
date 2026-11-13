@@ -4,14 +4,14 @@ if (!defined('DUPXABSPATH')) {
     define('DUPXABSPATH', __DIR__);
 }
 
-use gamb-duplica-wp\Installer\Core\Bootstrap;
+use GambDuplicaWP\Installer\Core\Bootstrap;
 
 define('DUPX_VERSION', '4.5.21');
 define('DUPX_INIT', str_replace('\\', '/', dirname(__DIR__)));
 define('DUPX_ROOT', preg_match('/^[\\\\\/]?$/', dirname(DUPX_INIT)) ? '/' : dirname(DUPX_INIT));
 
 require_once(DUPX_INIT . '/src/Utils/Autoloader.php');
-gamb-duplica-wp\Installer\Utils\Autoloader::register();
+GambDuplicaWP\Installer\Utils\Autoloader::register();
 /**
  * init constants and include
  */

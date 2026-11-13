@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint\UseFipsEndpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint\UseFipsEndpoint;
 
-use VendorDuplicator\Aws;
-use VendorDuplicator\Aws\Endpoint\UseFipsEndpoint\Exception\ConfigurationException;
+use VendorGambDuplicaWP\Aws;
+use VendorGambDuplicaWP\Aws\Endpoint\UseFipsEndpoint\Exception\ConfigurationException;
 class Configuration implements ConfigurationInterface
 {
     private $useFipsEndpoint;

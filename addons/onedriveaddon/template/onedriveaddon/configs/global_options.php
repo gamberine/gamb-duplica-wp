@@ -7,8 +7,8 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\OneDriveAddon\Models\OneDriveStorage;
-use gamb-duplica-wp\Addons\OneDriveAddon\OnedriveAdapter;
+use GambDuplicaWP\Addons\OneDriveAddon\Models\OneDriveStorage;
+use GambDuplicaWP\Addons\OneDriveAddon\OnedriveAdapter;
 
 defined("ABSPATH") or die("");
 
@@ -34,7 +34,7 @@ defined("ABSPATH") or die("");
                 name="onedrive_upload_chunksize_in_kb"
                 id="onedrive_upload_chunksize_in_kb"
                 type="number"
-                min="<?php echo intval(gamb-duplica-wp_PRO_ONEDRIVE_UPLOAD_CHUNK_MIN_SIZE_IN_KB); ?>"
+                min="<?php echo intval(GambDuplicaWP_PRO_ONEDRIVE_UPLOAD_CHUNK_MIN_SIZE_IN_KB); ?>"
                 step="320"
                 data-parsley-required
                 data-parsley-type="number"
@@ -50,9 +50,9 @@ defined("ABSPATH") or die("");
                         Higher=faster but less reliable. Default size %2$dkb. Min size %3$dkb.',
                         'gamb-duplica-wp'
                     ),
-                    (int) gamb-duplica-wp_PRO_ONEDRIVE_UPLOAD_CHUNK_MIN_SIZE_IN_KB,
-                    (int) gamb-duplica-wp_PRO_ONEDRIVE_UPLOAD_CHUNK_DEFAULT_SIZE_IN_KB,
-                    (int) gamb-duplica-wp_PRO_ONEDRIVE_UPLOAD_CHUNK_MIN_SIZE_IN_KB
+                    (int) GambDuplicaWP_PRO_ONEDRIVE_UPLOAD_CHUNK_MIN_SIZE_IN_KB,
+                    (int) GambDuplicaWP_PRO_ONEDRIVE_UPLOAD_CHUNK_DEFAULT_SIZE_IN_KB,
+                    (int) GambDuplicaWP_PRO_ONEDRIVE_UPLOAD_CHUNK_MIN_SIZE_IN_KB
                 );
                 ?>
             </p>

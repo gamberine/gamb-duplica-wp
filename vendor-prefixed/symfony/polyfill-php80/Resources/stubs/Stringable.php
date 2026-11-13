@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 /*
  * This file is part of the Symfony package.
@@ -18,5 +18,5 @@ if (\PHP_VERSION_ID < 80000) {
          */
         public function __toString();
     }
-    \class_alias('VendorDuplicator\Stringable', 'Stringable', \false);
+    \class_alias('VendorGambDuplicaWP\Stringable', 'Stringable', \false);
 }

@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
 
 defined("ABSPATH") or die("");
 
@@ -29,7 +29,7 @@ $global = GAMB_DUPLICA_WP_Global_Entity::getInstance();
     <?php esc_html_e("Version", 'gamb-duplica-wp'); ?>
 </label>
 <div class="margin-bottom-1" >
-    <?php echo esc_html(gamb-duplica-wp_PRO_VERSION); ?>
+    <?php echo esc_html(GambDuplicaWP_PRO_VERSION); ?>
 </div>
 
 <label class="lbl-larger">
@@ -89,7 +89,7 @@ $global = GAMB_DUPLICA_WP_Global_Entity::getInstance();
     <?php esc_html_e("Usage statistics", 'gamb-duplica-wp'); ?>
 </label>
 <div class="margin-bottom-1" >
-    <?php if (gamb-duplica-wp_USTATS_DISALLOW) {  // @phpstan-ignore-line ?>
+    <?php if (GambDuplicaWP_USTATS_DISALLOW) {  // @phpstan-ignore-line ?>
         <span class="maroon">
             <?php esc_html_e('Usage statistics are hardcoded disallowed.', 'gamb-duplica-wp'); ?>
         </span>

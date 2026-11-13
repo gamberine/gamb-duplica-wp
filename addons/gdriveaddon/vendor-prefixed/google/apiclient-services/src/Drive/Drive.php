@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class Drive extends \VendorDuplicator\Google\Model
+class Drive extends \VendorGambDuplicaWP\Google\Model
 {
     protected $backgroundImageFileType = DriveBackgroundImageFile::class;
     protected $backgroundImageFileDataType = '';
@@ -231,4 +231,4 @@ class Drive extends \VendorDuplicator\Google\Model
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Drive::class, 'VendorDuplicator\Google_Service_Drive_Drive');
+class_alias(Drive::class, 'VendorGambDuplicaWP\Google_Service_Drive_Drive');

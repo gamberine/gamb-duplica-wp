@@ -12,14 +12,14 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys\OpenSSH as Progenitor;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Ed25519;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedCurveException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys\OpenSSH as Progenitor;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Ed25519;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedCurveException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * OpenSSH Formatted EC Key Handler
  *
@@ -69,7 +69,7 @@ abstract class OpenSSH extends Progenitor
             $qa = self::extractPoint($parsed['publicKey'], $curve);
         } else {
             list($curveName, $publicKey) = Strings::unpackSSH2('ss', $parsed['publicKey']);
-            $curveName = '\VendorDuplicator\\phpseclib3\Crypt\EC\Curves\\' . $curveName;
+            $curveName = '\VendorGambDuplicaWP\\phpseclib3\Crypt\EC\Curves\\' . $curveName;
             $curve = new $curveName();
             $qa = self::extractPoint("\x00" . $publicKey, $curve);
         }
@@ -105,7 +105,7 @@ abstract class OpenSSH extends Progenitor
      * Convert an EC public key to the appropriate format
      *
      * @param BaseCurve $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @param array $options optional
      * @return string
      */
@@ -134,7 +134,7 @@ abstract class OpenSSH extends Progenitor
      *
      * @param BigInteger $privateKey
      * @param Ed25519 $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @param string $secret optional
      * @param string $password optional
      * @param array $options optional

@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Settings;
+namespace GambDuplicaWP\Utils\Settings;
 
 interface ModelMigrateSettingsInterface
 {

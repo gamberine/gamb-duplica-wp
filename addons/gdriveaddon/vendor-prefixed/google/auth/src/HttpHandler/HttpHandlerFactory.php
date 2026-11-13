@@ -15,13 +15,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\HttpHandler;
+namespace VendorGambDuplicaWP\Google\Auth\HttpHandler;
 
-use VendorDuplicator\GuzzleHttp\BodySummarizer;
-use VendorDuplicator\GuzzleHttp\Client;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\GuzzleHttp\HandlerStack;
-use VendorDuplicator\GuzzleHttp\Middleware;
+use VendorGambDuplicaWP\GuzzleHttp\BodySummarizer;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\HandlerStack;
+use VendorGambDuplicaWP\GuzzleHttp\Middleware;
 class HttpHandlerFactory
 {
     /**
@@ -45,9 +45,9 @@ class HttpHandlerFactory
             $client = new Client(['handler' => $stack]);
         }
         $version = null;
-        if (defined('VendorDuplicator\GuzzleHttp\ClientInterface::MAJOR_VERSION')) {
+        if (defined('VendorGambDuplicaWP\GuzzleHttp\ClientInterface::MAJOR_VERSION')) {
             $version = ClientInterface::MAJOR_VERSION;
-        } elseif (defined('VendorDuplicator\GuzzleHttp\ClientInterface::VERSION')) {
+        } elseif (defined('VendorGambDuplicaWP\GuzzleHttp\ClientInterface::VERSION')) {
             $version = (int) substr(ClientInterface::VERSION, 0, 1);
         }
         switch ($version) {

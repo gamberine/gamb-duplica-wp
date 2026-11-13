@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Bootstrap;
+namespace GambDuplicaWP\Installer\Bootstrap;
 
 use Exception;
 

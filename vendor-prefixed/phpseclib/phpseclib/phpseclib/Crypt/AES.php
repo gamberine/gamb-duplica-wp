@@ -44,7 +44,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
 /**
  * Pure-PHP implementation of AES.
@@ -58,7 +58,7 @@ class AES extends Rijndael
      *
      * Since \phpseclib3\Crypt\AES extends \phpseclib3\Crypt\Rijndael, this function is, technically, available, but it doesn't do anything.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Rijndael::setBlockLength()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Rijndael::setBlockLength()
      * @param int $length
      * @throws \BadMethodCallException anytime it's called
      */
@@ -71,7 +71,7 @@ class AES extends Rijndael
      *
      * Valid key lengths are 128, 192, and 256.  Set the link to bool(false) to disable a fixed key length
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Rijndael:setKeyLength()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Rijndael:setKeyLength()
      * @param int $length
      * @throws \LengthException if the key length isn't supported
      */
@@ -92,7 +92,7 @@ class AES extends Rijndael
      *
      * Rijndael supports five different key lengths, AES only supports three.
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Rijndael:setKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Rijndael:setKey()
      * @see setKeyLength()
      * @param string $key
      * @throws \LengthException if the key length isn't supported

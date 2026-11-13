@@ -9,15 +9,15 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Monolog\Formatter\LineFormatter;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Utils;
-use VendorDuplicator\PhpConsole\Connector;
-use VendorDuplicator\PhpConsole\Handler as VendorPhpConsoleHandler;
-use VendorDuplicator\PhpConsole\Helper;
+use VendorGambDuplicaWP\Monolog\Formatter\LineFormatter;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Utils;
+use VendorGambDuplicaWP\PhpConsole\Connector;
+use VendorGambDuplicaWP\PhpConsole\Handler as VendorPhpConsoleHandler;
+use VendorGambDuplicaWP\PhpConsole\Helper;
 /**
  * Monolog handler for Google Chrome extension "PHP Console"
  *
@@ -46,7 +46,7 @@ class PHPConsoleHandler extends AbstractProcessingHandler
     private $options = [
         'enabled' => \true,
         // bool Is PHP Console server enabled
-        'classesPartialsTraceIgnore' => ['VendorDuplicator\\Monolog\\'],
+        'classesPartialsTraceIgnore' => ['VendorGambDuplicaWP\\Monolog\\'],
         // array Hide calls of classes started with...
         'debugTagsKeysInContext' => [0, 'tag'],
         // bool Is PHP Console server enabled
@@ -93,7 +93,7 @@ class PHPConsoleHandler extends AbstractProcessingHandler
      */
     public function __construct(array $options = [], ?Connector $connector = null, $level = Logger::DEBUG, bool $bubble = \true)
     {
-        if (!class_exists('VendorDuplicator\PhpConsole\Connector')) {
+        if (!class_exists('VendorGambDuplicaWP\PhpConsole\Connector')) {
             throw new \RuntimeException('PHP Console library not found. See https://github.com/barbushin/php-console#installation');
         }
         parent::__construct($level, $bubble);

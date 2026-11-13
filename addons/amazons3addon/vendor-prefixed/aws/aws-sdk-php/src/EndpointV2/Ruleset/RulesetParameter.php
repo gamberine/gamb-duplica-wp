@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2\Ruleset;
+namespace VendorGambDuplicaWP\Aws\EndpointV2\Ruleset;
 
-use VendorDuplicator\Aws\Exception\UnresolvedEndpointException;
-use function VendorDuplicator\Aws\is_associative;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedEndpointException;
+use function VendorGambDuplicaWP\Aws\is_associative;
 /**
  * Houses properties of an individual parameter definition.
  */

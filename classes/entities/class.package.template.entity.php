@@ -5,17 +5,17 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Core\Models\AbstractEntityList;
-use gamb-duplica-wp\Core\Models\UpdateFromInputInterface;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\NameFormat;
-use gamb-duplica-wp\Package\Recovery\RecoveryStatus;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Utils\Settings\ModelMigrateSettingsInterface;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Core\Models\AbstractEntityList;
+use GambDuplicaWP\Core\Models\UpdateFromInputInterface;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\NameFormat;
+use GambDuplicaWP\Package\Recovery\RecoveryStatus;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\Settings\ModelMigrateSettingsInterface;
 
 class GAMB_DUPLICA_WP_Package_Template_Entity extends AbstractEntityList implements UpdateFromInputInterface, ModelMigrateSettingsInterface
 {

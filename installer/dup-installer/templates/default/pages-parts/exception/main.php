@@ -13,8 +13,8 @@ defined('ABSPATH') || defined('DUPXABSPATH') || exit;
  * @var Exception $exception
  */
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Libs\Snap\SnapString;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Libs\Snap\SnapString;
 
 $recoveryLink = PrmMng::getInstance()->getValue(PrmMng::PARAM_RECOVERY_LINK);
 if (SnapString::isHTML($exception->getMessage())) {

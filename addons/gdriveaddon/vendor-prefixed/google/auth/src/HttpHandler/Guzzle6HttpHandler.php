@@ -15,11 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\HttpHandler;
+namespace VendorGambDuplicaWP\Google\Auth\HttpHandler;
 
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 class Guzzle6HttpHandler
 {
     /**
@@ -50,7 +50,7 @@ class Guzzle6HttpHandler
      * @param RequestInterface $request
      * @param array<mixed> $options
      *
-     * @return \VendorDuplicator\GuzzleHttp\Promise\PromiseInterface
+     * @return \VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface
      */
     public function async(RequestInterface $request, array $options = [])
     {

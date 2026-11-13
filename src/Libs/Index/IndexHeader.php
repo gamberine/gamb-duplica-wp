@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Index;
+namespace GambDuplicaWP\Libs\Index;
 
-use gamb-duplica-wp\Libs\Binary\AbstractBinaryEncodable;
-use gamb-duplica-wp\Libs\Binary\BinaryFormat;
+use GambDuplicaWP\Libs\Binary\AbstractBinaryEncodable;
+use GambDuplicaWP\Libs\Binary\BinaryFormat;
 
 /**
  * IndexHeader class.

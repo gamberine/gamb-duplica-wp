@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Parser;
+namespace VendorGambDuplicaWP\Aws\S3\Parser;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * A custom mutator for a GetBucketLocation request, which
  * extract the bucket location value and injects it into the

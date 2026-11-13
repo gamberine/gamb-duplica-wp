@@ -15,9 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Task;
+namespace VendorGambDuplicaWP\Google\Task;
 
-use VendorDuplicator\Google\Exception as GoogleException;
+use VendorGambDuplicaWP\Google\Exception as GoogleException;
 class Exception extends GoogleException
 {
 }

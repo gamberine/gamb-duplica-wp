@@ -1,0 +1,19 @@
+name: Relatar defeito
+description: Registrar falha reproduzível, sem pacotes reais ou dados reservados.
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente e versões
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reprodução e resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidências sanitizadas

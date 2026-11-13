@@ -9,10 +9,10 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Processor;
+namespace VendorGambDuplicaWP\Monolog\Processor;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Psr\Log\LogLevel;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Psr\Log\LogLevel;
 /**
  * Injects Hg branch and Hg revision number in all records
  *

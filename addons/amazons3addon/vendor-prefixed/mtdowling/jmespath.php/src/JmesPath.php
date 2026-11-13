@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\JmesPath;
+namespace VendorGambDuplicaWP\JmesPath;
 
 /**
  * Returns data from the input array that matches a JMESPath expression.

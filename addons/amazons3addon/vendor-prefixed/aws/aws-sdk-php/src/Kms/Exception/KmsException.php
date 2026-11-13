@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Kms\Exception;
+namespace VendorGambDuplicaWP\Aws\Kms\Exception;
 
-use VendorDuplicator\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
 /**
  * Represents an error interacting with the AWS Key Management Service.
  */

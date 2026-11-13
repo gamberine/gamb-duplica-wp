@@ -1,9 +1,9 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\DropboxAddon\Utils;
+namespace GambDuplicaWP\Addons\DropboxAddon\Utils;
 
-use gamb-duplica-wp\Addons\DropboxAddon\DropboxAddon;
-use gamb-duplica-wp\Utils\AbstractAutoloader;
+use GambDuplicaWP\Addons\DropboxAddon\DropboxAddon;
+use GambDuplicaWP\Utils\AbstractAutoloader;
 
 class Autoloader extends AbstractAutoloader
 {

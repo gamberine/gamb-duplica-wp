@@ -15,21 +15,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Credentials;
+namespace VendorGambDuplicaWP\Google\Auth\Credentials;
 
-use VendorDuplicator\Google\Auth\CredentialsLoader;
-use VendorDuplicator\Google\Auth\GetQuotaProjectInterface;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpClientCache;
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\Google\Auth\Iam;
-use VendorDuplicator\Google\Auth\IamSignerTrait;
-use VendorDuplicator\Google\Auth\ProjectIdProviderInterface;
-use VendorDuplicator\Google\Auth\SignBlobInterface;
-use VendorDuplicator\GuzzleHttp\Exception\ClientException;
-use VendorDuplicator\GuzzleHttp\Exception\ConnectException;
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\GuzzleHttp\Exception\ServerException;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\Google\Auth\CredentialsLoader;
+use VendorGambDuplicaWP\Google\Auth\GetQuotaProjectInterface;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpClientCache;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\Google\Auth\Iam;
+use VendorGambDuplicaWP\Google\Auth\IamSignerTrait;
+use VendorGambDuplicaWP\Google\Auth\ProjectIdProviderInterface;
+use VendorGambDuplicaWP\Google\Auth\SignBlobInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ClientException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ConnectException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ServerException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
 use InvalidArgumentException;
 /**
  * GCECredentials supports authorization on Google Compute Engine.
@@ -289,8 +289,8 @@ class GCECredentials extends CredentialsLoader implements SignBlobInterface, Pro
                 // could lead to false negatives in the event that we are on GCE, but
                 // the metadata resolution was particularly slow. The latter case is
                 // "unlikely".
-                $resp = $httpHandler(new Request('GET', $checkUri, [self::FLAVOR_HEADER => 'VendorDuplicator\\Google']), ['timeout' => self::COMPUTE_PING_CONNECTION_TIMEOUT_S]);
-                return $resp->getHeaderLine(self::FLAVOR_HEADER) == 'VendorDuplicator\\Google';
+                $resp = $httpHandler(new Request('GET', $checkUri, [self::FLAVOR_HEADER => 'VendorGambDuplicaWP\\Google']), ['timeout' => self::COMPUTE_PING_CONNECTION_TIMEOUT_S]);
+                return $resp->getHeaderLine(self::FLAVOR_HEADER) == 'VendorGambDuplicaWP\\Google';
             } catch (ClientException $e) {
             } catch (ServerException $e) {
             } catch (RequestException $e) {
@@ -308,7 +308,7 @@ class GCECredentials extends CredentialsLoader implements SignBlobInterface, Pro
     {
         if (file_exists($productNameFile)) {
             $productName = trim((string) file_get_contents($productNameFile));
-            return 0 === strpos($productName, 'VendorDuplicator\\Google');
+            return 0 === strpos($productName, 'VendorGambDuplicaWP\\Google');
         }
         return \false;
     }
@@ -464,7 +464,7 @@ class GCECredentials extends CredentialsLoader implements SignBlobInterface, Pro
      */
     private function getFromMetadata(callable $httpHandler, $uri)
     {
-        $resp = $httpHandler(new Request('GET', $uri, [self::FLAVOR_HEADER => 'VendorDuplicator\\Google']));
+        $resp = $httpHandler(new Request('GET', $uri, [self::FLAVOR_HEADER => 'VendorGambDuplicaWP\\Google']));
         return (string) $resp->getBody();
     }
     /**

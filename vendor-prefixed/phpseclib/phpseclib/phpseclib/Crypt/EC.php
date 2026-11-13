@@ -26,24 +26,24 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\AsymmetricKey;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Curve25519;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Ed25519;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Ed448;
-use VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys\PKCS1;
-use VendorDuplicator\phpseclib3\Crypt\EC\Parameters;
-use VendorDuplicator\phpseclib3\Crypt\EC\PrivateKey;
-use VendorDuplicator\phpseclib3\Crypt\EC\PublicKey;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedCurveException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedOperationException;
-use VendorDuplicator\phpseclib3\File\ASN1;
-use VendorDuplicator\phpseclib3\File\ASN1\Maps\ECParameters;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\AsymmetricKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Curve25519;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Ed25519;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Ed448;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys\PKCS1;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Parameters;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\PublicKey;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedCurveException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedOperationException;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1\Maps\ECParameters;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Pure-PHP implementation of EC.
  *
@@ -150,7 +150,7 @@ abstract class EC extends AsymmetricKey
         } elseif (substr($curveName, 0, 10) == 'brainpoolp') {
             $curveName = 'brainpoolP' . substr($curveName, 10);
         }
-        $curve = '\VendorDuplicator\\phpseclib3\Crypt\EC\Curves\\' . $curveName;
+        $curve = '\VendorGambDuplicaWP\\phpseclib3\Crypt\EC\Curves\\' . $curveName;
         if (!class_exists($curve)) {
             throw new UnsupportedCurveException('Named Curve of ' . $curveName . ' is not supported');
         }

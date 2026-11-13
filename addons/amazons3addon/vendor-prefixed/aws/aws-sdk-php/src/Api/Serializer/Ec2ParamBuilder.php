@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Serializer;
+namespace VendorGambDuplicaWP\Aws\Api\Serializer;
 
-use VendorDuplicator\Aws\Api\Shape;
-use VendorDuplicator\Aws\Api\ListShape;
+use VendorGambDuplicaWP\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\Api\ListShape;
 /**
  * @internal
  */

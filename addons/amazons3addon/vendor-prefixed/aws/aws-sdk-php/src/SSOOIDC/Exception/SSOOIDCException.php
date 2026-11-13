@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\SSOOIDC\Exception;
+namespace VendorGambDuplicaWP\Aws\SSOOIDC\Exception;
 
-use VendorDuplicator\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
 /**
  * Represents an error interacting with the **AWS SSO OIDC** service.
  */

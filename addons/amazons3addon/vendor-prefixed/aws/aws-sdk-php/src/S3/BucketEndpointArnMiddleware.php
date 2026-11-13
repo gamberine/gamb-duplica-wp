@@ -1,23 +1,23 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Arn\AccessPointArnInterface;
-use VendorDuplicator\Aws\Arn\ArnParser;
-use VendorDuplicator\Aws\Arn\ObjectLambdaAccessPointArn;
-use VendorDuplicator\Aws\Arn\Exception\InvalidArnException;
-use VendorDuplicator\Aws\Arn\AccessPointArn as BaseAccessPointArn;
-use VendorDuplicator\Aws\Arn\S3\OutpostsAccessPointArn;
-use VendorDuplicator\Aws\Arn\S3\MultiRegionAccessPointArn;
-use VendorDuplicator\Aws\Arn\S3\OutpostsArnInterface;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Endpoint\PartitionEndpointProvider;
-use VendorDuplicator\Aws\Exception\InvalidRegionException;
-use VendorDuplicator\Aws\Exception\UnresolvedEndpointException;
-use VendorDuplicator\Aws\S3\Exception\S3Exception;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Arn\AccessPointArnInterface;
+use VendorGambDuplicaWP\Aws\Arn\ArnParser;
+use VendorGambDuplicaWP\Aws\Arn\ObjectLambdaAccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\Exception\InvalidArnException;
+use VendorGambDuplicaWP\Aws\Arn\AccessPointArn as BaseAccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\S3\OutpostsAccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\S3\MultiRegionAccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\S3\OutpostsArnInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Endpoint\PartitionEndpointProvider;
+use VendorGambDuplicaWP\Aws\Exception\InvalidRegionException;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedEndpointException;
+use VendorGambDuplicaWP\Aws\S3\Exception\S3Exception;
 use InvalidArgumentException;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Checks for access point ARN in members targeting BucketName, modifying
  * endpoint as appropriate
@@ -155,7 +155,7 @@ class BucketEndpointArnMiddleware
         } else {
             $region = $this->region;
         }
-        $region = \VendorDuplicator\Aws\strip_fips_pseudo_regions($region);
+        $region = \VendorGambDuplicaWP\Aws\strip_fips_pseudo_regions($region);
         $host .= '.' . $region . '.' . $this->getPartitionSuffix($arn, $this->partitionProvider);
         return $host;
     }
@@ -164,7 +164,7 @@ class BucketEndpointArnMiddleware
      * if successful
      *
      * @param $arn
-     * @return \VendorDuplicator\Aws\Endpoint\Partition
+     * @return \VendorGambDuplicaWP\Aws\Endpoint\Partition
      */
     private function validateArn($arn)
     {
@@ -206,7 +206,7 @@ class BucketEndpointArnMiddleware
             $clientPart = $this->partitionProvider->getPartition($this->region, 's3');
             // If client partition not found, try removing pseudo-region qualifiers
             if (!$clientPart->isRegionMatch($this->region, 's3')) {
-                $clientPart = $this->partitionProvider->getPartition(\VendorDuplicator\Aws\strip_fips_pseudo_regions($this->region), 's3');
+                $clientPart = $this->partitionProvider->getPartition(\VendorGambDuplicaWP\Aws\strip_fips_pseudo_regions($this->region), 's3');
             }
             if (!$arn instanceof MultiRegionAccessPointArn) {
                 // Verify that the partition matches for supplied partition and region

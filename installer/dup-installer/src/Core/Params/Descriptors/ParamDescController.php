@@ -10,14 +10,14 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPLv3
  */
 
-namespace gamb-duplica-wp\Installer\Core\Params\Descriptors;
+namespace GambDuplicaWP\Installer\Core\Params\Descriptors;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamItem;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamForm;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamItem;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamForm;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 /**
  * class where all parameters are initialized. Used by the param manager

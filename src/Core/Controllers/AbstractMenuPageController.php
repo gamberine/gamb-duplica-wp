@@ -8,11 +8,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Controllers;
+namespace GambDuplicaWP\Core\Controllers;
 
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapLog;
 use Error;
 use Exception;
 

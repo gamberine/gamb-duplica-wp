@@ -5,10 +5,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Views;
+namespace GambDuplicaWP\Views;
 
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use WP_Screen;
 
 /**

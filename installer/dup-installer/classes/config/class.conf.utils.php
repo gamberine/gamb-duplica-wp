@@ -8,9 +8,9 @@
  * @package SC\DUPX
  */
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Libs\Snap\FunctionalityCheck;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Libs\Snap\FunctionalityCheck;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

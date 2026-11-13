@@ -1,8 +1,8 @@
 <?php
 
-namespace gamb-duplica-wp\Package\Create\Scan;
+namespace GambDuplicaWP\Package\Create\Scan;
 
-use gamb-duplica-wp\Libs\Scan\ScanIterator;
+use GambDuplicaWP\Libs\Scan\ScanIterator;
 
 class ScanOptions
 {

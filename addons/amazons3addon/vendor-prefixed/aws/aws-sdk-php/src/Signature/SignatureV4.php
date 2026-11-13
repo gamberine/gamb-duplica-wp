@@ -1,20 +1,20 @@
 <?php
 
-namespace VendorDuplicator\Aws\Signature;
+namespace VendorGambDuplicaWP\Aws\Signature;
 
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\AWS\CRT\Auth\Signable;
-use VendorDuplicator\AWS\CRT\Auth\SignatureType;
-use VendorDuplicator\AWS\CRT\Auth\SignedBodyHeaderType;
-use VendorDuplicator\AWS\CRT\Auth\Signing;
-use VendorDuplicator\AWS\CRT\Auth\SigningAlgorithm;
-use VendorDuplicator\AWS\CRT\Auth\SigningConfigAWS;
-use VendorDuplicator\AWS\CRT\Auth\StaticCredentialsProvider;
-use VendorDuplicator\AWS\CRT\HTTP\Request;
-use VendorDuplicator\Aws\Exception\CommonRuntimeException;
-use VendorDuplicator\Aws\Exception\CouldNotCreateChecksumException;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\AWS\CRT\Auth\Signable;
+use VendorGambDuplicaWP\AWS\CRT\Auth\SignatureType;
+use VendorGambDuplicaWP\AWS\CRT\Auth\SignedBodyHeaderType;
+use VendorGambDuplicaWP\AWS\CRT\Auth\Signing;
+use VendorGambDuplicaWP\AWS\CRT\Auth\SigningAlgorithm;
+use VendorGambDuplicaWP\AWS\CRT\Auth\SigningConfigAWS;
+use VendorGambDuplicaWP\AWS\CRT\Auth\StaticCredentialsProvider;
+use VendorGambDuplicaWP\AWS\CRT\HTTP\Request;
+use VendorGambDuplicaWP\Aws\Exception\CommonRuntimeException;
+use VendorGambDuplicaWP\Aws\Exception\CouldNotCreateChecksumException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Signature Version 4
  * @link http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html

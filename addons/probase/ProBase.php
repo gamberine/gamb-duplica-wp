@@ -19,20 +19,20 @@
  * @link      https://gamb-duplica-wp.com/
  */
 
-namespace gamb-duplica-wp\Addons\ProBase;
+namespace GambDuplicaWP\Addons\ProBase;
 
 // phpcs:disable
 require_once __DIR__ . '/vendor/edd/EDD_SL_Plugin_Updater.php';
 // phpcs:enable
 
-use gamb-duplica-wp\Controllers\SchedulePageController;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Addons\ProBase\License\LicenseNotices;
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
-use gamb-duplica-wp\Core\Controllers\AbstractMenuPageController;
-use gamb-duplica-wp\Core\MigrationMng;
-use gamb-duplica-wp\Installer\Models\MigrateData;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
+use GambDuplicaWP\Controllers\SchedulePageController;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\License\LicenseNotices;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Core\Controllers\AbstractMenuPageController;
+use GambDuplicaWP\Core\MigrationMng;
+use GambDuplicaWP\Installer\Models\MigrateData;
+use GambDuplicaWP\Libs\Snap\SnapLog;
 
 /**
  * Version Pro Base addon class
@@ -43,7 +43,7 @@ use gamb-duplica-wp\Libs\Snap\SnapLog;
  * @license  https://www.gnu.org/licenses/gpl-3.0.html GPLv3
  * @link     http://snapcreek.com
  */
-class ProBase extends \gamb-duplica-wp\Core\Addons\AbstractAddonCore
+class ProBase extends \GambDuplicaWP\Core\Addons\AbstractAddonCore
 {
     /**
      * @return void
@@ -53,7 +53,7 @@ class ProBase extends \gamb-duplica-wp\Core\Addons\AbstractAddonCore
         add_action('init', [$this, 'hookInit']);
         add_action('gamb-duplica-wp_unistall', [$this, 'unistall']);
 
-        add_filter('gamb-duplica-wp_main_menu_label', fn(): string => 'gamb-duplica-wp Pro');
+        add_filter('gamb-duplica-wp_main_menu_label', fn(): string => 'Gamb Duplica WP');
 
         add_filter('gamb-duplica-wp_menu_pages', [$this, 'addScheduleMenuField']);
 

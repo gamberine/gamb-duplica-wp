@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\FtpAddon\Models\SFTPStorage;
+use GambDuplicaWP\Addons\FtpAddon\Models\SFTPStorage;
 
 defined("ABSPATH") or die("");
 

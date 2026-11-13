@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2;
+namespace VendorGambDuplicaWP\Aws\EndpointV2;
 
-use VendorDuplicator\Aws\Api\Operation;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Auth\Exception\UnresolvedAuthSchemeException;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\MetricsBuilder;
+use VendorGambDuplicaWP\Aws\Api\Operation;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Auth\Exception\UnresolvedAuthSchemeException;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\MetricsBuilder;
 use Closure;
-use VendorDuplicator\GuzzleHttp\Promise\Promise;
-use function VendorDuplicator\JmesPath\search;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\Promise;
+use function VendorGambDuplicaWP\JmesPath\search;
 /**
  * Handles endpoint rule evaluation and endpoint resolution.
  *

@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\ProBase\Vendor\EDD;
+namespace GambDuplicaWP\Addons\ProBase\Vendor\EDD;
 
 /**
  * gamb-duplica-wp Changes
@@ -8,7 +8,7 @@ namespace gamb-duplica-wp\Addons\ProBase\Vendor\EDD;
  * wp_remote_post => wp_remote_get
  */
 
-use gamb-duplica-wp\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapLog;
 use stdClass;
 
 // Exit if accessed directly

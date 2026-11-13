@@ -6,12 +6,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Package\Create\DupArchive;
+namespace GambDuplicaWP\Package\Create\DupArchive;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Package;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
-use gamb-duplica-wp\Libs\DupArchive\States\DupArchiveExpandState;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Libs\DupArchive\States\DupArchiveExpandState;
 use Exception;
 
 /**

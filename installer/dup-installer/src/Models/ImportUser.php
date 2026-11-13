@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Models;
+namespace GambDuplicaWP\Installer\Models;
 
 class ImportUser
 {

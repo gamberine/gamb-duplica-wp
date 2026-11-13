@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Multipart;
+namespace VendorGambDuplicaWP\Aws\Multipart;
 
 /**
  * Representation of the multipart upload.

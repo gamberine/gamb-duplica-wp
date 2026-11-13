@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Cron;
+namespace VendorGambDuplicaWP\Cron;
 
 interface FieldFactoryInterface
 {

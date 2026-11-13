@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp;
+namespace VendorGambDuplicaWP\GuzzleHttp;
 
-use VendorDuplicator\GuzzleHttp\Exception\InvalidArgumentException;
-use VendorDuplicator\GuzzleHttp\Handler\CurlHandler;
-use VendorDuplicator\GuzzleHttp\Handler\CurlMultiHandler;
-use VendorDuplicator\GuzzleHttp\Handler\Proxy;
-use VendorDuplicator\GuzzleHttp\Handler\StreamHandler;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\InvalidArgumentException;
+use VendorGambDuplicaWP\GuzzleHttp\Handler\CurlHandler;
+use VendorGambDuplicaWP\GuzzleHttp\Handler\CurlMultiHandler;
+use VendorGambDuplicaWP\GuzzleHttp\Handler\Proxy;
+use VendorGambDuplicaWP\GuzzleHttp\Handler\StreamHandler;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 final class Utils
 {
     /**
@@ -90,7 +90,7 @@ final class Utils
         if (\ini_get('allow_url_fopen')) {
             $handler = $handler ? Proxy::wrapStreaming($handler, new StreamHandler()) : new StreamHandler();
         } elseif (!$handler) {
-            throw new \RuntimeException('VendorDuplicator\\GuzzleHttp requires cURL, the allow_url_fopen ini setting, or a custom HTTP handler.');
+            throw new \RuntimeException('VendorGambDuplicaWP\\GuzzleHttp requires cURL, the allow_url_fopen ini setting, or a custom HTTP handler.');
         }
         return $handler;
     }
@@ -99,7 +99,7 @@ final class Utils
      */
     public static function defaultUserAgent(): string
     {
-        return sprintf('VendorDuplicator\\GuzzleHttp/%d', ClientInterface::MAJOR_VERSION);
+        return sprintf('VendorGambDuplicaWP\\GuzzleHttp/%d', ClientInterface::MAJOR_VERSION);
     }
     /**
      * Returns the default cacert bundle for the current system.

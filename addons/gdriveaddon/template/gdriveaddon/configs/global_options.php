@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\GDriveAddon\Models\GDriveStorage;
+use GambDuplicaWP\Addons\GDriveAddon\Models\GDriveStorage;
 
 defined("ABSPATH") or die("");
 

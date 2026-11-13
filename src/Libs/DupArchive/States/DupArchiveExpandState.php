@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\DupArchive\States;
+namespace GambDuplicaWP\Libs\DupArchive\States;
 
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveFileHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveFileHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
 
 /**
  * Dup archive expand state

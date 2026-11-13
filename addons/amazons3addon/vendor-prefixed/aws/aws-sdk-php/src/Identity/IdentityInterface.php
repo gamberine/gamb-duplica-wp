@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Identity;
+namespace VendorGambDuplicaWP\Aws\Identity;
 
 /**
  * An Identity object is used in identifying credential types and determining how

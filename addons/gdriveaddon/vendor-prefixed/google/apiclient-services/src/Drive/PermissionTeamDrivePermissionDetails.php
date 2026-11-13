@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class PermissionTeamDrivePermissionDetails extends \VendorDuplicator\Google\Model
+class PermissionTeamDrivePermissionDetails extends \VendorGambDuplicaWP\Google\Model
 {
     /**
      * @var bool
@@ -93,4 +93,4 @@ class PermissionTeamDrivePermissionDetails extends \VendorDuplicator\Google\Mode
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PermissionTeamDrivePermissionDetails::class, 'VendorDuplicator\Google_Service_Drive_PermissionTeamDrivePermissionDetails');
+class_alias(PermissionTeamDrivePermissionDetails::class, 'VendorGambDuplicaWP\Google_Service_Drive_PermissionTeamDrivePermissionDetails');

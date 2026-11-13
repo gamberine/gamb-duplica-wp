@@ -10,13 +10,13 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys\PuTTY as Progenitor;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys\PuTTY as Progenitor;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Base as BaseCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * PuTTY Formatted EC Key Handler
  *
@@ -30,7 +30,7 @@ abstract class PuTTY extends Progenitor
      *
      * @var string
      */
-    const PUBLIC_HANDLER = 'VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys\OpenSSH';
+    const PUBLIC_HANDLER = 'VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys\OpenSSH';
     /**
      * Supported Key Types
      *
@@ -71,7 +71,7 @@ abstract class PuTTY extends Progenitor
      *
      * @param BigInteger $privateKey
      * @param BaseCurve $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField\Integer[] $publicKey
      * @param string $secret optional
      * @param string $password optional
      * @param array $options optional
@@ -100,7 +100,7 @@ abstract class PuTTY extends Progenitor
      * Convert an EC public key to the appropriate format
      *
      * @param BaseCurve $curve
-     * @param \VendorDuplicator\phpseclib3\Math\Common\FiniteField[] $publicKey
+     * @param \VendorGambDuplicaWP\phpseclib3\Math\Common\FiniteField[] $publicKey
      * @return string
      */
     public static function savePublicKey(BaseCurve $curve, array $publicKey)

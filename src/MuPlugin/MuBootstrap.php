@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\MuPlugin;
+namespace GambDuplicaWP\MuPlugin;
 
 use Exception;
 
@@ -56,20 +56,20 @@ class MuBootstrap
             $instMainPath = self::sanitizeRequestVal('inst_main_path');
 
             if (strlen($instMainPath) > 0 && file_exists($instMainPath)) {
-                if (strpos($instMainPath, gamb-duplica-wp_MU_PATH_IMPORTS) !== 0) {
+                if (strpos($instMainPath, GambDuplicaWP_MU_PATH_IMPORTS) !== 0) {
                     throw new Exception('Security issue', self::EXCEPTION_CODE_SECURITY_ISSUE);
                 }
                 $fileName = basename(dirname($instMainPath));
-                if (preg_match(gamb-duplica-wp_MU_DUP_INSTALLER_FOLDER_REGEX_PATTERN, $fileName) !== 1) {
+                if (preg_match(GambDuplicaWP_MU_DUP_INSTALLER_FOLDER_REGEX_PATTERN, $fileName) !== 1) {
                     throw new Exception('Security issue', self::EXCEPTION_CODE_SECURITY_ISSUE);
                 }
                 include_once $instMainPath;
             } elseif (strlen($instPath) > 0 && file_exists($instPath)) {
-                if (strpos($instPath, gamb-duplica-wp_MU_PATH_IMPORTS) !== 0) {
+                if (strpos($instPath, GambDuplicaWP_MU_PATH_IMPORTS) !== 0) {
                     throw new Exception('Security issue', self::EXCEPTION_CODE_SECURITY_ISSUE);
                 }
                 $fileName = basename($instPath);
-                if (preg_match(gamb-duplica-wp_MU_INSTALLER_REGEX_PATTERN, $fileName) !== 1) {
+                if (preg_match(GambDuplicaWP_MU_INSTALLER_REGEX_PATTERN, $fileName) !== 1) {
                     throw new Exception('Security issue', self::EXCEPTION_CODE_SECURITY_ISSUE);
                 }
                 include_once $instPath;
@@ -110,15 +110,15 @@ class MuBootstrap
         // The defines set must match the defines in the plugin's define.php file
         $contentPath = untrailingslashit(wp_normalize_path(realpath(WP_CONTENT_DIR)));
 
-        define("gamb-duplica-wp_MU_SSDIR_NAME", 'backups-dup-pro');
-        define("gamb-duplica-wp_MU_SSDIR_PATH", $contentPath . '/' . gamb-duplica-wp_MU_SSDIR_NAME);
-        define("gamb-duplica-wp_MU_IMPORTS_DIR_NAME", 'imports');
-        define("gamb-duplica-wp_MU_PATH_IMPORTS", gamb-duplica-wp_MU_SSDIR_PATH . '/' . gamb-duplica-wp_MU_IMPORTS_DIR_NAME);
+        define("GambDuplicaWP_MU_SSDIR_NAME", 'gamb-duplica-wp-backups');
+        define("GambDuplicaWP_MU_SSDIR_PATH", $contentPath . '/' . GambDuplicaWP_MU_SSDIR_NAME);
+        define("GambDuplicaWP_MU_IMPORTS_DIR_NAME", 'imports');
+        define("GambDuplicaWP_MU_PATH_IMPORTS", GambDuplicaWP_MU_SSDIR_PATH . '/' . GambDuplicaWP_MU_IMPORTS_DIR_NAME);
 
         // MATCH installer.php installer-backup.php and full installer with hash
-        define('gamb-duplica-wp_MU_INSTALLER_REGEX_PATTERN', '/^(?:.+_[a-z0-9]{7,}_[0-9]{14}_)?installer(?:-backup)?\.php$/');
+        define('GambDuplicaWP_MU_INSTALLER_REGEX_PATTERN', '/^(?:.+_[a-z0-9]{7,}_[0-9]{14}_)?installer(?:-backup)?\.php$/');
         // MATCH dup-installer and dup-installer-[HASH]
-        define('gamb-duplica-wp_MU_DUP_INSTALLER_FOLDER_REGEX_PATTERN', '/^dup-installer(?:-[a-z0-9]{7,}-[0-9]{8})?$/');
+        define('GambDuplicaWP_MU_DUP_INSTALLER_FOLDER_REGEX_PATTERN', '/^dup-installer(?:-[a-z0-9]{7,}-[0-9]{8})?$/');
     }
 
     /**

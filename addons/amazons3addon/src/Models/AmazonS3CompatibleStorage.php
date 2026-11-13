@@ -6,10 +6,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\AmazonS3Addon\Models;
+namespace GambDuplicaWP\Addons\AmazonS3Addon\Models;
 
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 class AmazonS3CompatibleStorage extends AmazonS3Storage
 {

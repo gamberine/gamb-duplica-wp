@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api;
+namespace VendorGambDuplicaWP\Aws\Api;
 
 /**
  * Represents an API operation.

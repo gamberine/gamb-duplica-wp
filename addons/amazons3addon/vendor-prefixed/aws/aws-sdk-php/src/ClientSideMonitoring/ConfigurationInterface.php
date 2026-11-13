@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\ClientSideMonitoring;
+namespace VendorGambDuplicaWP\Aws\ClientSideMonitoring;
 
 /**
  * Provides access to client-side monitoring configuration options:

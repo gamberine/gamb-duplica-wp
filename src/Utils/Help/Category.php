@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Help;
+namespace GambDuplicaWP\Utils\Help;
 
 class Category
 {

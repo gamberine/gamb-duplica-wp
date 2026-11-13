@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser;
+namespace VendorGambDuplicaWP\Aws\Api\Parser;
 
-use VendorDuplicator\Aws\Api\DateTimeResult;
-use VendorDuplicator\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\Api\DateTimeResult;
+use VendorGambDuplicaWP\Aws\Api\Shape;
 /**
  * @internal Implements standard JSON parsing.
  */

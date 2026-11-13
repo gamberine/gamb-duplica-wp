@@ -10,14 +10,14 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\Common;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\Common;
 
-use VendorDuplicator\phpseclib3\Crypt\DSA;
-use VendorDuplicator\phpseclib3\Crypt\Hash;
-use VendorDuplicator\phpseclib3\Crypt\RSA;
-use VendorDuplicator\phpseclib3\Exception\NoKeyLoadedException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedFormatException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DSA;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Hash;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RSA;
+use VendorGambDuplicaWP\phpseclib3\Exception\NoKeyLoadedException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedFormatException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * Base Class for all asymmetric cipher classes
  *
@@ -300,7 +300,7 @@ abstract class AsymmetricKey
                 if ($name[0] == '.') {
                     continue;
                 }
-                $type = 'VendorDuplicator\\phpseclib3\Crypt\\' . static::ALGORITHM . '\Formats\\' . $format . '\\' . $name;
+                $type = 'VendorGambDuplicaWP\\phpseclib3\Crypt\\' . static::ALGORITHM . '\Formats\\' . $format . '\\' . $name;
                 $reflect = new \ReflectionClass($type);
                 if ($reflect->isTrait()) {
                     continue;

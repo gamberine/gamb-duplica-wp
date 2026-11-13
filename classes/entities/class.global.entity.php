@@ -5,28 +5,28 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\MigrationMng;
-use gamb-duplica-wp\Core\Models\AbstractEntitySingleton;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\Local\LocalStorage;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Utils\Email\EmailSummaryBootstrap;
-use gamb-duplica-wp\Utils\Email\EmailSummary;
-use gamb-duplica-wp\Utils\ZipArchiveExtended;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Utils\GroupOptions;
-use gamb-duplica-wp\Utils\LockUtil;
-use gamb-duplica-wp\Utils\PathUtil;
-use gamb-duplica-wp\Utils\Settings\ModelMigrateSettingsInterface;
-use gamb-duplica-wp\Utils\UsageStatistics\CommStats;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\MigrationMng;
+use GambDuplicaWP\Core\Models\AbstractEntitySingleton;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\Local\LocalStorage;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\Email\EmailSummaryBootstrap;
+use GambDuplicaWP\Utils\Email\EmailSummary;
+use GambDuplicaWP\Utils\ZipArchiveExtended;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Utils\GroupOptions;
+use GambDuplicaWP\Utils\LockUtil;
+use GambDuplicaWP\Utils\PathUtil;
+use GambDuplicaWP\Utils\Settings\ModelMigrateSettingsInterface;
+use GambDuplicaWP\Utils\UsageStatistics\CommStats;
 
 abstract class GAMB_DUPLICA_WP_Dropbox_Transfer_Mode
 {
@@ -252,7 +252,7 @@ class GAMB_DUPLICA_WP_Global_Entity extends AbstractEntitySingleton implements M
      * @deprecated 4.5.15 use {@see DynamicEntity::get()} instead
      * @var        null|int<0, max>
      */
-    public $onedrive_upload_chunksize_in_kb = gamb-duplica-wp_PRO_ONEDRIVE_UPLOAD_CHUNK_DEFAULT_SIZE_IN_KB;
+    public $onedrive_upload_chunksize_in_kb = GambDuplicaWP_PRO_ONEDRIVE_UPLOAD_CHUNK_DEFAULT_SIZE_IN_KB;
 
     /**
      * @deprecated 4.5.15 use {@see DynamicEntity::get()} instead
@@ -277,7 +277,7 @@ class GAMB_DUPLICA_WP_Global_Entity extends AbstractEntitySingleton implements M
     /** @var bool */
     public $ssl_disableverify = true;
     /** @var int<0, max> */
-    public $import_chunk_size = gamb-duplica-wp_PRO_DEFAULT_CHUNK_UPLOAD_SIZE; // in KB, 0 no chunk
+    public $import_chunk_size = GambDuplicaWP_PRO_DEFAULT_CHUNK_UPLOAD_SIZE; // in KB, 0 no chunk
     /** @var string */
     public $import_custom_path = '';
     /** @var bool */
@@ -492,7 +492,7 @@ class GAMB_DUPLICA_WP_Global_Entity extends AbstractEntitySingleton implements M
      */
     public function setUsageTracking($value)
     {
-        if (gamb-duplica-wp_USTATS_DISALLOW) { // @phpstan-ignore-line
+        if (GambDuplicaWP_USTATS_DISALLOW) { // @phpstan-ignore-line
             // If usagfe tracking is hardcoded disabled, don't change the setting value
             return;
         }
@@ -602,7 +602,7 @@ class GAMB_DUPLICA_WP_Global_Entity extends AbstractEntitySingleton implements M
     public function updateAftreInstall()
     {
         $this->lock_mode     = LockUtil::getDefaultLockType();
-        $this->ajax_protocol = gamb-duplica-wp_PRO_DEFAULT_AJAX_PROTOCOL;
+        $this->ajax_protocol = GambDuplicaWP_PRO_DEFAULT_AJAX_PROTOCOL;
         if ($this->getBuildMode() !== GAMB_DUPLICA_WP_Archive_Build_Mode::DupArchive) {
             $this->set_build_mode();
         }
@@ -1051,7 +1051,7 @@ class GAMB_DUPLICA_WP_Global_Entity extends AbstractEntitySingleton implements M
                     $message .= __('Those files probably could not be removed due to permission issues. ', 'gamb-duplica-wp');
                     $message .= sprintf(
                         __('You can find more info in FAQ %1$son this link%2$s.', 'gamb-duplica-wp'),
-                        "<a href='" . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . "how-to-fix-file-permissions-issues' target='_blank'>",
+                        "<a href='" . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . "how-to-fix-file-permissions-issues' target='_blank'>",
                         "</a>"
                     ) . "<br/>";
                     $message .= "<br/>";

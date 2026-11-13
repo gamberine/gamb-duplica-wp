@@ -9,11 +9,11 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
 use InvalidArgumentException;
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Utils;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Utils;
 /**
  * Stores logs to files that are rotated every day and a limited number of files are kept.
  *

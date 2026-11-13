@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint\UseDualstackEndpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint\UseDualstackEndpoint;
 
-use VendorDuplicator\Aws\AbstractConfigurationProvider;
-use VendorDuplicator\Aws\CacheInterface;
-use VendorDuplicator\Aws\ConfigurationProviderInterface;
-use VendorDuplicator\Aws\Endpoint\UseDualstackEndpoint\Exception\ConfigurationException;
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Aws\AbstractConfigurationProvider;
+use VendorGambDuplicaWP\Aws\CacheInterface;
+use VendorGambDuplicaWP\Aws\ConfigurationProviderInterface;
+use VendorGambDuplicaWP\Aws\Endpoint\UseDualstackEndpoint\Exception\ConfigurationException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 /**
  * A configuration provider is a function that returns a promise that is
  * fulfilled with a {@see \Aws\Endpoint\UseDualstackEndpoint\onfigurationInterface}
@@ -114,7 +114,7 @@ class ConfigurationProvider extends AbstractConfigurationProvider implements Con
                 return self::reject("Cannot read configuration from {$filename}");
             }
             // Use INI_SCANNER_NORMAL instead of INI_SCANNER_TYPED for PHP 5.5 compatibility
-            $data = \VendorDuplicator\Aws\parse_ini_file($filename, \true, \INI_SCANNER_NORMAL);
+            $data = \VendorGambDuplicaWP\Aws\parse_ini_file($filename, \true, \INI_SCANNER_NORMAL);
             if ($data === \false) {
                 return self::reject("Invalid config file: {$filename}");
             }

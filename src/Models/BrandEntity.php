@@ -6,13 +6,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Models;
+namespace GambDuplicaWP\Models;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\Models\AbstractEntityList;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\Models\AbstractEntityList;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use ReflectionObject;
 
 /**
@@ -282,6 +282,6 @@ class BrandEntity extends AbstractEntityList
      */
     protected static function getAttachmentFolder()
     {
-        return gamb-duplica-wp____PATH . "/installer/dup-installer/assets/images/brand";
+        return GambDuplicaWP____PATH . "/installer/dup-installer/assets/images/brand";
     }
 }

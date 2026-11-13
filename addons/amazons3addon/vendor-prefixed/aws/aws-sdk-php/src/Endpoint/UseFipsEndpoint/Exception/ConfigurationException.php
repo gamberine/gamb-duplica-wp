@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint\UseFipsEndpoint\Exception;
+namespace VendorGambDuplicaWP\Aws\Endpoint\UseFipsEndpoint\Exception;
 
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
 /**
  * Represents an error interacting with configuration for useFipsRegion
  */

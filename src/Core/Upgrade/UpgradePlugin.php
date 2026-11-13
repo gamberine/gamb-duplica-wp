@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Upgrade;
+namespace GambDuplicaWP\Core\Upgrade;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\MigrationMng;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\MigrationMng;
 
 /**
  * Upgrade logic of plugin resides here
@@ -51,7 +51,7 @@ class UpgradePlugin
      */
     protected static function newInstallation()
     {
-        UpgradeFunctions::performUpgrade(false, gamb-duplica-wp_PRO_VERSION);
+        UpgradeFunctions::performUpgrade(false, GambDuplicaWP_PRO_VERSION);
 
         // WordPress Options Hooks
         self::updateOptionVersion();
@@ -67,7 +67,7 @@ class UpgradePlugin
      */
     protected static function updateInstallation($oldVersion)
     {
-        UpgradeFunctions::performUpgrade($oldVersion, gamb-duplica-wp_PRO_VERSION);
+        UpgradeFunctions::performUpgrade($oldVersion, GambDuplicaWP_PRO_VERSION);
 
         //WordPress Options Hooks
         self::updateOptionVersion();
@@ -86,7 +86,7 @@ class UpgradePlugin
         if (empty($oldVersion) || ($installInfo = get_option(self::DUP_INSTALL_INFO_OPT_KEY, false)) === false) {
             // If is new installation or install info is not set generate new install info
             $installInfo = [
-                'version'    => gamb-duplica-wp_PRO_VERSION,
+                'version'    => GambDuplicaWP_PRO_VERSION,
                 'time'       => time(),
                 'updateTime' => time(),
             ];
@@ -127,12 +127,12 @@ class UpgradePlugin
     protected static function updateOptionVersion()
     {
         // WordPress Options Hooks
-        if (update_option(self::DUP_VERSION_OPT_KEY, gamb-duplica-wp_PRO_VERSION, true) === false) {
+        if (update_option(self::DUP_VERSION_OPT_KEY, GambDuplicaWP_PRO_VERSION, true) === false) {
             GAMB_DUPLICA_WP_Log::trace("Couldn't update gamb-duplica-wp_pro_plugin_version so deleting it.");
 
             delete_option(self::DUP_VERSION_OPT_KEY);
 
-            if (update_option(self::DUP_VERSION_OPT_KEY, gamb-duplica-wp_PRO_VERSION, true) === false) { // @phpstan-ignore-line
+            if (update_option(self::DUP_VERSION_OPT_KEY, GambDuplicaWP_PRO_VERSION, true) === false) { // @phpstan-ignore-line
                 GAMB_DUPLICA_WP_Log::trace("Still couldn\'t update the option!");
             } else { // @phpstan-ignore-line
                 GAMB_DUPLICA_WP_Log::trace("Option updated.");

@@ -5,9 +5,9 @@
  *
  * @package Requests\Exceptions
  */
-namespace VendorDuplicator\WpOrg\Requests\Exception;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Exception;
 
-use VendorDuplicator\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
 /**
  * Transport Exception
  *

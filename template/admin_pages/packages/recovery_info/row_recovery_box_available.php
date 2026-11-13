@@ -7,12 +7,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Controllers\RecoveryController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Controllers\RecoveryController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Views\ViewHelper;
 
 /**
  * Variables

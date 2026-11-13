@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\MuPlugin;
+namespace GambDuplicaWP\MuPlugin;
 
 /**
  * Mu plugin generator
@@ -51,7 +51,7 @@ class MuGenerator
      */
     protected static function getPluginContent(): string
     {
-        $pluginVersion = gamb-duplica-wp_PRO_VERSION;
+        $pluginVersion = GambDuplicaWP_PRO_VERSION;
 
         return <<<MUCONTENT
 <?php
@@ -66,9 +66,9 @@ class MuGenerator
  */
 
 defined('ABSPATH') || exit;
-define('gamb-duplica-wp_MU_PLUGIN_VERSION', '{$pluginVersion}');
+define('GambDuplicaWP_MU_PLUGIN_VERSION', '{$pluginVersion}');
 
-use gamb-duplica-wp\MuPlugin\MuBootstrap;
+use GambDuplicaWP\MuPlugin\MuBootstrap;
 
 \$bootstrapFile = WP_PLUGIN_DIR . '/gamb-duplica-wp/src/MuPlugin/MuBootstrap.php';
 if (file_exists(\$bootstrapFile)) {

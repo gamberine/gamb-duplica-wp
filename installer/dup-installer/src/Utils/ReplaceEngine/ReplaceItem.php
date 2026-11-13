@@ -1,9 +1,9 @@
 <?php
 
-namespace gamb-duplica-wp\Installer\Utils\ReplaceEngine;
+namespace GambDuplicaWP\Installer\Utils\ReplaceEngine;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 /**
  * search and replace item use in manager to creat the search and replace list.

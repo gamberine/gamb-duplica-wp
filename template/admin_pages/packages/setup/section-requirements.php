@@ -6,9 +6,9 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\MigrationMng;
-use gamb-duplica-wp\Libs\Snap\FunctionalityCheck;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\MigrationMng;
+use GambDuplicaWP\Libs\Snap\FunctionalityCheck;
 
 /**
  * Variables
@@ -110,7 +110,7 @@ if ($requirements['Success']) {
                             For additional information see our online technical FAQs.",
                             'gamb-duplica-wp'
                         ),
-                        esc_html(gamb-duplica-wp_PRO_PHP_MINIMUM_VERSION)
+                        esc_html(GambDuplicaWP_PRO_PHP_MINIMUM_VERSION)
                     );
                     ?>
                 </small>
@@ -127,8 +127,8 @@ if ($requirements['Success']) {
                 <div style="padding:3px 0px 0px 15px">
                     <?php
                     printf("<b>%s</b> &nbsp; [%s] <br/>", esc_html($requirements['IO']['WPROOT']), esc_html(GAMB_DUPLICA_WP_Archive::getArchiveListPaths('home')));
-                    printf("<b>%s</b> &nbsp; [%s] <br/>", esc_html($requirements['IO']['SSDIR']), esc_html(gamb-duplica-wp_PRO_SSDIR_PATH));
-                    printf("<b>%s</b> &nbsp; [%s] <br/>", esc_html($requirements['IO']['SSTMP']), esc_html(gamb-duplica-wp_PRO_SSDIR_PATH_TMP));
+                    printf("<b>%s</b> &nbsp; [%s] <br/>", esc_html($requirements['IO']['SSDIR']), esc_html(GambDuplicaWP_PRO_SSDIR_PATH));
+                    printf("<b>%s</b> &nbsp; [%s] <br/>", esc_html($requirements['IO']['SSTMP']), esc_html(GambDuplicaWP_PRO_SSDIR_PATH_TMP));
                     ?>
                 </div>
 
@@ -227,7 +227,7 @@ if ($requirements['Success']) {
         <div class="dup-sys-contact">
             <?php
             printf(
-                "<i class='fa fa-question-circle'></i> %s <a href='" . esc_attr(gamb-duplica-wp_PRO_TECH_FAQ_URL) . "' target='_blank'>[%s]</a>",
+                "<i class='fa fa-question-circle'></i> %s <a href='" . esc_attr(GambDuplicaWP_PRO_TECH_FAQ_URL) . "' target='_blank'>[%s]</a>",
                 esc_html__("For additional help please see the ", 'gamb-duplica-wp'),
                 esc_html__("online FAQs", 'gamb-duplica-wp')
             );

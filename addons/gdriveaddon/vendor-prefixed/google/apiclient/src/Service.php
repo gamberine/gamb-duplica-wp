@@ -15,9 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google;
+namespace VendorGambDuplicaWP\Google;
 
-use VendorDuplicator\Google\Http\Batch;
+use VendorGambDuplicaWP\Google\Http\Batch;
 use TypeError;
 class Service
 {
@@ -49,7 +49,7 @@ class Service
     }
     /**
      * Return the associated Google\Client class.
-     * @return \VendorDuplicator\Google\Client
+     * @return \VendorGambDuplicaWP\Google\Client
      */
     public function getClient()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Psr\Http\Message;
+namespace VendorGambDuplicaWP\Psr\Http\Message;
 
 /**
  * Value object representing a file uploaded through an HTTP request.

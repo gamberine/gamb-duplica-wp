@@ -15,10 +15,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\Revision;
-use VendorDuplicator\Google\Service\Drive\RevisionList;
+use VendorGambDuplicaWP\Google\Service\Drive\Revision;
+use VendorGambDuplicaWP\Google\Service\Drive\RevisionList;
 /**
  * The "revisions" collection of methods.
  * Typical usage is:
@@ -27,7 +27,7 @@ use VendorDuplicator\Google\Service\Drive\RevisionList;
  *   $revisions = $driveService->revisions;
  *  </code>
  */
-class Revisions extends \VendorDuplicator\Google\Service\Resource
+class Revisions extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Permanently deletes a file version. You can only delete revisions for files
@@ -38,7 +38,7 @@ class Revisions extends \VendorDuplicator\Google\Service\Resource
      * @param string $fileId The ID of the file.
      * @param string $revisionId The ID of the revision.
      * @param array $optParams Optional parameters.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function delete($fileId, $revisionId, $optParams = [])
     {
@@ -57,7 +57,7 @@ class Revisions extends \VendorDuplicator\Google\Service\Resource
      * of downloading known malware or other abusive files. This is only applicable
      * when alt=media.
      * @return Revision
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($fileId, $revisionId, $optParams = [])
     {
@@ -76,7 +76,7 @@ class Revisions extends \VendorDuplicator\Google\Service\Resource
      * on the next page. This should be set to the value of 'nextPageToken' from the
      * previous response.
      * @return RevisionList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listRevisions($fileId, $optParams = [])
     {
@@ -92,7 +92,7 @@ class Revisions extends \VendorDuplicator\Google\Service\Resource
      * @param Revision $postBody
      * @param array $optParams Optional parameters.
      * @return Revision
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function update($fileId, $revisionId, Revision $postBody, $optParams = [])
     {
@@ -102,4 +102,4 @@ class Revisions extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Revisions::class, 'VendorDuplicator\Google_Service_Drive_Resource_Revisions');
+class_alias(Revisions::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Revisions');

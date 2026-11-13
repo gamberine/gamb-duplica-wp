@@ -2,46 +2,46 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonUnserializeMap;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\MigrationMng;
-use gamb-duplica-wp\Libs\Index\FileIndexManager;
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Installer\Package\DescriptorDBTableInfo;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveFileHeader;
-use gamb-duplica-wp\Libs\DupArchive\Headers\DupArchiveHeader;
-use gamb-duplica-wp\Libs\DupArchive\Processors\DupArchiveProcessingFailure;
-use gamb-duplica-wp\Installer\Package\InstallerDescriptors;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapOrigFileManager;
-use gamb-duplica-wp\Libs\Snap\SnapString;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\WpConfig\WPConfigTransformer;
-use gamb-duplica-wp\Models\BrandEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\Local\LocalStorage;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Models\Storages\UnknownStorage;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\Create\BuildProgress;
-use gamb-duplica-wp\Package\Create\DatabaseInfo;
-use gamb-duplica-wp\Package\Create\DbBuildProgress;
-use gamb-duplica-wp\Package\Create\DupArchive\PackageDupArchiveCreateState;
-use gamb-duplica-wp\Package\Create\DupArchive\PackageDupArchiveExpandState;
-use gamb-duplica-wp\Package\NameFormat;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
-use gamb-duplica-wp\Package\Recovery\RecoveryStatus;
-use gamb-duplica-wp\Package\SettingsUtils;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Utils\ExpireOptions;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonUnserializeMap;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\MigrationMng;
+use GambDuplicaWP\Libs\Index\FileIndexManager;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Installer\Package\DescriptorDBTableInfo;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveFileHeader;
+use GambDuplicaWP\Libs\DupArchive\Headers\DupArchiveHeader;
+use GambDuplicaWP\Libs\DupArchive\Processors\DupArchiveProcessingFailure;
+use GambDuplicaWP\Installer\Package\InstallerDescriptors;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapOrigFileManager;
+use GambDuplicaWP\Libs\Snap\SnapString;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\WpConfig\WPConfigTransformer;
+use GambDuplicaWP\Models\BrandEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\Local\LocalStorage;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Models\Storages\UnknownStorage;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Create\BuildProgress;
+use GambDuplicaWP\Package\Create\DatabaseInfo;
+use GambDuplicaWP\Package\Create\DbBuildProgress;
+use GambDuplicaWP\Package\Create\DupArchive\PackageDupArchiveCreateState;
+use GambDuplicaWP\Package\Create\DupArchive\PackageDupArchiveExpandState;
+use GambDuplicaWP\Package\NameFormat;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Package\Recovery\RecoveryStatus;
+use GambDuplicaWP\Package\SettingsUtils;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\ExpireOptions;
 
-require_once(gamb-duplica-wp____PATH . '/classes/package/class.pack.upload.info.php');
-require_once(gamb-duplica-wp____PATH . '/classes/package/class.pack.multisite.php');
-require_once(gamb-duplica-wp____PATH . '/classes/class.exceptions.php');
+require_once(GambDuplicaWP____PATH . '/classes/package/class.pack.upload.info.php');
+require_once(GambDuplicaWP____PATH . '/classes/package/class.pack.multisite.php');
+require_once(GambDuplicaWP____PATH . '/classes/class.exceptions.php');
 
 final class GAMB_DUPLICA_WP_PackageStatus
 {
@@ -126,9 +126,9 @@ class GAMB_DUPLICA_WP_Package
     /** @var string */
     public $notes = '';
     /** @var string */
-    public $StorePath = gamb-duplica-wp_PRO_SSDIR_PATH_TMP;
+    public $StorePath = GambDuplicaWP_PRO_SSDIR_PATH_TMP;
     /** @var string */
-    public $StoreURL = gamb-duplica-wp_PRO_SSDIR_URL . '/';
+    public $StoreURL = GambDuplicaWP_PRO_SSDIR_URL . '/';
     /** @var string */
     public $ScanFile = '';
     /** @var float */
@@ -179,7 +179,7 @@ class GAMB_DUPLICA_WP_Package
     protected $buildEmailSent = false;
 
     /** @var string */
-    protected $version = gamb-duplica-wp_PRO_VERSION;
+    protected $version = GambDuplicaWP_PRO_VERSION;
     /** @var string */
     protected $created = '';
     /** @var string */
@@ -526,8 +526,8 @@ class GAMB_DUPLICA_WP_Package
             return __('Building', 'gamb-duplica-wp');
         } else {
             $size              = 0;
-            $temp_archive_path = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' . $this->get_archive_filename();
-            $archive_path      = gamb-duplica-wp_PRO_SSDIR_PATH . '/' . $this->get_archive_filename();
+            $temp_archive_path = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' . $this->get_archive_filename();
+            $archive_path      = GambDuplicaWP_PRO_SSDIR_PATH . '/' . $this->get_archive_filename();
             if (file_exists($archive_path)) {
                 $size = @filesize($archive_path);
             } elseif (file_exists($temp_archive_path)) {
@@ -567,7 +567,7 @@ class GAMB_DUPLICA_WP_Package
     public function get_safe_scan_filepath()
     {
         $filename = $this->get_scan_filename();
-        return SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH . "/$filename");
+        return SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH . "/$filename");
     }
 
     /**
@@ -612,7 +612,7 @@ class GAMB_DUPLICA_WP_Package
     public function get_safe_log_filepath()
     {
         $filename = $this->get_log_filename();
-        return SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH . "/$filename");
+        return SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH . "/$filename");
     }
 
     /**
@@ -623,7 +623,7 @@ class GAMB_DUPLICA_WP_Package
     public function dump_file_exists()
     {
         $filename = $this->get_dump_filename();
-        $filepath = SnapIO::safePath(gamb-duplica-wp_PRO_DUMP_PATH . "/$filename");
+        $filepath = SnapIO::safePath(GambDuplicaWP_PRO_DUMP_PATH . "/$filename");
         return file_exists($filepath);
     }
 
@@ -703,7 +703,7 @@ class GAMB_DUPLICA_WP_Package
         }
 
         //First check if default file exists
-        if (file_exists($filePath = SnapIO::trailingslashit(gamb-duplica-wp_PRO_SSDIR_PATH) . $fileName)) {
+        if (file_exists($filePath = SnapIO::trailingslashit(GambDuplicaWP_PRO_SSDIR_PATH) . $fileName)) {
             return SnapIO::safePath($filePath);
         }
 
@@ -736,7 +736,7 @@ class GAMB_DUPLICA_WP_Package
             case GAMB_DUPLICA_WP_Package_File_Type::Installer:
                 return $this->getLocalPackageAjaxDownloadURL(GAMB_DUPLICA_WP_Package_File_Type::Installer);
             case GAMB_DUPLICA_WP_Package_File_Type::Archive:
-                return file_exists(SnapIO::trailingslashit(gamb-duplica-wp_PRO_SSDIR_PATH) . $this->get_archive_filename())
+                return file_exists(SnapIO::trailingslashit(GambDuplicaWP_PRO_SSDIR_PATH) . $this->get_archive_filename())
                     ? $this->Archive->getURL()
                     : $this->getLocalPackageAjaxDownloadURL(GAMB_DUPLICA_WP_Package_File_Type::Archive);
             default:
@@ -1212,7 +1212,7 @@ class GAMB_DUPLICA_WP_Package
         $pending_cancellations = self::get_pending_cancellations();
         if (!in_array($this->ID, $pending_cancellations)) {
             array_push($pending_cancellations, $this->ID);
-            ExpireOptions::set(gamb-duplica-wp_PRO_PENDING_CANCELLATION_TRANSIENT, $pending_cancellations, gamb-duplica-wp_PRO_PENDING_CANCELLATION_TIMEOUT);
+            ExpireOptions::set(GambDuplicaWP_PRO_PENDING_CANCELLATION_TRANSIENT, $pending_cancellations, GambDuplicaWP_PRO_PENDING_CANCELLATION_TIMEOUT);
         }
     }
 
@@ -1223,7 +1223,7 @@ class GAMB_DUPLICA_WP_Package
      */
     public static function get_pending_cancellations()
     {
-        $pending_cancellations = ExpireOptions::get(gamb-duplica-wp_PRO_PENDING_CANCELLATION_TRANSIENT);
+        $pending_cancellations = ExpireOptions::get(GambDuplicaWP_PRO_PENDING_CANCELLATION_TRANSIENT);
         if ($pending_cancellations === false) {
             $pending_cancellations = [];
         }
@@ -1248,7 +1248,7 @@ class GAMB_DUPLICA_WP_Package
      */
     public static function clear_pending_cancellations()
     {
-        if (ExpireOptions::delete(gamb-duplica-wp_PRO_PENDING_CANCELLATION_TRANSIENT) == false) {
+        if (ExpireOptions::delete(GambDuplicaWP_PRO_PENDING_CANCELLATION_TRANSIENT) == false) {
             GAMB_DUPLICA_WP_Log::traceError("Couldn't remove pending cancel transient");
         }
     }
@@ -1437,9 +1437,9 @@ class GAMB_DUPLICA_WP_Package
     public static function delete_default_local_files($name_hash, $delete_temp, $delete_log_files = true)
     {
         if ($delete_temp) {
-            self::deletePackageFilesInDir($name_hash, gamb-duplica-wp_PRO_SSDIR_PATH_TMP, true);
+            self::deletePackageFilesInDir($name_hash, GambDuplicaWP_PRO_SSDIR_PATH_TMP, true);
         }
-        self::deletePackageFilesInDir($name_hash, gamb-duplica-wp_PRO_SSDIR_PATH, $delete_log_files);
+        self::deletePackageFilesInDir($name_hash, GambDuplicaWP_PRO_SSDIR_PATH, $delete_log_files);
     }
 
     /**
@@ -1816,7 +1816,7 @@ class GAMB_DUPLICA_WP_Package
                 $attachments = count($brand->attachments);
                 $exists      = [];
                 if ($attachments > 0) {
-                    $installer = gamb-duplica-wp____PATH . '/installer/dup-installer/assets/images/brand';
+                    $installer = GambDuplicaWP____PATH . '/installer/dup-installer/assets/images/brand';
                     if (file_exists($installer) && is_dir($installer)) {
                         foreach ($brand->attachments as $attachment) {
                             if (file_exists("{$installer}{$attachment}")) {
@@ -1872,13 +1872,13 @@ class GAMB_DUPLICA_WP_Package
             $report['RPT']['ScanTime'] = "0";
             $report['RPT']['ScanFile'] = $this->ScanFile;
             //FILES
-            $scanPath              = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/{$this->ScanFile}";
+            $scanPath              = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/{$this->ScanFile}";
             $dirCount              = $this->Archive->DirCount;
             $fileCount             = $this->Archive->FileCount;
             $fullCount             = $dirCount + $fileCount;
             $unreadable            = array_merge($this->Archive->FilterInfo->Files->Unreadable, $this->Archive->FilterInfo->Dirs->Unreadable);
             $site_warning_size     = $global->archive_build_mode === GAMB_DUPLICA_WP_Archive_Build_Mode::ZipArchive ?
-                gamb-duplica-wp_PRO_SCAN_SITE_ZIP_ARCHIVE_WARNING_SIZE : gamb-duplica-wp_PRO_SCAN_SITE_WARNING_SIZE;
+                GambDuplicaWP_PRO_SCAN_SITE_ZIP_ARCHIVE_WARNING_SIZE : GambDuplicaWP_PRO_SCAN_SITE_WARNING_SIZE;
             $filteredTables        = ($this->Database->FilterOn ? explode(',', $this->Database->FilterTables) : []);
             $subsites              = GAMB_DUPLICA_WP_MU::getSubsites($this->Multisite->FilterSites, $filteredTables);
             $hasImportableSites    = SnapUtil::inArrayExtended($subsites, fn($subsite): bool => count($subsite->filteredTables) === 0);
@@ -2177,7 +2177,7 @@ class GAMB_DUPLICA_WP_Package
             /** @var wpdb $wpdb */
             global $wpdb;
 
-            $this->version = gamb-duplica-wp_PRO_VERSION;
+            $this->version = GambDuplicaWP_PRO_VERSION;
             // Created is set in the constructor
             $this->updated = gmdate("Y-m-d H:i:s");
 
@@ -2268,7 +2268,7 @@ class GAMB_DUPLICA_WP_Package
                 $info              .= "PACKAGE CREATION START\n";
                 $info              .= "********************************************************************************\n";
                 $info              .= "********************************************************************************\n";
-                $info              .= "VERSION:\t" . gamb-duplica-wp_PRO_VERSION . "\n";
+                $info              .= "VERSION:\t" . GambDuplicaWP_PRO_VERSION . "\n";
                 $info              .= "WORDPRESS:\t{$wp_version}\n";
                 $info              .= "PHP INFO:\t" . phpversion() . ' | ' . 'SAPI: ' . php_sapi_name() . "\n";
                 $info              .= "SERVER:\t\t{$serverSoftware} \n";
@@ -2441,7 +2441,7 @@ class GAMB_DUPLICA_WP_Package
         GAMB_DUPLICA_WP_Log::info("********************************************************************************");
         //------------------------
         //SQL CHECK:  File should be at minimum 5K.  A base WP install with only Create tables is about 9K
-        $sql_temp_path = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' . $this->Database->File);
+        $sql_temp_path = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' . $this->Database->File);
         $sql_temp_size = @filesize($sql_temp_path);
         $sql_easy_size = GAMB_DUPLICA_WP_U::byteSize($sql_temp_size);
         $sql_done_txt  = GAMB_DUPLICA_WP_U::tailFile($sql_temp_path, 3);
@@ -2449,9 +2449,9 @@ class GAMB_DUPLICA_WP_Package
         // Note: Had to add extra size check of 800 since observed bad sql when filter was on
         if (
             in_array(BuildComponents::COMP_DB, $this->components) &&
-            (!strstr($sql_done_txt, (string) gamb-duplica-wp_PRO_DB_EOF_MARKER) ||
-            (!$this->Database->FilterOn && $sql_temp_size < gamb-duplica-wp_PRO_MIN_SIZE_DBFILE_WITHOUT_FILTERS) ||
-            ($this->Database->FilterOn && $this->Database->info->tablesFinalCount > 0 && $sql_temp_size < gamb-duplica-wp_PRO_MIN_SIZE_DBFILE_WITH_FILTERS))
+            (!strstr($sql_done_txt, (string) GambDuplicaWP_PRO_DB_EOF_MARKER) ||
+            (!$this->Database->FilterOn && $sql_temp_size < GambDuplicaWP_PRO_MIN_SIZE_DBFILE_WITHOUT_FILTERS) ||
+            ($this->Database->FilterOn && $this->Database->info->tablesFinalCount > 0 && $sql_temp_size < GambDuplicaWP_PRO_MIN_SIZE_DBFILE_WITH_FILTERS))
         ) {
             $this->build_progress->failed = true;
             $error_text                   = "ERROR: SQL file not complete.  The file looks too small ($sql_temp_size bytes) or the end of file marker was not found.";
@@ -2484,7 +2484,7 @@ class GAMB_DUPLICA_WP_Package
         GAMB_DUPLICA_WP_Log::info("SQL FILE: {$sql_easy_size}");
         //------------------------
         //INSTALLER CHECK:
-        $exe_temp_path = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' . $this->Installer->getInstallerLocalName());
+        $exe_temp_path = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' . $this->Installer->getInstallerLocalName());
         $exe_temp_size = @filesize($exe_temp_path);
         $exe_easy_size = GAMB_DUPLICA_WP_U::byteSize($exe_temp_size);
         $exe_done_txt  = GAMB_DUPLICA_WP_U::tailFile($exe_temp_path, 10);
@@ -2502,7 +2502,7 @@ class GAMB_DUPLICA_WP_Package
                 throw new Exception("ERROR: The archive file contains no size. Archive Size: {$zip_easy_size}");
             }
 
-            $scan_filepath = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/{$this->getNameHash()}_scan.json";
+            $scan_filepath = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/{$this->getNameHash()}_scan.json";
             $json          = '';
             GAMB_DUPLICA_WP_Log::trace("***********Does $scan_filepath exist?");
             if (file_exists($scan_filepath)) {
@@ -2691,7 +2691,7 @@ class GAMB_DUPLICA_WP_Package
                 $subject               = sprintf(__('Backup of %1$s (%2$s) Failed', 'gamb-duplica-wp'), home_url(), $schedule->name);
             }
 
-            $message     = \gamb-duplica-wp\Core\Views\TplMng::getInstance()->render("mail/scheduled-build", $data, false);
+            $message     = \GambDuplicaWP\Core\Views\TplMng::getInstance()->render("mail/scheduled-build", $data, false);
             $attachments = $data['logExists'] ? $this->get_safe_log_filepath() : '';
 
             if (!wp_mail($to, $subject, $message, ['Content-Type: text/html; charset=UTF-8'], $attachments)) {
@@ -2953,7 +2953,7 @@ class GAMB_DUPLICA_WP_Package
     protected function saveTemporary()
     {
         $this->cleanObjectBeforeSave();
-        $this->version = gamb-duplica-wp_PRO_VERSION;
+        $this->version = GambDuplicaWP_PRO_VERSION;
         $this->updated = gmdate("Y-m-d H:i:s");
         update_option(
             self::OPT_ACTIVE,
@@ -3055,7 +3055,7 @@ class GAMB_DUPLICA_WP_Package
 
         $this->cleanObjectBeforeSave();
         $this->updatePackageFlags();
-        $this->version = gamb-duplica-wp_PRO_VERSION;
+        $this->version = GambDuplicaWP_PRO_VERSION;
         $this->updated = gmdate("Y-m-d H:i:s");
 
         $packageObj = JsonSerialize::serialize($this, JSON_PRETTY_PRINT | JsonSerialize::JSON_SKIP_CLASS_NAME);
@@ -3230,17 +3230,17 @@ class GAMB_DUPLICA_WP_Package
     public static function safe_tmp_cleanup($purge_temp_archives = false)
     {
         if ($purge_temp_archives) {
-            $dir = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/*_archive.zip.*";
+            $dir = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/*_archive.zip.*";
             foreach (glob($dir) as $file_path) {
                 unlink($file_path);
             }
-            $dir = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/*_archive.daf.*";
+            $dir = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/*_archive.daf.*";
             foreach (glob($dir) as $file_path) {
                 unlink($file_path);
             }
         } else {
             //Remove all temp files that are 24 hours old
-            $dir   = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/*";
+            $dir   = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/*";
             $files = glob($dir);
             if ($files !== false) {
                 foreach ($files as $file_path) {
@@ -3267,7 +3267,7 @@ class GAMB_DUPLICA_WP_Package
     {
         //Delete all files now
         if ($all) {
-            $dir = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/*";
+            $dir = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/*";
             foreach (glob($dir) as $file) {
                 if (basename($file) === 'index.php') {
                     continue;
@@ -3276,7 +3276,7 @@ class GAMB_DUPLICA_WP_Package
             }
         } else {
             // Remove scan files that are 24 hours old
-            $dir = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/*_scan.json";
+            $dir = GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/*_scan.json";
             foreach (glob($dir) as $file) {
                 if (filemtime($file) <= time() - GAMB_DUPLICA_WP_Constants::TEMP_CLEANUP_SECONDS) {
                     SnapIO::rrmdir($file);
@@ -3285,7 +3285,7 @@ class GAMB_DUPLICA_WP_Package
         }
 
         // Clean up extras directory if it is still hanging around
-        $extras_directory = SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH_TMP) . '/extras';
+        $extras_directory = SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH_TMP) . '/extras';
         if (file_exists($extras_directory)) {
             try {
                 if (!SnapIO::rrmdir($extras_directory)) {
@@ -3306,13 +3306,13 @@ class GAMB_DUPLICA_WP_Package
      */
     private function build_cleanup()
     {
-        $files = SnapIO::regexGlob(gamb-duplica-wp_PRO_SSDIR_PATH_TMP);
+        $files = SnapIO::regexGlob(GambDuplicaWP_PRO_SSDIR_PATH_TMP);
         if (count($files) > 0) {
             $filesToStore = [
                 $this->Installer->getInstallerLocalName(),
                 $this->Archive->File,
             ];
-            $newPath      = gamb-duplica-wp_PRO_SSDIR_PATH;
+            $newPath      = GambDuplicaWP_PRO_SSDIR_PATH;
 
             foreach ($files as $file) {
                 $fileName = basename($file);
@@ -3437,7 +3437,7 @@ class GAMB_DUPLICA_WP_Package
     public static function getByArchiveName($archiveName)
     {
         global $wpdb;
-        if (!preg_match(gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN, $archiveName, $matches)) {
+        if (!preg_match(GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN, $archiveName, $matches)) {
             return null;
         }
 
@@ -3494,7 +3494,7 @@ class GAMB_DUPLICA_WP_Package
     public static function getTableName()
     {
         global $wpdb;
-        return $wpdb->base_prefix . "gamb-duplica-wp_backups";
+        return $wpdb->base_prefix . "gamb_duplica_wp_backups";
     }
 
     /**

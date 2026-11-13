@@ -7,38 +7,38 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core;
+namespace GambDuplicaWP\Core;
 
 use GAMB_DUPLICA_WP_Constants;
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Core\MigrationMng;
+use GambDuplicaWP\Core\MigrationMng;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Runner;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Ajax\AjaxServicesUtils;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Addons\AddonsManager;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\Views\Notifications;
-use gamb-duplica-wp\Core\REST\RESTManager;
-use gamb-duplica-wp\Core\Upgrade\UpgradePlugin;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
-use gamb-duplica-wp\Models\SystemGlobalEntity;
-use gamb-duplica-wp\Package\Import\PackageImporter;
-use gamb-duplica-wp\Utils\CronUtils;
-use gamb-duplica-wp\Utils\Email\EmailSummaryBootstrap;
-use gamb-duplica-wp\Utils\ExpireOptions;
-use gamb-duplica-wp\Utils\Translations;
-use gamb-duplica-wp\Utils\UsageStatistics\StatsBootstrap;
-use gamb-duplica-wp\Views\AdminNotices;
-use gamb-duplica-wp\Views\DashboardWidget;
-use gamb-duplica-wp\Views\PackageScreen;
-use gamb-duplica-wp\Views\ScreenBase;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Ajax\AjaxServicesUtils;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Addons\AddonsManager;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\Views\Notifications;
+use GambDuplicaWP\Core\REST\RESTManager;
+use GambDuplicaWP\Core\Upgrade\UpgradePlugin;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Models\SystemGlobalEntity;
+use GambDuplicaWP\Package\Import\PackageImporter;
+use GambDuplicaWP\Utils\CronUtils;
+use GambDuplicaWP\Utils\Email\EmailSummaryBootstrap;
+use GambDuplicaWP\Utils\ExpireOptions;
+use GambDuplicaWP\Utils\Translations;
+use GambDuplicaWP\Utils\UsageStatistics\StatsBootstrap;
+use GambDuplicaWP\Views\AdminNotices;
+use GambDuplicaWP\Views\DashboardWidget;
+use GambDuplicaWP\Views\PackageScreen;
+use GambDuplicaWP\Views\ScreenBase;
+use GambDuplicaWP\Views\ViewHelper;
 use Error;
 use Exception;
 
@@ -61,7 +61,7 @@ class Bootstrap
     {
         self::$addsHash = $addsHash;
 
-        register_activation_hook(gamb-duplica-wp____FILE, [UpgradePlugin::class, 'onActivationAction']);
+        register_activation_hook(GambDuplicaWP____FILE, [UpgradePlugin::class, 'onActivationAction']);
         Unistall::registreHooks();
 
         CapMng::getInstance(); // init capabilties
@@ -90,7 +90,7 @@ class Bootstrap
             load_plugin_textdomain(
                 GAMB_DUPLICA_WP_Constants::PLUGIN_SLUG,
                 false,
-                dirname(plugin_basename(gamb-duplica-wp____FILE)) . '/lang/'
+                dirname(plugin_basename(GambDuplicaWP____FILE)) . '/lang/'
             );
         });
 
@@ -114,7 +114,7 @@ class Bootstrap
             return;
         }
 
-        if (ControllersManager::getInstance()->isgamb-duplica-wpPage()) {
+        if (ControllersManager::getInstance()->isGambDuplicaWPPage()) {
             add_filter('admin_footer_text', [self::class, 'adminFooterText'], 1);
             add_filter('update_footer', [self::class, 'adminFooterVersion'], 99999);
         }
@@ -152,16 +152,16 @@ class Bootstrap
         $exception = null;
         try {
             // Only start the Backup runner and tracing once it's been confirmed that everything has been installed
-            if (get_option(UpgradePlugin::DUP_VERSION_OPT_KEY) != gamb-duplica-wp_PRO_VERSION) {
+            if (get_option(UpgradePlugin::DUP_VERSION_OPT_KEY) != GambDuplicaWP_PRO_VERSION) {
                 return;
             }
 
             if (
                 !is_admin() &&
                 ExpireOptions::getUpdate(
-                    gamb-duplica-wp_PRO_FRONTEND_TRANSIENT,
+                    GambDuplicaWP_PRO_FRONTEND_TRANSIENT,
                     true,
-                    gamb-duplica-wp_PRO_FRONTEND_ACTION_DELAY
+                    GambDuplicaWP_PRO_FRONTEND_ACTION_DELAY
                 ) !== false
             ) {
                 return;
@@ -174,9 +174,9 @@ class Bootstrap
 
             if (
                 ExpireOptions::getUpdate(
-                    gamb-duplica-wp_TMP_CLEANUP_CHECK_KEY,
+                    GambDuplicaWP_TMP_CLEANUP_CHECK_KEY,
                     true,
-                    gamb-duplica-wp_TMP_CLEANUP_CHECK_DELAY
+                    GambDuplicaWP_TMP_CLEANUP_CHECK_DELAY
                 ) === false &&
                 GAMB_DUPLICA_WP_Package::isPackageRunning() === false
             ) {
@@ -205,11 +205,11 @@ class Bootstrap
     {
         $exception = null;
         try {
-            if (ExpireOptions::getUpdate(gamb-duplica-wp_PRO_INSTALLER_RENAME_KEY, true, gamb-duplica-wp_PRO_INSTALLER_RENAME_DELAY) !== false) {
+            if (ExpireOptions::getUpdate(GambDuplicaWP_PRO_INSTALLER_RENAME_KEY, true, GambDuplicaWP_PRO_INSTALLER_RENAME_DELAY) !== false) {
                 return;
             }
 
-            MigrationMng::renameInstallersPhpFiles(gamb-duplica-wp_PRO_INSTALLER_RENAME_DELAY);
+            MigrationMng::renameInstallersPhpFiles(GambDuplicaWP_PRO_INSTALLER_RENAME_DELAY);
         } catch (Exception | Error $e) {
             $exception = $e;
         }
@@ -255,7 +255,7 @@ class Bootstrap
         add_filter('admin_body_class', [ViewHelper::class, 'addBodyClass'], 100, 1);
         add_action('admin_head', [ScreenBase::class, 'getCustomCss']);
 
-        if (gamb-duplica-wp_CAPABILITIES_RESET) { // @phpstan-ignore-line
+        if (GambDuplicaWP_CAPABILITIES_RESET) { // @phpstan-ignore-line
             CapMng::getInstance()->hardReset();
         }
     }
@@ -293,7 +293,7 @@ class Bootstrap
      */
     public static function isDebug()
     {
-        return defined('gamb-duplica-wp_DEBUG') && gamb-duplica-wp_DEBUG; // @phpstan-ignore-line
+        return defined('GambDuplicaWP_DEBUG') && GambDuplicaWP_DEBUG; // @phpstan-ignore-line
     }
 
     /**
@@ -321,79 +321,79 @@ class Bootstrap
 
         wp_register_style(
             'gamb-duplica-wp-font-awesome',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/css/font-awesome/css/all.min.css',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/css/font-awesome/css/all.min.css',
             [],
             '6.4.2'
         );
         wp_register_style(
             'formstone',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/formstone/bundle.css',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/formstone/bundle.css',
             [],
             'v1.4.16-1'
         );
         wp_register_style(
             'jstree',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/jstree/themes/snap/style.css',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/jstree/themes/snap/style.css',
             [],
             '3.8.1'
         );
         wp_register_style(
             'dup-pro-select2',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/select2/css/select2.min.css',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/select2/css/select2.min.css',
             [],
-            gamb-duplica-wp_PRO_VERSION
+            GambDuplicaWP_PRO_VERSION
         );
         wp_register_style(
             'gamb-duplica-wp-main',
-            gamb-duplica-wp_PRO_PLUGIN_URL . "assets/css/gamb-duplica-wp{$min}.css",
+            GambDuplicaWP_PRO_PLUGIN_URL . "assets/css/gamb-duplica-wp{$min}.css",
             [
                 'gamb-duplica-wp-font-awesome',
                 'jstree',
                 'formstone',
                 'dup-pro-select2',
             ],
-            gamb-duplica-wp_PRO_VERSION
+            GambDuplicaWP_PRO_VERSION
         );
         wp_register_style(
             'dup-plugin-global-style',
-            gamb-duplica-wp_PRO_PLUGIN_URL . "assets/css/gamb-duplica-wp-global{$min}.css",
+            GambDuplicaWP_PRO_PLUGIN_URL . "assets/css/gamb-duplica-wp-global{$min}.css",
             [],
-            gamb-duplica-wp_PRO_VERSION
+            GambDuplicaWP_PRO_VERSION
         );
 
         //JS
-        wp_register_script('dup-pro-handlebars', gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/handlebars.min.js', ['jquery'], '4.0.10');
-        wp_register_script('parsley', gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/parsleyjs/parsley.min.js', ['jquery'], '2.9.2');
-        wp_register_script('popper', gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/popper/popper.min.js', [], '2.4.4');
-        wp_register_script('dup-pro-tippy', gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/tippy/tippy-bundle.umd.min.js', ['popper'], '6.2.6');
-        wp_register_script('formstone', gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/formstone/bundle.js', ['jquery'], 'v1.4.16-1');
-        wp_register_script('jstree', gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/jstree/jstree.min.js', [], '3.3.7');
-        wp_register_script('jscookie', gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/jscookie/js.cookie.min.js', [], '3.0.0');
+        wp_register_script('dup-pro-handlebars', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/handlebars.min.js', ['jquery'], '4.0.10');
+        wp_register_script('parsley', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/parsleyjs/parsley.min.js', ['jquery'], '2.9.2');
+        wp_register_script('popper', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/popper/popper.min.js', [], '2.4.4');
+        wp_register_script('dup-pro-tippy', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/tippy/tippy-bundle.umd.min.js', ['popper'], '6.2.6');
+        wp_register_script('formstone', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/formstone/bundle.js', ['jquery'], 'v1.4.16-1');
+        wp_register_script('jstree', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/jstree/jstree.min.js', [], '3.3.7');
+        wp_register_script('jscookie', GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/jscookie/js.cookie.min.js', [], '3.0.0');
         wp_register_script(
             'dup-pro-select2',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/select2/js/select2.js',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/select2/js/select2.js',
             ['jquery'],
-            gamb-duplica-wp_PRO_VERSION,
+            GambDuplicaWP_PRO_VERSION,
             true
         );
         wp_register_script(
             'gamb-duplica-wp-tooltip',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/gamb-duplica-wp-tooltip.js',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/gamb-duplica-wp-tooltip.js',
             ['dup-pro-tippy'],
-            gamb-duplica-wp_PRO_VERSION
+            GambDuplicaWP_PRO_VERSION
         );
         wp_register_script(
             'dup-pro-import-installer',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/import-installer.js',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/import-installer.js',
             ['jquery'],
-            gamb-duplica-wp_PRO_VERSION,
+            GambDuplicaWP_PRO_VERSION,
             true
         );
         wp_register_script(
             'dup-pro-dynamic-help',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/dynamic-help.js',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/dynamic-help.js',
             ['jquery'],
-            gamb-duplica-wp_PRO_VERSION,
+            GambDuplicaWP_PRO_VERSION,
             true
         );
     }
@@ -443,9 +443,9 @@ class Bootstrap
     {
         wp_enqueue_script(
             'dup-pro-global-script',
-            gamb-duplica-wp_PRO_PLUGIN_URL . 'assets/js/global-admin-script.js',
+            GambDuplicaWP_PRO_PLUGIN_URL . 'assets/js/global-admin-script.js',
             ['jquery'],
-            gamb-duplica-wp_PRO_VERSION,
+            GambDuplicaWP_PRO_VERSION,
             true
         );
         wp_localize_script(
@@ -513,7 +513,7 @@ class Bootstrap
             return;
         }
 
-        if (gamb-duplica-wp_PRO_VERSION != get_option(UpgradePlugin::DUP_VERSION_OPT_KEY)) {
+        if (GambDuplicaWP_PRO_VERSION != get_option(UpgradePlugin::DUP_VERSION_OPT_KEY)) {
             UpgradePlugin::onActivationAction();
         }
 
@@ -558,37 +558,37 @@ class Bootstrap
     {
         ControllersManager::getInstance()->registerMenu();
 
-        $page_packages = \gamb-duplica-wp\Controllers\PackagesPageController::getInstance()->getMenuHookSuffix();
-        if (($page_packages = \gamb-duplica-wp\Controllers\PackagesPageController::getInstance()->getMenuHookSuffix())  != false) {
+        $page_packages = \GambDuplicaWP\Controllers\PackagesPageController::getInstance()->getMenuHookSuffix();
+        if (($page_packages = \GambDuplicaWP\Controllers\PackagesPageController::getInstance()->getMenuHookSuffix())  != false) {
             add_action('admin_print_scripts-' . $page_packages, [self::class, 'enqueueScripts']);
             add_action('admin_print_styles-' . $page_packages, [self::class, 'enqueueStyles']);
             $packageScreen = new PackageScreen($page_packages); // Init hook on constructor
         }
 
-        if (($page_import = \gamb-duplica-wp\Controllers\ImportPageController::getInstance()->getMenuHookSuffix())  != false) {
+        if (($page_import = \GambDuplicaWP\Controllers\ImportPageController::getInstance()->getMenuHookSuffix())  != false) {
             add_action('admin_print_scripts-' . $page_import, [self::class, 'enqueueScripts']);
             add_action('admin_print_styles-' . $page_import, [self::class, 'enqueueStyles']);
         }
-        if (($page_schedules = \gamb-duplica-wp\Controllers\SchedulePageController::getInstance()->getMenuHookSuffix())  != false) {
+        if (($page_schedules = \GambDuplicaWP\Controllers\SchedulePageController::getInstance()->getMenuHookSuffix())  != false) {
             add_action('admin_print_scripts-' . $page_schedules, [self::class, 'enqueueScripts']);
             add_action('admin_print_styles-' . $page_schedules, [self::class, 'enqueueStyles']);
         }
-        if (($page_storage = \gamb-duplica-wp\Controllers\StoragePageController::getInstance()->getMenuHookSuffix())  != false) {
+        if (($page_storage = \GambDuplicaWP\Controllers\StoragePageController::getInstance()->getMenuHookSuffix())  != false) {
             add_action('admin_print_scripts-' . $page_storage, [self::class, 'enqueueScripts']);
             add_action('admin_print_styles-' . $page_storage, [self::class, 'enqueueStyles']);
         }
-        if (($page_settings = \gamb-duplica-wp\Controllers\SettingsPageController::getInstance()->getMenuHookSuffix())  != false) {
+        if (($page_settings = \GambDuplicaWP\Controllers\SettingsPageController::getInstance()->getMenuHookSuffix())  != false) {
             add_action('admin_print_scripts-' . $page_settings, [self::class, 'enqueueScripts']);
             add_action('admin_print_styles-' . $page_settings, [self::class, 'enqueueStyles']);
         }
-        if (($page_tools = \gamb-duplica-wp\Controllers\ToolsPageController::getInstance()->getMenuHookSuffix())  != false) {
+        if (($page_tools = \GambDuplicaWP\Controllers\ToolsPageController::getInstance()->getMenuHookSuffix())  != false) {
             add_action('admin_print_scripts-' . $page_tools, [self::class, 'enqueueScripts']);
             add_action('admin_print_styles-' . $page_tools, [self::class, 'enqueueStyles']);
         }
-        $page_installer = \gamb-duplica-wp\Controllers\ImportInstallerPageController::getInstance()->getMenuHookSuffix();
+        $page_installer = \GambDuplicaWP\Controllers\ImportInstallerPageController::getInstance()->getMenuHookSuffix();
 
         //Init Blank Pages
-        \gamb-duplica-wp\Controllers\HelpPageController::getInstance();
+        \GambDuplicaWP\Controllers\HelpPageController::getInstance();
 
         add_action('admin_print_styles', [self::class, 'enqueueGlobalStyles']);
     }
@@ -620,7 +620,7 @@ class Bootstrap
      */
     public static function unhookThirdPartyAssets($hook)
     {
-        if (!ControllersManager::getInstance()->isgamb-duplica-wpPage()) {
+        if (!ControllersManager::getInstance()->isGambDuplicaWPPage()) {
             return;
         }
 
@@ -669,7 +669,7 @@ class Bootstrap
         static $this_plugin;
 
         if (!$this_plugin) {
-            $this_plugin = plugin_basename(gamb-duplica-wp____FILE);
+            $this_plugin = plugin_basename(GambDuplicaWP____FILE);
         }
 
         if ($file == $this_plugin) {
@@ -691,7 +691,7 @@ class Bootstrap
      */
     public static function metaLinks($links, $file)
     {
-        $plugin = plugin_basename(gamb-duplica-wp____FILE);
+        $plugin = plugin_basename(GambDuplicaWP____FILE);
         if ($file == $plugin) {
             $help_url = ControllersManager::getMenuLink(ControllersManager::TOOLS_SUBMENU_SLUG);
             $links[]  = sprintf('<a href="%1$s" title="%2$s">%3$s</a>', esc_url($help_url), __('Get Help', 'gamb-duplica-wp'), __('Help', 'gamb-duplica-wp'));
@@ -709,32 +709,7 @@ class Bootstrap
      */
     public static function adminFooterText()
     {
-        $text  = '';
-        $text .= '<span class="dup-styles" ><i>';
-        $text .= sprintf(
-            wp_kses(
-                _x(
-                    'Please rate <strong>gamb-duplica-wp</strong> %1$s on %2$sWordPress.org%3$s to help us spread the word.',
-                    '%1$s represents 5 start symbols linked to wordpress.org review page, %2$s,%2$s represents one,close link',
-                    'gamb-duplica-wp'
-                ),
-                [
-                    'a'      => [
-                        'href'   => [],
-                        'target' => [],
-                        'rel'    => [],
-                    ],
-                    'strong' => [],
-                ]
-            ),
-            '<a href="https://wordpress.org/support/plugin/gamb-duplica-wp/reviews/?filter=5#new-post" 
-            class="link-style" target="_blank" rel="noopener noreferrer">' .
-            '&#9733;&#9733;&#9733;&#9733;&#9733;</a>',
-            '<a href="https://wordpress.org/support/plugin/gamb-duplica-wp/reviews/?filter=5#new-post" 
-            class="link-style" target="_blank" rel="noopener">',
-            '</a>'
-        );
-        return $text . '</i></span>';
+        return '<a href="https://github.com/gamberine/gamb-duplica-wp" target="_blank" rel="noopener noreferrer">Gamb Duplica WP - Repositório e documentação</a>';
     }
 
     /**
@@ -746,14 +721,14 @@ class Bootstrap
      */
     public static function adminFooterVersion($defaultText)
     {
-        if (!ControllersManager::getInstance()->isgamb-duplica-wpPage()) {
+        if (!ControllersManager::getInstance()->isGambDuplicaWPPage()) {
             return $defaultText;
         }
 
         return sprintf(
-            '%1$s | gamb-duplica-wp Pro %2$s',
+            '%1$s | Gamb Duplica WP %2$s',
             $defaultText,
-            esc_html(gamb-duplica-wp_PRO_VERSION)
+            esc_html(GambDuplicaWP_PRO_VERSION)
         );
     }
 
@@ -766,7 +741,7 @@ class Bootstrap
     public static function adminFooter()
     {
         if (
-            !ControllersManager::getInstance()->isgamb-duplica-wpPage() ||
+            !ControllersManager::getInstance()->isGambDuplicaWPPage() ||
             !get_option('gamb-duplica-wp_pro_trace_log_enabled', false)
         ) {
             return;

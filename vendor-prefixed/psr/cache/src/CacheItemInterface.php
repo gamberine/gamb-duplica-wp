@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Psr\Cache;
+namespace VendorGambDuplicaWP\Psr\Cache;
 
 /**
  * CacheItemInterface defines an interface for interacting with objects inside a cache.

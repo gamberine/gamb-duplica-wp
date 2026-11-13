@@ -5,7 +5,7 @@
  *
  * @package Requests\Utilities
  */
-namespace VendorDuplicator\WpOrg\Requests\Utility;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Utility;
 
 use ArrayAccess;
 use CurlHandle;

@@ -1,20 +1,20 @@
 <?php
 
 /**
- * Plugin Name: gamb-duplica-wp Pro
- * Plugin URI: https://gamb-duplica-wp.com/
- * Description: Create, schedule and transfer a copy of your WordPress files and database. Duplicate and move a site from one location to another quickly.
- * Version: 4.5.21
+ * Plugin Name: Gamb Duplica WP
+ * Plugin URI: https://github.com/gamberine/gamb-duplica-wp
+ * Description: Cópias de segurança e migração WordPress, com geração de arquivos, banco de dados e instalador de recuperação.
+ * Version: 5.0.0
  * Requires at least: 5.3
- * Tested up to: 6.7
+ * Tested up to: 7.1
  * Requires PHP: 7.4
- * Author: gamb-duplica-wp
- * Author URI: https://gamb-duplica-wp.com/
+ * Author: Gamb
+ * Author URI: https://github.com/gamberine
  * Network: true
- * Update URI: https://gamb-duplica-wp.com/
+ * Update URI: https://github.com/gamberine/gamb-duplica-wp
  * Text Domain: gamb-duplica-wp
- * License: GPLv2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * License: GPL-3.0-or-later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  *
  * Copyright 2011-2022  Snapcreek LLC
  *
@@ -34,12 +34,14 @@
 
 defined('ABSPATH') || exit;
 
-// Credencial incorporada removida antes da importação pública.
+define('GambDuplicaWP_USTATS_DISALLOW', true );
+require_once __DIR__ . '/src/ProjectPolicy.php';
+\GambDuplicaWP\ProjectPolicy::register();
 // CHECK PHP VERSION
-define('gamb-duplica-wp_PRO_PHP_MINIMUM_VERSION', '7.4');
-define('gamb-duplica-wp_PRO_PHP_SUGGESTED_VERSION', '8.3');
-require_once dirname(__FILE__) . "/src/Utils/gamb-duplica-wpPhpVersionCheck.php";
-if (gamb-duplica-wpPhpVersionCheck::check(gamb-duplica-wp_PRO_PHP_MINIMUM_VERSION, gamb-duplica-wp_PRO_PHP_SUGGESTED_VERSION) === false) {
+define('GambDuplicaWP_PRO_PHP_MINIMUM_VERSION', '7.4');
+define('GambDuplicaWP_PRO_PHP_SUGGESTED_VERSION', '8.3');
+require_once dirname(__FILE__) . "/src/Utils/GambDuplicaWPPhpVersionCheck.php";
+if (GambDuplicaWPPhpVersionCheck::check(GambDuplicaWP_PRO_PHP_MINIMUM_VERSION, GambDuplicaWP_PRO_PHP_SUGGESTED_VERSION) === false) {
     return;
 }
 $currentPluginBootFile = __FILE__;

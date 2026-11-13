@@ -14,7 +14,7 @@
  * @since      3.3.0
  */
 
-use gamb-duplica-wp\Libs\Shell\Shell;
+use GambDuplicaWP\Libs\Shell\Shell;
 
 /**
  * Helper class for reporting problems with zipping

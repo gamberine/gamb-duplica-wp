@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3;
+namespace VendorGambDuplicaWP\Aws\S3;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\MetricsBuilder;
-use VendorDuplicator\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\MetricsBuilder;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
 use InvalidArgumentException;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 /**
  * Apply required or optional checksums to requests before sending.
  *

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 /*
  * This file is part of the Symfony package.
@@ -14,5 +14,5 @@ if (\PHP_VERSION_ID < 80000) {
     class UnhandledMatchError extends \Error
     {
     }
-    \class_alias('VendorDuplicator\UnhandledMatchError', 'UnhandledMatchError', \false);
+    \class_alias('VendorGambDuplicaWP\UnhandledMatchError', 'UnhandledMatchError', \false);
 }

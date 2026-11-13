@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
 interface AesStreamInterface extends StreamInterface
 {
     /**

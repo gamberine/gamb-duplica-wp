@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint;
 
 use ArrayAccess;
-use VendorDuplicator\Aws\HasDataTrait;
-use VendorDuplicator\Aws\Sts\RegionalEndpoints\ConfigurationProvider;
-use VendorDuplicator\Aws\S3\RegionalEndpoint\ConfigurationProvider as S3ConfigurationProvider;
+use VendorGambDuplicaWP\Aws\HasDataTrait;
+use VendorGambDuplicaWP\Aws\Sts\RegionalEndpoints\ConfigurationProvider;
+use VendorGambDuplicaWP\Aws\S3\RegionalEndpoint\ConfigurationProvider as S3ConfigurationProvider;
 use InvalidArgumentException as Iae;
 /**
  * Default implementation of an AWS partition.

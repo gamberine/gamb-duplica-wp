@@ -12,7 +12,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 
 class DUPX_Validation_test_memory_limit extends DUPX_Validation_abstract_item
 {

@@ -5,9 +5,9 @@
  *
  * @package Requests\Exceptions
  */
-namespace VendorDuplicator\WpOrg\Requests\Exception\Transport;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Exception\Transport;
 
-use VendorDuplicator\WpOrg\Requests\Exception\Transport;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\Transport;
 /**
  * CURL Transport Exception.
  *

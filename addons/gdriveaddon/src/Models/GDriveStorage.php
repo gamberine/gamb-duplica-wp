@@ -6,21 +6,21 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\GDriveAddon\Models;
+namespace GambDuplicaWP\Addons\GDriveAddon\Models;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Google_Drive_Transfer_Mode;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package_Upload_Info;
 use GAMB_DUPLICA_WP_Server;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\StorageAuthInterface;
-use gamb-duplica-wp\Utils\OAuth\TokenEntity;
-use gamb-duplica-wp\Utils\OAuth\TokenService;
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\StorageAuthInterface;
+use GambDuplicaWP\Utils\OAuth\TokenEntity;
+use GambDuplicaWP\Utils\OAuth\TokenService;
+use GambDuplicaWP\Views\AdminNotices;
 use Exception;
 
 /**
@@ -113,7 +113,7 @@ class GDriveStorage extends AbstractStorageEntity implements StorageAuthInterfac
      */
     public static function getStypeIcon()
     {
-        $imgUrl = gamb-duplica-wp_PRO_IMG_URL . '/google-drive.svg';
+        $imgUrl = GambDuplicaWP_PRO_IMG_URL . '/google-drive.svg';
         return '<img src="' . esc_url($imgUrl) . '" class="dup-storage-icon" alt="' . esc_attr(static::getStypeName()) . '" />';
     }
 
@@ -384,7 +384,7 @@ class GDriveStorage extends AbstractStorageEntity implements StorageAuthInterfac
                 $this->config['storage_folder'],
                 $storageFolderId,
                 !$global->ssl_disableverify,
-                ($global->ssl_useservercerts ? '' : gamb-duplica-wp_PRO_CERT_PATH),
+                ($global->ssl_useservercerts ? '' : GambDuplicaWP_PRO_CERT_PATH),
                 $global->ipv4_only
             );
             $this->adapter->initialize();
@@ -408,7 +408,7 @@ class GDriveStorage extends AbstractStorageEntity implements StorageAuthInterfac
                 $this->config['storage_folder'],
                 '',
                 !$global->ssl_disableverify,
-                ($global->ssl_useservercerts ? '' : gamb-duplica-wp_PRO_CERT_PATH),
+                ($global->ssl_useservercerts ? '' : GambDuplicaWP_PRO_CERT_PATH),
                 $global->ipv4_only
             );
             $this->adapter->initialize();

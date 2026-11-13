@@ -32,10 +32,10 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\BlockCipher;
-use VendorDuplicator\phpseclib3\Exception\BadModeException;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\BlockCipher;
+use VendorGambDuplicaWP\phpseclib3\Exception\BadModeException;
 /**
  * Pure-PHP implementation of Twofish.
  *
@@ -47,14 +47,14 @@ class Twofish extends BlockCipher
     /**
      * The mcrypt specific name of the cipher
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::cipher_name_mcrypt
      * @var string
      */
     protected $cipher_name_mcrypt = 'twofish';
     /**
      * Optimizing value while CFB-encrypting
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::cfb_init_len
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::cfb_init_len
      * @var int
      */
     protected $cfb_init_len = 800;
@@ -208,7 +208,7 @@ class Twofish extends BlockCipher
     /**
      * Setup the key (expansion)
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::_setupKey()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::_setupKey()
      */
     protected function setupKey()
     {
@@ -402,7 +402,7 @@ class Twofish extends BlockCipher
     /**
      * Setup the performance-optimized function for de/encrypt()
      *
-     * @see \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey::_setupInlineCrypt()
+     * @see \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey::_setupInlineCrypt()
      */
     protected function setupInlineCrypt()
     {

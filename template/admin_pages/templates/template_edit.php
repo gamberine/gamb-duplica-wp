@@ -6,11 +6,11 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Views\TplMng;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Views\TplMng;
 
 /**
  * Variables

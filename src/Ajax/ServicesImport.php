@@ -5,15 +5,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Ajax\AjaxWrapper;
-use gamb-duplica-wp\Ajax\FileTransfer\ImportUpload;
-use gamb-duplica-wp\Controllers\ImportPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Package\Import\PackageImporter;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Ajax\AjaxWrapper;
+use GambDuplicaWP\Ajax\FileTransfer\ImportUpload;
+use GambDuplicaWP\Controllers\ImportPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Package\Import\PackageImporter;
 use Exception;
 
 class ServicesImport extends AbstractAjaxService

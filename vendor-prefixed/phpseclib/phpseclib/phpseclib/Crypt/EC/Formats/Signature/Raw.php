@@ -10,9 +10,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC\Formats\Signature;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Signature;
 
-use VendorDuplicator\phpseclib3\Crypt\Common\Formats\Signature\Raw as Progenitor;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Signature\Raw as Progenitor;
 /**
  * Raw DSA Signature Handler
  *

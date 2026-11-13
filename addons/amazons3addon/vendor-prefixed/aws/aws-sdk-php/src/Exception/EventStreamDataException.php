@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Exception;
+namespace VendorGambDuplicaWP\Aws\Exception;
 
 /**
  * Represents an exception that was supplied via an EventStream.

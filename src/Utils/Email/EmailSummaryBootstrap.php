@@ -1,14 +1,14 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Email;
+namespace GambDuplicaWP\Utils\Email;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_Upload_Info;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Utils\CronUtils;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Utils\CronUtils;
 use Exception;
 
 /**
@@ -26,7 +26,7 @@ class EmailSummaryBootstrap
     public static function init()
     {
         //Init Preview page
-        \gamb-duplica-wp\Controllers\EmailSummaryPreviewPageController::getInstance();
+        \GambDuplicaWP\Controllers\EmailSummaryPreviewPageController::getInstance();
 
         //Storage hooks
         add_action('gamb-duplica-wp_pro_after_storage_create', function ($storageId): void {

@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Auth;
+namespace VendorGambDuplicaWP\Aws\Auth;
 
-use VendorDuplicator\Aws\Auth\Exception\UnresolvedAuthSchemeException;
-use VendorDuplicator\Aws\Identity\AwsCredentialIdentity;
-use VendorDuplicator\Aws\Identity\BearerTokenIdentity;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Aws\Auth\Exception\UnresolvedAuthSchemeException;
+use VendorGambDuplicaWP\Aws\Identity\AwsCredentialIdentity;
+use VendorGambDuplicaWP\Aws\Identity\BearerTokenIdentity;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
 /**
  * Houses logic for selecting an auth scheme modeled in a service's `auth` trait.
  * The `auth` trait can be modeled either in a service's metadata, or at the operation level.

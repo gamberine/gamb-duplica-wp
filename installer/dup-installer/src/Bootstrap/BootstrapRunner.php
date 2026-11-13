@@ -4,12 +4,12 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Bootstrap;
+namespace GambDuplicaWP\Installer\Bootstrap;
 
-use gamb-duplica-wp\Installer\Utils\SecureCsrf;
-use gamb-duplica-wp\Libs\DupArchive\DupArchive;
-use gamb-duplica-wp\Libs\DupArchive\DupArchiveExpandBasicEngine;
-use gamb-duplica-wp\Libs\Shell\Shell;
+use GambDuplicaWP\Installer\Utils\SecureCsrf;
+use GambDuplicaWP\Libs\DupArchive\DupArchive;
+use GambDuplicaWP\Libs\DupArchive\DupArchiveExpandBasicEngine;
+use GambDuplicaWP\Libs\Shell\Shell;
 use Exception;
 use InstallerBootstrapData;
 use ZipArchive;
@@ -165,13 +165,13 @@ class BootstrapRunner
         define('KB_IN_BYTES', 1024);
         define('MB_IN_BYTES', 1024 * KB_IN_BYTES);
         define('GB_IN_BYTES', 1024 * MB_IN_BYTES);
-        define('gamb-duplica-wp_PRO_PHP_MAX_MEMORY', 4096 * MB_IN_BYTES);
+        define('GambDuplicaWP_PRO_PHP_MAX_MEMORY', 4096 * MB_IN_BYTES);
 
         date_default_timezone_set('UTC'); // Some machines don’t have this set so just do it here.
         @ignore_user_abort(true);
         @set_time_limit(3600);
         if (BootstrapUtils::isIniValChangeable('memory_limit')) {
-            @ini_set('memory_limit', (string) gamb-duplica-wp_PRO_PHP_MAX_MEMORY);
+            @ini_set('memory_limit', (string) GambDuplicaWP_PRO_PHP_MAX_MEMORY);
         }
         if (BootstrapUtils::isIniValChangeable('max_input_time')) {
             @ini_set('max_input_time', '-1');
@@ -755,7 +755,7 @@ class BootstrapRunner
             'ignore_user_abort'      => 'On',
             'post_max_size'          => '4096M',
             'upload_max_filesize'    => '4096M',
-            'memory_limit'           => gamb-duplica-wp_PRO_PHP_MAX_MEMORY,
+            'memory_limit'           => GambDuplicaWP_PRO_PHP_MAX_MEMORY,
             'default_socket_timeout' => 3600,
             'pcre.backtrack_limit'   => 99999999999,
         ];
@@ -1493,6 +1493,6 @@ class BootstrapRunner
      */
     public static function isBridgeInstall()
     {
-        return defined('gamb-duplica-wp_MU_PLUGIN_VERSION');
+        return defined('GambDuplicaWP_MU_PLUGIN_VERSION');
     }
 }

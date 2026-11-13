@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator;
+namespace VendorGambDuplicaWP;
 
 /**
  * Backwards compatibility layer for Requests.
@@ -14,7 +14,7 @@ namespace VendorDuplicator;
  *
  * @deprecated 2.0.0 Use the PSR-4 class names instead.
  */
-if (\class_exists('VendorDuplicator\WpOrg\Requests\Autoload') === \false) {
+if (\class_exists('VendorGambDuplicaWP\WpOrg\Requests\Autoload') === \false) {
     require_once \dirname(__DIR__) . '/src/Autoload.php';
 }
 WpOrg\Requests\Autoload::register();

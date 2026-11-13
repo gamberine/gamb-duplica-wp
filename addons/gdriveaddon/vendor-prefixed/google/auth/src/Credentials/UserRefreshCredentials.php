@@ -15,11 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Credentials;
+namespace VendorGambDuplicaWP\Google\Auth\Credentials;
 
-use VendorDuplicator\Google\Auth\CredentialsLoader;
-use VendorDuplicator\Google\Auth\GetQuotaProjectInterface;
-use VendorDuplicator\Google\Auth\OAuth2;
+use VendorGambDuplicaWP\Google\Auth\CredentialsLoader;
+use VendorGambDuplicaWP\Google\Auth\GetQuotaProjectInterface;
+use VendorGambDuplicaWP\Google\Auth\OAuth2;
 /**
  * Authenticates requests using User Refresh credentials.
  *

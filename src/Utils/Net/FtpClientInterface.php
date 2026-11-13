@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Net;
+namespace GambDuplicaWP\Utils\Net;
 
 /**
  * Interface for FTP clients

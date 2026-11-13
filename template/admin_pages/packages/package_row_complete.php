@@ -4,9 +4,9 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
-use gamb-duplica-wp\Views\UserUIOptions;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Views\UserUIOptions;
 
 defined("ABSPATH") or die("");
 

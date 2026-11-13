@@ -35,11 +35,11 @@ DupPro.Tools = {};
 DupPro.UI = {};
 
 //New Format
-gamb-duplica-wp = {};
-gamb-duplica-wp.Util = {};
-gamb-duplica-wp.Debug = {};
-gamb-duplica-wp.Storage = {};
-gamb-duplica-wp.Help = {};
+GambDuplicaWP = {};
+GambDuplicaWP.Util = {};
+GambDuplicaWP.Debug = {};
+GambDuplicaWP.Storage = {};
+GambDuplicaWP.Help = {};
 
 (function ($) {
 
@@ -238,12 +238,12 @@ gamb-duplica-wp.Help = {};
 </script>
 
 <?php
-    require_once(gamb-duplica-wp____PATH . '/assets/js/gamb-duplica-wp/dup.ui.php');
-    require_once(gamb-duplica-wp____PATH . '/assets/js/gamb-duplica-wp/dup.util.php');
+    require_once(GambDuplicaWP____PATH . '/assets/js/gamb-duplica-wp/dup.ui.php');
+    require_once(GambDuplicaWP____PATH . '/assets/js/gamb-duplica-wp/dup.util.php');
 ?>
 <script>
     <?php
-        require_once(gamb-duplica-wp____PATH . '/assets/js/modal-box.js');
+        require_once(GambDuplicaWP____PATH . '/assets/js/modal-box.js');
     ?>
 </script>
 
@@ -328,7 +328,7 @@ jQuery(document).ready(function ($)
         }
     });
 
-    gamb-duplica-wpTooltip.load();
+    GambDuplicaWPTooltip.load();
     DupPro.passwordToggle();
 
     //HANDLEBARS HELPERS
@@ -474,7 +474,7 @@ jQuery(document).ready(function ($)
         if (DupPro.UI.hasUnsavedChanges) {
             e.preventDefault();
             // Most browsers ignore the value, but historically some browsers are known to honor this value. So it's here as a backup
-            e.returnValue = '<?php echo esc_js(__('Changes you made may not be saved.', 'gamb-duplica-wp')) ?>';
+            e.returnValue = '<?php echo esc_js(__('Changes you made may not be saved.', 'GambDuplicaWP')) ?>';
         }
     });
 });

@@ -1,9 +1,9 @@
 <?php
 
-namespace gamb-duplica-wp\Core\Models;
+namespace GambDuplicaWP\Core\Models;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapLog;
 use Error;
 use Exception;
 use wpdb;

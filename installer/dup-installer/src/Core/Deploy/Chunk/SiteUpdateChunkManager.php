@@ -5,12 +5,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace  gamb-duplica-wp\Installer\Core\Deploy\Chunk;
+namespace  GambDuplicaWP\Installer\Core\Deploy\Chunk;
 
-use gamb-duplica-wp\Installer\Core\Deploy\Database\DbCleanup;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Chunking\ChunkingManager;
-use gamb-duplica-wp\Libs\Chunking\Persistance\PersistanceAdapterInterface;
+use GambDuplicaWP\Installer\Core\Deploy\Database\DbCleanup;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Chunking\ChunkingManager;
+use GambDuplicaWP\Libs\Chunking\Persistance\PersistanceAdapterInterface;
 use DUPX_S3_Funcs;
 use DUPX_UpdateEngine;
 
@@ -95,7 +95,7 @@ class SiteUpdateChunkManager extends ChunkingManager
             case SiteUpdateChunkIterator::STEP_GEN_CLEAN:
                 $s3FuncsManager->generalCleanup();
                 $s3FuncsManager->forceLogoutOfAllUsers();
-                $s3FuncsManager->gamb-duplica-wpMigrationInfoSet();
+                $s3FuncsManager->GambDuplicaWPMigrationInfoSet();
                 break;
             case SiteUpdateChunkIterator::STEP_NOTICE_TEST:
                 $s3FuncsManager->checkForIndexHtml();

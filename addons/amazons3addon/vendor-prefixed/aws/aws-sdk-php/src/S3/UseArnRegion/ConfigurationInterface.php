@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\UseArnRegion;
+namespace VendorGambDuplicaWP\Aws\S3\UseArnRegion;
 
 interface ConfigurationInterface
 {

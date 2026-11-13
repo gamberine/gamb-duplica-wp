@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Parser;
+namespace VendorGambDuplicaWP\Aws\S3\Parser;
 
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * Interface for S3 result mutator implementations.
  * A S3 result mutator is meant for modifying a request

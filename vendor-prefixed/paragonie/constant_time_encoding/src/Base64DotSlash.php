@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\ParagonIE\ConstantTime;
+namespace VendorGambDuplicaWP\ParagonIE\ConstantTime;
 
 /**
  *  Copyright (c) 2016 - 2022 Paragon Initiative Enterprises.
@@ -29,7 +29,7 @@ namespace VendorDuplicator\ParagonIE\ConstantTime;
  * Class Base64DotSlash
  * ./[A-Z][a-z][0-9]
  *
- * @package VendorDuplicator\ParagonIE\ConstantTime
+ * @package VendorGambDuplicaWP\ParagonIE\ConstantTime
  */
 abstract class Base64DotSlash extends Base64
 {

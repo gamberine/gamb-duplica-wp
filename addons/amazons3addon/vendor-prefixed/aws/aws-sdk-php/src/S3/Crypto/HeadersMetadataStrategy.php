@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Crypto;
+namespace VendorGambDuplicaWP\Aws\S3\Crypto;
 
-use VendorDuplicator\Aws\Crypto\MetadataStrategyInterface;
-use VendorDuplicator\Aws\Crypto\MetadataEnvelope;
+use VendorGambDuplicaWP\Aws\Crypto\MetadataStrategyInterface;
+use VendorGambDuplicaWP\Aws\Crypto\MetadataEnvelope;
 class HeadersMetadataStrategy implements MetadataStrategyInterface
 {
     /**

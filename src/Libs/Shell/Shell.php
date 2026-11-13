@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Libs\Shell;
+namespace GambDuplicaWP\Libs\Shell;
 
 use Exception;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Crypto;
+namespace VendorGambDuplicaWP\Aws\S3\Crypto;
 
-use VendorDuplicator\Aws\AwsClientInterface;
-use VendorDuplicator\Aws\Middleware;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\AwsClientInterface;
+use VendorGambDuplicaWP\Aws\Middleware;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 trait UserAgentTrait
 {
     private function appendUserAgent(AwsClientInterface $client, $agentString)

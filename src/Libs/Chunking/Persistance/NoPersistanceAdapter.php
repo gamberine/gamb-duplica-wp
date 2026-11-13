@@ -5,9 +5,9 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Libs\Chunking\Persistance;
+namespace GambDuplicaWP\Libs\Chunking\Persistance;
 
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
 
 class NoPersistanceAdapter implements PersistanceAdapterInterface
 {

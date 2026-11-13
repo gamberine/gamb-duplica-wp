@@ -7,15 +7,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Controllers;
+namespace GambDuplicaWP\Controllers;
 
-use gamb-duplica-wp\Core\Bootstrap;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Controllers\AbstractSinglePageController;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Package\Import\PackageImporter;
+use GambDuplicaWP\Core\Bootstrap;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Controllers\AbstractSinglePageController;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Package\Import\PackageImporter;
 
 class ImportInstallerPageController extends AbstractSinglePageController
 {
@@ -44,7 +44,7 @@ class ImportInstallerPageController extends AbstractSinglePageController
      */
     public function isEnabled()
     {
-        return !((bool) gamb-duplica-wp_PRO_DISALLOW_IMPORT); // @phpstan-ignore-line
+        return !((bool) GambDuplicaWP_PRO_DISALLOW_IMPORT); // @phpstan-ignore-line
     }
 
     /**

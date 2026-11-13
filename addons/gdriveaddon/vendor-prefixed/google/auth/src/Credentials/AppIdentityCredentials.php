@@ -15,17 +15,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Credentials;
+namespace VendorGambDuplicaWP\Google\Auth\Credentials;
 
 /*
  * The AppIdentityService class is automatically defined on App Engine,
  * so including this dependency is not necessary, and will result in a
  * PHP fatal error in the App Engine environment.
  */
-use VendorDuplicator\google\appengine\api\app_identity\AppIdentityService;
-use VendorDuplicator\Google\Auth\CredentialsLoader;
-use VendorDuplicator\Google\Auth\ProjectIdProviderInterface;
-use VendorDuplicator\Google\Auth\SignBlobInterface;
+use VendorGambDuplicaWP\google\appengine\api\app_identity\AppIdentityService;
+use VendorGambDuplicaWP\Google\Auth\CredentialsLoader;
+use VendorGambDuplicaWP\Google\Auth\ProjectIdProviderInterface;
+use VendorGambDuplicaWP\Google\Auth\SignBlobInterface;
 /**
  * @deprecated
  *
@@ -89,7 +89,7 @@ class AppIdentityCredentials extends CredentialsLoader implements SignBlobInterf
      */
     public static function onAppEngine()
     {
-        $appEngineProduction = isset($_SERVER['SERVER_SOFTWARE']) && 0 === strpos($_SERVER['SERVER_SOFTWARE'], 'VendorDuplicator\\Google App Engine');
+        $appEngineProduction = isset($_SERVER['SERVER_SOFTWARE']) && 0 === strpos($_SERVER['SERVER_SOFTWARE'], 'VendorGambDuplicaWP\\Google App Engine');
         if ($appEngineProduction) {
             return \true;
         }
@@ -202,7 +202,7 @@ class AppIdentityCredentials extends CredentialsLoader implements SignBlobInterf
      */
     private function checkAppEngineContext()
     {
-        if (!self::onAppEngine() || !class_exists('VendorDuplicator\google\appengine\api\app_identity\AppIdentityService')) {
+        if (!self::onAppEngine() || !class_exists('VendorGambDuplicaWP\google\appengine\api\app_identity\AppIdentityService')) {
             throw new \Exception('This class must be run in App Engine, or you must include the AppIdentityService ' . 'mock class defined in tests/mocks/AppIdentityService.php');
         }
     }

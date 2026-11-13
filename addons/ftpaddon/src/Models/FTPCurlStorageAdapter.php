@@ -1,12 +1,12 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\FtpAddon\Models;
+namespace GambDuplicaWP\Addons\FtpAddon\Models;
 
 use CurlHandle;
-use gamb-duplica-wp\Addons\FtpAddon\Utils\FTPUtils;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Addons\FtpAddon\Utils\FTPUtils;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 class FTPCurlStorageAdapter extends AbstractStorageAdapter
 {

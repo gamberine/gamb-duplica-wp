@@ -1,8 +1,8 @@
 <?php
 
-namespace gamb-duplica-wp\Core\Controllers;
+namespace GambDuplicaWP\Core\Controllers;
 
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Core\CapMng;
 
 /**
  * Sub menu item class

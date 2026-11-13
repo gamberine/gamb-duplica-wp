@@ -10,9 +10,9 @@
  * @package SC\DUPX\U
  */
 
-namespace gamb-duplica-wp\Installer\Utils\Tests;
+namespace GambDuplicaWP\Installer\Utils\Tests;
 
-use gamb-duplica-wp\Installer\Utils\InstDescMng;
+use GambDuplicaWP\Installer\Utils\InstDescMng;
 
 class MessageCustomizer
 {

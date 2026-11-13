@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Parser;
+namespace VendorGambDuplicaWP\Aws\Api\Parser;
 
-use VendorDuplicator\Aws\Api\DateTimeResult;
-use VendorDuplicator\Aws\Api\ListShape;
-use VendorDuplicator\Aws\Api\MapShape;
-use VendorDuplicator\Aws\Api\Parser\Exception\ParserException;
-use VendorDuplicator\Aws\Api\Shape;
-use VendorDuplicator\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\Api\DateTimeResult;
+use VendorGambDuplicaWP\Aws\Api\ListShape;
+use VendorGambDuplicaWP\Aws\Api\MapShape;
+use VendorGambDuplicaWP\Aws\Api\Parser\Exception\ParserException;
+use VendorGambDuplicaWP\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
 /**
  * @internal Implements standard XML parsing for REST-XML and Query protocols.
  */

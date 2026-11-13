@@ -1,12 +1,12 @@
 <?php
 
-namespace gamb-duplica-wp\Core\Views;
+namespace GambDuplicaWP\Core\Views;
 
 use GAMB_DUPLICA_WP_Global_Entity;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Upgrade\UpgradePlugin;
-use gamb-duplica-wp\Core\Views\TplMng;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Upgrade\UpgradePlugin;
+use GambDuplicaWP\Core\Views\TplMng;
 
 /**
  * Notifications.
@@ -25,21 +25,21 @@ class Notifications
      *
      * @var string
      */
-    const gamb-duplica-wp_PRO_NOTIFICATIONS_OPT_KEY = 'gamb-duplica-wp_pro_notifications';
+    const GambDuplicaWP_PRO_NOTIFICATIONS_OPT_KEY = 'gamb-duplica-wp_pro_notifications';
 
     /**
      * WordPress option key containing notification data
      *
      * @var string
      */
-    const gamb-duplica-wp_PRO_BEFORE_PACKAGES_HOOK = 'gamb-duplica-wp_pro_before_packages_table_action';
+    const GambDuplicaWP_PRO_BEFORE_PACKAGES_HOOK = 'gamb-duplica-wp_pro_before_packages_table_action';
 
     /**
      * gamb-duplica-wp notifications dismiss nonce key
      *
      * @var string
      */
-    const gamb-duplica-wp_NOTIFICATION_NONCE_KEY = 'gamb-duplica-wp-notification-dismiss';
+    const GambDuplicaWP_NOTIFICATION_NONCE_KEY = 'gamb-duplica-wp-notification-dismiss';
 
     /**
      * Option value.
@@ -72,7 +72,7 @@ class Notifications
 
         self::update();
 
-        add_action(self::gamb-duplica-wp_PRO_BEFORE_PACKAGES_HOOK, [self::class, 'output']);
+        add_action(self::GambDuplicaWP_PRO_BEFORE_PACKAGES_HOOK, [self::class, 'output']);
     }
 
     /**
@@ -102,7 +102,7 @@ class Notifications
                 break;
             }
         }
-        return update_option(self::gamb-duplica-wp_PRO_NOTIFICATIONS_OPT_KEY, $option);
+        return update_option(self::GambDuplicaWP_PRO_NOTIFICATIONS_OPT_KEY, $option);
     }
 
     /**
@@ -118,7 +118,7 @@ class Notifications
             return self::$option;
         }
 
-        self::$option = get_option(self::gamb-duplica-wp_PRO_NOTIFICATIONS_OPT_KEY, [
+        self::$option = get_option(self::GambDuplicaWP_PRO_NOTIFICATIONS_OPT_KEY, [
             'update'    => 0,
             'feed'      => [],
             'events'    => [],
@@ -270,7 +270,7 @@ class Notifications
 
         $notification = self::verify([$notification]);
         update_option(
-            self::gamb-duplica-wp_PRO_NOTIFICATIONS_OPT_KEY,
+            self::GambDuplicaWP_PRO_NOTIFICATIONS_OPT_KEY,
             [
                 'update'    => $option['update'],
                 'feed'      => $option['feed'],
@@ -389,7 +389,7 @@ class Notifications
          */
         $data = (array)apply_filters('gamb-duplica-wp_admin_notifications_update_data', $data);
 
-        update_option(self::gamb-duplica-wp_PRO_NOTIFICATIONS_OPT_KEY, $data);
+        update_option(self::GambDuplicaWP_PRO_NOTIFICATIONS_OPT_KEY, $data);
     }
 
     /**
@@ -405,9 +405,9 @@ class Notifications
 
         wp_enqueue_script(
             'dup-admin-notifications',
-            gamb-duplica-wp_PRO_PLUGIN_URL . "assets/js/admin-notifications.js",
+            GambDuplicaWP_PRO_PLUGIN_URL . "assets/js/admin-notifications.js",
             ['jquery'],
-            gamb-duplica-wp_PRO_VERSION,
+            GambDuplicaWP_PRO_VERSION,
             true
         );
 
@@ -416,7 +416,7 @@ class Notifications
             'dup_admin_notifications',
             [
                 'ajax_url' => admin_url('admin-ajax.php'),
-                'nonce'    => wp_create_nonce(self::gamb-duplica-wp_NOTIFICATION_NONCE_KEY),
+                'nonce'    => wp_create_nonce(self::GambDuplicaWP_NOTIFICATION_NONCE_KEY),
             ]
         );
     }
@@ -581,6 +581,6 @@ class Notifications
      */
     private static function getUserAgent()
     {
-        return 'WordPress/' . get_bloginfo('version') . '; ' . get_bloginfo('url') . '; gamb-duplica-wp/Lite-' . gamb-duplica-wp_PRO_VERSION;
+        return 'WordPress/' . get_bloginfo('version') . '; ' . get_bloginfo('url') . '; gamb-duplica-wp/Lite-' . GambDuplicaWP_PRO_VERSION;
     }
 }

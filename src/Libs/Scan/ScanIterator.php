@@ -1,10 +1,10 @@
 <?php
 
-namespace gamb-duplica-wp\Libs\Scan;
+namespace GambDuplicaWP\Libs\Scan;
 
-use gamb-duplica-wp\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapOS;
+use GambDuplicaWP\Libs\Chunking\Iterators\GenericSeekableIteratorInterface;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapOS;
 
 class ScanIterator implements GenericSeekableIteratorInterface
 {

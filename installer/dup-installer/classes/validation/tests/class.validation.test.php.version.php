@@ -10,7 +10,7 @@
  * @package SC\DUPX\U
  */
 
-use gamb-duplica-wp\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\InstState;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Endpoint\UseFipsEndpoint;
+namespace VendorGambDuplicaWP\Aws\Endpoint\UseFipsEndpoint;
 
 interface ConfigurationInterface
 {

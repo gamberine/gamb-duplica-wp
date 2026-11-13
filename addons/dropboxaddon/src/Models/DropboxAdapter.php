@@ -1,14 +1,14 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\DropboxAddon\Models;
+namespace GambDuplicaWP\Addons\DropboxAddon\Models;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Addons\DropboxAddon\Utils\DropboxClient;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
+use GambDuplicaWP\Addons\DropboxAddon\Utils\DropboxClient;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
 use Error;
 use Exception;
-use Vendorgamb-duplica-wp\Spatie\Dropbox\UploadSessionCursor;
+use VendorGambDuplicaWP\Spatie\Dropbox\UploadSessionCursor;
 
 class DropboxAdapter extends AbstractStorageAdapter
 {

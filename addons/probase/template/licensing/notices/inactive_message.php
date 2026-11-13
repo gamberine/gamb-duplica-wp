@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Views\ViewHelper;
 
 defined("ABSPATH") or die("");
 
@@ -61,7 +61,7 @@ $licensing_tab_url = ControllersManager::getMenuLink(
             ),
             '<a href="' . esc_url($licensing_tab_url) . '">',
             '</a>',
-            '<a target="_blank" href="' . esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'my-account') . '">',
+            '<a target="_blank" href="' . esc_url(GambDuplicaWP_PRO_BLOG_URL . 'my-account') . '">',
             '</a>'
         );
     } else {

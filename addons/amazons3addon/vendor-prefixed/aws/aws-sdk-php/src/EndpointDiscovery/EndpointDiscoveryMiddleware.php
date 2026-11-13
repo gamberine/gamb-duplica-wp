@@ -1,17 +1,17 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointDiscovery;
+namespace VendorGambDuplicaWP\Aws\EndpointDiscovery;
 
-use VendorDuplicator\Aws\AwsClient;
-use VendorDuplicator\Aws\CacheInterface;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\Credentials\CredentialsInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\Exception\UnresolvedEndpointException;
-use VendorDuplicator\Aws\LruArrayCache;
-use VendorDuplicator\Aws\Middleware;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\UriInterface;
+use VendorGambDuplicaWP\Aws\AwsClient;
+use VendorGambDuplicaWP\Aws\CacheInterface;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\Credentials\CredentialsInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedEndpointException;
+use VendorGambDuplicaWP\Aws\LruArrayCache;
+use VendorGambDuplicaWP\Aws\Middleware;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UriInterface;
 class EndpointDiscoveryMiddleware
 {
     /**

@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Views\ViewHelper;
+use GambDuplicaWP\Views\ViewHelper;
 
 defined("ABSPATH") or die("");
 
@@ -39,7 +39,7 @@ defined("ABSPATH") or die("");
                 ),
                 ViewHelper::GEN_KSES_TAGS
             ),
-            '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-license-activation-issues/') . '" target="_blank">',
+            '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-license-activation-issues/') . '" target="_blank">',
             '</a>'
         );
         ?>

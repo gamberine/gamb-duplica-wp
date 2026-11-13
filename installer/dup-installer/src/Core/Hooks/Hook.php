@@ -4,7 +4,7 @@
  * From WordPress WP_Hook class
  */
 
-namespace gamb-duplica-wp\Installer\Core\Hooks;
+namespace GambDuplicaWP\Installer\Core\Hooks;
 
 /**
  * Core class used to implement action and filter hook functionality.

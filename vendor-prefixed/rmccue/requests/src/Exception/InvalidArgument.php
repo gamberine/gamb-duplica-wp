@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\WpOrg\Requests\Exception;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Exception;
 
 use InvalidArgumentException;
 /**
@@ -19,7 +19,7 @@ final class InvalidArgument extends InvalidArgumentException
      * @param string $expected The argument type expected as a string.
      * @param string $received The actual argument type received.
      *
-     * @return \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument
      */
     public static function create($position, $name, $expected, $received)
     {

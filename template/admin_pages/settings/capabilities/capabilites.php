@@ -4,11 +4,11 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
 
 defined("ABSPATH") or die("");
 
@@ -181,7 +181,7 @@ $dlgDelete->initConfirm();
                         search: params.term,
                         page: params.page || 1,
                         action: 'gamb-duplica-wp_settings_cap_users_list',
-                        nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_settings_cap_users_list')); ?>'
+                        nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_settings_cap_users_list')); ?>'
                     }
                     return query;
                 },

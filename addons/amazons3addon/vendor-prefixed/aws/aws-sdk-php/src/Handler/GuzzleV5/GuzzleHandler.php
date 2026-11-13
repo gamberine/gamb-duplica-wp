@@ -1,19 +1,19 @@
 <?php
 
-namespace VendorDuplicator\Aws\Handler\GuzzleV5;
+namespace VendorGambDuplicaWP\Aws\Handler\GuzzleV5;
 
 use Exception;
-use VendorDuplicator\GuzzleHttp\Client;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\GuzzleHttp\Event\EndEvent;
-use VendorDuplicator\GuzzleHttp\Exception\ConnectException;
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\GuzzleHttp\Message\ResponseInterface as GuzzleResponse;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Psr7\Response as Psr7Response;
-use VendorDuplicator\GuzzleHttp\Stream\Stream;
-use VendorDuplicator\Psr\Http\Message\RequestInterface as Psr7Request;
-use VendorDuplicator\Psr\Http\Message\StreamInterface as Psr7StreamInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Client;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Event\EndEvent;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\ConnectException;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\GuzzleHttp\Message\ResponseInterface as GuzzleResponse;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Response as Psr7Response;
+use VendorGambDuplicaWP\GuzzleHttp\Stream\Stream;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface as Psr7Request;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface as Psr7StreamInterface;
 /**
  * A request handler that sends PSR-7-compatible requests with Guzzle 5.
  *
@@ -39,7 +39,7 @@ class GuzzleHandler
      * @param Psr7Request $request
      * @param array $options
      * @return Promise\Promise|Promise\PromiseInterface
-     * @throws \VendorDuplicator\GuzzleHttp\Exception\GuzzleException
+     * @throws \VendorGambDuplicaWP\GuzzleHttp\Exception\GuzzleException
      */
     public function __invoke(Psr7Request $request, array $options = [])
     {

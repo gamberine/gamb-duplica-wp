@@ -5,7 +5,7 @@
  *
  * @package Requests\EventDispatcher
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
 /**
  * Event dispatcher

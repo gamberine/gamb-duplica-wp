@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\RegionalEndpoint;
+namespace VendorGambDuplicaWP\Aws\S3\RegionalEndpoint;
 
 class Configuration implements ConfigurationInterface
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Serializer;
+namespace VendorGambDuplicaWP\Aws\Api\Serializer;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Api\Shape;
-use VendorDuplicator\Aws\Api\TimestampShape;
-use VendorDuplicator\Aws\Exception\InvalidJsonException;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\Api\TimestampShape;
+use VendorGambDuplicaWP\Aws\Exception\InvalidJsonException;
 /**
  * Formats the JSON body of a JSON-REST or JSON-RPC operation.
  * @internal

@@ -9,11 +9,11 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler;
+namespace VendorGambDuplicaWP\Monolog\Handler;
 
-use VendorDuplicator\Aws\Sqs\SqsClient;
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Utils;
+use VendorGambDuplicaWP\Aws\Sqs\SqsClient;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Utils;
 /**
  * Writes to any sqs queue.
  *

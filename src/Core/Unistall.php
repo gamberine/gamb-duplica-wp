@@ -7,12 +7,12 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core;
+namespace GambDuplicaWP\Core;
 
-use gamb-duplica-wp\MuPlugin\MuGenerator;
-use gamb-duplica-wp\Utils\ExpireOptions;
-use gamb-duplica-wp\Utils\UsageStatistics\CommStats;
-use gamb-duplica-wp\Utils\UsageStatistics\PluginData;
+use GambDuplicaWP\MuPlugin\MuGenerator;
+use GambDuplicaWP\Utils\ExpireOptions;
+use GambDuplicaWP\Utils\UsageStatistics\CommStats;
+use GambDuplicaWP\Utils\UsageStatistics\PluginData;
 
 /**
  * Uninstall class
@@ -27,7 +27,7 @@ class Unistall
     public static function registreHooks()
     {
         if (is_admin()) {
-            register_deactivation_hook(gamb-duplica-wp____FILE, [self::class, 'deactivate']);
+            register_deactivation_hook(GambDuplicaWP____FILE, [self::class, 'deactivate']);
         }
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn;
+namespace VendorGambDuplicaWP\Aws\Arn;
 
 /**
  * @internal

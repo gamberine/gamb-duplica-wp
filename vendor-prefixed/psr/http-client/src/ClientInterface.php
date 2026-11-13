@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Psr\Http\Client;
+namespace VendorGambDuplicaWP\Psr\Http\Client;
 
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 interface ClientInterface
 {
     /**
@@ -13,7 +13,7 @@ interface ClientInterface
      *
      * @return ResponseInterface
      *
-     * @throws \VendorDuplicator\Psr\Http\Client\ClientExceptionInterface If an error happens while processing the request.
+     * @throws \VendorGambDuplicaWP\Psr\Http\Client\ClientExceptionInterface If an error happens while processing the request.
      */
     public function sendRequest(RequestInterface $request): ResponseInterface;
 }

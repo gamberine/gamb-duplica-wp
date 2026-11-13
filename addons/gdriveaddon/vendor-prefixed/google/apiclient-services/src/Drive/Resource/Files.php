@@ -15,15 +15,15 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\Channel;
-use VendorDuplicator\Google\Service\Drive\DriveFile;
-use VendorDuplicator\Google\Service\Drive\FileList;
-use VendorDuplicator\Google\Service\Drive\GeneratedIds;
-use VendorDuplicator\Google\Service\Drive\LabelList;
-use VendorDuplicator\Google\Service\Drive\ModifyLabelsRequest;
-use VendorDuplicator\Google\Service\Drive\ModifyLabelsResponse;
+use VendorGambDuplicaWP\Google\Service\Drive\Channel;
+use VendorGambDuplicaWP\Google\Service\Drive\DriveFile;
+use VendorGambDuplicaWP\Google\Service\Drive\FileList;
+use VendorGambDuplicaWP\Google\Service\Drive\GeneratedIds;
+use VendorGambDuplicaWP\Google\Service\Drive\LabelList;
+use VendorGambDuplicaWP\Google\Service\Drive\ModifyLabelsRequest;
+use VendorGambDuplicaWP\Google\Service\Drive\ModifyLabelsResponse;
 /**
  * The "files" collection of methods.
  * Typical usage is:
@@ -32,7 +32,7 @@ use VendorDuplicator\Google\Service\Drive\ModifyLabelsResponse;
  *   $files = $driveService->files;
  *  </code>
  */
-class Files extends \VendorDuplicator\Google\Service\Resource
+class Files extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Creates a copy of a file and applies any requested updates with patch
@@ -64,7 +64,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
      * instead.
      * @return DriveFile
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function copy($fileId, DriveFile $postBody, $optParams = [])
     {
@@ -118,7 +118,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool useContentAsIndexableText Whether to use the uploaded content
      * as indexable text.
      * @return DriveFile
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function create(DriveFile $postBody, $optParams = [])
     {
@@ -142,7 +142,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * both My Drives and shared drives.
      * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
      * instead.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function delete($fileId, $optParams = [])
     {
@@ -160,7 +160,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool enforceSingleParent Deprecated: If an item is not in a shared
      * drive and its last parent is deleted but the item itself is not, the item
      * will be placed under its owner's root.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function emptyTrash($optParams = [])
     {
@@ -177,7 +177,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * @param string $mimeType Required. The MIME type of the format requested for
      * this export.
      * @param array $optParams Optional parameters.
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function export($fileId, $mimeType, $optParams = [])
     {
@@ -198,7 +198,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * Supported values are 'files' and 'shortcuts'. Note that 'shortcuts' are only
      * supported in the `drive` 'space'. (Default: 'files')
      * @return GeneratedIds
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function generateIds($optParams = [])
     {
@@ -230,7 +230,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
      * instead.
      * @return DriveFile
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function get($fileId, $optParams = [])
     {
@@ -287,7 +287,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * instead.
      * @opt_param string teamDriveId Deprecated: Use `driveId` instead.
      * @return FileList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listFiles($optParams = [])
     {
@@ -307,7 +307,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * on the next page. This should be set to the value of 'nextPageToken' from the
      * previous response.
      * @return LabelList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listLabels($fileId, $optParams = [])
     {
@@ -323,7 +323,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * @param ModifyLabelsRequest $postBody
      * @param array $optParams Optional parameters.
      * @return ModifyLabelsResponse
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function modifyLabels($fileId, ModifyLabelsRequest $postBody, $optParams = [])
     {
@@ -369,7 +369,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool useContentAsIndexableText Whether to use the uploaded content
      * as indexable text.
      * @return DriveFile
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function update($fileId, DriveFile $postBody, $optParams = [])
     {
@@ -396,7 +396,7 @@ class Files extends \VendorDuplicator\Google\Service\Resource
      * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
      * instead.
      * @return Channel
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function watch($fileId, Channel $postBody, $optParams = [])
     {
@@ -406,4 +406,4 @@ class Files extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Files::class, 'VendorDuplicator\Google_Service_Drive_Resource_Files');
+class_alias(Files::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Files');

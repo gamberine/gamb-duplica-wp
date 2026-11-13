@@ -1,6 +1,6 @@
 <?php
 
-use gamb-duplica-wp\Views\UserUIOptions;
+use GambDuplicaWP\Views\UserUIOptions;
 
 /**
  * List table class

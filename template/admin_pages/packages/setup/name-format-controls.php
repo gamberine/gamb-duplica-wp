@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Package\NameFormat;
+use GambDuplicaWP\Package\NameFormat;
 
 defined("ABSPATH") or die("");
 

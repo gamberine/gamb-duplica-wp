@@ -1,12 +1,12 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\UsageStatistics;
+namespace GambDuplicaWP\Utils\UsageStatistics;
 
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Utils\CronUtils;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Utils\CronUtils;
 
 /**
  * StatsBootstrap
@@ -119,7 +119,7 @@ class StatsBootstrap
      */
     public static function isTrackingAllowed()
     {
-        if (gamb-duplica-wp_USTATS_DISALLOW) { // @phpstan-ignore-line
+        if (GambDuplicaWP_USTATS_DISALLOW) { // @phpstan-ignore-line
             return false;
         }
 

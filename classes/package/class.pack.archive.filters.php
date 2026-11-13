@@ -40,7 +40,7 @@ class GAMB_DUPLICA_WP_Archive_Filter_Scope_Base
     public function addUnreadableItem($item)
     {
         $this->unreadableCount++;
-        if ($this->unreadableCount <= gamb-duplica-wp_PRO_SCAN_MAX_UNREADABLE_COUNT) {
+        if ($this->unreadableCount <= GambDuplicaWP_PRO_SCAN_MAX_UNREADABLE_COUNT) {
             $this->Unreadable[] = $item;
         }
     }

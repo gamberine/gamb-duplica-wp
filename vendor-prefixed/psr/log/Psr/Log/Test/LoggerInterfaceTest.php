@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Psr\Log\Test;
+namespace VendorGambDuplicaWP\Psr\Log\Test;
 
-use VendorDuplicator\Psr\Log\LoggerInterface;
-use VendorDuplicator\Psr\Log\LogLevel;
+use VendorGambDuplicaWP\Psr\Log\LoggerInterface;
+use VendorGambDuplicaWP\Psr\Log\LogLevel;
 use PHPUnit\Framework\TestCase;
 /**
  * Provides a base test class for ensuring compliance with the LoggerInterface.
@@ -29,7 +29,7 @@ abstract class LoggerInterfaceTest extends TestCase
     abstract public function getLogs();
     public function testImplements()
     {
-        $this->assertInstanceOf('VendorDuplicator\Psr\Log\LoggerInterface', $this->getLogger());
+        $this->assertInstanceOf('VendorGambDuplicaWP\Psr\Log\LoggerInterface', $this->getLogger());
     }
     /**
      * @dataProvider provideLevelsAndMessages
@@ -64,9 +64,9 @@ abstract class LoggerInterfaceTest extends TestCase
     public function testObjectCastToString()
     {
         if (method_exists($this, 'createPartialMock')) {
-            $dummy = $this->createPartialMock('VendorDuplicator\Psr\Log\Test\DummyTest', array('__toString'));
+            $dummy = $this->createPartialMock('VendorGambDuplicaWP\Psr\Log\Test\DummyTest', array('__toString'));
         } else {
-            $dummy = $this->getMock('VendorDuplicator\Psr\Log\Test\DummyTest', array('__toString'));
+            $dummy = $this->getMock('VendorGambDuplicaWP\Psr\Log\Test\DummyTest', array('__toString'));
         }
         $dummy->expects($this->once())->method('__toString')->will($this->returnValue('DUMMY'));
         $this->getLogger()->warning($dummy);

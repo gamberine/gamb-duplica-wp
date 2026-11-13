@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Api\ListShape;
-use VendorDuplicator\Aws\Api\MapShape;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Api\Shape;
-use VendorDuplicator\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\Api\ListShape;
+use VendorGambDuplicaWP\Aws\Api\MapShape;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
 use Closure;
 /**
  * Inspects command input values and casts them to their modeled type.

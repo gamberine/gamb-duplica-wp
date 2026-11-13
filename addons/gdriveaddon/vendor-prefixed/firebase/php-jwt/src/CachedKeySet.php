@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorDuplicator\Firebase\JWT;
+namespace VendorGambDuplicaWP\Firebase\JWT;
 
 use ArrayAccess;
 use InvalidArgumentException;
 use LogicException;
 use OutOfBoundsException;
-use VendorDuplicator\Psr\Cache\CacheItemInterface;
-use VendorDuplicator\Psr\Cache\CacheItemPoolInterface;
-use VendorDuplicator\Psr\Http\Client\ClientInterface;
-use VendorDuplicator\Psr\Http\Message\RequestFactoryInterface;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemInterface;
+use VendorGambDuplicaWP\Psr\Cache\CacheItemPoolInterface;
+use VendorGambDuplicaWP\Psr\Http\Client\ClientInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestFactoryInterface;
 use RuntimeException;
 use UnexpectedValueException;
 /**

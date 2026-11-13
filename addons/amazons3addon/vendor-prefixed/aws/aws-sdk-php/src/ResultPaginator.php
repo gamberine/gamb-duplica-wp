@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 /**
  * Iterator that yields each page of results of a pageable operation.
  */

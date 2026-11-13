@@ -1,10 +1,10 @@
 <?php
 
-namespace gamb-duplica-wp\Models\Storages\Local;
+namespace GambDuplicaWP\Models\Storages\Local;
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
 use Exception;
 
 class LocalStorageAdapter extends AbstractStorageAdapter

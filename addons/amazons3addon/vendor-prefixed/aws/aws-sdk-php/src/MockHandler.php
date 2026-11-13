@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\RejectedPromise;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\RejectedPromise;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 use Exception;
 /**
  * Returns promises that are rejected or fulfilled using a queue of

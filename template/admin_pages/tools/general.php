@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Utils\Support\SupportToolkit;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Utils\Support\SupportToolkit;
 
 defined("ABSPATH") or die("");
 
@@ -83,9 +83,9 @@ $deleteRecordsDialog->initConfirm();
                             please instead provide available %1$sBackup%2$s, %3$strace%4$s and debug logs.',
                             'gamb-duplica-wp'
                         ),
-                        '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-do-i-read-the-package-build-log/') . '" target="_blank">',
+                        '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-do-i-read-the-package-build-log/') . '" target="_blank">',
                         '</a>',
-                        '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-do-i-read-the-package-trace-log/') . '" target="_blank">',
+                        '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-do-i-read-the-package-trace-log/') . '" target="_blank">',
                         '</a>'
                     ); ?>
                 <?php endif; ?>
@@ -203,7 +203,7 @@ $deleteRecordsDialog->initConfirm();
                     </td>
                     <td>
                         <?php esc_html_e('Removes all build data from:', 'gamb-duplica-wp'); ?>&nbsp;
-                        <b><?php echo esc_html(gamb-duplica-wp_PRO_SSDIR_PATH_TMP); ?></b>
+                        <b><?php echo esc_html(GambDuplicaWP_PRO_SSDIR_PATH_TMP); ?></b>
                     </td>
                 </tr>
                 <?php } ?>
@@ -251,7 +251,7 @@ $removeCacheConfirm->initConfirm();
             let confirmMessage = <?php echo json_encode(
                 __('Are you sure you want to delete all backup records that do not have an archive?', 'gamb-duplica-wp')
             ); ?>;
-            gamb-duplica-wp.Util.ajaxWrapper(
+            GambDuplicaWP.Util.ajaxWrapper(
                 {
                     action: "gamb-duplica-wp_pro_get_invalid_backup_records",
                     nonce: "<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_get_invalid_backup_records')); ?>"
@@ -278,7 +278,7 @@ $removeCacheConfirm->initConfirm();
         };
 
         DupPro.Pack.DeleteBackupRecords = function() {
-            gamb-duplica-wp.Util.ajaxWrapper(
+            GambDuplicaWP.Util.ajaxWrapper(
                 {
                     action: "gamb-duplica-wp_purge_backup_records",
                     nonce: "<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_purge_backup_records')); ?>"
@@ -303,19 +303,19 @@ $removeCacheConfirm->initConfirm();
                 dataType: "json",
                 data: {
                     action: 'gamb-duplica-wp_pro_reset_packages',
-                    nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_reset_packages')); ?>'
+                    nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_reset_packages')); ?>'
                 },
                 success: function(result) {
                     if (result.success) {
-                        var message = '<?php esc_html_e('Backups successfully reset', 'gamb-duplica-wp'); ?>';
+                        var message = '<?php esc_html_e('Backups successfully reset', 'GambDuplicaWP'); ?>';
                         DupPro.addAdminMessage(message);
                     } else {
-                        var message = '<?php esc_html_e('RESPONSE ERROR!', 'gamb-duplica-wp'); ?>' + '<br><br>' + result.data.message;
+                        var message = '<?php esc_html_e('RESPONSE ERROR!', 'GambDuplicaWP'); ?>' + '<br><br>' + result.data.message;
                         DupPro.addAdminMessage(message, 'error');
                     }
                 },
                 error: function(result) {
-                    var message = '<?php esc_html_e('Ajax request error', 'gamb-duplica-wp'); ?>';
+                    var message = '<?php esc_html_e('Ajax request error', 'GambDuplicaWP'); ?>';
                     DupPro.addAdminMessage(message, 'error');
                 }
             });

@@ -15,14 +15,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Middleware;
+namespace VendorGambDuplicaWP\Google\Auth\Middleware;
 
-use VendorDuplicator\Google\Auth\FetchAuthTokenCache;
-use VendorDuplicator\Google\Auth\FetchAuthTokenInterface;
-use VendorDuplicator\Google\Auth\GetQuotaProjectInterface;
-use VendorDuplicator\Google\Auth\UpdateMetadataInterface;
-use VendorDuplicator\GuzzleHttp\Psr7\Utils;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Google\Auth\FetchAuthTokenCache;
+use VendorGambDuplicaWP\Google\Auth\FetchAuthTokenInterface;
+use VendorGambDuplicaWP\Google\Auth\GetQuotaProjectInterface;
+use VendorGambDuplicaWP\Google\Auth\UpdateMetadataInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Utils;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * AuthTokenMiddleware is a Guzzle Middleware that adds an Authorization header
  * provided by an object implementing FetchAuthTokenInterface.

@@ -5,10 +5,10 @@
  *
  * @package Requests\Utilities
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * Class to validate and to work with IPv6 addresses
  *
@@ -38,7 +38,7 @@ final class Ipv6
      * @param string|Stringable $ip An IPv6 address
      * @return string The uncompressed IPv6 address
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string or a stringable object.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not a string or a stringable object.
      */
     public static function uncompress($ip)
     {
@@ -83,7 +83,7 @@ final class Ipv6
      * Example:  FF01:0:0:0:0:0:0:101   ->  FF01::101
      *           0:0:0:0:0:0:0:1        ->  ::1
      *
-     * @see \VendorDuplicator\WpOrg\Requests\Ipv6::uncompress()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Ipv6::uncompress()
      *
      * @param string $ip An IPv6 address
      * @return string The compressed IPv6 address

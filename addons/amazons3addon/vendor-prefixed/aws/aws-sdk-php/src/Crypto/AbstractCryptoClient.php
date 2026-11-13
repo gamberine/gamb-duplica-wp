@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws\Crypto;
+namespace VendorGambDuplicaWP\Aws\Crypto;
 
-use VendorDuplicator\Aws\Crypto\Cipher\CipherMethod;
-use VendorDuplicator\Aws\Crypto\Cipher\Cbc;
-use VendorDuplicator\GuzzleHttp\Psr7\Stream;
+use VendorGambDuplicaWP\Aws\Crypto\Cipher\CipherMethod;
+use VendorGambDuplicaWP\Aws\Crypto\Cipher\Cbc;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Stream;
 /**
  * Legacy abstract encryption client. New workflows should use
  * AbstractCryptoClientV2.

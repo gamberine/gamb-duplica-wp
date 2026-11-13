@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
 /**
  * Represents a history container that is required when using the history
  * middleware.

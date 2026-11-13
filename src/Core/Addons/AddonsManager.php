@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Core\Addons;
+namespace GambDuplicaWP\Core\Addons;
 
 final class AddonsManager
 {
@@ -39,7 +39,7 @@ final class AddonsManager
     private function __construct()
     {
         $this->addons = self::getAddonListFromFolder();
-        $checkString  = pack("H*", \gamb-duplica-wp\Core\Bootstrap::getAddsHash());
+        $checkString  = pack("H*", \GambDuplicaWP\Core\Bootstrap::getAddsHash());
         $this->check  = json_decode($checkString);
     }
 
@@ -115,7 +115,7 @@ final class AddonsManager
      */
     public static function getAddonsPath()
     {
-        return gamb-duplica-wp____PATH . '/addons';
+        return GambDuplicaWP____PATH . '/addons';
     }
 
     /**
@@ -162,7 +162,7 @@ final class AddonsManager
 
                 if (strcasecmp($elem, $info['filename']) === 0) {
                     $addonMainFile  = $checkDir . $elem . '/' . $addonElem;
-                    $addonMainClass = '\\gamb-duplica-wp\\Addons\\' . $info['filename'] . '\\' . $info['filename'];
+                    $addonMainClass = '\\GambDuplicaWP\\Addons\\' . $info['filename'] . '\\' . $info['filename'];
                     break;
                 }
             }

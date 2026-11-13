@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn;
+namespace VendorGambDuplicaWP\Aws\Arn;
 
 /**
  * This class represents an S3 Object bucket ARN, which is in the

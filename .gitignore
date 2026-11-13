@@ -1,0 +1,12 @@
+/dist/
+/tests/runtime/
+/.env
+/.env.*
+*.sql
+*.zip
+*.daf
+*.log
+*.bak
+*.bin
+/wp-config.php
+/.codex-artifacts/

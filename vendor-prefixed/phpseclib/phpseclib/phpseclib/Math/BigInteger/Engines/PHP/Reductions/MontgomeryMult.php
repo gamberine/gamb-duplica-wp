@@ -10,9 +10,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://pear.php.net/package/Math_BigInteger
  */
-namespace VendorDuplicator\phpseclib3\Math\BigInteger\Engines\PHP\Reductions;
+namespace VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\PHP\Reductions;
 
-use VendorDuplicator\phpseclib3\Math\BigInteger\Engines\PHP;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger\Engines\PHP;
 /**
  * PHP Montgomery Modular Exponentiation Engine with interleaved multiplication
  *

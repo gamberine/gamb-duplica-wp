@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\SettingsPageController;
 
 defined("ABSPATH") or die("");
 
@@ -154,7 +154,7 @@ DupPro.Tools.ImportProcess = function ()
 DupPro.Tools.ImportDialog = function () 
 {
     var url = "#TB_inline?width=610&height=300&inlineId=modal-window-import";
-    tb_show("<?php esc_html_e("Import gamb-duplica-wp Pro Data?", 'gamb-duplica-wp') ?>", url);
+    tb_show("<?php esc_html_e("Import GambDuplicaWP Pro Data?", 'gamb-duplica-wp') ?>", url);
     jQuery('#TB_window').addClass(<?php echo json_encode(GAMB_DUPLICA_WP_UI_Dialog::TB_WINDOW_CLASS); ?>);
     return false;
 }   

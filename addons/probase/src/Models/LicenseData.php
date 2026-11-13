@@ -6,20 +6,20 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\ProBase\Models;
+namespace GambDuplicaWP\Addons\ProBase\Models;
 
 use DateTime;
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Core\Models\AbstractEntitySingleton;
-use gamb-duplica-wp\Installer\Addons\ProBase\AbstractLicense;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Utils\Crypt\CryptBlowfish;
-use gamb-duplica-wp\Utils\ExpireOptions;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Core\Models\AbstractEntitySingleton;
+use GambDuplicaWP\Installer\Addons\ProBase\AbstractLicense;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Utils\Crypt\CryptBlowfish;
+use GambDuplicaWP\Utils\ExpireOptions;
 use Error;
 use Exception;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
 use WP_Error;
 
 class LicenseData extends AbstractEntitySingleton

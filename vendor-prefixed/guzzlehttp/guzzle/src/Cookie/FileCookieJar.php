@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Cookie;
+namespace VendorGambDuplicaWP\GuzzleHttp\Cookie;
 
-use VendorDuplicator\GuzzleHttp\Utils;
+use VendorGambDuplicaWP\GuzzleHttp\Utils;
 /**
  * Persists non-session cookies using a JSON formatted file
  */

@@ -1,11 +1,11 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\GuzzleHttp\Psr7;
+namespace VendorGambDuplicaWP\GuzzleHttp\Psr7;
 
 use InvalidArgumentException;
-use VendorDuplicator\Psr\Http\Message\StreamInterface;
-use VendorDuplicator\Psr\Http\Message\UploadedFileInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\StreamInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\UploadedFileInterface;
 use RuntimeException;
 class UploadedFile implements UploadedFileInterface
 {

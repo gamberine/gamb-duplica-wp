@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Token;
+namespace VendorGambDuplicaWP\Aws\Token;
 
 /**
  * Token that comes from the SSO provider

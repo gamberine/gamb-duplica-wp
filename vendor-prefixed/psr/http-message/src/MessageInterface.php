@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Psr\Http\Message;
+namespace VendorGambDuplicaWP\Psr\Http\Message;
 
 /**
  * HTTP messages consist of requests from a client to a server and responses

@@ -20,27 +20,27 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Libs\Index\FileIndexManager;
-use gamb-duplica-wp\Installer\Package\ArchiveDescriptor;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Libs\Snap\SnapOS;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\Local\LocalStorage;
-use gamb-duplica-wp\Package\Create\BuildProgress;
-use gamb-duplica-wp\Package\Create\DupArchive\PackageDupArchive;
-use gamb-duplica-wp\Package\Create\BuildComponents;
-use gamb-duplica-wp\Package\Create\Scan\ScanChunker;
-use gamb-duplica-wp\Libs\Scan\ScanIterator;
-use gamb-duplica-wp\Package\Create\Scan\ScanOptions;
-use gamb-duplica-wp\Package\Create\Scan\ScanResult;
+use GambDuplicaWP\Libs\Index\FileIndexManager;
+use GambDuplicaWP\Installer\Package\ArchiveDescriptor;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Libs\Snap\SnapOS;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\Local\LocalStorage;
+use GambDuplicaWP\Package\Create\BuildProgress;
+use GambDuplicaWP\Package\Create\DupArchive\PackageDupArchive;
+use GambDuplicaWP\Package\Create\BuildComponents;
+use GambDuplicaWP\Package\Create\Scan\ScanChunker;
+use GambDuplicaWP\Libs\Scan\ScanIterator;
+use GambDuplicaWP\Package\Create\Scan\ScanOptions;
+use GambDuplicaWP\Package\Create\Scan\ScanResult;
 
-require_once(gamb-duplica-wp____PATH . '/classes/package/class.pack.archive.filters.php');
-require_once(gamb-duplica-wp____PATH . '/classes/package/class.pack.archive.zip.php');
-require_once(gamb-duplica-wp____PATH . '/classes/package/class.pack.archive.shellzip.php');
-require_once(gamb-duplica-wp____PATH . '/classes/class.exceptions.php');
+require_once(GambDuplicaWP____PATH . '/classes/package/class.pack.archive.filters.php');
+require_once(GambDuplicaWP____PATH . '/classes/package/class.pack.archive.zip.php');
+require_once(GambDuplicaWP____PATH . '/classes/package/class.pack.archive.shellzip.php');
+require_once(GambDuplicaWP____PATH . '/classes/class.exceptions.php');
 
 class GAMB_DUPLICA_WP_Archive
 {
@@ -113,7 +113,7 @@ class GAMB_DUPLICA_WP_Archive
             $this->Format = 'ZIP';
         }
 
-        $indexPath          = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' . $this->Package->getIndexFileName();
+        $indexPath          = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' . $this->Package->getIndexFileName();
         $this->indexManager = new FileIndexManager($indexPath);
     }
 
@@ -145,7 +145,7 @@ class GAMB_DUPLICA_WP_Archive
      */
     public function __wakeup()
     {
-        $path               = gamb-duplica-wp_PRO_SSDIR_PATH_TMP . '/' . $this->Package->getIndexFileName();
+        $path               = GambDuplicaWP_PRO_SSDIR_PATH_TMP . '/' . $this->Package->getIndexFileName();
         $this->indexManager = new FileIndexManager($path);
     }
 
@@ -244,8 +244,9 @@ class GAMB_DUPLICA_WP_Archive
             } else {
                 GAMB_DUPLICA_WP_Log::trace("Archive chunk completed");
             }
-        } catch (Exception $e) {
-            echo 'Caught exception: ', esc_html($e->getMessage()), "\n";
+        } catch (\Throwable $e) {
+            $build_progress->failed = true;
+            throw new \RuntimeException('Falha na geração do arquivo de backup: ' . $e->getMessage(), 0, $e);
         }
     }
 
@@ -452,7 +453,7 @@ class GAMB_DUPLICA_WP_Archive
      */
     public function getSafeFilePath()
     {
-        return SnapIO::safePath(gamb-duplica-wp_PRO_SSDIR_PATH . "/{$this->File}");
+        return SnapIO::safePath(GambDuplicaWP_PRO_SSDIR_PATH . "/{$this->File}");
     }
 
     /**
@@ -462,7 +463,7 @@ class GAMB_DUPLICA_WP_Archive
      */
     public function getURL()
     {
-        return gamb-duplica-wp_PRO_SSDIR_URL . "/{$this->File}";
+        return GambDuplicaWP_PRO_SSDIR_URL . "/{$this->File}";
     }
 
     /**
@@ -582,7 +583,7 @@ class GAMB_DUPLICA_WP_Archive
      */
     public static function isBackupPathChild($path)
     {
-        return (preg_match('/[\/]' . preg_quote(gamb-duplica-wp_PRO_SSDIR_NAME, '/') . '[\/][^\/]+$/', $path) === 1);
+        return (preg_match('/[\/]' . preg_quote(GambDuplicaWP_PRO_SSDIR_NAME, '/') . '[\/][^\/]+$/', $path) === 1);
     }
 
     /**
@@ -697,6 +698,7 @@ class GAMB_DUPLICA_WP_Archive
                 'wpcontent' => [
                     'backups-dup-lite',
                     'backups-dup-pro',
+                    'gamb-duplica-wp-backups',
                     'ai1wm-backups',
                     'backupwordpress',
                     'content/cache',

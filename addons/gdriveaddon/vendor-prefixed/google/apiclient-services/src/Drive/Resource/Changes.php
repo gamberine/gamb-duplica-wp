@@ -15,11 +15,11 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive\Resource;
+namespace VendorGambDuplicaWP\Google\Service\Drive\Resource;
 
-use VendorDuplicator\Google\Service\Drive\ChangeList;
-use VendorDuplicator\Google\Service\Drive\Channel;
-use VendorDuplicator\Google\Service\Drive\StartPageToken;
+use VendorGambDuplicaWP\Google\Service\Drive\ChangeList;
+use VendorGambDuplicaWP\Google\Service\Drive\Channel;
+use VendorGambDuplicaWP\Google\Service\Drive\StartPageToken;
 /**
  * The "changes" collection of methods.
  * Typical usage is:
@@ -28,7 +28,7 @@ use VendorDuplicator\Google\Service\Drive\StartPageToken;
  *   $changes = $driveService->changes;
  *  </code>
  */
-class Changes extends \VendorDuplicator\Google\Service\Resource
+class Changes extends \VendorGambDuplicaWP\Google\Service\Resource
 {
     /**
      * Gets the starting pageToken for listing future changes.
@@ -44,7 +44,7 @@ class Changes extends \VendorDuplicator\Google\Service\Resource
      * instead.
      * @opt_param string teamDriveId Deprecated: Use `driveId` instead.
      * @return StartPageToken
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function getStartPageToken($optParams = [])
     {
@@ -91,7 +91,7 @@ class Changes extends \VendorDuplicator\Google\Service\Resource
      * instead.
      * @opt_param string teamDriveId Deprecated: Use `driveId` instead.
      * @return ChangeList
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function listChanges($pageToken, $optParams = [])
     {
@@ -139,7 +139,7 @@ class Changes extends \VendorDuplicator\Google\Service\Resource
      * instead.
      * @opt_param string teamDriveId Deprecated: Use `driveId` instead.
      * @return Channel
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public function watch($pageToken, Channel $postBody, $optParams = [])
     {
@@ -149,4 +149,4 @@ class Changes extends \VendorDuplicator\Google\Service\Resource
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Changes::class, 'VendorDuplicator\Google_Service_Drive_Resource_Changes');
+class_alias(Changes::class, 'VendorGambDuplicaWP\Google_Service_Drive_Resource_Changes');

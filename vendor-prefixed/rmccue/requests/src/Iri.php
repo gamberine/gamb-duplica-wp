@@ -5,13 +5,13 @@
  *
  * @package Requests\Utilities
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
-use VendorDuplicator\WpOrg\Requests\Exception;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Ipv6;
-use VendorDuplicator\WpOrg\Requests\Port;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Ipv6;
+use VendorGambDuplicaWP\WpOrg\Requests\Port;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * IRI parser/serialiser/normaliser
  *
@@ -202,7 +202,7 @@ class Iri
      *
      * @param string|Stringable|null $iri
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $iri argument is not a string, Stringable or null.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $iri argument is not a string, Stringable or null.
      */
     public function __construct($iri = null)
     {
@@ -216,9 +216,9 @@ class Iri
      *
      * Returns false if $base is not absolute, otherwise an IRI.
      *
-     * @param \VendorDuplicator\WpOrg\Requests\Iri|string $base (Absolute) Base IRI
-     * @param \VendorDuplicator\WpOrg\Requests\Iri|string $relative Relative IRI
-     * @return \VendorDuplicator\WpOrg\Requests\Iri|false
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Iri|string $base (Absolute) Base IRI
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Iri|string $relative Relative IRI
+     * @return \VendorGambDuplicaWP\WpOrg\Requests\Iri|false
      */
     public static function absolutize($base, $relative)
     {

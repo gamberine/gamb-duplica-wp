@@ -16,7 +16,7 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 /**
  * Tree files utility

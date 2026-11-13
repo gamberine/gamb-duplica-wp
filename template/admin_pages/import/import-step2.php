@@ -7,9 +7,9 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Controllers\RecoveryController;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Controllers\RecoveryController;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
 
 /**
  * Variables

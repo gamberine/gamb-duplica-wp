@@ -8,19 +8,19 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\EC;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\EC;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\Common;
-use VendorDuplicator\phpseclib3\Crypt\EC;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
-use VendorDuplicator\phpseclib3\Crypt\EC\Curves\Ed25519;
-use VendorDuplicator\phpseclib3\Crypt\EC\Formats\Keys\PKCS1;
-use VendorDuplicator\phpseclib3\Crypt\EC\Formats\Signature\ASN1 as ASN1Signature;
-use VendorDuplicator\phpseclib3\Crypt\Hash;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedOperationException;
-use VendorDuplicator\phpseclib3\Math\BigInteger;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\Montgomery as MontgomeryCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\BaseCurves\TwistedEdwards as TwistedEdwardsCurve;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Curves\Ed25519;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Keys\PKCS1;
+use VendorGambDuplicaWP\phpseclib3\Crypt\EC\Formats\Signature\ASN1 as ASN1Signature;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Hash;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedOperationException;
+use VendorGambDuplicaWP\phpseclib3\Math\BigInteger;
 /**
  * EC Public Key
  *

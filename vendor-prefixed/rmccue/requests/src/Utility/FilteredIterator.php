@@ -5,12 +5,12 @@
  *
  * @package Requests\Utilities
  */
-namespace VendorDuplicator\WpOrg\Requests\Utility;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Utility;
 
 use ArrayIterator;
 use ReturnTypeWillChange;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Utility\InputValidator;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Utility\InputValidator;
 /**
  * Iterator for arrays requiring filtered values
  *
@@ -30,7 +30,7 @@ final class FilteredIterator extends ArrayIterator
      * @param array    $data     The array or object to be iterated on.
      * @param callable $callback Callback to be called on each value
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed $data argument is not iterable.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed $data argument is not iterable.
      */
     public function __construct($data, $callback)
     {

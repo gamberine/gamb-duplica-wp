@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\CapMng;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\CapMng;
 
 defined("ABSPATH") or die("");
 
@@ -42,8 +42,8 @@ if (!isset($logname) || !$logname) {
 }
 
 $nocache     = @date("ymdHis");
-$logurl      = gamb-duplica-wp_PRO_SSDIR_URL . "/{$logname}?{$nocache}";
-$logurl_base = gamb-duplica-wp_PRO_SSDIR_URL . "/{$logname}";
+$logurl      = GambDuplicaWP_PRO_SSDIR_URL . "/{$logname}?{$nocache}";
+$logurl_base = GambDuplicaWP_PRO_SSDIR_URL . "/{$logname}";
 $logfound    = strlen($logname) > 0;
 ?>
 <script>
@@ -154,7 +154,7 @@ jQuery(document).ready(function ($)
                 "Try to create a Backup, since no log files were found in the %s directory ending in *_log.txt",
                 'gamb-duplica-wp'
             ),
-            '<b>' . esc_html(gamb-duplica-wp_PRO_SSDIR_NAME) . '</b>'
+            '<b>' . esc_html(GambDuplicaWP_PRO_SSDIR_NAME) . '</b>'
         );
         ?>.<br/><br/>
         <?php
@@ -177,7 +177,7 @@ jQuery(document).ready(function ($)
                 "The %s directory does not have the correct permissions to write files.  Try setting the permissions to 755",
                 'gamb-duplica-wp'
             ),
-            '<b>' . esc_html(gamb-duplica-wp_PRO_SSDIR_NAME) . '</b>'
+            '<b>' . esc_html(GambDuplicaWP_PRO_SSDIR_NAME) . '</b>'
         );
         ?>. <br/>
         -

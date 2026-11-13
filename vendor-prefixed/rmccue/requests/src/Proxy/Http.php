@@ -6,12 +6,12 @@
  * @package Requests\Proxy
  * @since   1.6
  */
-namespace VendorDuplicator\WpOrg\Requests\Proxy;
+namespace VendorGambDuplicaWP\WpOrg\Requests\Proxy;
 
-use VendorDuplicator\WpOrg\Requests\Exception\ArgumentCount;
-use VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument;
-use VendorDuplicator\WpOrg\Requests\Hooks;
-use VendorDuplicator\WpOrg\Requests\Proxy;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\ArgumentCount;
+use VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument;
+use VendorGambDuplicaWP\WpOrg\Requests\Hooks;
+use VendorGambDuplicaWP\WpOrg\Requests\Proxy;
 /**
  * HTTP Proxy connection interface
  *
@@ -57,8 +57,8 @@ final class Http implements Proxy
      *                                When passed as an array, must have exactly one (proxy)
      *                                or three elements (proxy, user, password).
      *
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not an array, a string or null.
-     * @throws \VendorDuplicator\WpOrg\Requests\Exception\ArgumentCount On incorrect number of arguments (`proxyhttpbadargs`)
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\InvalidArgument When the passed argument is not an array, a string or null.
+     * @throws \VendorGambDuplicaWP\WpOrg\Requests\Exception\ArgumentCount On incorrect number of arguments (`proxyhttpbadargs`)
      */
     public function __construct($args = null)
     {
@@ -81,11 +81,11 @@ final class Http implements Proxy
      * Register the necessary callbacks
      *
      * @since 1.6
-     * @see \VendorDuplicator\WpOrg\Requests\Proxy\Http::curl_before_send()
-     * @see \VendorDuplicator\WpOrg\Requests\Proxy\Http::fsockopen_remote_socket()
-     * @see \VendorDuplicator\WpOrg\Requests\Proxy\Http::fsockopen_remote_host_path()
-     * @see \VendorDuplicator\WpOrg\Requests\Proxy\Http::fsockopen_header()
-     * @param \VendorDuplicator\WpOrg\Requests\Hooks $hooks Hook system
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Proxy\Http::curl_before_send()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Proxy\Http::fsockopen_remote_socket()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Proxy\Http::fsockopen_remote_host_path()
+     * @see \VendorGambDuplicaWP\WpOrg\Requests\Proxy\Http::fsockopen_header()
+     * @param \VendorGambDuplicaWP\WpOrg\Requests\Hooks $hooks Hook system
      */
     public function register(Hooks $hooks)
     {

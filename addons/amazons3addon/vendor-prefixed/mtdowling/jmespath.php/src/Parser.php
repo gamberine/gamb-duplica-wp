@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\JmesPath;
+namespace VendorGambDuplicaWP\JmesPath;
 
-use VendorDuplicator\JmesPath\Lexer as T;
+use VendorGambDuplicaWP\JmesPath\Lexer as T;
 /**
  * JMESPath Pratt parser
  * @link http://hall.org.ua/halls/wizzard/pdf/Vaughan.Pratt.TDOP.pdf

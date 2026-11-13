@@ -4,10 +4,10 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Addons\ProBase\LicensingController;
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
-use gamb-duplica-wp\Core\Controllers\PageAction;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\LicensingController;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Core\Controllers\PageAction;
 
 defined("ABSPATH") or die("");
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn;
+namespace VendorGambDuplicaWP\Aws\Arn;
 
-use VendorDuplicator\Aws\Arn\S3\AccessPointArn as S3AccessPointArn;
-use VendorDuplicator\Aws\Arn\ObjectLambdaAccessPointArn;
-use VendorDuplicator\Aws\Arn\S3\MultiRegionAccessPointArn;
-use VendorDuplicator\Aws\Arn\S3\OutpostsBucketArn;
-use VendorDuplicator\Aws\Arn\S3\RegionalBucketArn;
-use VendorDuplicator\Aws\Arn\S3\OutpostsAccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\S3\AccessPointArn as S3AccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\ObjectLambdaAccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\S3\MultiRegionAccessPointArn;
+use VendorGambDuplicaWP\Aws\Arn\S3\OutpostsBucketArn;
+use VendorGambDuplicaWP\Aws\Arn\S3\RegionalBucketArn;
+use VendorGambDuplicaWP\Aws\Arn\S3\OutpostsAccessPointArn;
 /**
  * This class provides functionality to parse ARN strings and return a
  * corresponding ARN object. ARN-parsing logic may be subject to change in the

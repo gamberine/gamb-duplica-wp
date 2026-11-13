@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Arn;
+namespace VendorGambDuplicaWP\Aws\Arn;
 
 /**
  * Amazon Resource Names (ARNs) uniquely identify AWS resources. Classes

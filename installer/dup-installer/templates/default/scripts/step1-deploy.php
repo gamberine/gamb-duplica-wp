@@ -7,11 +7,11 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\SecureCsrf;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\SecureCsrf;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 if (!InstState::dbDoNothing()) {
     $nextStepParams = [

@@ -1,8 +1,8 @@
 <?php
 
-namespace gamb-duplica-wp\Addons\OneDriveAddon;
+namespace GambDuplicaWP\Addons\OneDriveAddon;
 
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
 
 class OneDriveStoragePathInfo extends StoragePathInfo
 {

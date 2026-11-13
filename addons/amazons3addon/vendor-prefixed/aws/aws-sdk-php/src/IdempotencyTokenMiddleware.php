@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * @internal Middleware that auto fills parameters with `idempotencyToken` trait
  */
@@ -29,7 +29,7 @@ class IdempotencyTokenMiddleware
      * You may also supply a custom bytes generator as an optional second
      * parameter.
      *
-     * @param \VendorDuplicator\Aws\Api\Service $service
+     * @param \VendorGambDuplicaWP\Aws\Api\Service $service
      * @param callable|null $bytesGenerator
      *
      * @return callable

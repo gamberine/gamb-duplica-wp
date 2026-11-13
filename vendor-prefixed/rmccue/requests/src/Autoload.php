@@ -10,7 +10,7 @@
  *
  * @codeCoverageIgnore
  */
-namespace VendorDuplicator\WpOrg\Requests;
+namespace VendorGambDuplicaWP\WpOrg\Requests;
 
 /*
  * Ensure the autoloader is only declared once.
@@ -18,7 +18,7 @@ namespace VendorDuplicator\WpOrg\Requests;
  * and this file being required unconditionally could easily cause
  * fatal "Class already declared" errors.
  */
-if (class_exists('VendorDuplicator\WpOrg\Requests\Autoload') === \false) {
+if (class_exists('VendorGambDuplicaWP\WpOrg\Requests\Autoload') === \false) {
     /**
      * Autoloader for Requests for PHP.
      *
@@ -38,64 +38,64 @@ if (class_exists('VendorDuplicator\WpOrg\Requests\Autoload') === \false) {
          */
         private static $deprecated_classes = [
             // Interfaces.
-            'requests_auth' => 'VendorDuplicator\WpOrg\Requests\Auth',
-            'requests_hooker' => 'VendorDuplicator\WpOrg\Requests\HookManager',
-            'requests_proxy' => 'VendorDuplicator\WpOrg\Requests\Proxy',
-            'requests_transport' => 'VendorDuplicator\WpOrg\Requests\Transport',
+            'requests_auth' => 'VendorGambDuplicaWP\WpOrg\Requests\Auth',
+            'requests_hooker' => 'VendorGambDuplicaWP\WpOrg\Requests\HookManager',
+            'requests_proxy' => 'VendorGambDuplicaWP\WpOrg\Requests\Proxy',
+            'requests_transport' => 'VendorGambDuplicaWP\WpOrg\Requests\Transport',
             // Classes.
-            'requests_cookie' => 'VendorDuplicator\WpOrg\Requests\Cookie',
-            'requests_exception' => 'VendorDuplicator\WpOrg\Requests\Exception',
-            'requests_hooks' => 'VendorDuplicator\WpOrg\Requests\Hooks',
-            'requests_idnaencoder' => 'VendorDuplicator\WpOrg\Requests\IdnaEncoder',
-            'requests_ipv6' => 'VendorDuplicator\WpOrg\Requests\Ipv6',
-            'requests_iri' => 'VendorDuplicator\WpOrg\Requests\Iri',
-            'requests_response' => 'VendorDuplicator\WpOrg\Requests\Response',
-            'requests_session' => 'VendorDuplicator\WpOrg\Requests\Session',
-            'requests_ssl' => 'VendorDuplicator\WpOrg\Requests\Ssl',
-            'requests_auth_basic' => 'VendorDuplicator\WpOrg\Requests\Auth\Basic',
-            'requests_cookie_jar' => 'VendorDuplicator\WpOrg\Requests\Cookie\Jar',
-            'requests_proxy_http' => 'VendorDuplicator\WpOrg\Requests\Proxy\Http',
-            'requests_response_headers' => 'VendorDuplicator\WpOrg\Requests\Response\Headers',
-            'requests_transport_curl' => 'VendorDuplicator\WpOrg\Requests\Transport\Curl',
-            'requests_transport_fsockopen' => 'VendorDuplicator\WpOrg\Requests\Transport\Fsockopen',
-            'requests_utility_caseinsensitivedictionary' => 'VendorDuplicator\WpOrg\Requests\Utility\CaseInsensitiveDictionary',
-            'requests_utility_filterediterator' => 'VendorDuplicator\WpOrg\Requests\Utility\FilteredIterator',
-            'requests_exception_http' => 'VendorDuplicator\WpOrg\Requests\Exception\Http',
-            'requests_exception_transport' => 'VendorDuplicator\WpOrg\Requests\Exception\Transport',
-            'requests_exception_transport_curl' => 'VendorDuplicator\WpOrg\Requests\Exception\Transport\Curl',
-            'requests_exception_http_304' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status304',
-            'requests_exception_http_305' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status305',
-            'requests_exception_http_306' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status306',
-            'requests_exception_http_400' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status400',
-            'requests_exception_http_401' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status401',
-            'requests_exception_http_402' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status402',
-            'requests_exception_http_403' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status403',
-            'requests_exception_http_404' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status404',
-            'requests_exception_http_405' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status405',
-            'requests_exception_http_406' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status406',
-            'requests_exception_http_407' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status407',
-            'requests_exception_http_408' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status408',
-            'requests_exception_http_409' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status409',
-            'requests_exception_http_410' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status410',
-            'requests_exception_http_411' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status411',
-            'requests_exception_http_412' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status412',
-            'requests_exception_http_413' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status413',
-            'requests_exception_http_414' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status414',
-            'requests_exception_http_415' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status415',
-            'requests_exception_http_416' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status416',
-            'requests_exception_http_417' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status417',
-            'requests_exception_http_418' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status418',
-            'requests_exception_http_428' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status428',
-            'requests_exception_http_429' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status429',
-            'requests_exception_http_431' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status431',
-            'requests_exception_http_500' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status500',
-            'requests_exception_http_501' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status501',
-            'requests_exception_http_502' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status502',
-            'requests_exception_http_503' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status503',
-            'requests_exception_http_504' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status504',
-            'requests_exception_http_505' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status505',
-            'requests_exception_http_511' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\Status511',
-            'requests_exception_http_unknown' => 'VendorDuplicator\WpOrg\Requests\Exception\Http\StatusUnknown',
+            'requests_cookie' => 'VendorGambDuplicaWP\WpOrg\Requests\Cookie',
+            'requests_exception' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception',
+            'requests_hooks' => 'VendorGambDuplicaWP\WpOrg\Requests\Hooks',
+            'requests_idnaencoder' => 'VendorGambDuplicaWP\WpOrg\Requests\IdnaEncoder',
+            'requests_ipv6' => 'VendorGambDuplicaWP\WpOrg\Requests\Ipv6',
+            'requests_iri' => 'VendorGambDuplicaWP\WpOrg\Requests\Iri',
+            'requests_response' => 'VendorGambDuplicaWP\WpOrg\Requests\Response',
+            'requests_session' => 'VendorGambDuplicaWP\WpOrg\Requests\Session',
+            'requests_ssl' => 'VendorGambDuplicaWP\WpOrg\Requests\Ssl',
+            'requests_auth_basic' => 'VendorGambDuplicaWP\WpOrg\Requests\Auth\Basic',
+            'requests_cookie_jar' => 'VendorGambDuplicaWP\WpOrg\Requests\Cookie\Jar',
+            'requests_proxy_http' => 'VendorGambDuplicaWP\WpOrg\Requests\Proxy\Http',
+            'requests_response_headers' => 'VendorGambDuplicaWP\WpOrg\Requests\Response\Headers',
+            'requests_transport_curl' => 'VendorGambDuplicaWP\WpOrg\Requests\Transport\Curl',
+            'requests_transport_fsockopen' => 'VendorGambDuplicaWP\WpOrg\Requests\Transport\Fsockopen',
+            'requests_utility_caseinsensitivedictionary' => 'VendorGambDuplicaWP\WpOrg\Requests\Utility\CaseInsensitiveDictionary',
+            'requests_utility_filterediterator' => 'VendorGambDuplicaWP\WpOrg\Requests\Utility\FilteredIterator',
+            'requests_exception_http' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http',
+            'requests_exception_transport' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Transport',
+            'requests_exception_transport_curl' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Transport\Curl',
+            'requests_exception_http_304' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status304',
+            'requests_exception_http_305' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status305',
+            'requests_exception_http_306' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status306',
+            'requests_exception_http_400' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status400',
+            'requests_exception_http_401' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status401',
+            'requests_exception_http_402' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status402',
+            'requests_exception_http_403' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status403',
+            'requests_exception_http_404' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status404',
+            'requests_exception_http_405' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status405',
+            'requests_exception_http_406' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status406',
+            'requests_exception_http_407' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status407',
+            'requests_exception_http_408' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status408',
+            'requests_exception_http_409' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status409',
+            'requests_exception_http_410' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status410',
+            'requests_exception_http_411' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status411',
+            'requests_exception_http_412' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status412',
+            'requests_exception_http_413' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status413',
+            'requests_exception_http_414' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status414',
+            'requests_exception_http_415' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status415',
+            'requests_exception_http_416' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status416',
+            'requests_exception_http_417' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status417',
+            'requests_exception_http_418' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status418',
+            'requests_exception_http_428' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status428',
+            'requests_exception_http_429' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status429',
+            'requests_exception_http_431' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status431',
+            'requests_exception_http_500' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status500',
+            'requests_exception_http_501' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status501',
+            'requests_exception_http_502' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status502',
+            'requests_exception_http_503' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status503',
+            'requests_exception_http_504' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status504',
+            'requests_exception_http_505' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status505',
+            'requests_exception_http_511' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\Status511',
+            'requests_exception_http_unknown' => 'VendorGambDuplicaWP\WpOrg\Requests\Exception\Http\StatusUnknown',
         ];
         /**
          * Register the autoloader.
@@ -127,8 +127,8 @@ if (class_exists('VendorDuplicator\WpOrg\Requests\Autoload') === \false) {
          */
         public static function load($class_name)
         {
-            // Check that the class starts with "Requests" (PSR-0) or "VendorDuplicator\\WpOrg\Requests" (PSR-4).
-            $psr_4_prefix_pos = strpos($class_name, 'VendorDuplicator\\WpOrg\Requests\\');
+            // Check that the class starts with "Requests" (PSR-0) or "VendorGambDuplicaWP\\WpOrg\Requests" (PSR-4).
+            $psr_4_prefix_pos = strpos($class_name, 'VendorGambDuplicaWP\\WpOrg\Requests\\');
             if (stripos($class_name, 'Requests') !== 0 && $psr_4_prefix_pos !== 0) {
                 return \false;
             }

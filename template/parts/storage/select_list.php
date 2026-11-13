@@ -7,10 +7,10 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\StoragePageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Controllers\StoragePageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
 
 defined("ABSPATH") or die("");
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Models\Storages;
+namespace GambDuplicaWP\Models\Storages;
 
 class StoragePathInfo
 {

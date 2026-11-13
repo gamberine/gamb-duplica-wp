@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Spatie\Dropbox;
+namespace VendorGambDuplicaWP\Spatie\Dropbox;
 
 class UploadSessionCursor
 {

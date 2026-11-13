@@ -15,16 +15,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Http;
+namespace VendorGambDuplicaWP\Google\Http;
 
-use VendorDuplicator\Google\Auth\HttpHandler\HttpHandlerFactory;
-use VendorDuplicator\Google\Service\Exception as GoogleServiceException;
-use VendorDuplicator\Google\Task\Runner;
-use VendorDuplicator\GuzzleHttp\ClientInterface;
-use VendorDuplicator\GuzzleHttp\Exception\RequestException;
-use VendorDuplicator\GuzzleHttp\Psr7\Response;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Google\Auth\HttpHandler\HttpHandlerFactory;
+use VendorGambDuplicaWP\Google\Service\Exception as GoogleServiceException;
+use VendorGambDuplicaWP\Google\Task\Runner;
+use VendorGambDuplicaWP\GuzzleHttp\ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Exception\RequestException;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Response;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * This class implements the RESTful transport of apiServiceRequest()'s
  */
@@ -41,7 +41,7 @@ class REST
      * @param array $config
      * @param array $retryMap
      * @return mixed|T|null
-     * @throws \VendorDuplicator\Google\Service\Exception on server side error (ie: not authenticated,
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception on server side error (ie: not authenticated,
      *  invalid or malformed post body, invalid url)
      */
     public static function execute(ClientInterface $client, RequestInterface $request, $expectedClass = null, $config = [], $retryMap = null)
@@ -60,7 +60,7 @@ class REST
      * @param RequestInterface $request
      * @param class-string<T>|false|null $expectedClass
      * @return mixed|T|null
-     * @throws \VendorDuplicator\Google\Service\Exception on server side error (ie: not authenticated,
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception on server side error (ie: not authenticated,
      *  invalid or malformed post body, invalid url)
      */
     public static function doExecute(ClientInterface $client, RequestInterface $request, $expectedClass = null)
@@ -75,7 +75,7 @@ class REST
             }
             $response = $e->getResponse();
             // specific checking for Guzzle 5: convert to PSR7 response
-            if (interface_exists('VendorDuplicator\GuzzleHttp\Message\ResponseInterface') && $response instanceof \VendorDuplicator\GuzzleHttp\Message\ResponseInterface) {
+            if (interface_exists('VendorGambDuplicaWP\GuzzleHttp\Message\ResponseInterface') && $response instanceof \VendorGambDuplicaWP\GuzzleHttp\Message\ResponseInterface) {
                 $response = new Response($response->getStatusCode(), $response->getHeaders() ?: [], $response->getBody(), $response->getProtocolVersion(), $response->getReasonPhrase());
             }
         }
@@ -90,7 +90,7 @@ class REST
      * @param ResponseInterface $response
      * @param class-string<T>|false|null $expectedClass
      * @return mixed|T|null
-     * @throws \VendorDuplicator\Google\Service\Exception
+     * @throws \VendorGambDuplicaWP\Google\Service\Exception
      */
     public static function decodeHttpResponse(ResponseInterface $response, ?RequestInterface $request = null, $expectedClass = null)
     {

@@ -6,8 +6,8 @@
 
 defined("ABSPATH") or die("");
 
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 
 /**
  * Variables

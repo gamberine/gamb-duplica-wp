@@ -15,13 +15,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth;
+namespace VendorGambDuplicaWP\Google\Auth;
 
-use VendorDuplicator\Google\Auth\Credentials\ExternalAccountCredentials;
-use VendorDuplicator\Google\Auth\Credentials\ImpersonatedServiceAccountCredentials;
-use VendorDuplicator\Google\Auth\Credentials\InsecureCredentials;
-use VendorDuplicator\Google\Auth\Credentials\ServiceAccountCredentials;
-use VendorDuplicator\Google\Auth\Credentials\UserRefreshCredentials;
+use VendorGambDuplicaWP\Google\Auth\Credentials\ExternalAccountCredentials;
+use VendorGambDuplicaWP\Google\Auth\Credentials\ImpersonatedServiceAccountCredentials;
+use VendorGambDuplicaWP\Google\Auth\Credentials\InsecureCredentials;
+use VendorGambDuplicaWP\Google\Auth\Credentials\ServiceAccountCredentials;
+use VendorGambDuplicaWP\Google\Auth\Credentials\UserRefreshCredentials;
 use RuntimeException;
 use UnexpectedValueException;
 /**
@@ -147,14 +147,14 @@ abstract class CredentialsLoader implements GetUniverseDomainInterface, FetchAut
      * @param array<mixed> $httpClientOptions (optional) Array of request options to apply.
      * @param callable $httpHandler (optional) http client to fetch the token.
      * @param callable $tokenCallback (optional) function to be called when a new token is fetched.
-     * @return \VendorDuplicator\GuzzleHttp\Client
+     * @return \VendorGambDuplicaWP\GuzzleHttp\Client
      */
     public static function makeHttpClient(FetchAuthTokenInterface $fetcher, array $httpClientOptions = [], ?callable $httpHandler = null, ?callable $tokenCallback = null)
     {
         $middleware = new Middleware\AuthTokenMiddleware($fetcher, $httpHandler, $tokenCallback);
-        $stack = \VendorDuplicator\GuzzleHttp\HandlerStack::create();
+        $stack = \VendorGambDuplicaWP\GuzzleHttp\HandlerStack::create();
         $stack->push($middleware);
-        return new \VendorDuplicator\GuzzleHttp\Client(['handler' => $stack, 'auth' => 'google_auth'] + $httpClientOptions);
+        return new \VendorGambDuplicaWP\GuzzleHttp\Client(['handler' => $stack, 'auth' => 'google_auth'] + $httpClientOptions);
     }
     /**
      * Create a new instance of InsecureCredentials.

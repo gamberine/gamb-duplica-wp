@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\Aws\Signature;
+namespace VendorGambDuplicaWP\Aws\Signature;
 
 /**
  * Provides signature calculation for SignatureV4.

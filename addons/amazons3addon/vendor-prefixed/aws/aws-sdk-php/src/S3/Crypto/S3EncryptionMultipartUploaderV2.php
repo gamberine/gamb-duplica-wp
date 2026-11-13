@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Crypto;
+namespace VendorGambDuplicaWP\Aws\S3\Crypto;
 
-use VendorDuplicator\Aws\Crypto\AbstractCryptoClientV2;
-use VendorDuplicator\Aws\Crypto\EncryptionTraitV2;
-use VendorDuplicator\Aws\Crypto\MetadataEnvelope;
-use VendorDuplicator\Aws\Crypto\Cipher\CipherBuilderTrait;
-use VendorDuplicator\Aws\S3\MultipartUploader;
-use VendorDuplicator\Aws\S3\S3ClientInterface;
-use VendorDuplicator\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\Aws\Crypto\AbstractCryptoClientV2;
+use VendorGambDuplicaWP\Aws\Crypto\EncryptionTraitV2;
+use VendorGambDuplicaWP\Aws\Crypto\MetadataEnvelope;
+use VendorGambDuplicaWP\Aws\Crypto\Cipher\CipherBuilderTrait;
+use VendorGambDuplicaWP\Aws\S3\MultipartUploader;
+use VendorGambDuplicaWP\Aws\S3\S3ClientInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
 /**
  * Encapsulates the execution of a multipart upload of an encrypted object to S3.
  *

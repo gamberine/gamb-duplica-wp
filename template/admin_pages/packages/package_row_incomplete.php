@@ -4,9 +4,9 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
-use gamb-duplica-wp\Views\UserUIOptions;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Views\UserUIOptions;
 
 defined("ABSPATH") or die("");
 
@@ -65,7 +65,7 @@ $cellErrCSS = '';
 if ($status < GAMB_DUPLICA_WP_PackageStatus::COPIEDPACKAGE) {
     // In the process of building
     $size      = 0;
-    $tmpSearch = glob(gamb-duplica-wp_PRO_SSDIR_PATH_TMP . "/{$pack_namehash}_*");
+    $tmpSearch = glob(GambDuplicaWP_PRO_SSDIR_PATH_TMP . "/{$pack_namehash}_*");
 
     if (is_array($tmpSearch)) {
         $result = @array_map('filesize', $tmpSearch);

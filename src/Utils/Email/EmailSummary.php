@@ -1,16 +1,16 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\Email;
+namespace GambDuplicaWP\Utils\Email;
 
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Global_Entity;
 use GAMB_DUPLICA_WP_Package_Upload_Info;
 use GAMB_DUPLICA_WP_Schedule_Entity;
-use gamb-duplica-wp\Core\Models\AbstractEntitySingleton;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
-use gamb-duplica-wp\Controllers\EmailSummaryPreviewPageController;
-use gamb-duplica-wp\Models\Storages\StoragesUtil;
+use GambDuplicaWP\Core\Models\AbstractEntitySingleton;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Controllers\EmailSummaryPreviewPageController;
+use GambDuplicaWP\Models\Storages\StoragesUtil;
 
 /**
  * Email Summary

@@ -15,11 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace VendorDuplicator\Google\Auth\Middleware;
+namespace VendorGambDuplicaWP\Google\Auth\Middleware;
 
-use VendorDuplicator\Google\Auth\FetchAuthTokenInterface;
-use VendorDuplicator\Google\Auth\GetQuotaProjectInterface;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Google\Auth\FetchAuthTokenInterface;
+use VendorGambDuplicaWP\Google\Auth\GetQuotaProjectInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * ProxyAuthTokenMiddleware is a Guzzle Middleware that adds an Authorization header
  * provided by an object implementing FetchAuthTokenInterface.

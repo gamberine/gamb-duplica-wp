@@ -1,6 +1,6 @@
 <?php
 
-namespace gamb-duplica-wp\Utils\CachesPurge;
+namespace GambDuplicaWP\Utils\CachesPurge;
 
 use GAMB_DUPLICA_WP_Log;
 use Error;

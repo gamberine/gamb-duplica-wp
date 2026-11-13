@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-namespace VendorDuplicator\Google\Service\Drive;
+namespace VendorGambDuplicaWP\Google\Service\Drive;
 
-class RevisionList extends \VendorDuplicator\Google\Collection
+class RevisionList extends \VendorGambDuplicaWP\Google\Collection
 {
     protected $collection_key = 'revisions';
     /**
@@ -74,4 +74,4 @@ class RevisionList extends \VendorDuplicator\Google\Collection
     }
 }
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RevisionList::class, 'VendorDuplicator\Google_Service_Drive_RevisionList');
+class_alias(RevisionList::class, 'VendorGambDuplicaWP\Google_Service_Drive_RevisionList');

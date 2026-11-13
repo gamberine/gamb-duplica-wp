@@ -6,7 +6,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\AmazonS3Addon\Models;
+namespace GambDuplicaWP\Addons\AmazonS3Addon\Models;
 
 class VultrStorage extends AmazonS3CompatibleStorage
 {
@@ -37,7 +37,7 @@ class VultrStorage extends AmazonS3CompatibleStorage
      */
     protected static function getIconUrl()
     {
-        return gamb-duplica-wp_PRO_IMG_URL . '/vultr.svg';
+        return GambDuplicaWP_PRO_IMG_URL . '/vultr.svg';
     }
 
     /**

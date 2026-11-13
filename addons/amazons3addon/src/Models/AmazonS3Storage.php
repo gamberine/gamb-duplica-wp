@@ -6,13 +6,13 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\AmazonS3Addon\Models;
+namespace GambDuplicaWP\Addons\AmazonS3Addon\Models;
 
 use GAMB_DUPLICA_WP_Global_Entity;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Models\DynamicGlobalEntity;
-use gamb-duplica-wp\Models\Storages\AbstractStorageEntity;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Models\DynamicGlobalEntity;
+use GambDuplicaWP\Models\Storages\AbstractStorageEntity;
 use Exception;
 
 /** @property S3StorageAdapter $adapter */
@@ -144,7 +144,7 @@ class AmazonS3Storage extends AbstractStorageEntity
      */
     protected static function getIconUrl()
     {
-        return gamb-duplica-wp_PRO_IMG_URL . '/aws.svg';
+        return GambDuplicaWP_PRO_IMG_URL . '/aws.svg';
     }
 
 
@@ -368,7 +368,7 @@ class AmazonS3Storage extends AbstractStorageEntity
             $this->config['storage_class'],
             $global->ipv4_only,
             !$global->ssl_disableverify,
-            ($global->ssl_useservercerts ? '' : gamb-duplica-wp_PRO_CERT_PATH),
+            ($global->ssl_useservercerts ? '' : GambDuplicaWP_PRO_CERT_PATH),
             $this->config['ACL_full_control']
         );
 

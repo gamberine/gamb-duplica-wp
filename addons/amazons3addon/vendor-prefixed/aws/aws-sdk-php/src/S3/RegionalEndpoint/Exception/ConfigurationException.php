@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\RegionalEndpoint\Exception;
+namespace VendorGambDuplicaWP\Aws\S3\RegionalEndpoint\Exception;
 
-use VendorDuplicator\Aws\HasMonitoringEventsTrait;
-use VendorDuplicator\Aws\MonitoringEventsInterface;
+use VendorGambDuplicaWP\Aws\HasMonitoringEventsTrait;
+use VendorGambDuplicaWP\Aws\MonitoringEventsInterface;
 /**
  * Represents an error interacting with configuration for sts regional endpoints
  */

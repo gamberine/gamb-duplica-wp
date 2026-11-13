@@ -11,7 +11,7 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 
 class DUPX_Liquidweb_Host implements DUPX_Host_interface
 {

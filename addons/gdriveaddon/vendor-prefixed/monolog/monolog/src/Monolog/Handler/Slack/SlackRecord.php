@@ -9,12 +9,12 @@ declare (strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace VendorDuplicator\Monolog\Handler\Slack;
+namespace VendorGambDuplicaWP\Monolog\Handler\Slack;
 
-use VendorDuplicator\Monolog\Logger;
-use VendorDuplicator\Monolog\Utils;
-use VendorDuplicator\Monolog\Formatter\NormalizerFormatter;
-use VendorDuplicator\Monolog\Formatter\FormatterInterface;
+use VendorGambDuplicaWP\Monolog\Logger;
+use VendorGambDuplicaWP\Monolog\Utils;
+use VendorGambDuplicaWP\Monolog\Formatter\NormalizerFormatter;
+use VendorGambDuplicaWP\Monolog\Formatter\FormatterInterface;
 /**
  * Slack record utility helping to log to Slack webhooks or API.
  *

@@ -1,34 +1,34 @@
 <?php
 
-namespace VendorDuplicator\Aws\Sts;
+namespace VendorGambDuplicaWP\Aws\Sts;
 
-use VendorDuplicator\Aws\Arn\ArnParser;
-use VendorDuplicator\Aws\AwsClient;
-use VendorDuplicator\Aws\CacheInterface;
-use VendorDuplicator\Aws\Credentials\Credentials;
-use VendorDuplicator\Aws\Result;
-use VendorDuplicator\Aws\Sts\RegionalEndpoints\ConfigurationProvider;
+use VendorGambDuplicaWP\Aws\Arn\ArnParser;
+use VendorGambDuplicaWP\Aws\AwsClient;
+use VendorGambDuplicaWP\Aws\CacheInterface;
+use VendorGambDuplicaWP\Aws\Credentials\Credentials;
+use VendorGambDuplicaWP\Aws\Result;
+use VendorGambDuplicaWP\Aws\Sts\RegionalEndpoints\ConfigurationProvider;
 /**
  * This client is used to interact with the **AWS Security Token Service (AWS STS)**.
  *
- * @method \VendorDuplicator\Aws\Result assumeRole(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise assumeRoleAsync(array $args = [])
- * @method \VendorDuplicator\Aws\Result assumeRoleWithSAML(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise assumeRoleWithSAMLAsync(array $args = [])
- * @method \VendorDuplicator\Aws\Result assumeRoleWithWebIdentity(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise assumeRoleWithWebIdentityAsync(array $args = [])
- * @method \VendorDuplicator\Aws\Result assumeRoot(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise assumeRootAsync(array $args = [])
- * @method \VendorDuplicator\Aws\Result decodeAuthorizationMessage(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise decodeAuthorizationMessageAsync(array $args = [])
- * @method \VendorDuplicator\Aws\Result getAccessKeyInfo(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise getAccessKeyInfoAsync(array $args = [])
- * @method \VendorDuplicator\Aws\Result getCallerIdentity(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise getCallerIdentityAsync(array $args = [])
- * @method \VendorDuplicator\Aws\Result getFederationToken(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise getFederationTokenAsync(array $args = [])
- * @method \VendorDuplicator\Aws\Result getSessionToken(array $args = [])
- * @method \VendorDuplicator\GuzzleHttp\Promise\Promise getSessionTokenAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result assumeRole(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise assumeRoleAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result assumeRoleWithSAML(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise assumeRoleWithSAMLAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result assumeRoleWithWebIdentity(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise assumeRoleWithWebIdentityAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result assumeRoot(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise assumeRootAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result decodeAuthorizationMessage(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise decodeAuthorizationMessageAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result getAccessKeyInfo(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise getAccessKeyInfoAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result getCallerIdentity(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise getCallerIdentityAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result getFederationToken(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise getFederationTokenAsync(array $args = [])
+ * @method \VendorGambDuplicaWP\Aws\Result getSessionToken(array $args = [])
+ * @method \VendorGambDuplicaWP\GuzzleHttp\Promise\Promise getSessionTokenAsync(array $args = [])
  */
 class StsClient extends AwsClient
 {

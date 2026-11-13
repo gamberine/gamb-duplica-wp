@@ -4,7 +4,7 @@
  * @package gamb-duplica-wp
  */
 
-use gamb-duplica-wp\Controllers\SettingsPageController;
+use GambDuplicaWP\Controllers\SettingsPageController;
 
 defined("ABSPATH") or die("");
 
@@ -68,7 +68,7 @@ if ($isTemplateEdit && $template != null) {
                     '%1$s and %2$s are opening and closing anchor tags',
                     'gamb-duplica-wp'
                 ),
-                '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'database-install') . '" target="_blank">',
+                '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'database-install') . '" target="_blank">',
                 '</a>'
             );
             ?>

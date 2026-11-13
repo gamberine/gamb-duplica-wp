@@ -5,18 +5,18 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Installer\Core\Deploy\Database;
+namespace GambDuplicaWP\Installer\Core\Deploy\Database;
 
-use gamb-duplica-wp\Installer\Core\Deploy\Multisite;
-use gamb-duplica-wp\Installer\Core\Params\Models\SiteOwrMap;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Core\Deploy\Multisite;
+use GambDuplicaWP\Installer\Core\Params\Models\SiteOwrMap;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 use DUPX_ArchiveConfig;
 use DUPX_DB_Tables;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Utils\ReplaceEngine\ReplaceItem;
-use gamb-duplica-wp\Installer\Utils\ReplaceEngine\ReplaceMng;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Utils\ReplaceEngine\ReplaceItem;
+use GambDuplicaWP\Installer\Utils\ReplaceEngine\ReplaceMng;
 use DUPX_U;
 use DUPX_UpdateEngine;
 use Exception;

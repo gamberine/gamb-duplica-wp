@@ -1,7 +1,7 @@
 <?php
 
 declare (strict_types=1);
-namespace VendorDuplicator\ParagonIE\ConstantTime;
+namespace VendorGambDuplicaWP\ParagonIE\ConstantTime;
 
 use InvalidArgumentException;
 use RangeException;
@@ -32,7 +32,7 @@ use TypeError;
  * Class Base32
  * [A-Z][2-7]
  *
- * @package VendorDuplicator\ParagonIE\ConstantTime
+ * @package VendorGambDuplicaWP\ParagonIE\ConstantTime
  */
 abstract class Base32 implements EncoderInterface
 {

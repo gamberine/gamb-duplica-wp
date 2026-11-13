@@ -22,19 +22,19 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\Common\Formats\Keys;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\Common\Formats\Keys;
 
-use VendorDuplicator\phpseclib3\Common\Functions\Strings;
-use VendorDuplicator\phpseclib3\Crypt\AES;
-use VendorDuplicator\phpseclib3\Crypt\DES;
-use VendorDuplicator\phpseclib3\Crypt\Random;
-use VendorDuplicator\phpseclib3\Crypt\RC2;
-use VendorDuplicator\phpseclib3\Crypt\RC4;
-use VendorDuplicator\phpseclib3\Crypt\TripleDES;
-use VendorDuplicator\phpseclib3\Exception\InsufficientSetupException;
-use VendorDuplicator\phpseclib3\Exception\UnsupportedAlgorithmException;
-use VendorDuplicator\phpseclib3\File\ASN1;
-use VendorDuplicator\phpseclib3\File\ASN1\Maps;
+use VendorGambDuplicaWP\phpseclib3\Common\Functions\Strings;
+use VendorGambDuplicaWP\phpseclib3\Crypt\AES;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DES;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Random;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RC2;
+use VendorGambDuplicaWP\phpseclib3\Crypt\RC4;
+use VendorGambDuplicaWP\phpseclib3\Crypt\TripleDES;
+use VendorGambDuplicaWP\phpseclib3\Exception\InsufficientSetupException;
+use VendorGambDuplicaWP\phpseclib3\Exception\UnsupportedAlgorithmException;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1;
+use VendorGambDuplicaWP\phpseclib3\File\ASN1\Maps;
 /**
  * PKCS#8 Formatted Key Handler
  *
@@ -121,7 +121,7 @@ abstract class PKCS8 extends PKCS
     /**
      * Returns a SymmetricKey object based on a PBES1 $algo
      *
-     * @return \VendorDuplicator\phpseclib3\Crypt\Common\SymmetricKey
+     * @return \VendorGambDuplicaWP\phpseclib3\Crypt\Common\SymmetricKey
      * @param string $algo
      */
     private static function getPBES1EncryptionObject($algo)

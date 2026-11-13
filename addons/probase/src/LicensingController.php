@@ -12,19 +12,19 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\ProBase;
+namespace GambDuplicaWP\Addons\ProBase;
 
 use GAMB_DUPLICA_WP_Log;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Addons\ProBase\License\License;
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\PageAction;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Libs\Snap\SnapWP;
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Addons\ProBase\License\License;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\PageAction;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Libs\Snap\SnapWP;
+use GambDuplicaWP\Views\AdminNotices;
 use Exception;
 
 class LicensingController
@@ -480,7 +480,7 @@ class LicensingController
                 '%1$s and %2$s represents the opening and closing HTML tags for an anchor or link',
                 'gamb-duplica-wp'
             ),
-            '<a href="' . gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'how-to-resolve-license-activation-issues/" target="_blank">',
+            '<a href="' . GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'how-to-resolve-license-activation-issues/" target="_blank">',
             '</a>'
         );
     }

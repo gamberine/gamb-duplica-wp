@@ -12,12 +12,12 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\Security;
-use gamb-duplica-wp\Installer\Addons\ProBase\License;
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Package\PComponents;
-use gamb-duplica-wp\Installer\Utils\Log\Log;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Security;
+use GambDuplicaWP\Installer\Addons\ProBase\License;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Package\PComponents;
+use GambDuplicaWP\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
 
 final class DUPX_Ctrl_S0
 {

@@ -12,14 +12,14 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-require_once(gamb-duplica-wp____PATH . '/classes/host/interface.host.php');
-require_once(gamb-duplica-wp____PATH . '/classes/host/class.godaddy.host.php');
-require_once(gamb-duplica-wp____PATH . '/classes/host/class.wpengine.host.php');
-require_once(gamb-duplica-wp____PATH . '/classes/host/class.cloudways.host.php');
-require_once(gamb-duplica-wp____PATH . '/classes/host/class.wordpresscom.host.php');
-require_once(gamb-duplica-wp____PATH . '/classes/host/class.liquidweb.host.php');
-require_once(gamb-duplica-wp____PATH . '/classes/host/class.pantheon.host.php');
-require_once(gamb-duplica-wp____PATH . '/classes/host/class.flywheel.host.php');
+require_once(GambDuplicaWP____PATH . '/classes/host/interface.host.php');
+require_once(GambDuplicaWP____PATH . '/classes/host/class.godaddy.host.php');
+require_once(GambDuplicaWP____PATH . '/classes/host/class.wpengine.host.php');
+require_once(GambDuplicaWP____PATH . '/classes/host/class.cloudways.host.php');
+require_once(GambDuplicaWP____PATH . '/classes/host/class.wordpresscom.host.php');
+require_once(GambDuplicaWP____PATH . '/classes/host/class.liquidweb.host.php');
+require_once(GambDuplicaWP____PATH . '/classes/host/class.pantheon.host.php');
+require_once(GambDuplicaWP____PATH . '/classes/host/class.flywheel.host.php');
 
 class GAMB_DUPLICA_WP_Custom_Host_Manager
 {

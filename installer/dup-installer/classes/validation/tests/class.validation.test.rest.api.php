@@ -10,9 +10,9 @@
  * @package SC\DUPX\U
  */
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\REST\RESTPoints;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\REST\RESTPoints;
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 

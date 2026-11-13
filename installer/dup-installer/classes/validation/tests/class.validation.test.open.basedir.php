@@ -12,8 +12,8 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Libs\Snap\SnapIO;
 
 class DUPX_Validation_test_open_basedir extends DUPX_Validation_abstract_item
 {

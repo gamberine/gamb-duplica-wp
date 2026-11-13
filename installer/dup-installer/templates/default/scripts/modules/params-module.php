@@ -7,10 +7,10 @@
 
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-use gamb-duplica-wp\Installer\Core\InstState;
-use gamb-duplica-wp\Installer\Core\Params\PrmMng;
-use gamb-duplica-wp\Installer\Core\Params\Items\ParamFormTables;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
+use GambDuplicaWP\Installer\Core\InstState;
+use GambDuplicaWP\Installer\Core\Params\PrmMng;
+use GambDuplicaWP\Installer\Core\Params\Items\ParamFormTables;
+use GambDuplicaWP\Libs\Snap\SnapJson;
 
 $paramsManager = PrmMng::getInstance();
 ?>

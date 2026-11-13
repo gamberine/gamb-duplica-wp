@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorDuplicator\GuzzleHttp\Cookie;
+namespace VendorGambDuplicaWP\GuzzleHttp\Cookie;
 
 /**
  * Set-Cookie object

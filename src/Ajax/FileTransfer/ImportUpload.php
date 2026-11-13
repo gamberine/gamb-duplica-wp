@@ -5,17 +5,17 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax\FileTransfer;
+namespace GambDuplicaWP\Ajax\FileTransfer;
 
 use GAMB_DUPLICA_WP_Log;
-use Vendorgamb-duplica-wp\WpOrg\Requests\Requests;
-use Vendorgamb-duplica-wp\Amk\JsonSerialize\JsonSerialize;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Libs\Snap\SnapLog;
-use gamb-duplica-wp\Libs\Snap\SnapURL;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Package\Import\PackageImporter;
-use gamb-duplica-wp\Utils\HTTP\DynamicChunkRequests;
+use VendorGambDuplicaWP\WpOrg\Requests\Requests;
+use VendorGambDuplicaWP\Amk\JsonSerialize\JsonSerialize;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Libs\Snap\SnapLog;
+use GambDuplicaWP\Libs\Snap\SnapURL;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Package\Import\PackageImporter;
+use GambDuplicaWP\Utils\HTTP\DynamicChunkRequests;
 use Exception;
 
 class ImportUpload
@@ -87,9 +87,9 @@ class ImportUpload
      */
     public function exec()
     {
-        if (!file_exists(gamb-duplica-wp_PRO_PATH_IMPORTS)) {
-            SnapIO::mkdir(gamb-duplica-wp_PRO_PATH_IMPORTS, 0755, true);
-            SnapIO::createSilenceIndex(gamb-duplica-wp_PRO_PATH_IMPORTS);
+        if (!file_exists(GambDuplicaWP_PRO_PATH_IMPORTS)) {
+            SnapIO::mkdir(GambDuplicaWP_PRO_PATH_IMPORTS, 0755, true);
+            SnapIO::createSilenceIndex(GambDuplicaWP_PRO_PATH_IMPORTS);
         }
 
         switch ($this->mode) {
@@ -125,7 +125,7 @@ class ImportUpload
         $currentChunk = filter_input(INPUT_POST, 'chunk', FILTER_VALIDATE_INT, ['options' => ['default' => false]]);
         $numChunks    = filter_input(INPUT_POST, 'chunks', FILTER_VALIDATE_INT, ['options' => ['default' => false]]);
 
-        $this->archivePath = gamb-duplica-wp_PRO_PATH_IMPORTS . '/' . $archiveName;
+        $this->archivePath = GambDuplicaWP_PRO_PATH_IMPORTS . '/' . $archiveName;
 
         if ($numChunks !== false) {
             //CHUNK MODE
@@ -205,13 +205,13 @@ class ImportUpload
             $this->remoteChunk->setExtraData('maxRetrials', $downloadData['maxRetrials']);
             $this->remoteChunk->setExtraData('startedDownload', true);
 
-            $this->archivePath = gamb-duplica-wp_PRO_PATH_IMPORTS . '/' . $downloadData['archiveName'];
+            $this->archivePath = GambDuplicaWP_PRO_PATH_IMPORTS . '/' . $downloadData['archiveName'];
             $archivePart       = $this->getArchivePart();
             if (file_exists($archivePart)) {
                 unlink($archivePart);
             }
         } else {
-            $this->archivePath = gamb-duplica-wp_PRO_PATH_IMPORTS . '/' . $this->remoteChunk->getExtraData('archiveName');
+            $this->archivePath = GambDuplicaWP_PRO_PATH_IMPORTS . '/' . $this->remoteChunk->getExtraData('archiveName');
             $archivePart       = $this->getArchivePart();
 
             if (!file_exists($archivePart)) {
@@ -225,7 +225,7 @@ class ImportUpload
 
         $startTime = microtime(true);
         do {
-            $tmpFile = tempnam(gamb-duplica-wp_PRO_PATH_IMPORTS, 'tmp_p2p_part_');
+            $tmpFile = tempnam(GambDuplicaWP_PRO_PATH_IMPORTS, 'tmp_p2p_part_');
 
             $options = [];
             if (session_id() == "") {

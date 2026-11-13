@@ -7,7 +7,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Addons\AmazonS3Addon\Models\AmazonS3CompatibleStorage;
+use GambDuplicaWP\Addons\AmazonS3Addon\Models\AmazonS3CompatibleStorage;
 
 defined("ABSPATH") or die("");
 
@@ -59,9 +59,9 @@ $tplMng->render('admin_pages/storages/parts/provider_head');
                 '1%$s and %3$s are opening and %2$s and %4$s are closing <a> tags',
                 'gamb-duplica-wp'
             ),
-            '<a target="_blank" href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'amazon-s3-step-by-step') . '">',
+            '<a target="_blank" href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'amazon-s3-step-by-step') . '">',
             '</a>',
-            '<a href="' . esc_url(gamb-duplica-wp_PRO_gamb-duplica-wp_DOCS_URL . 'amazon-s3-policy-setup') . '" target="_blank">',
+            '<a href="' . esc_url(GambDuplicaWP_PRO_GambDuplicaWP_DOCS_URL . 'amazon-s3-policy-setup') . '" target="_blank">',
             '</a>'
         ); ?>
         </i>

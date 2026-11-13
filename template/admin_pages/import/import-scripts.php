@@ -5,7 +5,7 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-use gamb-duplica-wp\Controllers\ImportPageController;
+use GambDuplicaWP\Controllers\ImportPageController;
 
 defined("ABSPATH") or die("");
 
@@ -121,7 +121,7 @@ $importChunkSize = ImportPageController::getChunkSize();
                     action: <?php echo json_encode(get_admin_url(null, 'admin-ajax.php')); ?>,
                     chunked: <?php echo empty($importChunkSize) ? 'false' : 'true'; ?>,
                     label: DupPro.ImportManager.uploaderContent.parent().html(),
-                    leave: '<?php echo esc_js(__('You have uploads pending, are you sure you want to leave this page?', 'gamb-duplica-wp')); ?>'
+                    leave: '<?php echo esc_js(__('You have uploads pending, are you sure you want to leave this page?', 'GambDuplicaWP')); ?>'
                 })
                 .on("start.upload", DupPro.ImportManager.onStart)
                 .on("complete.upload", DupPro.ImportManager.onComplete)
@@ -188,7 +188,7 @@ $importChunkSize = ImportPageController::getChunkSize();
                     try {
                         parsedUrl = new URL(uploadUrl);
                     } catch (error) {
-                        DupPro.addAdminMessage('<?php echo esc_js(__('Invalid URL', 'gamb-duplica-wp')) ?>', 'error');
+                        DupPro.addAdminMessage('<?php echo esc_js(__('Invalid URL', 'GambDuplicaWP')) ?>', 'error');
                     }
 
                     let files = [
@@ -206,12 +206,12 @@ $importChunkSize = ImportPageController::getChunkSize();
                 });
             },
             remoteUploadCall: function (uploadUrl, restoreDownload) {
-                gamb-duplica-wp.Util.ajaxWrapper(
+                GambDuplicaWP.Util.ajaxWrapper(
                     {
                         action: 'gamb-duplica-wp_pro_import_remote_download',
                         url: uploadUrl,
                         restoreDownload : (restoreDownload == null ? '' : JSON.stringify(restoreDownload)),
-                        nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_remote_download')); ?>'
+                        nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_remote_download')); ?>'
                     },
                     function (result, data, funcData, textStatus, jqXHR) {
                         if (DupPro.ImportManager.packageRowUploading == null) {
@@ -241,10 +241,10 @@ $importChunkSize = ImportPageController::getChunkSize();
                 let archiveFile = row.data('path');
                 let password = row.find('.dup-import-archive-password-request .dup-import-archive-password').val();
 
-                gamb-duplica-wp.Util.ajaxWrapper(
+                GambDuplicaWP.Util.ajaxWrapper(
                     {
                         action: 'gamb-duplica-wp_pro_import_set_archive_password',
-                        nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_import_set_archive_password')); ?>',
+                        nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_import_set_archive_password')); ?>',
                         archive: archiveFile,
                         password: password
                     },
@@ -352,7 +352,7 @@ $importChunkSize = ImportPageController::getChunkSize();
 
                 DupPro.ImportManager.packageRowUploading.removeAttr('id');
                 DupPro.ImportManager.packageRowUploading.find('.name .text').text(file.name);
-                DupPro.ImportManager.packageRowUploading.find('.size').text(gamb-duplica-wp.Util.humanFileSize(file.size));
+                DupPro.ImportManager.packageRowUploading.find('.size').text(GambDuplicaWP.Util.humanFileSize(file.size));
                 DupPro.ImportManager.packageRowUploading.find('.created').html("<i><?php esc_html_e('loading...', 'gamb-duplica-wp'); ?></i>");
 
                 let loader = DupPro.ImportManager.packageRowUploading.find('.funcs .dup-pro-loader').removeClass('no-display');
@@ -402,7 +402,7 @@ $importChunkSize = ImportPageController::getChunkSize();
                     DupPro.ImportManager.packageRowUploading.find('.dup-pro-import-action-package-detail-toggle').trigger('click');
                 }
                 DupPro.ImportManager.packageRowUploading.find('.dup-pro-import-package-detail').html(result.data.funcData.htmlDetails);
-                DupPro.ImportManager.packageRowUploading.find('.size').text(gamb-duplica-wp.Util.humanFileSize(result.data.funcData.archiveSize));
+                DupPro.ImportManager.packageRowUploading.find('.size').text(GambDuplicaWP.Util.humanFileSize(result.data.funcData.archiveSize));
                 DupPro.ImportManager.packageRowUploading.find('.created').text(result.data.funcData.created);
                 DupPro.ImportManager.packageRowUploading.find('.funcs .dup-pro-loader').addClass('no-display');
                 DupPro.ImportManager.packageRowUploading.find('.funcs .actions').removeClass('no-display');
@@ -440,7 +440,7 @@ $importChunkSize = ImportPageController::getChunkSize();
             },
             millisecToTime: function (s) {
                 if (s <= 0) {
-                    return '<?php echo esc_js(__('loading...', 'gamb-duplica-wp')) ?>';
+                    return '<?php echo esc_js(__('loading...', 'GambDuplicaWP')) ?>';
                 }
 
                 var ms = s % 1000;
@@ -452,15 +452,15 @@ $importChunkSize = ImportPageController::getChunkSize();
 
                 let result = '';
                 if (hrs > 0) {
-                    result += ' ' + hrs + ' <?php echo esc_js(__('hr', 'gamb-duplica-wp')) ?>';
+                    result += ' ' + hrs + ' <?php echo esc_js(__('hr', 'GambDuplicaWP')) ?>';
                 }
 
                 if (mins > 0) {
-                    result += ' ' + (mins + 1) + ' <?php echo esc_js(__('min', 'gamb-duplica-wp')) ?>';
+                    result += ' ' + (mins + 1) + ' <?php echo esc_js(__('min', 'GambDuplicaWP')) ?>';
                     return result;
                 }
 
-                return secs + ' <?php echo esc_js(__('sec', 'gamb-duplica-wp')) ?>';
+                return secs + ' <?php echo esc_js(__('sec', 'GambDuplicaWP')) ?>';
             },
             resetUploadTimes: function() {
                 DupPro.ImportManager.lastUploadsTimes = [];
@@ -484,7 +484,7 @@ $importChunkSize = ImportPageController::getChunkSize();
                     percent = Number.isInteger(percent) ? percent + ".0" : percent; 
                 }
 
-                DupPro.ImportManager.packageRowUploading.find('.size').text(gamb-duplica-wp.Util.humanFileSize(total));
+                DupPro.ImportManager.packageRowUploading.find('.size').text(GambDuplicaWP.Util.humanFileSize(total));
                 let timeLeft = DupPro.ImportManager.getTimeLeft(total - position);
                 let loader = DupPro.ImportManager.packageRowUploading.find('.funcs .dup-pro-loader');
                 loader.find('.dup-pro-meter > span').css("width", percent + "%");
@@ -517,7 +517,7 @@ $importChunkSize = ImportPageController::getChunkSize();
                 return alreadyExists;
             },
             isValidFileName: function (name) {
-                if (!name.match(<?php echo wp_json_encode(gamb-duplica-wp_PRO_ARCHIVE_REGEX_PATTERN); ?>)) {
+                if (!name.match(<?php echo wp_json_encode(GambDuplicaWP_PRO_ARCHIVE_REGEX_PATTERN); ?>)) {
                     return false;
                 }
                 return true;
@@ -532,11 +532,11 @@ $importChunkSize = ImportPageController::getChunkSize();
                 DupPro.ImportManager.packageRowUploading = null;
             },
             removePackage: function () {
-                gamb-duplica-wp.Util.ajaxWrapper(
+                GambDuplicaWP.Util.ajaxWrapper(
                     {
                         action: 'gamb-duplica-wp_pro_import_package_delete',
                         path: DupPro.ImportManager.packageRowToDelete.data('path'),
-                        nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_import_package_delete')); ?>'
+                        nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_import_package_delete')); ?>'
                     },
                     function (result, data, funcData, textStatus, jqXHR) {
                         DupPro.ImportManager.removeRow(DupPro.ImportManager.packageRowToDelete);
@@ -580,10 +580,10 @@ $importChunkSize = ImportPageController::getChunkSize();
                 DupPro.ImportManager.uploaderWrapper
             },
             updateViewMode: function (viewMode) {
-                gamb-duplica-wp.Util.ajaxWrapper(
+                GambDuplicaWP.Util.ajaxWrapper(
                     {
                         action: 'gamb-duplica-wp_pro_import_set_view_mode',
-                        nonce: '<?php echo esc_js(wp_create_nonce('gamb-duplica-wp_pro_import_set_view_mode')); ?>',
+                        nonce: '<?php echo esc_js(wp_create_nonce('GambDuplicaWP_pro_import_set_view_mode')); ?>',
                         view_mode: viewMode
                     },
                     function (result, data, funcData, textStatus, jqXHR) {
@@ -601,7 +601,7 @@ $importChunkSize = ImportPageController::getChunkSize();
                                 DupPro.ImportManager.packagesAviable.removeClass('view-list-item').addClass('view-single-item');
                                 break;
                             default:
-                                throw '<?php echo esc_js(__('Invalid view mode', 'gamb-duplica-wp')); ?>';
+                                throw '<?php echo esc_js(__('Invalid view mode', 'GambDuplicaWP')); ?>';
                         }
                         DupPro.ImportManager.checkMaxUploadedFiles();
                         return '';

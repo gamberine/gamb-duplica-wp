@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\EndpointV2\Rule;
+namespace VendorGambDuplicaWP\Aws\EndpointV2\Rule;
 
-use VendorDuplicator\Aws\Exception\UnresolvedEndpointException;
+use VendorGambDuplicaWP\Aws\Exception\UnresolvedEndpointException;
 class RuleCreator
 {
     public static function create($type, $definition)

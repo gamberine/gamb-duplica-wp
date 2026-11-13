@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorDuplicator\Aws;
+namespace VendorGambDuplicaWP\Aws;
 
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
-use VendorDuplicator\Psr\Log\InvalidArgumentException;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Log\InvalidArgumentException;
 /**
  * Used to update the host based on a modeled endpoint trait
  *
@@ -59,7 +59,7 @@ class EndpointParameterMiddleware
             }
             $uri = $request->getUri();
             $host = $prefix . $uri->getHost();
-            if (!\VendorDuplicator\Aws\is_valid_hostname($host)) {
+            if (!\VendorGambDuplicaWP\Aws\is_valid_hostname($host)) {
                 throw new \InvalidArgumentException("The supplied parameters result in an invalid hostname: '{$host}'.");
             }
             $request = $request->withUri($uri->withHost($host));

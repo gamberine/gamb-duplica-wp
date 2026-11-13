@@ -1,21 +1,21 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\Serializer;
+namespace VendorGambDuplicaWP\Aws\Api\Serializer;
 
-use VendorDuplicator\Aws\Api\MapShape;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Api\Operation;
-use VendorDuplicator\Aws\Api\Shape;
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\Api\TimestampShape;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\EndpointV2\EndpointV2SerializerTrait;
-use VendorDuplicator\Aws\EndpointV2\Ruleset\RulesetEndpoint;
-use VendorDuplicator\GuzzleHttp\Psr7;
-use VendorDuplicator\GuzzleHttp\Psr7\Request;
-use VendorDuplicator\GuzzleHttp\Psr7\Uri;
-use VendorDuplicator\GuzzleHttp\Psr7\UriResolver;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Aws\Api\MapShape;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\Operation;
+use VendorGambDuplicaWP\Aws\Api\Shape;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\Api\TimestampShape;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\EndpointV2\EndpointV2SerializerTrait;
+use VendorGambDuplicaWP\Aws\EndpointV2\Ruleset\RulesetEndpoint;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Request;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\Uri;
+use VendorGambDuplicaWP\GuzzleHttp\Psr7\UriResolver;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Serializes HTTP locations like header, uri, payload, etc...
  * @internal

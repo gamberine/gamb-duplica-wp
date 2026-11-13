@@ -1,18 +1,18 @@
 <?php
 
-namespace VendorDuplicator\Aws\Multipart;
+namespace VendorGambDuplicaWP\Aws\Multipart;
 
-use VendorDuplicator\Aws\AwsClientInterface as Client;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Aws\CommandPool;
-use VendorDuplicator\Aws\Exception\AwsException;
-use VendorDuplicator\Aws\Exception\MultipartUploadException;
-use VendorDuplicator\Aws\Result;
-use VendorDuplicator\Aws\ResultInterface;
-use VendorDuplicator\GuzzleHttp\Promise;
-use VendorDuplicator\GuzzleHttp\Promise\PromiseInterface;
+use VendorGambDuplicaWP\Aws\AwsClientInterface as Client;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Aws\CommandPool;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Exception\MultipartUploadException;
+use VendorGambDuplicaWP\Aws\Result;
+use VendorGambDuplicaWP\Aws\ResultInterface;
+use VendorGambDuplicaWP\GuzzleHttp\Promise;
+use VendorGambDuplicaWP\GuzzleHttp\Promise\PromiseInterface;
 use InvalidArgumentException as IAE;
-use VendorDuplicator\Psr\Http\Message\RequestInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\RequestInterface;
 /**
  * Encapsulates the execution of a multipart upload to S3 or Glacier.
  *

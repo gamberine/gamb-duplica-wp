@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorDuplicator\Aws\S3\Exception;
+namespace VendorGambDuplicaWP\Aws\S3\Exception;
 
-use VendorDuplicator\Aws\Exception\AwsException;
+use VendorGambDuplicaWP\Aws\Exception\AwsException;
 /**
  * Represents an error interacting with the Amazon Simple Storage Service.
  */

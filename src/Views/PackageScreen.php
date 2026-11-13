@@ -5,11 +5,11 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Views;
+namespace GambDuplicaWP\Views;
 
-use gamb-duplica-wp\Controllers\PackagesPageController;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Controllers\PackagesPageController;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
 use WP_Screen;
 
 class PackageScreen extends ScreenBase

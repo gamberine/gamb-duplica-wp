@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorDuplicator\Aws\Api\ErrorParser;
+namespace VendorGambDuplicaWP\Aws\Api\ErrorParser;
 
-use VendorDuplicator\Aws\Api\Parser\JsonParser;
-use VendorDuplicator\Aws\Api\Service;
-use VendorDuplicator\Aws\Api\StructureShape;
-use VendorDuplicator\Aws\CommandInterface;
-use VendorDuplicator\Psr\Http\Message\ResponseInterface;
+use VendorGambDuplicaWP\Aws\Api\Parser\JsonParser;
+use VendorGambDuplicaWP\Aws\Api\Service;
+use VendorGambDuplicaWP\Aws\Api\StructureShape;
+use VendorGambDuplicaWP\Aws\CommandInterface;
+use VendorGambDuplicaWP\Psr\Http\Message\ResponseInterface;
 /**
  * Parses JSON-REST errors.
  */

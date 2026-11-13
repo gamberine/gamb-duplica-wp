@@ -4,9 +4,9 @@
  * @package gamb-duplica-wp\Installer
  */
 
-namespace gamb-duplica-wp\Installer\Utils\ReplaceEngine;
+namespace GambDuplicaWP\Installer\Utils\ReplaceEngine;
 
-use gamb-duplica-wp\Installer\Utils\Log\Log;
+use GambDuplicaWP\Installer\Utils\Log\Log;
 
 /**
  * Search and replace manager

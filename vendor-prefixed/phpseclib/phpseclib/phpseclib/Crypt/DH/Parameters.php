@@ -8,9 +8,9 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
-namespace VendorDuplicator\phpseclib3\Crypt\DH;
+namespace VendorGambDuplicaWP\phpseclib3\Crypt\DH;
 
-use VendorDuplicator\phpseclib3\Crypt\DH;
+use VendorGambDuplicaWP\phpseclib3\Crypt\DH;
 /**
  * DH Parameters
  *

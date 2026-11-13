@@ -5,24 +5,24 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Ajax;
+namespace GambDuplicaWP\Ajax;
 
 use GAMB_DUPLICA_WP_Archive;
 use GAMB_DUPLICA_WP_Log;
 use GAMB_DUPLICA_WP_Package;
 use GAMB_DUPLICA_WP_Package_File_Type;
-use gamb-duplica-wp\Ajax\AbstractAjaxService;
-use gamb-duplica-wp\Ajax\AjaxWrapper;
-use gamb-duplica-wp\Controllers\RecoveryController;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Controllers\ToolsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Libs\Snap\SnapJson;
-use gamb-duplica-wp\Libs\Snap\SnapUtil;
-use gamb-duplica-wp\Package\Recovery\BackupPackage;
-use gamb-duplica-wp\Package\Recovery\RecoveryPackage;
+use GambDuplicaWP\Ajax\AbstractAjaxService;
+use GambDuplicaWP\Ajax\AjaxWrapper;
+use GambDuplicaWP\Controllers\RecoveryController;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Controllers\ToolsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Libs\Snap\SnapJson;
+use GambDuplicaWP\Libs\Snap\SnapUtil;
+use GambDuplicaWP\Package\Recovery\BackupPackage;
+use GambDuplicaWP\Package\Recovery\RecoveryPackage;
 use Exception;
 
 class ServicesRecovery extends AbstractAjaxService
@@ -421,7 +421,7 @@ class ServicesRecovery extends AbstractAjaxService
         }
         $updDirs = wp_upload_dir();
 
-        $result = gamb-duplica-wp_PRO_SSDIR_URL . '/' . $package->Installer->getInstallerName() . '?dup_folder=dupinst_' . $package->getHash();
+        $result = GambDuplicaWP_PRO_SSDIR_URL . '/' . $package->Installer->getInstallerName() . '?dup_folder=dupinst_' . $package->getHash();
 
         $installerParams = [
             'inst_mode'              => ['value' => 2 ], // mode restore backup
@@ -432,7 +432,7 @@ class ServicesRecovery extends AbstractAjaxService
             ],
             'path_old'               => ['formStatus' => "st_skip"],
             'path_new'               => [
-                'value'      => gamb-duplica-wp_pro_get_home_path(),
+                'value'      => GambDuplicaWP_pro_get_home_path(),
                 'formStatus' => "st_infoonly",
             ],
             'dbaction'               => [
@@ -510,7 +510,7 @@ class ServicesRecovery extends AbstractAjaxService
                 'formStatus' => "st_infoonly",
             ],
         ];
-        $localParamsFile = gamb-duplica-wp_PRO_SSDIR_PATH . '/' . gamb-duplica-wp_PRO_LOCAL_OVERWRITE_PARAMS . '_' . $package->getPackageHash() . '.json';
+        $localParamsFile = GambDuplicaWP_PRO_SSDIR_PATH . '/' . GambDuplicaWP_PRO_LOCAL_OVERWRITE_PARAMS . '_' . $package->getPackageHash() . '.json';
         file_put_contents($localParamsFile, SnapJson::jsonEncodePPrint($installerParams));
 
         return $result;

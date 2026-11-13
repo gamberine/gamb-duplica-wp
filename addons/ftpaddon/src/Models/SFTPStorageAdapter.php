@@ -5,15 +5,15 @@
  * @copyright (c) 2022, Snapcreek LLC
  */
 
-namespace gamb-duplica-wp\Addons\FtpAddon\Models;
+namespace GambDuplicaWP\Addons\FtpAddon\Models;
 
 use Exception;
-use gamb-duplica-wp\Libs\Snap\SnapIO;
-use gamb-duplica-wp\Models\Storages\AbstractStorageAdapter;
-use gamb-duplica-wp\Models\Storages\StoragePathInfo;
-use Vendorgamb-duplica-wp\phpseclib3\Crypt\Common\PrivateKey;
-use Vendorgamb-duplica-wp\phpseclib3\Crypt\PublicKeyLoader;
-use Vendorgamb-duplica-wp\phpseclib3\Net\SFTP;
+use GambDuplicaWP\Libs\Snap\SnapIO;
+use GambDuplicaWP\Models\Storages\AbstractStorageAdapter;
+use GambDuplicaWP\Models\Storages\StoragePathInfo;
+use VendorGambDuplicaWP\phpseclib3\Crypt\Common\PrivateKey;
+use VendorGambDuplicaWP\phpseclib3\Crypt\PublicKeyLoader;
+use VendorGambDuplicaWP\phpseclib3\Net\SFTP;
 
 /**
  * SFTP class adapter

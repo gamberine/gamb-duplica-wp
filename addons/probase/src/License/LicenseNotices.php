@@ -6,15 +6,15 @@
  * @copyright (c) 2022, Snap Creek LLC
  */
 
-namespace gamb-duplica-wp\Addons\ProBase\License;
+namespace GambDuplicaWP\Addons\ProBase\License;
 
-use gamb-duplica-wp\Addons\ProBase\DrmHandler;
-use gamb-duplica-wp\Addons\ProBase\Models\LicenseData;
-use gamb-duplica-wp\Controllers\SettingsPageController;
-use gamb-duplica-wp\Core\CapMng;
-use gamb-duplica-wp\Core\Controllers\ControllersManager;
-use gamb-duplica-wp\Core\Views\TplMng;
-use gamb-duplica-wp\Views\AdminNotices;
+use GambDuplicaWP\Addons\ProBase\DrmHandler;
+use GambDuplicaWP\Addons\ProBase\Models\LicenseData;
+use GambDuplicaWP\Controllers\SettingsPageController;
+use GambDuplicaWP\Core\CapMng;
+use GambDuplicaWP\Core\Controllers\ControllersManager;
+use GambDuplicaWP\Core\Views\TplMng;
+use GambDuplicaWP\Views\AdminNotices;
 
 class LicenseNotices
 {
@@ -27,7 +27,7 @@ class LicenseNotices
     {
         add_action('admin_init', [self::class, 'adminInit']);
 
-        $path = plugin_basename(gamb-duplica-wp____FILE);
+        $path = plugin_basename(GambDuplicaWP____FILE);
 
         // Important to make this priority 11 or greater to ensure the version cache is up to date by EDD
         add_action("after_plugin_row_{$path}", [self::class, 'noLicenseDisplay'], 11, 2);
@@ -57,7 +57,7 @@ class LicenseNotices
         $latest_version = License::getLatestVersion();
 
         // Only display this message when there is no update message
-        if (($latest_version === false) || version_compare(gamb-duplica-wp_PRO_VERSION, $latest_version, '>=')) {
+        if (($latest_version === false) || version_compare(GambDuplicaWP_PRO_VERSION, $latest_version, '>=')) {
             $error_string = null;
 
             $licenseSettingsUrl = SettingsPageController::getInstance()->getMenuLink(
@@ -76,7 +76,7 @@ class LicenseNotices
                         ),
                         '<a href="' . esc_url($licenseSettingsUrl) . '">',
                         '</a>',
-                        '<a target="_blank" href="' . esc_url(gamb-duplica-wp_PRO_BLOG_URL . 'pricing/') . '">',
+                        '<a target="_blank" href="' . esc_url(GambDuplicaWP_PRO_BLOG_URL . 'pricing/') . '">',
                         '</a>'
                     );
                     break;
@@ -151,7 +151,7 @@ class LicenseNotices
             return;
         }
 
-        if (file_exists(gamb-duplica-wp_PRO_SSDIR_PATH . "/ovr.dup")) {
+        if (file_exists(GambDuplicaWP_PRO_SSDIR_PATH . "/ovr.dup")) {
             return;
         }
 
