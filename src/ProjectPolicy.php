@@ -33,6 +33,7 @@ final class ProjectPolicy
         if (!current_user_can('manage_options') || class_exists('ZipArchive')) { return; }
         $page = isset($_GET['page']) ? sanitize_key(wp_unslash($_GET['page'])) : '';
         if (strpos($page, 'gamb-duplica-wp') !== 0) { return; }
+        if (\GambDuplicaWP\Utils\ZipArchiveExtended::isPhpZipAvailable()) { echo '<div class="notice notice-info"><p>'.esc_html('Gamb Duplica WP: ZIP portátil disponível pelo PclZip do WordPress, sem habilitar ZipArchive. AES e ZIP64 continuam exigindo a extensão nativa; DAF é um formato distinto de ZIP.').'</p></div>'; return; }
         echo '<div class="notice notice-warning"><p>' . esc_html('Gamb Duplica WP: a extensão ZIP do PHP está desabilitada. Para gerar arquivos .zip pelo mecanismo PHP, habilite ZipArchive no servidor. O formato .daf é um formato próprio de recuperação e não é um arquivo ZIP.') . '</p></div>';
     }
 }

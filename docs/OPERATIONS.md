@@ -2,7 +2,7 @@
 
 ## Mecanismos de arquivamento
 
-**ZIP pelo PHP:** utiliza ZipArchive. Habilite a extensão no PHP utilizado pelo servidor web e confira a disponibilidade no painel. Habilitar a extensão apenas na linha de comando não a habilita no Apache ou PHP-FPM.
+**ZIP pelo PHP:** utiliza ZipArchive quando disponível; sem a extensão, utiliza automaticamente PclZip do WordPress com zlib, PHP de 64 bits e temporários privados. Não exige DLL ou executável externo. AES e ZIP64 continuam dependentes da extensão nativa. Consulte [ZIP portátil](PORTABLE-ZIP.md).
 
 **ZIP pelo sistema:** depende de executável compatível, permissões e comandos disponíveis. A existência de uma função shell não demonstra disponibilidade do executável ZIP.
 

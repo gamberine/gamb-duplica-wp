@@ -4,7 +4,7 @@
 
 Extensão para WordPress destinada à criação de cópias de segurança e à preparação de pacotes de recuperação e migração. O projeto mantém código, documentação, auditoria e distribuição em repositório independente.
 
-**Versão:** 5.0.1. **Manutenção:** [gamberine](https://github.com/gamberine). **Licença da distribuição:** GPL-3.0-or-later, com avisos das dependências preservados.
+**Versão:** 5.1.0. **Manutenção:** [gamberine](https://github.com/gamberine). **Licença da distribuição:** GPL-3.0-or-later, com avisos das dependências preservados.
 
 ## Procedência e governança
 
@@ -19,7 +19,7 @@ O fluxo de cópia percorre as etapas de seleção e varredura, exportação do b
 | Recurso | Condição operacional |
 | --- | --- |
 | Backup manual local | Fluxo completo validado em WordPress 7.1.4 e PHP 8.3.26 |
-| Arquivo ZIP pelo PHP | Requer extensão `zip`/`ZipArchive` habilitada no PHP que atende a aplicação |
+| Arquivo ZIP pelo PHP | ZipArchive preferencial; alternativa automática PclZip do WordPress, sem executável ZIP externo |
 | ZIP por comando do sistema | Depende do executável e do ambiente; não homologado nesta entrega |
 | Arquivo DAF | Formato próprio de recuperação; não equivale a ZIP |
 | Banco de dados | Exportação por PHP validada; seleção de tabelas deve ser conferida pelo administrador |
@@ -38,7 +38,7 @@ O requisito mínimo validado é **PHP 8.1**. O requisito 7.4 herdado da base foi
 4. Ative **Gamb Duplica WP**, confira os diagnósticos e defina o mecanismo de arquivamento.
 5. Gere uma cópia, aguarde a conclusão, baixe os arquivos e ensaie a recuperação em ambiente isolado.
 
-A instalação do plugin não habilita extensões PHP do servidor. Se `ZipArchive` estiver ausente, o painel informa a condição. A base pode selecionar DAF quando o mecanismo ZIP solicitado não estiver disponível: confira sempre a extensão efetivamente gerada.
+A instalação não altera o PHP do servidor. Na ausência de `ZipArchive`, o mecanismo **ZIP PHP** utiliza o PclZip já distribuído pelo WordPress. Requer PHP de 64 bits, zlib, hash e diretório temporário privado gravável. ZIP32 aceita até 65.534 entradas e menos de 4 GiB no arquivo e na soma dos conteúdos descompactados. AES e ZIP64 exigem ZipArchive; solicitações incompatíveis são recusadas. Consulte [ZIP portátil](docs/PORTABLE-ZIP.md).
 
 ## Arquivos e proteção
 
@@ -52,7 +52,7 @@ A conferência ZIP verifica abertura consistente, caminhos relativos, duplicidad
 
 Na auditoria local, um pacote de **32.449.207 bytes** chegou ao estado concluído. Foram conferidos **6.403 arquivos**, distribuídos em **7.514 entradas**, sem falha de CRC. O SQL exportado foi importado em outro banco isolado, com **18 tabelas**; os registros de conteúdo e seus metadados coincidiram com a origem do ensaio. Arquivos selecionados foram extraídos e comparados por SHA-256.
 
-Há 31 verificações independentes com ZIP, incluindo criptografia, senha incorreta, arquivos corrompidos, caminhos inseguros, autoload e bloqueio de serviços não configurados. O modo sem ZIP também é testado. A integração contínua verifica PHP 8.1, 8.2, 8.3 e 8.4; consulte o resultado do commit em [Actions](https://github.com/gamberine/gamb-duplica-wp/actions).
+A versão 5.1.0 possui 59 verificações sem ZipArchive e 65 com a extensão nativa, incluindo arquivos corrompidos, caminhos inseguros, duplicidades, continuação do pacote, diretórios, nomes UTF-8 e recusa de criptografia indisponível. Os ensaios anteriores de SQL e recuperação acima permanecem identificados como auditoria da versão 5.0.x. A integração contínua verifica PHP 8.1, 8.2, 8.3 e 8.4; consulte o resultado do commit em [Actions](https://github.com/gamberine/gamb-duplica-wp/actions).
 
 Consulte [Auditoria](docs/AUDIT.md), [Operação e recuperação](docs/OPERATIONS.md), [Registro de versões](CHANGELOG.md), [Segurança](SECURITY.md) e [Contribuição](CONTRIBUTING.md).
 
@@ -60,9 +60,12 @@ Consulte [Auditoria](docs/AUDIT.md), [Operação e recuperação](docs/OPERATION
 
 ```sh
 php scripts/check-php.php
+python scripts/fetch-pclzip.py
+python scripts/zip-fixtures.py
 php tests/run.php
+php -n tests/run.php
 node scripts/check-js.cjs
 python scripts/build.py
 ```
 
-Os testes ZIP exigem a extensão habilitada no processo. O pacote instalável contém apenas a distribuição do plugin; exclui testes, registros locais, bancos, backups, credenciais e artefatos de auditoria. O ZIP determinístico e seu SHA-256 são gerados em `dist/`. Atualizações são instaladas manualmente a partir das versões publicadas.
+Os testes obtêm uma referência oficial do PclZip com SHA-256 fixado. Não há download de bibliotecas durante a operação do plugin. A matriz de CI testa o mecanismo nativo e sua ausência. O pacote instalável contém apenas a distribuição do plugin; exclui testes, registros locais, bancos, backups, credenciais e artefatos de auditoria. O ZIP determinístico e seu SHA-256 são gerados em `dist/`. Atualizações são instaladas manualmente a partir das versões publicadas.

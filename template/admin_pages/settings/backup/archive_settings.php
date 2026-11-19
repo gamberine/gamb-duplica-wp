@@ -103,7 +103,7 @@ $isShellZipAvailable   = (GAMB_DUPLICA_WP_Zip_U::getShellExecZipPath() != null);
         <?php checked($global->getBuildMode() == GAMB_DUPLICA_WP_Archive_Build_Mode::ZipArchive); ?>
         <?php disabled(!$global->isBuildModeAvailable(GAMB_DUPLICA_WP_Archive_Build_Mode::ZipArchive)) ?>
     >
-    <label for="archive_build_mode2"><?php esc_html_e("ZipArchive", 'gamb-duplica-wp'); ?></label>
+    <label for="archive_build_mode2"><?php esc_html_e("ZIP PHP", 'gamb-duplica-wp'); ?></label>
     </div>
 
     <br style="clear:both"/>
@@ -134,6 +134,7 @@ $isShellZipAvailable   = (GAMB_DUPLICA_WP_Zip_U::getShellExecZipPath() != null);
     ?>
     </div>
 
+    <p class="description">ZIP PHP utiliza ZipArchive quando disponível e PclZip do WordPress como alternativa portátil. O modo portátil requer zlib e espaço temporário para conferência; não oferece AES ou ZIP64. DAF é um formato distinto de ZIP.</p>
     <!-- ZIP ARCHIVE -->
     <div class="engine-sub-opts" id="engine-details-2" style="display:none;">
     <div class="margin-bottom-1" >

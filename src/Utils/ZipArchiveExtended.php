@@ -15,6 +15,9 @@ use ZipArchive;
 class ZipArchiveExtended
 {
     /** @var string */
+    const CREATE = 1;
+    const CHECKCONS = 4;
+    const FL_NODIR = 2;
     protected $archivePath = '';
     /** @var ZipArchive */
     protected $zipArchive;
@@ -42,7 +45,7 @@ class ZipArchiveExtended
         }
 
         $this->archivePath = $path;
-        $this->zipArchive  = new ZipArchive();
+        $this->zipArchive  = self::createHandle();
         $this->setCompressed(true);
     }
 
@@ -51,7 +54,7 @@ class ZipArchiveExtended
      */
     public function __destruct()
     {
-        $this->close();
+        try { $this->close(); } catch (\Throwable $error) { /* A chamada explícita já informa a falha ao construtor do pacote. */ }
     }
 
     /**
@@ -61,7 +64,19 @@ class ZipArchiveExtended
      */
     public static function isPhpZipAvailable()
     {
+        return self::isNativeAvailable() || WordPressZipBackend::available();
+    }
+
+    public static function isNativeAvailable()
+    {
         return SnapUtil::classExists(ZipArchive::class);
+    }
+
+    public static function createHandle()
+    {
+        if (self::isNativeAvailable()) { return new ZipArchive(); }
+        if (!WordPressZipBackend::available()) { throw new \RuntimeException('ZIP portátil indisponível. Verifique PclZip do WordPress, zlib e a pasta temporária privada.'); }
+        return new WordPressZipBackend();
     }
 
     /**
@@ -144,7 +159,7 @@ class ZipArchiveExtended
             }
         }
         if ($result && !$this->compressed) {
-            $this->zipArchive->setCompressionName($archivePath, ZipArchive::CM_STORE);
+            $this->zipArchive->setCompressionName($archivePath, 0);
         }
         return $result;
     }
@@ -172,7 +187,7 @@ class ZipArchiveExtended
             }
         }
         if ($result && !$this->compressed) {
-            $this->zipArchive->setCompressionName($archivePath, ZipArchive::CM_STORE);
+            $this->zipArchive->setCompressionName($archivePath, 0);
         }
         return $result;
     }
@@ -188,7 +203,7 @@ class ZipArchiveExtended
             return true;
         }
 
-        if (($result = $this->zipArchive->open($this->archivePath, ZipArchive::CREATE)) === true) {
+        if (($result = $this->zipArchive->open($this->archivePath, self::CREATE)) === true) {
             $this->isOpened = true;
             if ($this->encrypt) {
                 $this->zipArchive->setPassword($this->password);
@@ -277,7 +292,7 @@ class ZipArchiveExtended
     {
         static $isEncryptAvailable = null;
         if ($isEncryptAvailable === null) {
-            if (!self::isPhpZipAvailable()) {
+            if (!self::isNativeAvailable()) {
                 $isEncryptAvailable = false;
                 return false;
             }
@@ -303,6 +318,7 @@ class ZipArchiveExtended
      */
     public static function getLibzipVersion()
     {
+        if (!self::isNativeAvailable()) { return '0'; }
         if (defined('ZipArchive::LIBZIP_VERSION')) { return constant('ZipArchive::LIBZIP_VERSION'); }
         static $libzipVersion = null;
 
@@ -368,7 +384,7 @@ class ZipArchiveExtended
             throw new Exception(__('ZipArchive PHP module is not installed/enabled. The current Backup cannot be opened.', 'gamb-duplica-wp'));
         }
 
-        $zip = new ZipArchive();
+        $zip = self::createHandle();
         if ($zip->open($path) !== true) {
             throw new Exception('Cannot open the ZipArchive file.  Please see the online FAQ\'s for additional help.' . $path);
         }
