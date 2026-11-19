@@ -7,6 +7,7 @@ final class WordPressZipBackend
     public $numFiles = 0;
     private $path = '';
     private $headers = [];
+    private $indices = [];
     private $pending = [];
     private $directory = '';
     private $extracted = false;
@@ -34,11 +35,12 @@ final class WordPressZipBackend
     public function open($path, $flags = 0)
     {
         if (!self::available() || is_link($path)) { return false; }
-        $this->path=$path; $this->headers=[]; $this->pending=[];
+        $this->path=$path; $this->headers=[]; $this->indices=[]; $this->pending=[];
         if (is_file($path)) {
             if (filesize($path)<22) { return false; }
             try { $this->headers=$this->readHeaders($path); } catch (\Throwable $error) { return false; }
         } elseif (!($flags&1)) { return false; }
+        $this->indices=array_column($this->headers,'index','name');
         $this->opened=true; $this->numFiles=count($this->headers); return true;
     }
 
@@ -121,11 +123,11 @@ final class WordPressZipBackend
             if (filesize($temporary)===0) { file_put_contents($temporary,"PK\x05\x06".str_repeat("\0",18)); }
             $headers=$this->readHeaders($temporary);
             if (!rename($temporary,$this->path)) { return false; }
-            $this->headers=$headers; $this->numFiles=count($headers); $this->pending=[]; $this->opened=false; return true;
+            $this->headers=$headers; $this->indices=array_column($headers,'index','name'); $this->numFiles=count($headers); $this->pending=[]; $this->opened=false; return true;
         } finally { if (is_file($temporary)) { unlink($temporary); } $this->opened=false; $this->pending=[]; $this->cleanup(); }
     }
     public function statIndex($index) { if (!isset($this->headers[$index])) { return false; } $h=$this->headers[$index]; return ['name'=>$h['name'],'index'=>$index,'size'=>$h['size'],'crc'=>$h['crc'],'mtime'=>$h['mtime'],'comp_size'=>$h['compressed_size'],'comp_method'=>$h['compression'],'encryption_method'=>0]; }
-    public function locateName($name,$flags=0) { foreach ($this->headers as $i=>$h) { if ($h['name']===$name || ($flags===2 && basename($h['name'])===basename($name))) { return $i; } } return false; }
+    public function locateName($name,$flags=0) { if ($flags!==2) { return $this->indices[$name]??false; } foreach ($this->headers as $i=>$h) { if (basename($h['name'])===basename($name)) { return $i; } } return false; }
     public function statName($name,$flags=0) { $index=$this->locateName($name,$flags); return $index===false ? false : $this->statIndex($index); }
     public function getStream($name)
     {
