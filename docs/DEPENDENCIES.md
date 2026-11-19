@@ -9,3 +9,7 @@ Há bibliotecas prefixadas nos diretórios andreamk, dragonmantank, guzzlehttp, 
 A base recebida não contém composer.lock nem inventário completo de versões das bibliotecas prefixadas. Portanto, não foi demonstrada a atualização de todas as dependências nem realizada uma análise exaustiva de vulnerabilidades por versão. A reconstrução de um inventário verificável e de uma cadeia de atualização permanece registrada como pendência de manutenção, sem inferir versões pelos nomes das pastas.
 
 Nenhuma assinatura comercial, chave de licença, credencial de nuvem ou acesso a serviços do fornecedor é fornecido por este projeto. O código incorporado não demonstra disponibilidade operacional de serviços externos.
+
+## Mecanismo portátil da versão 5.1.0
+
+Utiliza o PclZip fornecido pelo próprio WordPress, preservando seus avisos legais. Não incorpora outra cópia dessa biblioteca ao pacote nem realiza downloads durante o backup. Requer zlib, hash, PHP de 64 bits e espaço temporário privado. A referência PclZip obtida apenas no desenvolvimento tem SHA-256 fixado no script de preparação dos testes.

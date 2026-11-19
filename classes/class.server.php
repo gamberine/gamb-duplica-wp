@@ -163,7 +163,7 @@ class GAMB_DUPLICA_WP_Server
         if ($global->getBuildMode() == GAMB_DUPLICA_WP_Archive_Build_Mode::ZipArchive) {
             $result[] = new FunctionalityCheck(
                 FunctionalityCheck::TYPE_CLASS,
-                \ZipArchive::class,
+                \GambDuplicaWP\Utils\ZipArchiveExtended::isNativeAvailable() ? \ZipArchive::class : \PclZip::class,
                 true,
                 'https://www.php.net/manual/en/class.ziparchive.php',
                 '<i style="font-size:12px">'

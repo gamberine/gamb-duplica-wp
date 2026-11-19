@@ -16,7 +16,11 @@ jobs:
           extensions: zip, mbstring
           coverage: none
       - run: php scripts/check-php.php
+      - run: python3 scripts/fetch-pclzip.py
+      - run: python3 scripts/zip-fixtures.py
       - run: php tests/run.php
+      - name: Validar sem extensao ZIP
+        run: php -n tests/run.php
   distribution:
     runs-on: ubuntu-latest
     steps:

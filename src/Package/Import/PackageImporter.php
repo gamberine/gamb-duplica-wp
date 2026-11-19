@@ -159,7 +159,7 @@ class PackageImporter
                     throw new Exception(__('ZipArchive PHP module is not installed/enabled. The current Backup cannot be opened.', 'gamb-duplica-wp'));
                 }
 
-                $zip = new ZipArchive();
+                $zip = ZipArchiveExtended::createHandle();
                 if ($zip->open($this->archive) !== true) {
                     throw new Exception('Cannot open the ZipArchive file.  Please see the online FAQ\'s for additional help.' . $this->archive);
                 }
@@ -217,11 +217,11 @@ class PackageImporter
     {
         switch ($this->ext) {
             case 'zip':
-                $zip = new ZipArchive();
+                $zip = ZipArchiveExtended::createHandle();
                 if ($zip->open($this->archive) !== true) {
                     throw new Exception('Cannot open the ZipArchive file.  Please see the online FAQ\'s for additional help.' . $this->archive);
                 }
-                if (($stats = $zip->statName('main.installer.php', ZipArchive::FL_NODIR))  == false) {
+                if (($stats = $zip->statName('main.installer.php', ZipArchiveExtended::FL_NODIR))  == false) {
                     throw new Exception('Formatting archive error, cannot find the file main.installer.php');
                 }
 
@@ -292,11 +292,11 @@ class PackageImporter
 
         switch ($this->ext) {
             case 'zip':
-                $zip = new ZipArchive();
+                $zip = ZipArchiveExtended::createHandle();
                 if ($zip->open($this->archive) !== true) {
                     throw new Exception('Cannot open the ZipArchive file.  Please see the online FAQ\'s for additional help.' . $this->archive);
                 }
-                if (($stats = $zip->statName('main.installer.php', ZipArchive::FL_NODIR))  == false) {
+                if (($stats = $zip->statName('main.installer.php', ZipArchiveExtended::FL_NODIR))  == false) {
                     throw new Exception('Formatting archive error, cannot find the file main.installer.php');
                 }
 
@@ -310,7 +310,7 @@ class PackageImporter
                 if (!$isEncrypt) {
                     $result = true;
                 } else {
-                    GAMB_DUPLICA_WP_Log::trace('Zip archive password check ' . $password);
+                    GAMB_DUPLICA_WP_Log::trace('Zip archive password check requested.');
                     $zip->setPassword($password);
                     if ($result = $zip->getFromIndex($stats['index'])) {
                         GAMB_DUPLICA_WP_Log::trace('ZIP ARCHIVE PASSWORD OK ');
@@ -1200,7 +1200,7 @@ class PackageImporter
             throw new Exception(__('ZipArchive PHP module is not installed/enabled. The current Backup cannot be opened.', 'gamb-duplica-wp'));
         }
 
-        $zip = new ZipArchive();
+        $zip = ZipArchiveExtended::createHandle();
         if ($zip->open($this->archive) !== true) {
             throw new Exception('Cannot open the ZipArchive file.  Please see the online FAQ\'s for additional help.' . $this->archive);
         }

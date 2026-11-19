@@ -4,7 +4,7 @@ Tags: backup, migration, zip, database
 Requires at least: 5.3
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 5.0.1
+Stable tag: 5.1.0
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,8 +16,10 @@ Distribuição independente derivada de uma base modificada do Duplicator Pro 4.
 Os avisos de autoria e licença dos componentes incorporados são preservados.
 Não são fornecidas assinatura comercial, chaves ou credenciais de integrações.
 
-O backup manual local inclui banco, arquivos e instalador. ZIP pelo PHP exige
-ZipArchive habilitado no servidor web. DAF é um formato próprio e não equivale
+O backup manual local inclui banco, arquivos e instalador. ZIP PHP utiliza
+ZipArchive quando disponível ou PclZip do WordPress com zlib, PHP de 64 bits
+e pasta temporária privada gravável. ZIP portátil: menos de 4 GiB e até 65.534
+entradas; AES e ZIP64 exigem ZipArchive. DAF é um formato próprio e não equivale
 a ZIP. Agendamento, nuvem, multisite e migração completa entre servidores não
 foram homologados nesta auditoria.
 
@@ -32,6 +34,10 @@ Pacotes anteriores em backups-dup-pro não são migrados nem excluídos automati
 Downloads assinados exigem reserva de seus tokens. A telemetria está desabilitada.
 
 == Registro de versões ==
+
+= 5.1.0 =
+ZIP PHP portátil com PclZip do WordPress, validação de CRC e caminhos, proteção
+de temporários, compatibilidade UTF-8 e testes com e sem ZipArchive.
 
 = 5.0.1 =
 Recuperação de inicialização e autoload, identificadores PHP/SQL/JavaScript válidos,

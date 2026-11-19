@@ -1,5 +1,13 @@
 # Registro de versões
 
+## 5.1.0 - 2026-11-19
+
+- Adicionar mecanismo ZIP32 portátil com PclZip do WordPress, sem habilitar DLL local, alterar php.ini ou executar utilitário externo. ZipArchive permanece preferencial quando disponível.
+- Integrar criação, continuação, importação e conferência por tamanho e CRC ao mecanismo disponível. Preservar UTF-8 e diretórios registrados após seus arquivos.
+- Recusar travessia de diretórios, duplicidades, links, arquivos truncados, formatos e criptografia não suportados, sem degradação silenciosa. Utilizar temporários privados.
+- Corrigir o diagnóstico e a nomenclatura ZIP PHP no painel. Preservar a distinção entre ZIP e DAF e retirar senha de mensagem de log do importador.
+- Acrescentar testes independentes e matriz PHP 8.1 a 8.4 com e sem ZipArchive. Documentar limites de ZIP32 e recuperação fora do WordPress.
+
 ## 5.0.1 - 2026-11-13
 
 - Corrigir o requisito mínimo declarado para PHP 8.1, após a matriz de CI demonstrar incompatibilidade das dependências incorporadas com PHP 7.4. A versão 7.4 não era operacional nesta distribuição.

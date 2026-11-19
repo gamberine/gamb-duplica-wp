@@ -1241,8 +1241,8 @@ class GAMB_DUPLICA_WP_Global_Entity extends AbstractEntitySingleton implements M
         switch ($this->archive_build_mode) {
             case GAMB_DUPLICA_WP_Archive_Build_Mode::ZipArchive:
                 $mode = ($this->ziparchive_mode == GAMB_DUPLICA_WP_ZipArchive_Mode::Multithreaded) ?
-                    __("ZipArchive: multi-thread", 'gamb-duplica-wp') :
-                    __("ZipArchive: single-thread", 'gamb-duplica-wp');
+                    __("ZIP PHP: múltiplas etapas", 'gamb-duplica-wp') :
+                    __("ZIP PHP: etapa única", 'gamb-duplica-wp');
                 break;
 
             case GAMB_DUPLICA_WP_Archive_Build_Mode::DupArchive:

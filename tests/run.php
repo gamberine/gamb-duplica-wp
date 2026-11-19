@@ -19,10 +19,6 @@ expect(class_exists('GambDuplicaWP\Addons\ProBase\License\License'), 'Carregar c
 expect(class_exists('VendorGambDuplicaWP\Amk\JsonSerialize\AbstractJsonSerializable'), 'Carregar dependência prefixada.');
 foreach (['../outside', '/etc/passwd', 'C:\\outside', 'dir/../../outside', "bad\0name"] as $name) { expect(!ZipIntegrityValidator::isSafePath($name), 'Recusar caminho inseguro.'); }
 expect(ZipIntegrityValidator::isSafePath('wp-content/themes/example/index.php'), 'Aceitar caminho relativo.');
-if (!class_exists('ZipArchive')) {
-    reject(static function () { ZipIntegrityValidator::validate('missing.zip'); }, 'Informar extensão ausente.');
-    echo $checks . " verificações concluídas sem extensão ZIP.\n"; exit;
-}
 $dir = __DIR__ . '/runtime'; if (!is_dir($dir)) { mkdir($dir, 0777, true); }
 // Cada execução utiliza nomes novos; não interfere em pacotes anteriores.
 $prefix = $dir . '/' . bin2hex(random_bytes(6));
@@ -40,6 +36,7 @@ expect($archive->close(), 'Concluir arquivo ZIP.');
 $result = ZipIntegrityValidator::validate($prefix . '.zip', '', ['database.sql']);
 expect($result['files'] === 2 && $result['entries'] === 3, 'Conferir todos os arquivos e diretórios.');
 reject(static function () use ($prefix) { ZipIntegrityValidator::validate($prefix . '.zip', '', ['absent.php']); }, 'Detectar arquivo obrigatório ausente.');
+if (class_exists('ZipArchive')) {
 $unsafe = new ZipArchive(); $unsafe->open($prefix . '-unsafe.zip', ZipArchive::CREATE); $unsafe->addFromString('../escape.txt', 'unsafe'); $unsafe->close();
 reject(static function () use ($prefix) { ZipIntegrityValidator::validate($prefix . '-unsafe.zip'); }, 'Rejeitar caminho inseguro na validação.');
 file_put_contents($prefix . '-broken.zip', substr(file_get_contents($prefix . '.zip'), 0, -20));
@@ -47,6 +44,7 @@ reject(static function () use ($prefix) { ZipIntegrityValidator::validate($prefi
 $stored = new ZipArchive(); $stored->open($prefix . '-crc.zip', ZipArchive::CREATE); $stored->addFromString('file.txt', 'UNIQUE-CONTENT-TEST'); $stored->setCompressionName('file.txt', ZipArchive::CM_STORE); $stored->close();
 $bytes = file_get_contents($prefix . '-crc.zip'); $bytes = str_replace('UNIQUE-CONTENT-TEST', 'BROKEN-CONTENT-TEST', $bytes); file_put_contents($prefix . '-crc.zip', $bytes);
 reject(static function () use ($prefix) { ZipIntegrityValidator::validate($prefix . '-crc.zip'); }, 'Detectar corrupção por CRC.');
+}
 $secure = new ZipArchiveExtended($prefix . '-encrypted.zip');
 reject(static function () use ($secure) { $secure->setEncrypt(true, ''); }, 'Recusar criptografia sem senha.');
 if (ZipArchiveExtended::isEncryptionAvaliable()) {
@@ -56,4 +54,6 @@ if (ZipArchiveExtended::isEncryptionAvaliable()) {
     reject(static function () use ($prefix) { ZipIntegrityValidator::validate($prefix . '-encrypted.zip', 'wrong-password'); }, 'Recusar senha incorreta.');
     reject(static function () use ($prefix) { ZipIntegrityValidator::validate($prefix . '-encrypted.zip'); }, 'Recusar leitura sem senha.');
 }
-echo $checks . " verificações concluídas com extensão ZIP.\n";
+require __DIR__.'/portable.php';
+
+echo $checks . ' verificações concluídas; mecanismo '.(ZipArchiveExtended::isNativeAvailable() ? 'nativo' : 'portátil sem ZipArchive').".\n";

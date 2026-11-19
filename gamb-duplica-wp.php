@@ -4,7 +4,7 @@
  * Plugin Name: Gamb Duplica WP
  * Plugin URI: https://github.com/gamberine/gamb-duplica-wp
  * Description: Cópias de segurança e migração WordPress, com geração de arquivos, banco de dados e instalador de recuperação.
- * Version: 5.0.1
+ * Version: 5.1.0
  * Requires at least: 5.3
  * Tested up to: 7.1
  * Requires PHP: 8.1

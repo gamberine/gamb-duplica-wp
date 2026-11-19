@@ -1,20 +1,20 @@
 <?php
 namespace GambDuplicaWP\Utils;
 
-/** Validação sequencial sem extrair o conteúdo do pacote. */
+/** Validação de tamanho e CRC; o mecanismo portátil utiliza extração temporária privada. */
 final class ZipIntegrityValidator
 {
     public static function isSafePath($name)
     {
-        return is_string($name) && $name !== '' && strpos($name, "\0") === false
+        return is_string($name) && $name !== '' && !preg_match('/[\x00-\x1f:]/', $name)
             && !preg_match('~^(?:[/\\\\]|[A-Za-z]:)|(?:^|[/\\\\])\.\.(?:[/\\\\]|$)~', $name);
     }
 
     public static function validate($path, $password = '', array $requiredPaths = [])
     {
-        if (!class_exists('ZipArchive')) { throw new \RuntimeException('A validação ZIP requer a extensão ZIP do PHP.'); }
-        $zip = new \ZipArchive();
-        $result = $zip->open($path, \ZipArchive::CHECKCONS);
+        if (!ZipArchiveExtended::isPhpZipAvailable()) { throw new \RuntimeException('A validação ZIP requer ZipArchive ou PclZip do WordPress com zlib e pasta temporária privada.'); }
+        $zip = ZipArchiveExtended::createHandle();
+        $result = $zip->open($path, ZipArchiveExtended::CHECKCONS);
         if ($result !== true) { throw new \RuntimeException('Arquivo ZIP inválido ou inconsistente. Código: ' . $result); }
         try {
             if ($password !== '' && !$zip->setPassword($password)) { throw new \RuntimeException('Não foi possível definir a senha para validação.'); }
