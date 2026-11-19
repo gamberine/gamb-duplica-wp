@@ -34,6 +34,7 @@ final class WordPressZipBackend
 
     public function open($path, $flags = 0)
     {
+        clearstatcache(true,$path);
         if (!self::available() || is_link($path)) { return false; }
         $this->path=$path; $this->headers=[]; $this->indices=[]; $this->pending=[];
         if (is_file($path)) {
@@ -47,6 +48,7 @@ final class WordPressZipBackend
     /** Ler nomes originais antes da redução de caminhos realizada por listContent(). */
     private function readHeaders($path)
     {
+        clearstatcache(true,$path);
         if (filesize($path)>self::MAX_SIZE) { throw new \RuntimeException('O mecanismo portátil suporta ZIP32 até 4 GiB. ZIP64 requer ZipArchive.'); }
         $zip=new Utf8PclZip($path); $headers=[]; $seen=[]; $bytes=0;
         if ($zip->privOpenFd('rb')!==1) { throw new \RuntimeException('Não foi possível abrir o ZIP.'); }
